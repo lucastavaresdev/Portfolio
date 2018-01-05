@@ -1,0 +1,576 @@
+* {
+    font-family: 'Hind', sans-serif;
+}
+
+
+.navbar-nav a {
+    font-size: 21px;
+}
+
+.bg {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.globaltopo {
+    background: url(../img/bgtopo.png) no-repeat;
+    height: 627px;
+    background-position: top;
+}
+
+.botaotopo a {
+    color: #3A3959;
+    border-bottom: 2px solid transparent;
+    text-decoration: none;
+}
+
+.botaotopo a:hover {
+    color: #3A3959;
+    border-bottom: 2px solid #7088ac;
+}
+
+.tamanho_banner {
+    height: 487px;
+    z-index: 1;
+}
+
+
+.banner {
+    position: relative;
+}
+
+.setas {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+}
+
+.btnp {
+    float: right;
+
+}
+
+.texto_banner h1 {
+    margin-top: 147px;
+    font-size: 47px;
+}
+
+.btn_roxo_banner {
+    color: #ffffff;
+    cursor: pointer;
+    background: #3a3959;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 11px 60px 11px 60px;
+}
+
+.btn_roxo_banner:hover {
+    color: #ffffff;
+    background: #302f48;
+    border: none;
+}
+
+
+
+
+.btn_roxo {
+    cursor: pointer;
+    color: #ffffff;
+    background: #3a3959;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 80px;
+    margin-top: 20px;
+    padding: 11px 60px 11px 60px;
+}
+
+.btn_roxo:hover {
+    color: #ffffff;
+    background: #302f48;
+    border: none;
+}
+
+.botao_inspira-se {
+    position: relative;
+    color: #3a3959;
+    cursor: pointer;
+    background: #dae0e9;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 11px 60px 11px 60px;
+}
+
+.botao_inspira-se:hover {
+    background: #c5cad1;
+    border: none;
+}
+
+
+.btn_imagem {
+    width: 27px!important;
+    position: absolute;
+    left: 28px;
+}
+
+
+.bd {
+    background: #ddd;
+    height: 20px;
+    border: 1px solid #fff;
+}
+
+.botoes_banner {
+    margin-top: 45px;
+}
+
+.sobre {
+    background: #ffffff no-repeat center;
+    background-size: contain;
+}
+
+.sobre h1 {
+    font-size: 40px;
+    color: #3a3959;
+    text-align: center;
+    margin-top: 105px;
+    margin-bottom: -19px;
+    font-weight: 700;
+}
+
+.sobre p:nth-child(3n + 2) {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    margin-top: 44px;
+}
+
+.sobre p {
+    font-family: 'Oxygen', sans-serif;
+    margin-top: 19px;
+    font-size: 16px;
+}
+
+
+.ambientes {
+    background: #dae0e9 no-repeat center;
+    background-size: contain;
+
+}
+
+.ambientes h1 {
+    font-size: 40px;
+    color: #3a3959;
+    margin-top: 95px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.fotos {
+    margin-top: 54px;
+}
+
+.foto {
+    position: relative;
+}
+
+
+.box_foto {
+    position: relative;
+    background-color: #383752;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.botao_foto {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.box_foto:hover .image {
+    opacity: 0.3;
+}
+
+.box_foto:hover .botao_foto {
+    opacity: 1;
+}
+
+
+.btn_foto {
+    color: #ffffff;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    padding: 17px 50px 17px 50px;
+}
+
+
+.ambientes hr {
+    width: 89%;
+}
+
+.ambientes h2 {
+    font-size: 20px;
+    color: #3a3959;
+    margin-bottom: 50px;
+}
+
+.depoimentos {
+    background: url(../img/bg-depoimentos.png);
+    height: 540px;
+
+}
+
+.depoimentos .bloco {
+    margin-left: 80px;
+}
+
+.depoimentos h1 {
+    padding-top: 96px;
+    padding-bottom: 35px;
+    font-weight: 700;
+}
+
+.depoimentos .imagem_depoimentos {
+    margin-left: 72px;
+}
+
+.depoimentos .texto_cliente {
+    padding-bottom: 50px;
+}
+
+.depoimentos .setas {
+    top: 70%
+}
+
+.depoimentos .tamanho_banner {
+    height: 237px;
+}
+
+.depoimentos .circulo {
+    width: 45px;
+    height: 45px;
+    background: #ff0000;
+    border-radius: 50px;
+    background: url("../img/fotopessoa.png") no-repeat center center;
+    background-size: cover;
+    margin-bottom: 30px;
+}
+
+.depoimentos h2 {
+    font-size: 22px;
+}
+
+.depoimentos .col-7 p {
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+.depoimento .pessoa {
+    position: relative;
+    background: #ff0000;
+    width: 50px;
+}
+
+.depoimentos p {
+    font-size: 16px;
+}
+
+.produtos {
+    height: 722px;
+}
+
+.produtos h1 {
+    color: #3a3959;
+    margin-top: 95px;
+    margin-bottom: 32px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.produtos p {
+    margin-bottom: 50px;
+}
+
+.tabela th {
+    border: 2px solid #7088ac;
+
+}
+
+.tabela th {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background: #3a3959;
+}
+
+.tabelaborda {
+    border: 2px solid #3a3959;
+}
+
+.produtos td {
+    padding: 10px;
+    border-top: none;
+
+}
+
+.envie {
+    background: url(../img/bg_enviar.png) no-repeat;
+}
+
+.envie h1 {
+    margin-top: 132px;
+    margin-bottom: 31px;
+    color: #3a3959;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.envie p {
+    color: #3a3959;
+    margin-bottom: 54px;
+}
+
+.envie .btn_enviar {
+    padding: 20px 169px 25px 169px;
+}
+
+.news {
+    background: #7088ac no-repeat center;
+    background-size: contain;
+}
+
+.news h1 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    font-weight: 700;
+}
+
+
+.btn_receber {
+    cursor: pointer;
+    color: #ffffff;
+    background: #3a3959;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 11px 13px 11px 13px;
+}
+
+.btn_receber:hover {
+    color: #ffffff;
+    background: #302f48;
+    border: none;
+}
+
+.news .boxnews {
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
+
+.rodape {
+    background: #3a3959 no-repeat center;
+    background-size: contain;
+}
+
+
+.rodape h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    margin-top: 57px;
+    margin-bottom: 20px;
+    width: 122px;
+}
+
+.rodape .lista_icones {
+    list-style: none;
+    margin-left: -39px;
+}
+
+.rodape .lista_icones li a {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 45px;
+}
+
+.rodape .fa {
+    color: #ffffff;
+    padding-right: 12px;
+}
+
+
+.rodape .lista {
+    margin-left: -22px;
+    color: #ffffff;
+}
+
+.rodape .lista li a {
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.four {
+    background: #2a2a39 no-repeat center;
+    background-size: contain;
+}
+
+.four h1 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 13px;
+}
+
+.four img {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.four .logo {
+    padding-left: 43%;
+}
+
+.owl-dots {
+    display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .texto_banner h1 {
+        font-size: 23px;
+        padding: 10px;
+    }
+
+    .btn_roxo_banner {
+        margin-bottom: 10px;
+    }
+
+    .botao_inspira-se {
+        margin-left: 5%;
+    }
+
+    .btn_roxo_banner,
+    .botao_inspira-se {
+        max-width: 90%;
+    }
+
+    .depoimentos {
+        height: 945px;
+    }
+
+    .depoimentos .imagem_depoimentos {
+        margin-left: 0px;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+
+
+    .depoimentos .bloco {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+
+    .depoimentos .boxpessoa p {
+        font-size: 15px;
+        width: 156%;
+    }
+
+
+
+    .depoimentos p {
+        text-align: center;
+        font-size: 15px;
+    }
+    .envie .btn_enviar {
+        padding: 17px 50px;
+    }
+
+    .four .logo {
+        padding-left: 17%;
+    }
+    .news {
+        margin-top: -49px
+    }
+    .tabela {
+        padding: 20px;
+
+    }
+
+    .produtos {
+        height: 756px;
+    }
+
+    .tabelaborda {
+        padding: 10px;
+        border: 2px solid transparent;
+    }
+
+    .tableescondida {
+        display: none;
+        margin-top: -22px;
+    }
+
+    .envie h1 {
+        margin-top: 44px;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width: 1079px) {
+    .sociais {
+        float: right;
+        margin-top: -204px;
+        padding-right: 17%;
+    }
+
+    .btnp {
+        margin-right: -281%;
+        margin-top: -14%;
+    }
+
+
+    .btn_roxo_banner {
+        padding: 11px 12px 11px 12px;
+    }
+    .botao_inspira-se {
+        padding: 11px 12px 11px 12px;
+    }
+
+    .botao_inspira-se img {
+        display: none !important;
+    }
+
+    .texto_banner h1 {
+        font-size: 29px;
+        margin-top: 53%
+    }
+
+    .tableescondida {
+        display: none;
+    }
+
+}

@@ -1,0 +1,124 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cor {
+    background-color: #e5007a;
+}
+
+.botao,
+pedir {
+    font-size: 15px;
+}
+
+.botao {
+    color: #ffffff;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+}
+
+.botao:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #02afae;
+    text-decoration: none;
+}
+
+.pedir {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 50px;
+    padding: 4px 30px 4px 30px;
+}
+
+.pedir:hover {
+    color: #ffffff;
+    background-color: #02afae;
+    border-color: #02afae;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-link {
+    padding-right: 2.5rem;
+}
+
+.box {
+    top: 30%;
+}
+
+.box p {
+    font-size: 12px;
+}
+
+.btn-rosa {
+    color: white;
+    background-color: #e5007a;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+}
+
+.btn-rosa:hover {
+    background-color: #cc0069;
+}
+
+.btn-rosa:active {
+    background-color: #cc0069;
+}
+
+.bg {
+    background-color: #02afae;
+}
+
+.processo {
+    border: none;
+}
+
+.imgcard{
+    height: 180px;
+}
+
+.proctitulo{
+    font-size: 15px;
+    
+}
+
+.cardtexto{
+    padding-top: 2px;
+}
+
+.cardtexto p{
+    line-height: 150%;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+.bgsomos{
+    background: url("../img/bg-quem-somos.jpg") no-repeat;
+    background-size: cover;
+}  
+
+aside p{
+    font-size: 12px;
+}
+
+.atendemos h1{
+    font-size: 18px;
+}
+
+.atendemos ul, diferenciais ul{
+    font-size: 11px;
+}
+
+.contato h1{
+    font-size: 15px
+}
+.contato p{
+    font-size: 14px;
+}
+
+.icone{
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+
