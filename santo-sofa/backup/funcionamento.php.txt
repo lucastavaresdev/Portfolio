@@ -1,0 +1,40 @@
+﻿<!-- Header -->
+<?php include("includes/header.php");?>
+<!-- Header -->
+<body id="quem-somos">
+<!-- Topo e Menu -->
+<?php include("includes/top_menu.php");?>
+<!-- Topo e Menu -->
+
+<section class="bg_title text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Horário de Funcionamento</h1>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 text-center">
+				<h2>Horário de Funcionamento</h2><br>
+			</div>
+			<div class="col-md-12">
+				<p><b>ABERTO DE DOMINGO A DOMINGO <BR>
+					SEGUNDA A SEXTA DAS 10:00 AS 20:00<BR>
+					SABADO DAS 10:00 AS 19:00HRS<BR>
+					DOMINGOS E FERIADOS DAS 11:00 AS 17:00HRS</b></p>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Footer -->
+<?php include("includes/footer.php");?>
+<!-- Footer -->
+<!-- Js -->
+<?php include("includes/js.php");?>
+<!-- Js -->        
+</body>
+</html>
