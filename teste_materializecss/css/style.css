@@ -1,0 +1,21 @@
+nav{
+    background: none;
+    box-shadow: none
+}
+
+nav ul a{
+     color: #614747;
+     font-weight: 400;
+
+}
+
+nav ul a:hover{
+     color: #44b5b0;
+    font-weight: 500;
+}
+
+.main_titulo h1{
+    padding-top: 175px;
+    padding-bottom: 42px;
+    font-size: 45px;
+}
