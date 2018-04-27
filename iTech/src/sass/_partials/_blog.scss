@@ -1,0 +1,14 @@
+.blog {
+    .container-fluid {
+            background:lighten($cinza-claro,20%);
+            height: 375px;
+    }
+    .preTitle{
+        padding-top: 125px;
+    }
+    .quadrado{
+     //   background: rebeccapurple;
+        height: 607px;
+        margin-bottom: 150px;
+    }
+}
