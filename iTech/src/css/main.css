@@ -237,4 +237,15 @@ h1, h2, h3, h4, h5, h6, p, a {
   background: #f1f1f1;
 }
 
+/* line 3, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato .title {
+  padding-top: 110px;
+}
+
+/* line 6, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato .subTitle1 {
+  color: #505050;
+  font-size: 18px;
+}
+
 /*# sourceMappingURL=../css/main.map */
