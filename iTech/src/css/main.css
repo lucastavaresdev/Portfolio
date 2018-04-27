@@ -30,6 +30,15 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-weight: 700;
 }
 
+/* line 30, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
+.subTitle1 {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #a2a2a2;
+  margin-bottom: 30px;
+}
+
 /* line 1, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
 .navbar {
   padding-left: 0;
@@ -80,7 +89,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-size: 24px;
   font-weight: 200;
   color: #00ff00;
-  color: #b6b6b6;
+  color: #a2a2a2;
   padding-bottom: 40px;
   line-height: 28px;
 }
@@ -162,7 +171,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 /* line 2, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_estatisticas.scss */
 .estatisticas .descricaoTitle {
-  color: #b6b6b6;
+  color: #a2a2a2;
   padding-bottom: 75px;
 }
 
@@ -171,7 +180,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: Montserrat, sans-serif;
   font-size: 72px;
   font-weight: 300;
-  color: #b6b6b6;
+  color: #a2a2a2;
   margin: 100px 100px  0 100px;
 }
 
@@ -186,17 +195,17 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 /* line 15, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_estatisticas.scss */
 .estatisticas .line {
-  border-right: solid 1px #b6b6b6;
+  border-right: solid 1px #a2a2a2;
 }
 
 /* line 18, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_estatisticas.scss */
 .estatisticas .line-bottom {
-  border-bottom: solid 1px #b6b6b6;
+  border-bottom: solid 1px #a2a2a2;
 }
 
 /* line 2, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_blog.scss */
 .blog .container-fluid {
-  background: #e9e9e9;
+  background: #d5d5d5;
   height: 375px;
 }
 
@@ -205,11 +214,27 @@ h1, h2, h3, h4, h5, h6, p, a {
   padding-top: 125px;
 }
 
-/* line 9, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_blog.scss */
+/* line 10, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_blog.scss */
 .blog .quadrado {
-  background: rebeccapurple;
   height: 607px;
   margin-bottom: 150px;
+}
+
+/* line 1, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_sobre.scss */
+.sobre {
+  margin-bottom: 150px;
+}
+
+/* line 3, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_sobre.scss */
+.sobre .title {
+  padding-top: 23%;
+  font-size: 38px;
+  padding-right: 0;
+}
+
+/* line 1, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato {
+  background: #f1f1f1;
 }
 
 /*# sourceMappingURL=../css/main.map */

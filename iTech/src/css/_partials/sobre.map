@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "../../sass/_partials/sobre.css",
+	"sources": [
+		"../../sass/_partials/sobre.scss"
+	],
+	"sourcesContent": [
+		".sobre {\r\n    .title {\r\n        padding-top: 23%;\r\n    }\r\n}"
+	],
+	"mappings": ";AAAA,AACI,MADE,CACF,MAAM,CAAC;EACH,WAAW,EAAE,GAAI;CACpB",
+	"names": []
+}
