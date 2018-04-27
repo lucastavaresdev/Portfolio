@@ -1,5 +1,21 @@
-.estatisticas{
-    .descricaoTitle{
+.estatisticas {
+    .descricaoTitle {
         color: $cinza-claro;
+        padding-bottom: 75px;
+    }
+    .numeros {
+        @include fonte($Monte-serrat, '72px', 300, $cinza-claro);
+        //padding: 15px;
+        margin: 100px 100px  0 100px;
+    }
+    .descricaoNumeros {
+        @include fonte($Monte-serrat, '24px', 300, $cinza-escuro);
+        margin-bottom: 100px;
+    }
+    .line {
+        border-right: solid 1px $cinza-claro;
+    }
+    .line-bottom {
+        border-bottom: solid 1px $cinza-claro;
     }
 }
