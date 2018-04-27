@@ -62,3 +62,39 @@ h1, h2, h3, h4, h5, h6, p, a {
   border-radius: 60px;
   margin-bottom: 195px;
 }
+
+.posBanner {
+  margin-top: 137px;
+}
+
+.posBanner .preTitle {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #505050;
+  padding-bottom: 5px;
+}
+
+.posBanner .title {
+  font-family: Montserrat, sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+  color: #505050;
+}
+
+.posBanner .subTitle {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #505050;
+  line-height: 28.8px;
+}
+
+.posBanner .titleRodape {
+  font-family: Raleway, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #505050;
+  line-height: 28px;
+  margin-bottom: 155px;
+}

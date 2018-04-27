@@ -1,0 +1,19 @@
+.posBanner{
+    margin-top: 137px;
+    .preTitle{
+        @include fonte($Monte-serrat,'18px',300,$cinza-escuro);
+        padding-bottom: 5px;
+    }
+    .title{
+        @include fonte($Monte-serrat,'40px',200,$cinza-escuro);
+    }
+    .subTitle{
+        @include fonte($Monte-serrat,'18px',300,$cinza-escuro);
+        line-height: 28.8px;
+    }
+    .titleRodape{
+        @include fonte($Raleway,'12px',normal,$cinza-escuro);
+        line-height: 28px;
+        margin-bottom: 155px;
+    }
+}

@@ -18,7 +18,7 @@
     
     .subTitle{
         @include fonte($Monte-serrat,'24px',200);
-        color: lighten($cinza-escuro, 20%);
+        color: $cinza-claro;
         padding-bottom: 40px;
         line-height: 28px;
     }
