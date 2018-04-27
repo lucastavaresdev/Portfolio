@@ -1,0 +1,30 @@
+.produto{
+    @include fonte($Monte-serrat);
+    background: #293437;//aqui vai uma imagem
+    color: $branco;
+    .preTitle{
+        padding-top: 121px;
+        font-size:18px;
+        font-weight: 300;
+    }
+    .title{
+        font-size: 40px;
+        font-weight: 200;
+        b{
+            font-weight: 700;
+        }
+    }
+
+    .produtos{
+        padding-top: 114px;
+        .titleProduto{
+            @include fonte($Monte-serrat,'30px',200,$branco);
+            padding-bottom: 25px;
+        }
+        .descricao{
+            @include fonte($Raleway,'14px',200,$branco);
+            line-height: 25.5px;
+            padding-bottom: 200px;
+        }
+    }
+}
