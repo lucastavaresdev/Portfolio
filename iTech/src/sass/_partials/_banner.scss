@@ -7,9 +7,27 @@
         height: 100%;
     }
 
-    h1,p{
-        
+    .title{
+        @include fonte($Monte-serrat ,'48px',200,$cinza-escuro);
+        padding-top: 170px;
+        padding-bottom: 40px;
+        b{
+            font-weight: 700;
+        }
     }
-
     
+    .subTitle{
+        @include fonte($Monte-serrat,'24px',200);
+        color: lighten($cinza-escuro, 20%);
+        padding-bottom: 40px;
+        line-height: 28px;
+    }
+    
+    .botao{
+        @include fonte($Raleway,'13px',700,$branco);
+        background: $azul-claro;
+        padding: 20px 10px 20px 10px;
+        border-radius: 60px;
+        margin-bottom: 195px;
+    }
 }

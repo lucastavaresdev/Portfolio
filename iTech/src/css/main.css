@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 h1, h2, h3, h4, h5, h6, p, a {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .navbar {
@@ -20,10 +21,44 @@ h1, h2, h3, h4, h5, h6, p, a {
   padding-right: 20px;
 }
 
-.banner-img {
+.banner .banner-img {
   background: url(../img/banner.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   width: 100%;
   height: 100%;
+}
+
+.banner .title {
+  font-family: Montserrat, sans-serif;
+  font-size: 48px;
+  font-weight: 200;
+  color: #505050;
+  padding-top: 170px;
+  padding-bottom: 40px;
+}
+
+.banner .title b {
+  font-weight: 700;
+}
+
+.banner .subTitle {
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  color: #00ff00;
+  color: #838383;
+  padding-bottom: 40px;
+  line-height: 28px;
+}
+
+.banner .botao {
+  font-family: Raleway, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #47c9e5;
+  padding: 20px 10px 20px 10px;
+  border-radius: 60px;
+  margin-bottom: 195px;
 }
