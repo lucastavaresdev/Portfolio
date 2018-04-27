@@ -1,33 +1,59 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
-h1,h2,h3,h4,h5,h6,p,a{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
     font-family: $Raleway;
 }
 
-@mixin fonte($fonte: "Montserrat', sans-serif", $tamanho: '12px' , $espessura: normal, $cor:"#00ff00"){
+@mixin fonte($fonte: "Montserrat', sans-serif",
+$tamanho: '12px',
+$espessura: normal,
+$cor:"#00ff00") {
     font-family: #{$fonte};
     font-size: #{$tamanho};
     font-weight: #{$espessura};
     color: #{$cor}
 }
 
-.preTitle{
-    @include fonte($Monte-serrat,'18px',300,$cinza-escuro);
+@mixin bgs($caminho: 'red') {
+    background: url(#{$caminho}) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+.preTitle {
+    @include fonte($Monte-serrat,
+    '18px',
+    300,
+    $cinza-escuro);
     text-transform: uppercase;
     margin-top: 125px;
-    font-size:18px;
+    font-size: 18px;
     font-weight: 300;
 }
 
-.title{
-    @include fonte($Monte-serrat,'40px',200,$cinza-escuro);
-    b{
+.title {
+    @include fonte($Monte-serrat,
+    '40px',
+    200,
+    $cinza-escuro);
+    b {
         font-weight: 700;
     }
 }
 
-.subTitle1{
-    @include fonte($Monte-serrat, '16px', 200, $cinza-claro);
-   margin-bottom: 30px;
+.subTitle1 {
+    @include fonte($Monte-serrat,
+    '16px',
+    200,
+    $cinza-claro);
+    margin-bottom: 30px;
 }

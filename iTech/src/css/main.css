@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
-/* line 4, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
-h1, h2, h3, h4, h5, h6, p, a {
+/* line 3, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
   font-family: "Raleway", sans-serif;
 }
 
-/* line 15, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
+/* line 32, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
 .preTitle {
   font-family: Montserrat, sans-serif;
   font-size: 18px;
@@ -17,7 +24,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-weight: 300;
 }
 
-/* line 23, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
+/* line 43, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
 .title {
   font-family: Montserrat, sans-serif;
   font-size: 40px;
@@ -25,12 +32,12 @@ h1, h2, h3, h4, h5, h6, p, a {
   color: #505050;
 }
 
-/* line 25, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
+/* line 48, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
 .title b {
   font-weight: 700;
 }
 
-/* line 30, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
+/* line 53, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
 .subTitle1 {
   font-family: Montserrat, sans-serif;
   font-size: 16px;
@@ -68,7 +75,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   height: 100%;
 }
 
-/* line 10, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+/* line 6, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
 .banner .title {
   font-family: Montserrat, sans-serif;
   font-size: 48px;
@@ -78,12 +85,12 @@ h1, h2, h3, h4, h5, h6, p, a {
   padding-bottom: 40px;
 }
 
-/* line 14, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+/* line 10, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
 .banner .title b {
   font-weight: 700;
 }
 
-/* line 19, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+/* line 15, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
 .banner .subTitle {
   font-family: Montserrat, sans-serif;
   font-size: 24px;
@@ -94,7 +101,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   line-height: 28px;
 }
 
-/* line 26, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+/* line 22, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
 .banner .botao {
   font-family: Raleway, sans-serif;
   font-size: 13px;
@@ -246,6 +253,25 @@ h1, h2, h3, h4, h5, h6, p, a {
 .contato .subTitle1 {
   color: #505050;
   font-size: 18px;
+  padding-bottom: 51px;
+}
+
+/* line 12, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato input {
+  border-radius: 30px;
+  padding: 25px;
+}
+
+/* line 16, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato textarea {
+  margin-top: 25px;
+  border-radius: 20px;
+  padding: 35px;
+}
+
+/* line 22, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato button {
+  margin-bottom: 150px;
 }
 
 /*# sourceMappingURL=../css/main.map */
