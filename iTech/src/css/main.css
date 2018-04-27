@@ -288,4 +288,28 @@ a {
   padding: 100px;
 }
 
+/* line 1, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_footer.scss */
+footer {
+  background: #2a3338;
+}
+
+/* line 3, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_footer.scss */
+footer .title-footer {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-top: 120px;
+  padding-bottom: 33px;
+}
+
+/* line 8, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_footer.scss */
+footer .subTitle-footer {
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 25.5px;
+}
+
 /*# sourceMappingURL=../css/main.map */

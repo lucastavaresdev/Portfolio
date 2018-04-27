@@ -1,0 +1,12 @@
+footer {
+    background: $rodape;
+    .title-footer {
+        @include fonte($Monte-serrat, '20px', 700, $branco);
+        padding-top: 120px;
+        padding-bottom:33px; 
+    }
+    .subTitle-footer{
+        @include fonte($Raleway, '14px', 300, $branco);
+        line-height: 25.5px;
+    }
+}
