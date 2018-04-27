@@ -1,0 +1,8 @@
+.clientes{
+    .container-fluid{
+        @include bgs("../img/cliente.jpg");
+    }
+    .c{
+     padding: 100px;
+    }
+}
