@@ -5,6 +5,31 @@ h1, h2, h3, h4, h5, h6, p, a {
   font-family: "Raleway", sans-serif;
 }
 
+/* line 15, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
+.preTitle {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #505050;
+  text-transform: uppercase;
+  margin-top: 125px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* line 23, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
+.title {
+  font-family: Montserrat, sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+  color: #505050;
+}
+
+/* line 25, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_base.scss */
+.title b {
+  font-weight: 700;
+}
+
 /* line 1, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
 .navbar {
   padding-left: 0;
@@ -72,29 +97,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   margin-bottom: 195px;
 }
 
-/* line 1, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
-.posBanner {
-  margin-top: 137px;
-}
-
-/* line 3, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
-.posBanner .preTitle {
-  font-family: Montserrat, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  color: #505050;
-  padding-bottom: 5px;
-}
-
-/* line 7, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
-.posBanner .title {
-  font-family: Montserrat, sans-serif;
-  font-size: 40px;
-  font-weight: 200;
-  color: #505050;
-}
-
-/* line 10, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
+/* line 4, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
 .posBanner .subTitle {
   font-family: Montserrat, sans-serif;
   font-size: 18px;
@@ -103,7 +106,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   line-height: 28.8px;
 }
 
-/* line 14, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
+/* line 8, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
 .posBanner .titleRodape {
   font-family: Raleway, sans-serif;
   font-size: 12px;
@@ -125,28 +128,20 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 /* line 5, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
 .produto .preTitle {
-  padding-top: 121px;
-  font-size: 18px;
-  font-weight: 300;
+  color: #ffffff;
 }
 
-/* line 10, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+/* line 8, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
 .produto .title {
-  font-size: 40px;
-  font-weight: 200;
+  color: #ffffff;
 }
 
-/* line 13, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
-.produto .title b {
-  font-weight: 700;
-}
-
-/* line 18, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+/* line 11, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
 .produto .produtos {
   padding-top: 114px;
 }
 
-/* line 20, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+/* line 13, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
 .produto .produtos .titleProduto {
   font-family: Montserrat, sans-serif;
   font-size: 30px;
@@ -155,7 +150,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   padding-bottom: 25px;
 }
 
-/* line 24, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+/* line 17, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
 .produto .produtos .descricao {
   font-family: Raleway, sans-serif;
   font-size: 14px;
@@ -163,6 +158,11 @@ h1, h2, h3, h4, h5, h6, p, a {
   color: #ffffff;
   line-height: 25.5px;
   padding-bottom: 200px;
+}
+
+/* line 2, C:/wamp64/www/cursos/Portfolio/iTech/src/sass/_partials/_estatisticas.scss */
+.estatisticas .descricaoTitle {
+  color: #838383;
 }
 
 /*# sourceMappingURL=../css/main.map */

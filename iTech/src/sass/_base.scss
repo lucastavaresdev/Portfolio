@@ -11,3 +11,18 @@ h1,h2,h3,h4,h5,h6,p,a{
     font-weight: #{$espessura};
     color: #{$cor}
 }
+
+.preTitle{
+    @include fonte($Monte-serrat,'18px',300,$cinza-escuro);
+    text-transform: uppercase;
+    margin-top: 125px;
+    font-size:18px;
+    font-weight: 300;
+}
+
+.title{
+    @include fonte($Monte-serrat,'40px',200,$cinza-escuro);
+    b{
+        font-weight: 700;
+    }
+}
