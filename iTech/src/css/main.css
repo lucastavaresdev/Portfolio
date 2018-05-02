@@ -37,7 +37,6 @@ a {
 
 .barra {
   background: #ffffff;
-  height: 15%;
   position: fixed;
   z-index: 20; }
   .barra .navbar {
@@ -227,12 +226,12 @@ a {
     font-size: 18px;
     padding-bottom: 51px; }
   .contato input {
-    border-radius: 30px;
     padding: 25px; }
   .contato textarea {
     margin-top: 25px;
-    border-radius: 20px;
     padding: 35px; }
+  .contato .email {
+    margin-top: 20px; }
   .contato button {
     margin-bottom: 150px; }
 
