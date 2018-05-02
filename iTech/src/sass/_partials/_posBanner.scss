@@ -1,11 +1,25 @@
-.posBanner{
-    .subTitle{
-        @include fonte($Monte-serrat,'18px',300,$cinza-escuro);
+.posBanner {
+    .subTitle {
+        @include fonte($Monte-serrat, '18px', 300, $cinza-escuro);
         line-height: 28.8px;
     }
-    .titleRodape{
-        @include fonte($Raleway,'12px',normal,$cinza-escuro);
+    .titleRodape {
+        @include fonte($Raleway, '12px', normal, $cinza-escuro);
         line-height: 28px;
-        margin-bottom: 155px;
+    }
+    .itechflow {
+        padding-top: 30%;
+    }
+    .mao-imagem {
+        max-width: 119%;
+        margin-top: 14%;
+    }
+}
+
+@media(max-width: 680px) {
+    .posBanner {
+        .mao {
+            display: none;
+        }
     }
 }

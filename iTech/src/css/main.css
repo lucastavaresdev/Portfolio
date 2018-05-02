@@ -132,8 +132,18 @@ a {
   font-size: 12px;
   font-weight: normal;
   color: #505050;
-  line-height: 28px;
-  margin-bottom: 155px; }
+  line-height: 28px; }
+
+.posBanner .itechflow {
+  padding-top: 30%; }
+
+.posBanner .mao-imagem {
+  max-width: 119%;
+  margin-top: 14%; }
+
+@media (max-width: 680px) {
+  .posBanner .mao {
+    display: none; } }
 
 .produto {
   font-family: Montserrat, sans-serif;
