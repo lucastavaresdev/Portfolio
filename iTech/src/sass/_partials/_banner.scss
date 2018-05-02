@@ -20,9 +20,14 @@
     .botao {
         @include fonte($Raleway, '13px', 700, $branco);
         background: $azul-claro;
-        padding: 20px 10px 20px 10px;
-        border-radius: 60px;
-        margin-bottom: 195px;
+        padding: 10px 38px;
+        border:none;
+        &:hover{
+            background: darken($azul-claro, 5%);
+        }
+        &:active{
+            background: darken($azul-claro, 5%); 
+        }
     }
     .aplicativo {
         max-width: 140%;
