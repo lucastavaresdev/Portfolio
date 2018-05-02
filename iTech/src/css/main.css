@@ -35,6 +35,20 @@ a {
   color: #a2a2a2;
   margin-bottom: 30px; }
 
+.botao {
+  font-family: Raleway, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #00bfbf;
+  padding: 10px 38px;
+  border: none;
+  margin-bottom: 150px; }
+  .botao:hover {
+    background: #00a6a6; }
+  .botao:active {
+    background: #00a6a6; }
+
 .barra {
   background: #ffffff;
   position: fixed;
@@ -95,20 +109,6 @@ a {
   color: #a2a2a2;
   padding-bottom: 40px;
   line-height: 28px; }
-
-.banner .botao {
-  font-family: Raleway, sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  color: #ffffff;
-  background: #00bfbf;
-  padding: 10px 38px;
-  border: none;
-  margin-bottom: 150px; }
-  .banner .botao:hover {
-    background: #00a6a6; }
-  .banner .botao:active {
-    background: #00a6a6; }
 
 .banner .aplicativo {
   max-width: 140%;
@@ -234,8 +234,14 @@ a {
     padding: 35px; }
   .contato .email {
     margin-top: 20px; }
-  .contato button {
-    margin-bottom: 150px; }
+  .contato .botao2 {
+    margin-right: 2%; }
+
+@media (max-width: 680px) {
+  .contato .telefone {
+    margin-top: 20px; }
+  .contato .botao2 {
+    margin-right: 35%; } }
 
 .clientes .container-fluid {
   background: url(../img/cliente.jpg) no-repeat;

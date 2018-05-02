@@ -17,19 +17,7 @@
         padding-bottom: 40px;
         line-height: 28px;
     }
-    .botao {
-        @include fonte($Raleway, '13px', 700, $branco);
-        background: $azul-claro;
-        padding: 10px 38px;
-        border:none;
-        margin-bottom: 150px;
-        &:hover{
-            background: darken($azul-claro, 5%);
-        }
-        &:active{
-            background: darken($azul-claro, 5%); 
-        }
-    }
+  
     .aplicativo {
         max-width: 140%;
         margin-top: 15%;

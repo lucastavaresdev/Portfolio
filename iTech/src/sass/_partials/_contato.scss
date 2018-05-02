@@ -1,26 +1,35 @@
-.contato{
+.contato {
     background: #f1f1f1;
-    .title{
+    .title {
         padding-top: 110px;
     }
-    .subTitle1{
-        color:  $cinza-escuro;
+    .subTitle1 {
+        color: $cinza-escuro;
         font-size: 18px;
         padding-bottom: 51px;
     }
-
-    input{
+    input {
         padding: 25px;
     }
-    textarea{
+    textarea {
         margin-top: 25px;
         padding: 35px;
     }
-    .email{
+    .email {
         margin-top: 20px;
     }
+    .botao2 {
+        margin-right: 2%;
+    }
+}
 
-    button{
-        margin-bottom: 150px;
+@media(max-width: 680px) {
+    .contato {
+        .telefone {
+            margin-top: 20px;
+        }
+        .botao2 {
+         margin-right: 35%;
+     }
     }
 }
