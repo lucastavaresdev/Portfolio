@@ -35,17 +35,27 @@ a {
   color: #a2a2a2;
   margin-bottom: 30px; }
 
-.navbar {
-  padding-left: 0;
-  padding-right: 0; }
-  .navbar .navbar-brand {
-    padding-top: 35px;
-    padding-bottom: 35px; }
-  .navbar .navbar-nav .nav-link {
-    color: #505050;
-    font-weight: 700;
-    font-size: 14px;
-    padding-right: 20px; }
+.barra {
+  background: #ffffff;
+  height: 21%;
+  position: fixed;
+  z-index: 20; }
+  .barra .navbar {
+    z-index: 10;
+    padding-left: 0;
+    padding-right: 0; }
+    .barra .navbar .navbar-brand {
+      padding-top: 35px;
+      padding-bottom: 35px; }
+    .barra .navbar .navbar-nav .nav-link {
+      color: #505050;
+      font-weight: 700;
+      font-size: 14px;
+      padding-right: 20px; }
+
+@media screen and (max-width: 680px) {
+  .barra {
+    position: absolute; } }
 
 .banner .banner-img {
   background: url(../img/banner.jpg) no-repeat;
