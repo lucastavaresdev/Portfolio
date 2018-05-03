@@ -12,6 +12,40 @@
 </head>
 
 <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light topo">
+    <div class="container">
+    <a class="navbar-brand" href="#">
+                        <img src="img/logo-itechmed-solucoes-medicas.png" alt="Logo ITechMed Soluções Medicas">
+                    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav  ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Home
+                                <span class="sr-only scrollSuave">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#itechflow">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#produto">Produto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"href="#contato">Contato</a>
+                        </li>
+                    </ul
+
+  </div>
+</div>
+</nav>
+
+
+<!--
+
     <div class="container-fluid barra">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -45,7 +79,7 @@
             </nav>
         </div>
     </div>
-
+-->
     <section class="banner"><a id="home"></a>
         <div class="container-fluid banner-img">
             <div class="container">
@@ -53,7 +87,7 @@
                     <div class="col-md-6">
                         <h1 class="title">ITechMed
                             <br>
-                            <b>Soluções sob medida</b>
+                            <b>Soluções Medicas</b>
                         </h1>
                         <p class="subTitle">
                             <br> Desenvolvemos soluções sob medida para cada setor, preenchendo uma lacuna há muito tempo na

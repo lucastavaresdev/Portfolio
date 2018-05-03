@@ -49,44 +49,19 @@ a {
   .botao:active {
     background: #00a6a6; }
 
-.barra {
-  background: #ffffff;
-  position: fixed;
-  z-index: 20; }
-  .barra .navbar {
-    z-index: 10;
-    padding-left: 0;
-    padding-right: 0; }
-    .barra .navbar .navbar-brand {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      width: 240px; }
-      .barra .navbar .navbar-brand img {
-        width: 100%;
-        max-width: 75%;
-        background-size: 100% 100%; }
-    .barra .navbar .navbar-nav {
-      background: #ffffff; }
-      .barra .navbar .navbar-nav .nav-link {
-        color: #505050;
-        font-weight: 700;
-        font-size: 14px;
-        padding-right: 20px; }
+.topo {
+  background: #ffffff; }
+  .topo .navbar-brand img {
+    max-width: 200px; }
+  .topo .nav-link {
+    color: #505050;
+    font-weight: 700;
+    font-size: 14px;
+    padding-right: 20px; }
 
 @media (max-width: 680px) {
-  .barra {
-    position: absolute; }
-    .barra .linha {
-      padding-top: 6%; }
-      .barra .linha .navbar-brand {
-        padding: 0 !important; }
-        .barra .linha .navbar-brand img {
-          padding-left: 8%;
-          max-width: 77%; }
-    .barra .navbar-nav {
-      text-align: center;
-      padding-top: 20px;
-      padding-bottom: 20px; } }
+  .topo .navbar-brand img {
+    max-width: 150px; } }
 
 .banner .banner-img {
   background: #f7f7f7; }

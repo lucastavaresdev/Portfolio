@@ -1,50 +1,24 @@
-.barra {
+.topo {
     background: $branco;
-    position: fixed;
-    z-index: 20;
-    .navbar {
-        z-index: 10;
-        padding-left: 0;
-        padding-right: 0;
-        .navbar-brand {
-            padding-top: 15px;
-            padding-bottom: 15px;
-            width: 240px;
-            img {
-                width: 100%;
-                max-width: 75%;
-                background-size: 100% 100%;
-            }
+    .navbar-brand {
+        img {
+            max-width: 200px;
         }
-        .navbar-nav {
-            background: $branco;
-            .nav-link {
-                color: $cinza-escuro;
-                font-weight: 700;
-                font-size: 14px;
-                padding-right: 20px;
-            }
-        }
+    }
+    .nav-link {
+        color: $cinza-escuro;
+        font-weight: 700;
+        font-size: 14px;
+        padding-right: 20px;
     }
 }
 
 @media(max-width: 680px) {
-    .barra {
-        position: absolute;
-        .linha {
-            padding-top: 6%;
-            .navbar-brand {
-                padding: 0 !important;
-                img {
-                    padding-left: 8%;
-                    max-width: 77%;
-                }
+    .topo {
+        .navbar-brand {
+            img {
+                max-width: 150px;
             }
-        }
-        .navbar-nav {
-            text-align: center;
-            padding-top:20px;
-            padding-bottom: 20px;
         }
     }
 }
