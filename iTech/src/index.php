@@ -224,7 +224,7 @@ if(isset($_GET["msg"]) && $_GET["msg"] ==="enviada"){
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-sm-12">
-                        <h1 class="title-footer">Sobre Nos</h1>
+                        <h1 class="title-footer">Sobre Nós</h1>
                         <p class="subTitle-footer">
                         A iTechMED nasceu na busca de criar soluções que não só sejam sustentáveis, mas que de fato faça a diferença nas instituições. Acima de tudo, as soluções da iTechMED buscam conectar tudo dentro das instituições de saúde e tornar possível o que antes era impossível. No conceito de internet das coisas (IoT), inteligência artificial (I.A.) e algoritmos baseado em protocolos, desenvolvemos o melhor que a tecnologia em saúde pode fazer.
                         </p>
