@@ -95,6 +95,10 @@ a {
   .aplicativo {
     display: none; } }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .banner .aplicativo {
+    display: none; } }
+
 .posBanner .subTitle {
   font-family: Montserrat, sans-serif;
   font-size: 18px;
@@ -117,8 +121,12 @@ a {
   margin-top: 14%; }
 
 @media (max-width: 680px) {
-  .posBanner .mao {
-    display: none; } }
+  .posBanner .mao-imagem {
+    max-width: 93%; } }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .posBanner .mao-imagem {
+    margin-top: 82%; } }
 
 .produto {
   font-family: Montserrat, sans-serif;

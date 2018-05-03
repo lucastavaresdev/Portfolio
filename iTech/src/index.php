@@ -44,47 +44,11 @@
 </nav>
 
 
-<!--
-
-    <div class="container-fluid barra">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="row linha">
-                    <a class="navbar-brand" href="#">
-                        <img class="img-fluid" src="img/logo-itechmed-solucoes-medicas.png" alt="Logo ITechMed Soluções Medicas">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#home">Home
-                                <span class="sr-only scrollSuave">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#itechflow">Serviços</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#produto">Produto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"href="#contato">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
--->
     <section class="banner"><a id="home"></a>
         <div class="container-fluid banner-img">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-6 col-md-12">
                         <h1 class="title">ITechMed
                             <br>
                             <b>Soluções Medicas</b>
@@ -94,13 +58,13 @@
                             área médica.
                         </p>
                         <div class="row">
-                            <div class="col-md-3 col-sm-5">
+                            <div class="col-ld-3 col-sm-5">
                                 <a href="#itechflow" class="btn btn-primary botao" >Descubra</a>
                                 <a id="itechflow"></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 aplicativo">
+                    <div class="col-lg-6 aplicativo">
                         <img class="img-fluid" src="img/itechmed-aplicativo-workflow-sulucoes-medicas-3.png" alt="itechmed-aplicativo-workflow-sulucoes-medicas">
                     </div>
                 </div>
@@ -112,7 +76,7 @@
         <div class="container">
             <div class="row">
             
-                <div class="col-md-4 col-sm-12">
+                <div class=" col-lg-4 col-md-7 col-sm-12">
                     <img class="itechflow" src="img/itechflow_logo.png" alt="iTechFlow Solucações Medicas">
                     <hr>
                     <h2 class="subTitle">Com interface intuitiva, leve e responsiva, o ITechFlow conta com um sistema de Rastreabilidade Indoor
@@ -121,7 +85,7 @@
                     <hr>
                     <p class="titleRodape">.</p>
                 </div>
-                <div class=" offset-3 col-md-4 col-sm-12 mao">
+                <div class="offset-lg-3 col-lg-4 col-md-4 col-sm-12 mao">
                     <img class="mao-imagem" src="img/workflow-itechmed.png" alt="Aplicativo Workflow ITechMed">
                 </div>
             </div>
