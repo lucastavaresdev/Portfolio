@@ -7,7 +7,7 @@ $mensagem .= "Mensagem:". $_POST['mensagem'];
 
 $headers = "From: ".$_POST['email']." \r\n";
 
-mail("david@itechmed.com.br", "Mensagem ItechMED", $mensagem, $headers);
+mail("lucas@itechmed.com.br", "Mensagem ItechMED", $mensagem, $headers);
 
 
 header('Location: /home/index.php?msg=enviada#contato');
