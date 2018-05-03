@@ -10,4 +10,4 @@ $headers = "From: ".$_POST['email']." \r\n";
 mail("teste@gmail.com", "Mensagem teste", $mensagem, $headers);
 
 
-header('Location: index.php?msg=enviada');
+header('Location: index.php?msg=enviada#contato');
