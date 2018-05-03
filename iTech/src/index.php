@@ -38,9 +38,6 @@
                             <a class="nav-link" href="#produto">Produto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sobre">Sobre</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link"href="#contato">Contato</a>
                         </li>
                     </ul>
@@ -156,7 +153,7 @@
                 </div>
             </div>
     </section>
-    <section class="sobre"><a id="sobre"></a>
+  <!--  <section class="sobre"><a id="sobre"></a>
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -174,6 +171,7 @@
             </div>
         </div>
     </section>
+-->
     <section class="contato"><a id="contato"></a>
         <div class="container">
             <div class="row">
