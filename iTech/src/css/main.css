@@ -224,9 +224,11 @@ a {
   .contato .title {
     padding-top: 110px; }
   .contato .subTitle1 {
-    color: #505050;
-    font-size: 18px;
-    padding-bottom: 51px; }
+    color: #00bfbf;
+    font-size: 25px;
+    padding-bottom: 51px;
+    text-align: center;
+    font-weight: 700; }
   .contato input {
     padding: 25px; }
   .contato textarea {
@@ -238,6 +240,8 @@ a {
     margin-right: 2%; }
 
 @media (max-width: 680px) {
+  .contato .title {
+    font-size: 34px; }
   .contato .telefone {
     margin-top: 20px; }
   .contato .botao2 {
