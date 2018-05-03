@@ -191,7 +191,7 @@ if(isset($_GET["msg"]) && $_GET["msg"] ==="enviada"){
 ?>
             <div class="row">
                 <div class="col-md-7 mx-auto">
-                    <form method='post' action='contato_confirmacao'>
+                    <form method='post' action='contato_confirmacao.php'>
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
                                 <input type="text" class="form-control" id="nome"  aria-describedby="nome" placeholder="Nome" name="nome" required>
