@@ -183,11 +183,16 @@
                     </h1>
                     <div class="row">
                         <div class="col-md-7 mx-auto    ">
-                            <p class="subTitle1"></p>
+                          </p>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php 
+if(isset($_GET["msg"]) && $_GET["msg"] ==="enviada"){
+    echo'<p class="subTitle1">mensagem enviada</p>';
+}
+?>
             <div class="row">
                 <div class="col-md-7 mx-auto">
                     <form method='post' action='contato_confirmacao'>
@@ -244,6 +249,8 @@
             </div>
         </div>
     </footer>
+
+
 
 
     <!-- script -->

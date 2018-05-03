@@ -4,9 +4,10 @@
         padding-top: 110px;
     }
     .subTitle1 {
-        color: $cinza-escuro;
+        color: $azul-claro;
         font-size: 18px;
         padding-bottom: 51px;
+        text-align: center;
     }
     input {
         padding: 25px;
@@ -25,6 +26,9 @@
 
 @media(max-width: 680px) {
     .contato {
+        .title {
+            font-size: 34px;
+        }
         .telefone {
             margin-top: 20px;
         }
