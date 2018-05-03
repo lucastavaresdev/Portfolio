@@ -49,7 +49,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
-                        <h1 class="title">ITechMed
+                        <h1 class="title">ITechMED
                             <br>
                             <b>Soluções Medicas</b>
                         </h1>
@@ -235,20 +235,16 @@ if(isset($_GET["msg"]) && $_GET["msg"] ==="enviada"){
                     <div class="col-md-4 col-sm-12">
                         <h1 class="title-footer">Contato</h1>
                         <ul>
-                            <li>County, Street name - number</li>
-                            <li>032 267 899 442</li>
-                            <li>company@name.com</li>
-                            <li>Mon.-Fri.: 10-20 Sun.: 12-16</li>
+                            <li>Rua: Juá 54 Saúde São Paulo</li>
+                            <li>(11) 5591-2081</li>
+                            <li>david@itechmed.com.br</li>
+                            <li>Seg - Sex 8h30 as 18h00</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
-
-
-
     <!-- script -->
     <script src="components/jquery/jquery.min.js"></script>
     <script src="components/popper/popper.min.js"></script>
