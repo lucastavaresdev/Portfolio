@@ -190,26 +190,26 @@
             </div>
             <div class="row">
                 <div class="col-md-7 mx-auto">
-                    <form>
+                    <form method='post' action='contato_confirmacao'>
                         <div class="row">
                             <div class="col-md-6 col-sm-12">
-                                <input type="text" class="form-control" id="nome" aria-describedby="nome" placeholder="Nome" required>
+                                <input type="text" class="form-control" id="nome"  aria-describedby="nome" placeholder="Nome" name="nome" required>
                             </div>
                             <div class="col-md-6 col-sm-12">
-                                <input type="tel" class="telefone form-control" id="telefone" aria-describedby="email" placeholder="telefone" required>
+                                <input type="tel" class="telefone form-control" id="telefone" aria-describedby="email" placeholder="telefone" name='telefone' required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <input type="email" class="email form-control" id="email" aria-describedby="email" placeholder="email" required>
+                                <input type="email" class="email form-control" id="email" aria-describedby="email" placeholder="email" name="email" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder='Digite sua Mensagem' rows="3" required></textarea>
+                            <textarea class="form-control" id="mensagem"   placeholder='Digite sua Mensagem' rows="3"  name="mensagem" required></textarea>
                         </div>
                         <div class="row justify-content-end">
   
-                                <button class="btn btn-primary botao botao2" type="submit" class="btn btn-primary text-center">Enviar</button>
+                         <button class="btn btn-primary botao botao2" type="submit" class="btn btn-primary text-center">Enviar</button>
                            
                         </div>
                     </form>
