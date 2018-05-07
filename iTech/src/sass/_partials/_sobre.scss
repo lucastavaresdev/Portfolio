@@ -1,8 +1,19 @@
 .sobre {
-    margin-bottom: 150px;
+    margin-bottom: 50px;
     .title {
-        padding-top: 23%;
+        margin-top: 35px;
         font-size: 38px;
         padding-right: 0;
-    }   
+    }
+    .linha-videos {
+        padding-top: 50px;
+    }
+}
+
+@media(max-width: 680px) {
+    .sobre {
+        .videos {
+            padding-top: 20px;
+        }
+    }
 }

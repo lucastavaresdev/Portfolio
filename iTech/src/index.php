@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -33,6 +33,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#produto">Produto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">Sobre</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link"href="#contato">Contato</a>
@@ -144,32 +147,41 @@
                     <div class="col-md-4 col-sm-12 text-center">
                         <i class="fa fa-cogs fa-4x" aria-hidden="true"></i>
                         <h2 class="titleProduto">Stand-Alone ou Integrado</h2>
+                        <a id="sobre"></a>
                         <p class='descricao'>Nossos sistemas funcionam de forma independente ou integrado. Você pode começar a usá-lo imediatamente
                             ou, se preferir, podemos integrá-lo ao seu sistema atual.
                         </p>
                     </div>
                 </div>
             </div>
+          
     </section>
-  <!--  <section class="sobre"><a id="sobre"></a>
+  <section class="sobre">
         <div class="container">
-            <div class="row">
+        <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="title">Workflow
+                        <br>
+                        <b>Na pratica</b>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row linha-videos">
                 <div class="col-md-6">
-                    <img class="img-fluid" src="../src/img/produto" alt="isto é um produto">
+                <video class="videos embed-responsive embed-responsive-16by9" controls>
+                    <source src="components/itech-rastreamento-paciente" type="video/mp4"> 
+                    </video>
                 </div>
                 <div class="col-md-6">
-                    <div class="col-12 text-center">
-                        <h1 class="title"> Something about
-                            <b>product</b>
-                        </h1>
-                        <p class="subTitle1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacus lectus, lobortis sit amet eleifend
-                            eleifend, iaculis ac justo.</p>
-                    </div>
+                <video class="videos embed-responsive embed-responsive-16by9" controls>
+                    <source src="components/itech-rastreamento-equipamentos" type="video/mp4"> 
+                    </video>
                 </div>
             </div>
         </div>
     </section>
--->
+
     <section class="contato"><a id="contato"></a>
         <div class="container">
             <div class="row">
@@ -186,7 +198,7 @@
             </div>
             <?php 
 if(isset($_GET["msg"]) && $_GET["msg"] ==="enviada"){
-    echo'<p class="subTitle1">mensagem enviada</p>';
+    echo'<p class="text-danger text-center text-uppercase">mensagem não enviada</p>';
 }
 ?>
             <div class="row">
