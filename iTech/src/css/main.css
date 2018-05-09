@@ -76,9 +76,10 @@ a {
 /* line 4, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
 .topo .navbar-brand img {
   max-width: 200px;
+  transition: 1s ease .1s;
 }
 
-/* line 8, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
+/* line 9, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
 .topo .nav-link {
   color: #505050;
   font-weight: 700;
@@ -86,8 +87,14 @@ a {
   padding-right: 20px;
 }
 
+/* line 19, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
+.toponovo .navbar-brand img {
+  max-width: 128px;
+  transition: 1s ease .1s;
+}
+
 @media (max-width: 680px) {
-  /* line 19, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
+  /* line 30, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
   .topo .navbar-brand img {
     max-width: 150px;
   }

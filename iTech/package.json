@@ -9,6 +9,7 @@
   "author": "Lucas Tavares",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^3.6.1",
     "bootstrap": "^4.1.0",
     "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",

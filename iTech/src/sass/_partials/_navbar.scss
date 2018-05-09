@@ -3,6 +3,7 @@
     .navbar-brand {
         img {
             max-width: 200px;
+            transition: 1s ease .1s 
         }
     }
     .nav-link {
@@ -12,6 +13,16 @@
         padding-right: 20px;
     }
 }
+
+.toponovo{
+    .navbar-brand {
+        img {
+            max-width: 128px;
+            transition: 1s ease .1s 
+        }
+    }
+}
+
 
 @media(max-width: 680px) {
     .topo {

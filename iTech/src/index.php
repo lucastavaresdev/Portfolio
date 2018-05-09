@@ -7,10 +7,11 @@
     <title>ITechMed Soluções Medicas</title>
     <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="components/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light topo">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light topo" id='a'>
     <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo-itechmed-solucoes-medicas.png" alt="Logo ITechMed Soluções Medicas"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +40,8 @@
         </div>
     </div>
 </nav>
+
+
     <section class="banner"><a id="home"></a>
         <div class="container-fluid banner-img">
             <div class="container">
@@ -54,7 +57,7 @@
                         </p>
                         <div class="row">
                             <div class="col-ld-3 col-sm-5">
-                                <a href="#itechflow" class="btn btn-primary botao" >Descubra</a>
+                                <a href="#itechflow" class="btn btn-primary animated  bounceInLeft botao" >Descubra</a>
                                 <a id="itechflow"></a>
                             </div>
                         </div>
@@ -64,7 +67,6 @@
                     </div>
                 </div>
             </div>
-           
         </div>
     </section>
     <section class="posBanner">
