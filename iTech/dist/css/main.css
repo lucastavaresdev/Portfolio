@@ -1,0 +1,461 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+/* line 3, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_base.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Raleway", sans-serif;
+}
+
+/* line 32, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_base.scss */
+.preTitle {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #505050;
+  text-transform: uppercase;
+  margin-top: 125px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* line 43, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_base.scss */
+.title {
+  font-family: Montserrat, sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+  color: #505050;
+}
+
+/* line 48, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_base.scss */
+.title b {
+  font-weight: 700;
+}
+
+/* line 53, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_base.scss */
+.subTitle1 {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: #a2a2a2;
+  margin-bottom: 30px;
+}
+
+/* line 61, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_base.scss */
+.botao {
+  font-family: Raleway, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #00bfbf;
+  padding: 10px 38px;
+  border: none;
+  margin-bottom: 150px;
+}
+
+/* line 67, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_base.scss */
+.botao:hover {
+  background: #00a6a6;
+}
+
+/* line 70, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_base.scss */
+.botao:active {
+  background: #00a6a6;
+}
+
+/* line 1, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
+.topo {
+  background: #ffffff;
+}
+
+/* line 4, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
+.topo .navbar-brand img {
+  max-width: 200px;
+  transition: 1s ease .1s;
+}
+
+/* line 9, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
+.topo .nav-link {
+  color: #505050;
+  font-weight: 700;
+  font-size: 14px;
+  padding-right: 20px;
+}
+
+/* line 19, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
+.toponovo .navbar-brand img {
+  max-width: 128px;
+  transition: 1s ease .1s;
+}
+
+@media (max-width: 680px) {
+  /* line 30, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_navbar.scss */
+  .topo .navbar-brand img {
+    max-width: 150px;
+  }
+}
+
+/* line 2, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+.banner .banner-img {
+  background: #f7f7f7;
+}
+
+/* line 6, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+.banner .title {
+  font-family: Montserrat, sans-serif;
+  font-size: 48px;
+  font-weight: 200;
+  color: #505050;
+  padding-top: 170px;
+  padding-bottom: 40px;
+}
+
+/* line 10, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+.banner .title b {
+  font-weight: 700;
+}
+
+/* line 14, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+.banner .subTitle {
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  color: #00ff00;
+  color: #a2a2a2;
+  padding-bottom: 40px;
+  line-height: 28px;
+}
+
+/* line 20, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+.banner .aplicativo {
+  max-width: 140%;
+  margin-top: 15%;
+}
+
+/* line 23, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+.banner .aplicativo img {
+  animation: circulo 10s linear infinite;
+}
+
+@keyframes circulo {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 680px) {
+  /* line 48, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+  .banner .title {
+    text-align: center;
+  }
+  /* line 52, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+  .aplicativo {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* line 59, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_banner.scss */
+  .banner .aplicativo {
+    display: none;
+  }
+}
+
+/* line 2, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
+.posBanner .subTitle {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #505050;
+  line-height: 28.8px;
+}
+
+/* line 6, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
+.posBanner .titleRodape {
+  font-family: Raleway, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #505050;
+  line-height: 28px;
+}
+
+/* line 10, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
+.posBanner .itechflow {
+  padding-top: 30%;
+}
+
+/* line 13, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
+.posBanner .mao-imagem {
+  max-width: 119%;
+  margin-top: 14%;
+}
+
+@media (max-width: 680px) {
+  /* line 21, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
+  .posBanner .mao-imagem {
+    max-width: 93%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* line 29, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_posBanner.scss */
+  .posBanner .mao-imagem {
+    margin-top: 82%;
+  }
+}
+
+/* line 1, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+.produto {
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  color: #00ff00;
+  background: #293437;
+  color: #ffffff;
+}
+
+/* line 5, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+.produto .preTitle {
+  color: #ffffff;
+}
+
+/* line 8, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+.produto .title {
+  color: #ffffff;
+}
+
+/* line 11, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+.produto .produtos {
+  padding-top: 114px;
+}
+
+/* line 13, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+.produto .produtos .titleProduto {
+  font-family: Montserrat, sans-serif;
+  font-size: 27px;
+  font-weight: 500;
+  color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+/* line 18, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+.produto .produtos .descricao {
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  color: #ffffff;
+  line-height: 25.5px;
+  padding-bottom: 150px;
+}
+
+/* line 24, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+.produto .linha2 {
+  padding-top: 0;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+/* line 31, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+.parallax {
+  /* The image used */
+  background: url("../img/banner.jpg");
+  /* Set a specific height */
+  min-height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 2, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_estatisticas.scss */
+.estatisticas .descricaoTitle {
+  color: #a2a2a2;
+  padding-bottom: 75px;
+}
+
+/* line 6, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_estatisticas.scss */
+.estatisticas .numeros {
+  font-family: Montserrat, sans-serif;
+  font-size: 72px;
+  font-weight: 300;
+  color: #a2a2a2;
+  margin: 100px 100px  0 100px;
+}
+
+/* line 11, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_estatisticas.scss */
+.estatisticas .descricaoNumeros {
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #505050;
+  margin-bottom: 100px;
+}
+
+/* line 15, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_estatisticas.scss */
+.estatisticas .line {
+  border-right: solid 1px #a2a2a2;
+}
+
+/* line 18, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_estatisticas.scss */
+.estatisticas .line-bottom {
+  border-bottom: solid 1px #a2a2a2;
+}
+
+/* line 2, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_blog.scss */
+.blog .container-fluid {
+  background: #d5d5d5;
+  height: 375px;
+}
+
+/* line 6, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_blog.scss */
+.blog .preTitle {
+  padding-top: 125px;
+}
+
+/* line 10, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_blog.scss */
+.blog .quadrado {
+  height: 607px;
+  margin-bottom: 150px;
+}
+
+/* line 1, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_sobre.scss */
+.sobre {
+  margin-bottom: 50px;
+}
+
+/* line 3, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_sobre.scss */
+.sobre .title {
+  margin-top: 35px;
+  font-size: 38px;
+  padding-right: 0;
+}
+
+/* line 8, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_sobre.scss */
+.sobre .linha-videos {
+  padding-top: 50px;
+}
+
+@media (max-width: 680px) {
+  /* line 15, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_sobre.scss */
+  .sobre .videos {
+    padding-top: 20px;
+  }
+}
+
+/* line 1, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato {
+  background: #f1f1f1;
+}
+
+/* line 3, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato .title {
+  padding-top: 110px;
+}
+
+/* line 6, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato .subTitle1 {
+  color: #00bfbf;
+  font-size: 25px;
+  padding-bottom: 51px;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* line 13, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato input {
+  padding: 25px;
+}
+
+/* line 16, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato textarea {
+  margin-top: 25px;
+  padding: 35px;
+}
+
+/* line 20, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato .email {
+  margin-top: 20px;
+}
+
+/* line 23, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+.contato .botao2 {
+  margin-right: 2%;
+}
+
+@media (max-width: 680px) {
+  /* line 30, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+  .contato .title {
+    font-size: 34px;
+  }
+  /* line 33, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+  .contato .telefone {
+    margin-top: 20px;
+  }
+  /* line 36, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_contato.scss */
+  .contato .botao2 {
+    margin-right: 35%;
+  }
+}
+
+/* line 2, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_clientes.scss */
+.clientes .container-fluid {
+  background: url(../img/cliente.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 5, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_clientes.scss */
+.clientes .c {
+  padding: 100px;
+}
+
+/* line 1, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_footer.scss */
+footer {
+  background: #2a3338;
+  border-bottom: solid 20px #1d1d1d;
+}
+
+/* line 4, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_footer.scss */
+footer .title-footer {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 33px;
+}
+
+/* line 9, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_footer.scss */
+footer .subTitle-footer {
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 25.5px;
+}
+
+/* line 13, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_footer.scss */
+footer ul {
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 37px;
+  color: #ffffff;
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+/*# sourceMappingURL=../css/main.map */
