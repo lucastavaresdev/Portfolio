@@ -30,10 +30,7 @@
                 <li class="nav-item">
                      <a class="nav-link" href="#produto">Produto</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sobre">Sobre</a>
-                </li>
-                <li class="nav-item">
+                        <li class="nav-item">
                     <a class="nav-link"href="#contato">Contato</a>
                 </li>
             </ul>
@@ -148,8 +145,9 @@
                     </div>
                 </div>
             </div>
-          
     </section>
+
+    <!--
   <section class="sobre ">
         <div class="container">
         <div class="row">
@@ -160,7 +158,7 @@
                     </h1>
                 </div>
             </div>
-
+_-
             <div class="row linha-videos">
                 <div class="col-md-6">
                 <video class="videos embed-responsive embed-responsive-16by9" controls>
@@ -175,6 +173,7 @@
             </div>
         </div>
     </section>
+-->
 
     <section class="contato"><a id="contato"></a>
         <div class="container">

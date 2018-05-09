@@ -241,7 +241,7 @@ a {
 .produto .produtos .titleProduto {
   font-family: Montserrat, sans-serif;
   font-size: 27px;
-  font-weight: 200;
+  font-weight: 500;
   color: #ffffff;
   padding-top: 10px;
   padding-bottom: 25px;
@@ -268,7 +268,6 @@ a {
 .parallax {
   /* The image used */
   background: url("../img/banner.jpg");
-  opacity: 5;
   /* Set a specific height */
   min-height: 500px;
   /* Create the parallax scrolling effect */

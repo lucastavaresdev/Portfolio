@@ -11,7 +11,7 @@
     .produtos{
         padding-top: 114px;
         .titleProduto{
-            @include fonte($Monte-serrat,'27px',200,$branco);
+            @include fonte($Monte-serrat,'27px',500,$branco);
             padding-top: 10px;
             padding-bottom: 25px;
         }
