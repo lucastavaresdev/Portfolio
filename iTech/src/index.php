@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="components/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-light topo">
     <div class="container">
@@ -41,8 +39,6 @@
         </div>
     </div>
 </nav>
-
-
     <section class="banner"><a id="home"></a>
         <div class="container-fluid banner-img">
             <div class="container">

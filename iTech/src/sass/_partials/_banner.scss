@@ -20,8 +20,28 @@
     .aplicativo {
         max-width: 140%;
         margin-top: 15%;
+        img{
+            animation: circulo 10s linear infinite;
+        }
     }
 }
+
+
+@keyframes circulo {
+    from {
+       transform: scale(1);
+    }
+    
+    to {
+        transform: scale(1.1);
+    }
+  }
+
+
+
+
+
+
 
 @media(max-width: 680px) {
     .banner {
