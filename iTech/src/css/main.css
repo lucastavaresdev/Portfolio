@@ -264,6 +264,20 @@ a {
   margin-left: 0px;
 }
 
+/* line 31, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_produto.scss */
+.parallax {
+  /* The image used */
+  background: url("../img/banner.jpg");
+  opacity: 5;
+  /* Set a specific height */
+  min-height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* line 2, C:/inetpub/wwwroot/cursos/Portfolio/iTech/src/sass/_partials/_estatisticas.scss */
 .estatisticas .descricaoTitle {
   color: #a2a2a2;

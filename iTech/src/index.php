@@ -82,13 +82,13 @@
                     <hr>
                     <p class="titleRodape">.</p>
                 </div>
-                <div class="offset-lg-3 col-lg-4 col-md-4 col-sm-12 mao">
+                <div class="offset-lg-3 col-lg-4 col-md-4 col-sm-12 mao anime">
                     <img class="mao-imagem" src="img/workflow-itechmed.png" alt="Aplicativo Workflow ITechMed">
                 </div>
             </div>
         </div>
     </section>
-    <section class="produto"><a id="produto"></a>
+    <section class="produto parallax"><a id="produto"></a>
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -99,9 +99,9 @@
                     </h1>
                 </div>
             </div>
-            <div class="row produtos">
+            <div class="row produtos  ">
                 <div class="col-md-4 col-sm-12 text-center">
-                    <i class="fa fa-user-o fa-4x" aria-hidden="true"></i>
+                    <i class="fa fa-user-o fa-4x " aria-hidden="true"></i>
                     <h2 class="titleProduto">Rastreabilidade Indoor</h2>
                     <p class='descricao'>Com recursos Wearable (tecnologias vestíveis), o ITechFlow pode rastrear pessoas e equipamentos em tempo
                         real, com facilidade e precisão. Também é possível pesquisar o histórico de cada um, o tempo de permanência
@@ -150,7 +150,7 @@
             </div>
           
     </section>
-  <section class="sobre">
+  <section class="sobre ">
         <div class="container">
         <div class="row">
                 <div class="col-12 text-center">
