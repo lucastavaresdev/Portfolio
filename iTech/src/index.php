@@ -12,38 +12,34 @@
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light topo">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light topo">
     <div class="container">
-    <a class="navbar-brand" href="#">
-                        <img src="img/logo-itechmed-solucoes-medicas.png" alt="Logo ITechMed Soluções Medicas">
+            <a class="navbar-brand" href="#"><img src="img/logo-itechmed-solucoes-medicas.png" alt="Logo ITechMed Soluções Medicas"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav  ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home
+                        <span class="sr-only scrollSuave">(current)</span>
                     </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-    <ul class="navbar-nav  ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#home">Home
-                                <span class="sr-only scrollSuave">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#itechflow">Serviços</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#produto">Produto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#sobre">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link"href="#contato">Contato</a>
-                        </li>
-                    </ul
-
-  </div>
-</div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#itechflow">Serviços</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#produto">Produto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"href="#contato">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 
 
@@ -197,10 +193,10 @@
                 </div>
             </div>
             <?php 
-if(isset($_GET["msg"]) && $_GET["msg"] ==="enviada"){
-    echo'<p class="text-danger text-center text-uppercase">mensagem não enviada</p>';
-}
-?>
+            if (isset($_GET["msg"]) && $_GET["msg"] === "enviada") {
+                echo '<p class="text-danger text-center text-uppercase">mensagem não enviada</p>';
+            }
+            ?>
             <div class="row">
                 <div class="col-md-7 mx-auto">
                     <form method='post' action='contato_confirmacao.php'>
