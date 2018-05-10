@@ -1,0 +1,211 @@
+@import "compass/css3";
+$salmao: #ee7e77;
+$cinza: #3c3a3b;
+
+
+
+@mixin fonte {
+    font-family: 'Baloo', cursive;
+}
+
+
+
+
+header {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url(../img/banner-criative.png);
+    background-size: cover;
+
+    .linha {
+        height: 14px;
+        background-color: rgba( $cinza, 0.7);
+    }
+    .header-title {
+        padding-top: 9%;
+        h1 {
+            @include fonte;
+            font-size: 48px;
+        }
+    }
+}
+
+
+.barra-de-navegacao {
+    background-color: rgba( $cinza, 0.9);
+
+
+    .navbar {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        img {
+            padding: 12px;
+        }
+
+        .nav-link {
+            padding: 10px 20px 10px 20px;
+            border: 1.5px solid transparent;
+            border-radius: 15px;
+        }
+
+        .nav-link:hover {
+            border: 1.5px solid #ffffff;
+            border-radius: 15px;
+        }
+
+        @media(max-width:480px) {
+            img {
+                box-sizing: content-box;
+                width: 7em;
+            }
+            .barra-de-navegacao {
+                .navbar {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .navbar-toggler {
+                border-color: #ffffff;
+            }
+
+            .navbar-toggler-icon {
+                color: #ffffff;
+            }
+        }
+
+
+    }
+}
+
+
+
+.agencia {
+    h1 {
+        padding-top: 40px;
+        @include fonte;
+    }
+    .agencia-linha {
+        margin-bottom: 20px;
+    }
+    h2 {
+        @include fonte;
+        font-size: 24px;
+    }
+    .agencia-texto-2 {
+        padding-left: 0;
+    }
+    .icon-1 {
+        background: url(../img/icone-1.png) no-repeat;
+        height: 55px;
+        width: 55px;
+    }
+    .icon-2 {
+        background: url(../img/icone-2.png) no-repeat;
+        height: 55px;
+        width: 55px;
+    }
+    .icon-3 {
+        background: url(../img/icone-3.png) no-repeat;
+        height: 55px;
+        width: 55px;
+    }
+
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    p {
+        font-weight: 600;
+        font-size: 24px;
+    }
+    h1 {
+        @include fonte;
+        font-size: 36px;
+        border-bottom: solid 6px $salmao;
+        padding-bottom: 3px;
+    }
+}
+
+.equipe {
+    h2 {
+        font-size: 24px;
+        @include fonte;
+    }
+    .foto {
+        padding-top: 45px;
+    }
+}
+
+.portfolio {
+    background-color: $salmao;
+    titulo {
+        h1 {
+            border-bottom: solid 6px lighten($salmao, 20%);
+        }
+        p {
+            font-size: 24px;
+            font-weight: 100;
+        }
+    }
+    .portifolio-icones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icone-1 {
+            background: url(../img/icon1.png) no-repeat;
+            width: 85px;
+            height: 122px;
+        }
+        .icone-2 {
+            background: url(../img/icon2.png) no-repeat;
+            width: 93px;
+            height: 122px;
+        }
+        .icone-3 {
+            background: url(../img/icon3.png) no-repeat;
+            width: 94px;
+            height: 122px;
+        }
+        .icone-4 {
+            background: url(../img/icon4.png) no-repeat;
+            width: 85px;
+            height: 122px;
+        }
+
+        h2 {
+            @include fonte;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 17px;
+        }
+    }
+}
+
+.contato {
+	h1{
+     @include fonte;   
+    }
+    label{
+        @include fonte;
+        margin-bottom: 0;
+    }
+    h2{
+         @include fonte;   
+    }
+    
+}
+
+
+
+.col-md-1 {
+    border: 1px solid #ffffff;
+    background: red;
+    height: 20px;
+}
