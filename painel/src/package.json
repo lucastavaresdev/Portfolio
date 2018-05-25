@@ -1,0 +1,14 @@
+{
+  "name": "painel_geral",
+  "version": "1.0.0",
+  "description": "Painel para exibir as informações gerais",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Lucas Tavares <lucastavaresdev@gmail.com>",
+  "license": "MIT"
+}

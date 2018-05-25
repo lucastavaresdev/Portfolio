@@ -4,6 +4,9 @@ var gulp = require('gulp')
     , autoprefixer = require('gulp-autoprefixer')
     , postcss = require('gulp-postcss')
     , imagemin = require('gulp-imagemin')
+    , cssnano= require('gulp-cssnano')
+    , uglify = require('gulp-uglify')
+    , concat = require('gulp-concat')
     , browserSync = require('browser-sync')
 
     gulp.task('clean', function(){
@@ -14,7 +17,6 @@ var gulp = require('gulp')
 gulp.task('copy', ['clean'], function () {
     gulp.src([
         'src/components/**/*',
-        'src/javascript/**/*',
         'src/css/**/*',
         'src/*.php',
     ], { "base": "src" })//o base mantem a estrutura
@@ -26,6 +28,7 @@ gulp.task('sass', function(){
     return gulp.src('./src/sass/**/*.scss')
         .pipe(sass())
         .pipe(autoprefixer())
+        .pipe(cssnano())
         .pipe(gulp.dest('./dist/css/'));
 })
 
@@ -45,7 +48,12 @@ gulp.task('imagemin', function(){
         .pipe(gulp.dest('./dist/img/'))
 });
 
-
+gulp.task('build-js', function(){
+    gulp.src('src/javascript/**/*')
+    .pipe(concat('app.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/javascript/'))
+})
 
 gulp.task('serve', ['copy', 'imagemin'], function () {
     browserSync.init({
