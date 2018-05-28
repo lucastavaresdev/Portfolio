@@ -24,17 +24,27 @@ body{
     border-top-right-radius: 25px;
 }
 
-.tabela-salas{
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
+
+@mixin fonte{
+    font-weight: bold;
+    color: $branco
 }
+
 
 .disponivel{
     background: $disponivel;
+    @include fonte;
 }
 .emuso{
     background: $emuso;
+    @include fonte;
 }
-.indiponivel{
-    background: $indiponivel;
+.Indisponivel{
+    background: $Indisponivel;
+    @include fonte;
+}
+
+.dados-emuso{
+    color: $emuso;
+    font-weight: 700;
 }

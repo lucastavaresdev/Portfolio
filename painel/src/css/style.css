@@ -18,18 +18,24 @@ body {
 .borda-topo-right {
   border-top-right-radius: 25px; }
 
-.tabela-salas {
-  padding-top: 30px !important;
-  padding-bottom: 30px !important; }
-
 .disponivel {
-  background: #169F85; }
+  background: #169F85;
+  font-weight: bold;
+  color: #ffffff; }
 
 .emuso {
-  background: #2A80B9; }
+  background: #2A80B9;
+  font-weight: bold;
+  color: #ffffff; }
 
-.indiponivel {
-  background: #8F44AD; }
+.Indisponivel {
+  background: #8F44AD;
+  font-weight: bold;
+  color: #ffffff; }
+
+.dados-emuso {
+  color: #2A80B9;
+  font-weight: 700; }
 
 .navbar {
   background: #313C4C; }
@@ -53,5 +59,13 @@ body {
       font-weight: 400; }
   .table .conteudo_tabela {
     background: #ffffff; }
+    .table .conteudo_tabela td {
+      text-align: center;
+      vertical-align: inherit !important; }
+      .table .conteudo_tabela td p {
+        margin-bottom: -1.2rem; }
+      .table .conteudo_tabela td ul li {
+        list-style: none;
+        line-height: 0.5; }
 
 /*# sourceMappingURL=style.css.map */
