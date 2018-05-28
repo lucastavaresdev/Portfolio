@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+h1,h2,h3,h4,h5,h6,p,a,div{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: url(../img/bg.jpg);
+}
+
+.icone{
+    width: 50px;
+    height: 50px;
+    background: #f1f;
+    margin-left: -26px;
+    margin-top: 30px;
+}
+
+.borda-topo-left{
+    border-top-left-radius: 25px;
+}
+.borda-topo-right{
+    border-top-right-radius: 25px;
+}
+
+
+@mixin fonte{
+    font-weight: bold;
+    color: $branco
+}
+
+
+.disponivel{
+    background: $disponivel;
+    @include fonte;
+}
+.emuso{
+    background: $emuso;
+    @include fonte;
+}
+.Indisponivel{
+    background: $Indisponivel;
+    @include fonte;
+}
+
+.finalizado{
+    background: $finalizado;
+    @include fonte;
+}
+
+.dados-emuso{
+    color: $emuso;
+    font-weight: 700;
+}
+
