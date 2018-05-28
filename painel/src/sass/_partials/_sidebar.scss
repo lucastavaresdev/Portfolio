@@ -1,18 +1,10 @@
-#sidebar-wrapper {
-    width: 77px;
+.sidebar{
     background: $azul-escuro;
-    position: fixed;
-    height: 100%;
-    z-index: 10000;
-    a{
-        color: $branco;
-        font-size: 10px;
-        margin-left: -27px;
+    .nav-link{
+        padding: 0.5rem 2rem;
     }
-    li{
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content:center;
+    .icon-text{
+        font-size: 10px;
+        color: $branco
     }
 }

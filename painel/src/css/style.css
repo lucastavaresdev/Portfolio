@@ -2,7 +2,7 @@
 h1, h2, h3, h4, h5, h6, p, a, div {
   font-family: 'Open Sans', sans-serif; }
 
-html {
+body {
   background: url(../img/bg.jpg); }
 
 .icone {
@@ -17,20 +17,12 @@ html {
   .navbar .titulo {
     color: #ffffff; }
 
-#sidebar-wrapper {
-  width: 77px;
-  background: #313C4C;
-  position: fixed;
-  height: 100%;
-  z-index: 10000; }
-  #sidebar-wrapper a {
-    color: #ffffff;
+.sidebar {
+  background: #313C4C; }
+  .sidebar .nav-link {
+    padding: 0.5rem 2rem; }
+  .sidebar .icon-text {
     font-size: 10px;
-    margin-left: -27px; }
-  #sidebar-wrapper li {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
+    color: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */
