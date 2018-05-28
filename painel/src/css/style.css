@@ -73,4 +73,11 @@ body {
         list-style: none;
         line-height: 0.5; }
 
+footer {
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  background: #313C4C;
+  bottom: 0px; }
+
 /*# sourceMappingURL=style.css.map */
