@@ -12,6 +12,12 @@ body {
   margin-left: -26px;
   margin-top: 30px; }
 
+.borda-topo-left {
+  border-top-left-radius: 25px; }
+
+.borda-topo-right {
+  border-top-right-radius: 25px; }
+
 .navbar {
   background: #313C4C; }
   .navbar .titulo {
@@ -24,5 +30,13 @@ body {
   .sidebar .icon-text {
     font-size: 10px;
     color: #ffffff; }
+
+.table .topo_tabela {
+  background: #313C4C; }
+  .table .topo_tabela tr th {
+    color: #ffffff;
+    font-weight: 400; }
+.table .conteudo_tabela {
+  background: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */

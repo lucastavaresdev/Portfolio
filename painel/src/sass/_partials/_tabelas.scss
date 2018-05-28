@@ -1,0 +1,15 @@
+
+.table{
+    .topo_tabela{
+        background: $azul-escuro;
+        tr{
+            th{
+                color: $branco;
+                font-weight: 400;
+            }
+        }
+    }
+    .conteudo_tabela{
+        background: $branco;
+    }
+}
