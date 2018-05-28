@@ -1,0 +1,18 @@
+#sidebar-wrapper {
+    width: 77px;
+    background: $azul-escuro;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    a{
+        color: $branco;
+        font-size: 10px;
+        margin-left: -27px;
+    }
+    li{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+    }
+}
