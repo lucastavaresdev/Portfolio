@@ -33,6 +33,11 @@ body {
   font-weight: bold;
   color: #ffffff; }
 
+.finalizado {
+  background: #565656;
+  font-weight: bold;
+  color: #ffffff; }
+
 .dados-emuso {
   color: #2A80B9;
   font-weight: 700; }

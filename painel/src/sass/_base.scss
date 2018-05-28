@@ -44,7 +44,13 @@ body{
     @include fonte;
 }
 
+.finalizado{
+    background: $finalizado;
+    @include fonte;
+}
+
 .dados-emuso{
     color: $emuso;
     font-weight: 700;
 }
+
