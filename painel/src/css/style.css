@@ -18,6 +18,10 @@ body {
 .borda-topo-right {
   border-top-right-radius: 25px; }
 
+.tabela-salas {
+  padding-top: 30px !important;
+  padding-bottom: 30px !important; }
+
 .navbar {
   background: #313C4C; }
   .navbar .titulo {
@@ -31,12 +35,14 @@ body {
     font-size: 10px;
     color: #ffffff; }
 
-.table .topo_tabela {
-  background: #313C4C; }
-  .table .topo_tabela tr th {
-    color: #ffffff;
-    font-weight: 400; }
-.table .conteudo_tabela {
-  background: #ffffff; }
+.table {
+  text-align: center; }
+  .table .topo_tabela {
+    background: #313C4C; }
+    .table .topo_tabela tr th {
+      color: #ffffff;
+      font-weight: 400; }
+  .table .conteudo_tabela {
+    background: #ffffff; }
 
 /*# sourceMappingURL=style.css.map */
