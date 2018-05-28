@@ -22,6 +22,15 @@ body {
   padding-top: 30px !important;
   padding-bottom: 30px !important; }
 
+.disponivel {
+  background: #169F85; }
+
+.emuso {
+  background: #2A80B9; }
+
+.indiponivel {
+  background: #8F44AD; }
+
 .navbar {
   background: #313C4C; }
   .navbar .titulo {
