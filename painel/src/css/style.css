@@ -43,9 +43,13 @@ body {
   font-weight: 700; }
 
 .navbar {
-  background: #313C4C; }
-  .navbar .titulo {
-    color: #ffffff; }
+  background: #313C4C;
+  max-height: 50px; }
+  .navbar .tituloprincipal {
+    color: #ffffff;
+    padding-left: 15px;
+    font-weight: 500;
+    font-size: 19px; }
 
 .sidebar {
   position: fixed;
