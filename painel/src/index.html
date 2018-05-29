@@ -13,140 +13,173 @@
 <body>
     <!--navbar topo-->
     <nav class="navbar navbar-expand-lg">
-        <div class="navbar-brand" href="#"><h1 class="tituloprincipal">Dashboard de rotina</h1></div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-brand" href="#">
+            <h1 class="tituloprincipal">Dashboard de rotina</h1>
         </div>
+        <button href="#menu-toggle" id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </div>
     </nav>
-    <!--sidebar -->
-    <div class="row">
-        <nav class="d-none d-md-block  sidebar">
-            <div class="sidebar-sticky">
-                <ul class="nav flex-column text-center">
-                    <li class="nav-item">
-                        <img src="img/icon-dashboard.png">
-                        <a class="nav-link active" href="#">
-                            <p class="icon-text">Dashboard</p>
-                            <span class="sr-only">(current)</span>
-                        </a>
+
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#"></a>
+                </li>
+                <a href="#">
+                    <li>
+                        <img class="icone" src="img/icon-dashboard.png" alt="">Dashboard
                     </li>
-                    <li class="nav-item">
-                        <img src="img/icon-dashboard.png">
-                        <a class="nav-link active" href="#">
-                            <p class="icon-text">Dashboard</p>
-                            <span class="sr-only">(current)</span>
-                        </a>
+                </a>
+                <a href="#">
+                    <li>
+                        <img class="icone" src="img/icon-lista.png" alt="">Lista
                     </li>
-                </ul>
+                </a>
+
+       
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+
             </div>
-        </nav>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
 
 
 
-        <main role="main" class="col-md-9 col-lg-10 offset-md-1">
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h2">Dashboard</h1>
+
+
+    <main role="main" class="col-md-9 col-lg-10 offset-md-1">
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+            <div class="col-6 text-center">
+                <h1 class="h4">Salas</h1>
             </div>
-            <section>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <table class="table">
-                                <thead class="topo_tabela">
-                                    <tr class="a">
-                                        <th class="borda-topo-left" scope="col">Localização</th>
-                                        <th scope="col">Status</th>
-                                        <th class="borda-topo-right" scope="col">Descrição</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="conteudo_tabela">
-                                    <tr>
-                                        <td>pre-exame</td>
-                                        <td class="disponivel">Disponivel</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sala 1</td>
-                                        <td class="emuso">Em uso</td>
-                                        <td>
-                                            <p>Paciente:
-                                                <span class="dados-emuso"> Vinícius Cardoso Rocha</span>
-                                            </p>
-                                            <br>
-                                            <p>Data de Nascimento:
-                                                <span class="dados-emuso">25/05/1980</span>
-                                            </p>
-                                            <br>
-                                            <p>Procedimento:
-                                                <span class="dados-emuso">Consulta</span>
-                                            </p>
-                                            <br>
-                                            <p>Tempo:
-                                                <span class="dados-emuso">1:31</span>
-                                            </p>
-                                            <br>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="tabela-salas">Sala 2</td>
-                                        <td class="tabela-salas Indisponivel">Indisponivel</td>
-                                        <td class="tabela-salas"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+            <div class="col-6 text-center">
+                <h1 class="h4">Pacientes</h1>
+            </div>
+        </div>
+
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <table class="table">
+                            <thead class="topo_tabela">
+                                <tr class="a">
+                                    <th class="borda-topo-left" scope="col">Localização</th>
+                                    <th scope="col">Status</th>
+                                    <th class="borda-topo-right" scope="col">Descrição</th>
+                                </tr>
+                            </thead>
+                            <tbody class="conteudo_tabela">
+                                <tr>
+                                    <td>pre-exame</td>
+                                    <td class="disponivel">Disponivel</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Sala 1</td>
+                                    <td class="emuso">Em uso</td>
+                                    <td>
+                                        <p>Paciente:
+                                            <span class="dados-emuso"> Vinícius Cardoso Rocha</span>
+                                        </p>
+                                        <br>
+                                        <p>Data de Nascimento:
+                                            <span class="dados-emuso">25/05/1980</span>
+                                        </p>
+                                        <br>
+                                        <p>Procedimento:
+                                            <span class="dados-emuso">Consulta</span>
+                                        </p>
+                                        <br>
+                                        <p>Tempo:
+                                            <span class="dados-emuso">1:31</span>
+                                        </p>
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="tabela-salas">Sala 2</td>
+                                    <td class="tabela-salas Indisponivel">Indisponivel</td>
+                                    <td class="tabela-salas"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
 
 
-                        <div class="col-md-6">
-                            <table class="table">
-                                <thead class="topo_tabela">
-                                    <tr class="a">
-                                        <th class="borda-topo-left" scope="col">Nome</th>
-                                        <th class="borda-topo-right" scope="col">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="conteudo_tabela">
-                                    <tr>
-                                        <td>Rebeca Cavalcante</td>
-                                        <td class="disponivel">Aguardando</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Estevan Ferreira Azevedo</td>
-                                        <td class="emuso">Em uso</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mariana C. Robison</td>
-                                        <td class="emuso">Em uso</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Eduardo Cardoso Ferreira</td>
-                                        <td class="tabela-salas Indisponivel">Indisponivel</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Carolina Oliveira Castro</td>
-                                        <td class="finalizado">Finalizado</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                    <div class="col-md-6">
+                        <table class="table">
+                            <thead class="topo_tabela">
+                                <tr class="a">
+                                    <th class="borda-topo-left" scope="col">Nome</th>
+                                    <th class="borda-topo-right" scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="conteudo_tabela">
+                                <tr>
+                                    <td>Rebeca Cavalcante</td>
+                                    <td class="disponivel">Aguardando</td>
+                                </tr>
+                                <tr>
+                                    <td>Estevan Ferreira Azevedo</td>
+                                    <td class="emuso">Em uso</td>
+                                </tr>
+                                <tr>
+                                    <td>Mariana C. Robison</td>
+                                    <td class="emuso">Em uso</td>
+                                </tr>
+                                <tr>
+                                    <td>Eduardo Cardoso Ferreira</td>
+                                    <td class="tabela-salas Indisponivel">Indisponivel</td>
+                                </tr>
+                                <tr>
+                                    <td>Carolina Oliveira Castro</td>
+                                    <td class="finalizado">Finalizado</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
     </div>
 
-    <footer>
 
-
-        
-    </footer>
 
 
 </body>
-<script src="componentes/Bootstrap/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+<script src="componentes/Bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+    if ($(window).width() <= 900) {
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    }
+    else {
+        $("#wrapper").toggleClass("toggled");
+        console.log('dasdsa')
+    }
+</script>
 
 </html>
