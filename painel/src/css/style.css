@@ -213,4 +213,11 @@ footer {
   background: #313C4C;
   bottom: 0px; }
 
+.box {
+  border: 2px solid #313C4C;
+  border-radius: 15px; }
+  .box .dados {
+    font-size: 18px;
+    padding: 21px 5px 14px 5px; }
+
 /*# sourceMappingURL=style.css.map */
