@@ -9,13 +9,7 @@ body{
     background: url(../img/bg.jpg);
 }
 
-.icone{
-    width: 50px;
-    height: 50px;
-    background: #f1f;
-    margin-left: -26px;
-    margin-top: 30px;
-}
+
 
 .borda-topo-left{
     border-top-left-radius: 25px;
@@ -30,6 +24,9 @@ body{
     color: $branco
 }
 
+.icone{
+    margin-right: 10px;
+}
 
 .disponivel{
     background: $disponivel;
