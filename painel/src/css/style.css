@@ -200,6 +200,9 @@ li {
 @media (min-device-width: 768px) and (max-device-width: 1024px) {
   .tablet {
     margin-top: 10px; } }
+@media (max-device-width: 767px) {
+  .tablet {
+    margin-top: 10px; } }
 footer {
   position: absolute;
   height: 5px;
