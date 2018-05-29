@@ -197,6 +197,9 @@ li {
         list-style: none;
         line-height: 0.5; }
 
+@media (min-device-width: 768px) and (max-device-width: 1024px) {
+  .tablet {
+    margin-top: 10px; } }
 footer {
   position: absolute;
   height: 5px;
