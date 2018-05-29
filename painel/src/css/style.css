@@ -210,4 +210,9 @@ footer {
   background: #313C4C;
   bottom: 0px; }
 
+.chart-container {
+  position: relative;
+  width: 500px;
+  height: 500px; }
+
 /*# sourceMappingURL=style.css.map */

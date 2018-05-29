@@ -8,8 +8,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="componentes/Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="componentes/Chart.js"></script>
-    <script src="componentes/Chart.min.js"></script>
+
 </head>
 
 <body>
@@ -154,7 +153,14 @@
                         </table>
 
                         <section class="row">
-                            <h1>dsda</h1>
+                            <div class="col-md-6">
+                              
+                                <div class="chart-container" >
+                                        <canvas id="graficoPacientes"></canvas>
+                                    </div>                   
+                            </div>
+                            <div class="col-md-6"></div>
+
 
 
                         </section>
@@ -174,6 +180,10 @@
     crossorigin="anonymous"></script>
 
 <script src="componentes/Bootstrap/js/bootstrap.min.js"></script>
+<script src="componentes/Chart.js"></script>
+<script src="componentes/Chart.min.js"></script>
+<script src="js/grafico.js"></script>
+
 
 <script>
     if ($(window).width() <= 900) {
