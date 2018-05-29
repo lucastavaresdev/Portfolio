@@ -54,7 +54,9 @@ body {
 .sidebar {
   position: fixed;
   height: 100%;
-  background: #313C4C; }
+  background: #313C4C;
+  max-width: 4%;
+  position: fixed; }
   .sidebar .nav-link {
     padding: 0.5rem 2rem; }
   .sidebar .icon-text {
