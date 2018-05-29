@@ -40,7 +40,10 @@ body {
 
 .navbar {
   background: #313C4C;
-  max-height: 50px; }
+  max-height: 50px;
+  position: fixed;
+  z-index: 1001;
+  width: 100%; }
   .navbar .tituloprincipal {
     color: #ffffff;
     padding-left: 15px;

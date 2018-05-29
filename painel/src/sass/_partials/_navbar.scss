@@ -1,6 +1,9 @@
 .navbar{
     background: $azul-escuro;
     max-height: 50px;
+    position: fixed;
+    z-index: 1001;
+    width: 100%;
     .tituloprincipal{
        color: $branco;
        padding-left: 15px;
