@@ -1,5 +1,4 @@
 var gulp = require('gulp')
-    , sass = require('gulp-sass')
     , include = require('gulp-file-include')
     , clean = require('gulp-clean')
     , autoprefixer = require('gulp-autoprefixer')
@@ -16,39 +15,23 @@ var gulp = require('gulp')
             .pipe(clean());
     })
 
+
+//o que ira copiar
 gulp.task('copy', ['clean'], function () {
     gulp.src([
-        'src/components/**/*',
-        'src/javascript/**/*',
-        'src/index.html',
+        'src/css/**/*',
+        'src/img/**/*',
     ], { "base": "src" })//o base mantem a estrutura
         .pipe(gulp.dest('dist'))
 })
 
 
-gulp.task('sass', function(){
-    return gulp.src('./src/sass/**/*.scss')
-        .pipe(sass())
-        .pipe(autoprefixer())
-        .pipe(cssnano())
-        .pipe(gulp.dest('./dist/css/'));
-})
-
-gulp.task('svgmin', function(){
-    return gulp.src(['src/inc/icon/*.svg,   !./src/inc/icon/*min.svg'])
-        .pipe(imagemin())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest('src/inc/icon/*.svg'))
-})
-
 
 gulp.task('build-js', function(){
-    gulp.src('src/javascript/**/*')
+    gulp.src('src/js/**/*')
     .pipe(concat('app.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/javascript/'))
+    .pipe(gulp.dest('./dist/js/'))
 })
 
 
@@ -63,13 +46,14 @@ gulp.task('html', function(){
 
 
 gulp.task('uncss', ['html'], function(){
-    return gulp.src('./dist/components/**/*.css')
+    return gulp.src('./dist/css/**/*.css')
         .pipe(uncss({
             html: ['./dist/*.html']
         }))
-        .pipe(gulp.dest('./dist/components/'))
+        .pipe(gulp.dest('./dist/css/'))
 })
 
+//reduz o tamanho da imagem
 gulp.task('imagemin', function(){
     return gulp.src('./src/img/**/*')
         .pipe(imagemin())
@@ -78,9 +62,8 @@ gulp.task('imagemin', function(){
 
 
 gulp.task('default', ['copy' ,], function(){
-    gulp.start('uncss', 'imagemin', 'sass' , 'build-js')
+    gulp.start('uncss', 'imagemin', 'build-js')
 })
-
 
 
 gulp.task('serve',['html'], function () {
@@ -93,13 +76,8 @@ gulp.task('serve',['html'], function () {
     gulp.watch('./dist/**/*').on('change', browserSync.reload)
 
     //monitora alteração caso sera alteradao reload o browser
-    gulp.watch('./src/sass/**/*.scss', ['sass'])
-    gulp.watch('./src/**/*.html', ['html'])
+     gulp.watch('./src/**/*.html', ['html'])
     gulp.watch('.src/javascript/**/*', ['build-js'])
-  gulp.watch([
-      './src/inc/icon/*.svg',
-      '!./src/inc/icon/*min.svg'
-    ], ['svgmin'])
 })
 
 
