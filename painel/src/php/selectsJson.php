@@ -1,11 +1,12 @@
 <?php
 
-require('conexao.php');
 
-
-        $sql = 'SELECT * FROM agendamento';
+function query($sql){
+        require('conexao.php');
         $stmt = $conn->prepare( $sql );
         $stmt->execute();
         $result = $stmt->fetchAll( PDO::FETCH_ASSOC );
         $json = json_encode( $result );
-        echo $json;
+        return $json;
+}
+
