@@ -19,6 +19,7 @@ var gulp = require('gulp')
 //o que ira copiar
 gulp.task('copy', ['clean'], function () {
     gulp.src([
+        'src/componentes/**/*',
         'src/css/**/*',
         'src/img/**/*',
     ], { "base": "src" })//o base mantem a estrutura
@@ -38,20 +39,11 @@ gulp.task('build-js', function(){
 gulp.task('html', function(){
     return gulp.src([
             './src/**/*.html',
-            '!src/inc/**'
         ])
         .pipe(include())
         .pipe(gulp.dest('./dist/'))
 })
 
-
-gulp.task('uncss', ['html'], function(){
-    return gulp.src('./dist/css/**/*.css')
-        .pipe(uncss({
-            html: ['./dist/*.html']
-        }))
-        .pipe(gulp.dest('./dist/css/'))
-})
 
 //reduz o tamanho da imagem
 gulp.task('imagemin', function(){
@@ -62,7 +54,7 @@ gulp.task('imagemin', function(){
 
 
 gulp.task('default', ['copy' ,], function(){
-    gulp.start('uncss', 'imagemin', 'build-js')
+    gulp.start('html', 'imagemin', 'build-js')
 })
 
 
