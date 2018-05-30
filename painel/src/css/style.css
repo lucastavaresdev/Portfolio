@@ -207,18 +207,18 @@ li {
 @media (max-device-width: 767px) {
   .tablet {
     margin-top: 10px; } }
-footer {
-  position: absolute;
-  height: 5px;
-  width: 100%;
-  background: #313C4C;
-  bottom: 0px; }
-
 .box {
   border: 2px solid #313C4C;
   border-radius: 15px; }
   .box .dados {
     font-size: 18px;
     padding: 21px 5px 14px 5px; }
+
+footer {
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #313C4C;
+  bottom: 0px; }
 
 /*# sourceMappingURL=style.css.map */
