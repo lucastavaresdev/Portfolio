@@ -9,11 +9,17 @@ var gulp = require('gulp')
     , concat = require('gulp-concat')
     , rename = require('gulp-rename')
     , browserSync = require('browser-sync')
+     , htmlmin = require('gulp-htmlmin');
 
     gulp.task('clean', function(){
         return gulp.src('dist')
             .pipe(clean());
     })
+
+   
+ 
+
+
 
 
 //o que ira copiar
@@ -36,14 +42,20 @@ gulp.task('build-js', function(){
 })
 
 
-gulp.task('html', function(){
-    return gulp.src([
-            './src/**/*.html',
-        ])
-        .pipe(include())
-        .pipe(gulp.dest('./dist/'))
-})
+// gulp.task('html', function(){
+//     return gulp.src([
+//             ',
+//         ])
+//         .pipe(include())
+//         .pipe(gulp.dest('./dist/'))
+// })
 
+
+gulp.task('minify', function() {
+    return gulp.src('./src/**/*.html')
+      .pipe(htmlmin({collapseWhitespace: true}))
+      .pipe(gulp.dest('dist'));
+  });
 
 //reduz o tamanho da imagem
 gulp.task('imagemin', function(){
@@ -54,11 +66,11 @@ gulp.task('imagemin', function(){
 
 
 gulp.task('default', ['copy' ,], function(){
-    gulp.start('html', 'imagemin', 'build-js')
+    gulp.start('minify', 'imagemin', 'build-js')
 })
 
 
-gulp.task('serve',['html'], function () {
+gulp.task('serve',['minify'], function () {
     browserSync.init({
         server: {
             baseDir: 'dist'
