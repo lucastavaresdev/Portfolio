@@ -7,26 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<table>
-<table border="1" width="500">
-		    <thead>
-		        <tr>
-		            <th>ID</th>
-		            <th>Nome</th>
-		        </tr>
-		    </thead>
-		    <tbody id="tabela">
-		    </tbody>
-		</table>
 
-<div class="dados"></div>
 <body>
 </body>
 
+<?php 
+    require ('./php/selectsJson.php');
 
+    //coloca o select e pega o retorno
+    $sql = 'select * from agendamento';
+    $agendamento = query($sql);
+    echo $agendamento;
+    ?>
 
 <script src="componentes/jquery.js"></script>
-<script src="componentes/requisicoes.js"></script>
 </script>
 
 </html>
