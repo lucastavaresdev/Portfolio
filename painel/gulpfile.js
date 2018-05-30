@@ -17,9 +17,6 @@ var gulp = require('gulp')
     })
 
    
- 
-
-
 
 
 //o que ira copiar
