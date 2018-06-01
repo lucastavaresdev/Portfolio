@@ -4,8 +4,8 @@
 
     $result =$conexao->query("SELECT * FROM agendamento;");
    
-    while ($row = $result->fetchAll()) {
-        $encode = $row;
+    while ($linha = $result->fetchAll()) {
+        $encode = $linha;
     }
     echo json_encode($encode);
 

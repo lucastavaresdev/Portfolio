@@ -10,17 +10,18 @@
 
 <body>
 </body>
-
-<?php 
-    require ('./php/selectsJson.php');
-
-    //coloca o select e pega o retorno
-    $sql = 'select * from agendamento';
-    $agendamento = query($sql);
-    echo $agendamento;
-    ?>
+<div id="lista-de-servicos">
+    <table id="ic" style="width:30%">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+        </tr>
+    </table>
+</div>
 
 <script src="componentes/jquery.js"></script>
+<script src="componentes/lerjson.js"></script>
 </script>
+
 
 </html>
