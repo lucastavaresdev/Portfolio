@@ -2,14 +2,14 @@
 
     require('conexao.php');
 
-    $result =$conexao->query("SELECT * FROM agendamento;");
-   
-    while ($linha = $result->fetchAll()) {
-        $encode = $linha;
-    }
-    echo json_encode($encode);
+  
+      $sql = 'SELECT * FROM agendamento';
+      $stmt = $conexao->prepare( $sql );
+      $stmt->execute();
+      $result = $stmt->fetchAll( PDO::FETCH_ASSOC );
+      $json = json_encode( $result );
 
-
+    echo $json; 
 ?>
 
 
