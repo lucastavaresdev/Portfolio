@@ -119,7 +119,7 @@
 
                     <div class="col-md-12 col-lg-6 tablet">
                         <h1 class="h4 text-center">Pacientes</h1>
-                        <table class="table">
+                        <table class="table" id="tabela">
                             <thead class="topo_tabela">
                                 <tr class="a">
                                     <th class="borda-topo-left" scope="col">Nome</th>
@@ -127,7 +127,7 @@
                                 </tr>
                             </thead>
                             <tbody class="conteudo_tabela">
-                                <tr>
+                                <!-- <tr>
                                     <td>Rebeca Cavalcante</td>
                                     <td class="disponivel">Aguardando</td>
                                 </tr>
@@ -146,7 +146,7 @@
                                 <tr>
                                     <td>Carolina Oliveira Castro</td>
                                     <td class="finalizado">Finalizado</td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
 
@@ -174,12 +174,16 @@
 </body>
 
 
-<script src="./componentes/jquery.min.js"></script>
+
+
+<script src="./componentes/jquery.js"></script>
 <!-- <script src="../dist/js/app.min.js"></script> -->
 <script src="./componentes/bootstrap.min.js"></script> 
 <script src="./componentes/Chart.min.js"></script> 
-<script src="./js/app.min.js"></script> 
+<!-- <script src="./js/app.min.js"></script>  -->
 <script src="./js/grafico.js"></script> 
+<script src="componentes/lerjson.js"></script>
+
 
 <script>
     if ($(window).width() <= 900) {
