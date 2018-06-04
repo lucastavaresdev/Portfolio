@@ -1,32 +1,46 @@
-function listapacientes() {
+
+
+//chamada de funções
+listapacientes('php/selectsJson.php?parametro=agendamento', tabela);
+
+
+
+
+//ajax
+function listapacientes(urldoSelect, funcao) {
     $.ajax({
         dataType: "json", // tipo de arquivo
-        url: 'php/selectsJson.php?parametro=agendamento',// local do json
+        url: urldoSelect,// local do json
         data: 'linha', // linha
         success: function (data) {//se funcionar execulta essa função
-            if (data == "") {
-                $('#tabela').append('<tr class="linha_pacientes"><td>' + "Não ha registros <td>");
-            } else {
-                for (let i = 0; i < data.length; i++) {
-                    $('#tabela').append('<tr class="linha_pacientes"><td>' + data[i]['nm_paciente'] + '</td><td class="status"  class="' + data[i]["status"] + '">' + data[i]['status'] + '</td>');
-                    // $('#tabela').append('<tr id="linha"><td>' + data[i]['id'] + '</td><td>' + data[i]['nm_paciente'] + '</td><td>');
-
-                }//fim loop
-                coresStatus();
-                totaldePaciente();
-            }
+         funcao(data);
         }//fim funcao
     });//fim do ajax
 }
 
+//tabela pacientes
+function tabela(data) {
+    if (data == "") {
+        $('#tabela').append('<tr class="linha_pacientes"><td>' + "Não ha registros <td>");
+    } else {
+        for (let i = 0; i < data.length; i++) {
+            $('#tabela').append('<tr class="linha_pacientes"><td>' + data[i]['nm_paciente'] + '</td><td class="status"  class="' + data[i]["status"] + '">' + data[i]['status'] + '</td>');
+        }//fim loop
+        coresStatus();
+        totaldePaciente();
+    }
+}
+
+
+
+//atualiza a tabelas
 setInterval(function atualiza() {
     document.getElementById("tabela").innerHTML = ""
     listapacientes();
 }, 300000);
 
-listapacientes();
 
-
+//cores de status
 function coresStatus() {
     var status = document.querySelectorAll(".status");
     for (i = 0; i < status.length; i++) {
@@ -46,20 +60,14 @@ function coresStatus() {
 }
 
 
-
-
-
-
-
-
-function totaldePaciente(){
-    var qtdPacientes  = contarlinhastabela('.status');
+//total de pacientes
+function totaldePaciente() {
+    var qtdPacientes = contarlinhastabela('.status');
     numerodePacientes = document.getElementById("totaldePacientes");
     numerodePacientes.textContent = qtdPacientes;
-    console.log(qtdPacientes);
 }
 
-
+//conta as linhas da tabela para dar o valor total
 function contarlinhastabela(nomedaclasse) {
     var status = document.querySelectorAll(nomedaclasse);
     resultado = 0;
