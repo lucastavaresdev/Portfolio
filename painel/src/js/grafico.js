@@ -1,3 +1,12 @@
+chamadaAjax('php/selectsJson.php?parametro=qtdstatus', exibir);
+
+
+function exibir(data){
+    
+    console.log(data[0]['status'] + data[0]['qtdStatus'])
+}
+
+
 var ctx = document.getElementById("graficoPacientes");
 
 var myChart = new Chart(ctx, {
