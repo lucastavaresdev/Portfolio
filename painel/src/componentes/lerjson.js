@@ -48,18 +48,22 @@ function coresStatus() {
 
 
 
+
+
+
+
 function totaldePaciente(){
     var qtdPacientes  = contarlinhastabela('.status');
     numerodePacientes = document.getElementById("totaldePacientes");
-
     numerodePacientes.textContent = qtdPacientes;
+    console.log(qtdPacientes);
 }
 
 
 function contarlinhastabela(nomedaclasse) {
     var status = document.querySelectorAll(nomedaclasse);
     resultado = 0;
-    for (i = 0; i < nomedaclasse.length; i++) {
+    for (i = 0; i < status.length; i++) {
         resultado = resultado + 1;
     }
     return resultado;
