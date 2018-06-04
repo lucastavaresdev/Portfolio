@@ -1,22 +1,32 @@
 
 
 //chamada de funções
-chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
+   chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
 
 
 
 
 //ajax
 function chamadaAjax(urldoSelect, funcao) {
-    $.ajax({
-        dataType: "json", // tipo de arquivo
-        url: urldoSelect,// local do json
-        data: 'linha', // linha
-        success: function (data) {//se funcionar execulta essa função
-         funcao(data);
-        }//fim funcao
-    });//fim do ajax
+    if (typeof urldoSelect == 'string' && typeof funcao == 'function') {
+        $.ajax({
+            dataType: "json", // tipo de arquivo
+            url: urldoSelect,// local do json
+            data: 'linha', // linha
+            success: function (data) {//se funcionar execulta essa função
+                funcao(data);
+            }//fim funcao
+        });//fim do ajax
+    } else {
+        console.log('Erros de paramentro')
+    }
 }
+
+
+function error() {
+    console.log('nao esta chamando a função')
+}
+
 
 //tabela pacientes
 function tabela(data) {
