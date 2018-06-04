@@ -1,13 +1,13 @@
 
 
 //chamada de funções
-listapacientes('php/selectsJson.php?parametro=agendamento', tabela);
+chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
 
 
 
 
 //ajax
-function listapacientes(urldoSelect, funcao) {
+function chamadaAjax(urldoSelect, funcao) {
     $.ajax({
         dataType: "json", // tipo de arquivo
         url: urldoSelect,// local do json
