@@ -9,6 +9,9 @@
       $result = $stmt->fetchAll( PDO::FETCH_ASSOC );
       $json = json_encode( $result );
     echo $json; 
+
+
+    //Select count(status) from agendamento group by status;
 ?>
 
 
