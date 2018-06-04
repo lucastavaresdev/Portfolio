@@ -13,8 +13,14 @@ function localizacao(data) {
 
 function criar_tabela(data, id_da_tabela) {
         for (let i = 0; i < data.length; i++) {
-            $(id_da_tabela).append('<tr class="linha_pacientes"><td>' + data[i]['localizacao'] + '</td><td>' + data[i]['status_localizacao'] + '</td>');
+            $(id_da_tabela).append('<tr class="linha_pacientes"><td >' + data[i]['localizacao'] + '</td><td class="status_localizacao">' + data[i]['status_localizacao'] + '</td>');
         }//fim loop
+        
+        var status = document.querySelectorAll(".status_localizacao");
+        coresStatus(status);
+
+
+
 }
 
 
@@ -34,7 +40,9 @@ function tabela(data) {
         for (let i = 0; i < data.length; i++) {
             $('#tabela').append('<tr class="linha_pacientes"><td>' + data[i]['nm_paciente'] + '</td><td class="status"  class="' + data[i]["status"] + '">' + data[i]['status'] + '</td>');
         }//fim loop
-        coresStatus();
+        var status = document.querySelectorAll(".status");
+
+        coresStatus(status);
         totaldePaciente();
     }
 }
@@ -49,11 +57,10 @@ setInterval(function atualiza() {
 
 
 //cores de status
-function coresStatus() {
-    var status = document.querySelectorAll(".status");
+function coresStatus(status) {
     for (i = 0; i < status.length; i++) {
         valordoStatus = status[i].textContent;
-        if (valordoStatus == "Aguardando") {
+        if (valordoStatus == "Aguardando" || valordoStatus == "Disponivel") {
             status[i].setAttribute('class', 'status disponivel');
         } else if (valordoStatus == 'Indisponivel') {
             status[i].setAttribute('class', 'status Indisponivel');
