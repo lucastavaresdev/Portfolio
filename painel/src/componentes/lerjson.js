@@ -13,6 +13,7 @@ function listapacientes() {
 
                 }//fim loop
                 coresStatus();
+                totaldePaciente();
             }
         }//fim funcao
     });//fim do ajax
@@ -28,7 +29,6 @@ listapacientes();
 
 function coresStatus() {
     var status = document.querySelectorAll(".status");
-    contarlinhastabela(status);
     for (i = 0; i < status.length; i++) {
         valordoStatus = status[i].textContent;
         if (valordoStatus == "Aguardando") {
@@ -46,10 +46,21 @@ function coresStatus() {
 }
 
 
-function contarlinhastabela(classnaLinhaTabela) {
+
+
+function totaldePaciente(){
+    var qtdPacientes  = contarlinhastabela('.status');
+    numerodePacientes = document.getElementById("totaldePacientes");
+
+    numerodePacientes.textContent = qtdPacientes;
+}
+
+
+function contarlinhastabela(nomedaclasse) {
+    var status = document.querySelectorAll(nomedaclasse);
     resultado = 0;
-    for (i = 0; i < classnaLinhaTabela.length; i++) {
+    for (i = 0; i < nomedaclasse.length; i++) {
         resultado = resultado + 1;
     }
-    return console.log(resultado);
+    return resultado;
 }
