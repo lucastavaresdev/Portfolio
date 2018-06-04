@@ -5,12 +5,14 @@ function listapacientes() {
         data: 'linha', // linha
         success: function (data) {//se funcionar execulta essa função
             if (data == "") {
-                $('#tabela').append('<tr class="linha_pacientes"><td>' + "Não ha registros <td>" );
+                $('#tabela').append('<tr class="linha_pacientes"><td>' + "Não ha registros <td>");
             } else {
                 for (let i = 0; i < data.length; i++) {
-                    $('#tabela').append('<tr class="linha_pacientes"><td>' + data[i]['nm_paciente'] + '</td><td>' + data[i]['status']);
+                    $('#tabela').append('<tr class="linha_pacientes"><td>' + data[i]['nm_paciente'] + '</td><td class="status"  class="' + data[i]["status"] + '">' + data[i]['status'] + '</td>');
                     // $('#tabela').append('<tr id="linha"><td>' + data[i]['id'] + '</td><td>' + data[i]['nm_paciente'] + '</td><td>');
+
                 }//fim loop
+                coresStatus();
             }
         }//fim funcao
     });//fim do ajax
@@ -24,5 +26,30 @@ setInterval(function atualiza() {
 listapacientes();
 
 
+function coresStatus() {
+    var status = document.querySelectorAll(".status");
+    contarlinhastabela(status);
+    for (i = 0; i < status.length; i++) {
+        valordoStatus = status[i].textContent;
+        if (valordoStatus == "Aguardando") {
+            status[i].setAttribute('class', 'status disponivel');
+        } else if (valordoStatus == 'Indisponivel') {
+            status[i].setAttribute('class', 'status Indisponivel');
+        } else if (valordoStatus == 'finalizado') {
+            status[i].setAttribute('class', 'status finalizado');
+        } else if (valordoStatus == 'null') {
+            status[i].setAttribute('class', 'status nenhum');
+        } else {
+            status[i].setAttribute('class', 'status emuso');
+        }
+    }
+}
 
 
+function contarlinhastabela(classnaLinhaTabela) {
+    resultado = 0;
+    for (i = 0; i < classnaLinhaTabela.length; i++) {
+        resultado = resultado + 1;
+    }
+    return console.log(resultado);
+}
