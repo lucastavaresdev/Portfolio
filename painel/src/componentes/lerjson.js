@@ -22,7 +22,7 @@ function listapacientes() {
 setInterval(function atualiza() {
     document.getElementById("tabela").innerHTML = ""
     listapacientes();
-}, 100000);
+}, 3000);
 
 listapacientes();
 
