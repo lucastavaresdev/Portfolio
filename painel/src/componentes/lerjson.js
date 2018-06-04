@@ -1,26 +1,21 @@
 
 
 //chamada de funções
-chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
+
 
 
 
 
 function localizacao(data) {
-    criar_tabela(data, '#tabela_localizacao')
+    tabela_localizacao(data, '#tabela_localizacao')
 }
 
-function criar_tabela(data, id_da_tabela) {
+function tabela_localizacao(data, id_da_tabela) {
         for (let i = 0; i < data.length; i++) {
-            $(id_da_tabela).append('<tr class="linha_pacientes"><td >' + data[i]['localizacao'] + '</td><td class="status_localizacao">' + data[i]['status_localizacao'] + '</td>');
+            $(id_da_tabela).append('<tr><td >' + data[i]['localizacao'] + '</td><td class="status_localizacao">' + data[i]['status_localizacao'] + '</td><td>descricao</td></tr>');
         }//fim loop
-        
         var status = document.querySelectorAll(".status_localizacao");
         coresStatus(status);
-
-
-
 }
 
 
@@ -48,12 +43,17 @@ function tabela(data) {
 }
 
 
+chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
+chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
+
 
 //atualiza a tabelas
 setInterval(function atualiza() {
     document.getElementById("tabela").innerHTML = ""
-    listapacientes();
-}, 300000);
+    chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
+    document.getElementById("tabela_localizacao").innerHTML = ""
+    chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
+}, 3000);
 
 
 //cores de status
