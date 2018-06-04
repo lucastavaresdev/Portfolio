@@ -1,7 +1,7 @@
 function listapacientes() {
     $.ajax({
         dataType: "json", // tipo de arquivo
-        url: 'php/selectsJson.php',// local do json
+        url: 'php/selectsJson.php?parametro=agendamento',// local do json
         data: 'linha', // linha
         success: function (data) {//se funcionar execulta essa função
             if (data == "") {
@@ -22,7 +22,7 @@ function listapacientes() {
 setInterval(function atualiza() {
     document.getElementById("tabela").innerHTML = ""
     listapacientes();
-}, 3000);
+}, 300000);
 
 listapacientes();
 
