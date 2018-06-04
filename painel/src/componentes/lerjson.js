@@ -1,12 +1,24 @@
 
 
 //chamada de funções
-   chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
+chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
+chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
 
 
 
 
-//ajax
+function localizacao(data) {
+    criar_tabela(data, '#tabela_localizacao')
+}
+
+function criar_tabela(data, id_da_tabela) {
+        for (let i = 0; i < data.length; i++) {
+            $(id_da_tabela).append('<tr class="linha_pacientes"><td>' + data[i]['localizacao'] + '</td><td>' + data[i]['status_localizacao'] + '</td>');
+        }//fim loop
+}
+
+
+
 
 
 function error() {

@@ -8,6 +8,8 @@
     geraJson('SELECT * FROM agendamento', $conexao );
   }else if($parametro === 'qtdstatus'){
     geraJson('SELECT status ,count(status) as qtdStatus FROM agendamento GROUP BY status', $conexao );
+  }else if($parametro === 'localizacao'){
+    geraJson('SELECT localizacao, status_localizacao FROM localizacao', $conexao );
   }
 
 
