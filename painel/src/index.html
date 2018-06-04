@@ -41,13 +41,13 @@
                         <img class="icone" src="img/icon-dashboard.png" alt="">Dashboard
                     </li>
                 </a>
-                <a href="#">
+                <!-- <a href="#">
                     <li>
                         <img class="icone" src="img/icon-lista.png" alt="">Lista
-                    </li>
+                    </li> 
                 </a>
 
-
+-->
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
@@ -71,7 +71,7 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-6">
                         <h1 class="h4 text-center">Salas</h1>
-                        <div class="table-responsive-sm">
+                        <div class="table-responsive-sm c">
                             <table class="table">
                                 <thead class="topo_tabela">
                                     <tr class="a">
@@ -80,8 +80,8 @@
                                         <th class="borda-topo-right" scope="col">Descrição</th>
                                     </tr>
                                 </thead>
-                                <tbody class="conteudo_tabela">
-                                    <tr>
+                                <tbody class="conteudo_tabela" id='tabela_localizacao'>
+                                    <!-- <tr>
                                         <td>pre-exame</td>
                                         <td class="disponivel">Disponivel</td>
                                         <td></td>
@@ -111,7 +111,7 @@
                                             <td class="tabela-salas">Sala 2</td>
                                             <td class="tabela-salas Indisponivel">Indisponivel</td>
                                             <td class="tabela-salas"></td>
-                                        </tr>
+                                        </tr> -->
                                 </tbody>
                             </table>
                         </div>
@@ -126,60 +126,70 @@
                                     <th class="borda-topo-right" scope="col">Status</th>
                                 </tr>
                             </thead>
-                            <tbody class="conteudo_tabela">
-                                <tr>
-                                    <td>Rebeca Cavalcante</td>
-                                    <td class="disponivel">Aguardando</td>
-                                </tr>
-                                <tr>
-                                    <td>Estevan Ferreira Azevedo</td>
-                                    <td class="emuso">Em uso</td>
-                                </tr>
-                                <tr>
-                                    <td>Mariana C. Robison</td>
-                                    <td class="emuso">Em uso</td>
-                                </tr>
-                                <tr>
-                                    <td>Eduardo Cardoso Ferreira</td>
-                                    <td class="tabela-salas Indisponivel">Indisponivel</td>
-                                </tr>
-                                <tr>
-                                    <td>Carolina Oliveira Castro</td>
-                                    <td class="finalizado">Finalizado</td>
-                                </tr>
+                            <tbody class="conteudo_tabela"  id="tabela">
                             </tbody>
                         </table>
 
-                        <section class="row">
-                            <div class="col-md-8 col-sm-12">
-                                <div class="chart-container">
-                                    <canvas id="graficoPacientes"></canvas>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="box">
-                                    <h2 class="dados">Total de pacientes:
-                                        <span class="dados-emuso">15</span>
-                                    </h2>
-                                </div>
 
-                            </div>
-                        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <section class="row">
+                                <div class="col-md-8 col-sm-12">
+                                    <div class="chart-container">
+                                        <canvas id="graficoPacientes"></canvas>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="box">
+                                        <h2 class="dados">Total de pacientes:
+                                            <span id='totaldePacientes' class="dados-emuso">0</span>
+                                        </h2>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
-            </div>
         </section>
     </main>
     </div>
 </body>
 
 
-<script src="./componentes/jquery.min.js"></script>
+
+
+<script src="./componentes/jquery.js"></script>
 <!-- <script src="../dist/js/app.min.js"></script> -->
-<script src="./componentes/bootstrap.min.js"></script> 
-<script src="./componentes/Chart.min.js"></script> 
-<script src="./js/app.min.js"></script> 
-<script src="./js/grafico.js"></script> 
+<script src="./componentes/bootstrap.min.js"></script>
+<script src="./componentes/ajax.js"></script>
+<script src="./componentes/Chart.min.js"></script>
+<!-- <script src="./js/app.min.js"></script>  -->
+<script src="./js/grafico.js"></script>
+<script src="componentes/lerjson.js"></script>
+
 
 <script>
     if ($(window).width() <= 900) {
@@ -190,7 +200,6 @@
     }
     else {
         $("#wrapper").toggleClass("toggled");
-        console.log('dasdsa')
     }
 </script>
 

@@ -45,9 +45,12 @@ body{
     background: $finalizado;
     @include fonte;
 }
+.nenhum{
+    background: $branco;
+    @include fonte;
+}
 
 .dados-emuso{
     color: $emuso;
     font-weight: 700;
 }
-
