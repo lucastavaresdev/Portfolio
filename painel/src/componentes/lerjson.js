@@ -15,18 +15,16 @@ setInterval(function () {
 
 
 
-
 function tabela_localizacao(data, id_da_tabela, html) {
     var html = "";
-
     for (let i = 0; i < data.length; i++) {
         html += '<tr><td>' + data[i].localizacao + '</td><td class="status_localizacao">' + data[i].status_localizacao + '</td><td>Descrição</td></tr>'
     }
     document.getElementById("tabela_localizacao").innerHTML = html;
-
     var status = document.querySelectorAll(".status_localizacao");
     coresStatus(status);
 }
+
 
 function tabela(data) {
     var html = "";
@@ -42,51 +40,10 @@ function tabela(data) {
 }
 
 
-//tabela pacientes
-
-// //tabela pacientes
-// function tabela(data) {
-//     if (data == "") {
-//         $('#tabela').append('<tr class="linha_pacientes"><td>' + "Não ha registros <td>");
-//     } else {
-//         for (let i = 0; i < data.length; i++) {
-//             $('#tabela').append('<tr class="linha_pacientes"><td>' + data[i]['nm_paciente'] + '</td><td class="status"  class="' + data[i]["status"] + '">' + data[i]['status'] + '</td>');
-//         }//fim loop
-//         var status = document.querySelectorAll(".status");
-
-//         coresStatus(status);
-//         totaldePaciente();
-
-//     }
-// }
-
-
-
-
-
 
 function error() {
     console.log('nao esta chamando a função')
 }
-
-
-
-
-
-
-
-
-
-
-//atualiza a tabelas
-
-
-
-setInterval(function atualiza() {
-    document.getElementById("tabela").innerHTML = ""
-    chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-}, 50000);
-
 
 
 
@@ -117,10 +74,3 @@ function totaldePaciente() {
 function exibirTotalPaciente(data) {
     var numTotal = document.querySelector('#totaldePacientes').textContent = data[0]['totpacientes'];;
 }
-
-
-//chamadaAjax('php/selectsJson.php?parametro=dados_pacientes', dadosPaciente);
-
-
-
-
