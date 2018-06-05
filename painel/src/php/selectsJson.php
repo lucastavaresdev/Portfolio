@@ -13,6 +13,8 @@
     geraJson('SELECT status ,count(status) as qtdStatus FROM agendamento GROUP BY status', $conexao );
   }else if($parametro === 'localizacao'){
     geraJson('SELECT localizacao, status_localizacao FROM localizacao', $conexao );
+  }else if($parametro === 'qtdpacientes'){
+    geraJson('SELECT count(nm_paciente) as totpacientes FROM painel.agendamento;', $conexao );
   }
 
 

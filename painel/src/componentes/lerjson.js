@@ -1,11 +1,6 @@
 
 
 //chamada de funções
-
-
-
-
-
 function localizacao(data) {
     tabela_localizacao(data, '#tabela_localizacao')
 }
@@ -81,17 +76,9 @@ function coresStatus(status) {
 
 //total de pacientes
 function totaldePaciente() {
-    var qtdPacientes = contarlinhastabela('.status');
-    numerodePacientes = document.getElementById("totaldePacientes");
-    numerodePacientes.textContent = qtdPacientes;
+    chamadaAjax('php/selectsJson.php?parametro=qtdpacientes', exibirTotalPaciente);
 }
 
-//conta as linhas da tabela para dar o valor total
-function contarlinhastabela(nomedaclasse) {
-    var status = document.querySelectorAll(nomedaclasse);
-    resultado = 0;
-    for (i = 0; i < status.length; i++) {
-        resultado = resultado + 1;
-    }
-    return resultado;
+function exibirTotalPaciente(data) {
+    var numTotal = document.querySelector('#totaldePacientes').textContent = data[0]['totpacientes'];;
 }
