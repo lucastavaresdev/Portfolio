@@ -2,71 +2,47 @@
 
 //chamada de funções
 
-
-
-
-
 function localizacao(data) {
     tabela_localizacao(data, '#tabela_localizacao')
 }
 
-function tabela_localizacao(data, id_da_tabela) {
+
+setInterval(function () {
+    chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
+    chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
+}, 500);
+
+
+
+function tabela_localizacao(data, id_da_tabela, html) {
+    var html = "";
     for (let i = 0; i < data.length; i++) {
-        $(id_da_tabela).append('<tr><td >' + data[i]['localizacao'] + '</td><td class="status_localizacao">' + data[i]['status_localizacao'] + '</td><td>descricao</td></tr>');
-    }//fim loop
+        html += '<tr><td>' + data[i].localizacao + '</td><td class="status_localizacao">' + data[i].status_localizacao + '</td><td>Descrição</td></tr>'
+    }
+    document.getElementById("tabela_localizacao").innerHTML = html;
     var status = document.querySelectorAll(".status_localizacao");
     coresStatus(status);
 }
 
 
+function tabela(data) {
+    var html = "";
+
+    for (let i = 0; i < data.length; i++) {
+        html += '<tr class="linha_pacientes"><td>' + data[i].nm_paciente + '</td><td class="status"  class="' + data[i].status + '">' + data[i].status + '</td>';
+    }
+    document.getElementById("tabela").innerHTML = html;
+
+    var status = document.querySelectorAll(".status");
+    coresStatus(status);
+    totaldePaciente();
+}
 
 
 
 function error() {
     console.log('nao esta chamando a função')
 }
-
-
-//tabela pacientes
-function tabela(data) {
-    if (data == "") {
-        $('#tabela').append('<tr class="linha_pacientes"><td>' + "Não ha registros <td>");
-    } else {
-        for (let i = 0; i < data.length; i++) {
-            $('#tabela').append('<tr class="linha_pacientes"><td>' + data[i]['nm_paciente'] + '</td><td class="status"  class="' + data[i]["status"] + '">' + data[i]['status'] + '</td>');
-        }//fim loop
-        var status = document.querySelectorAll(".status");
-
-        coresStatus(status);
-        totaldePaciente();
-    }
-}
-
-
-chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-//chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
-
-
-//atualiza a tabelas
-// setInterval(function atualiza() {
-//     // document.getElementById("tabela").innerHTML = ""
-//     //chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-//     document.getElementById("tabela_localizacao").innerHTML = ""
-//     chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
-// }, 3000);
-
-
-//atualiza a tabelas
-// setInterval(function atualiza() {
-// //     // document.getElementById("tabela").innerHTML = ""
-// //     //chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-//      document.getElementById("tabela_localizacao").innerHTML = ""
-//      chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
-//  }, 3000);
-
-$("#tabela_localizacao").load(chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao));
-
-
 
 
 
@@ -91,17 +67,9 @@ function coresStatus(status) {
 
 //total de pacientes
 function totaldePaciente() {
-    var qtdPacientes = contarlinhastabela('.status');
-    numerodePacientes = document.getElementById("totaldePacientes");
-    numerodePacientes.textContent = qtdPacientes;
+    chamadaAjax('php/selectsJson.php?parametro=qtdpacientes', exibirTotalPaciente);
 }
 
-//conta as linhas da tabela para dar o valor total
-function contarlinhastabela(nomedaclasse) {
-    var status = document.querySelectorAll(nomedaclasse);
-    resultado = 0;
-    for (i = 0; i < status.length; i++) {
-        resultado = resultado + 1;
-    }
-    return resultado;
+function exibirTotalPaciente(data) {
+    var numTotal = document.querySelector('#totaldePacientes').textContent = data[0]['totpacientes'];;
 }

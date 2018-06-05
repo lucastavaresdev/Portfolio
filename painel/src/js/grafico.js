@@ -1,6 +1,7 @@
 chamadaAjax('php/selectsJson.php?parametro=qtdstatus', exibir);
 
 
+
 function exibir(data) {
     arrNomesStatus = [];
     arrQuantidadeStatus = [];
