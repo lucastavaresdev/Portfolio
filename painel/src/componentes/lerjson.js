@@ -7,20 +7,16 @@ function localizacao(data) {
 
 function tabela_localizacao(data, id_da_tabela) {
     for (let i = 0; i < data.length; i++) {
-        $(id_da_tabela).append('<tr><td >' + data[i]['localizacao'] + '</td><td class="status_localizacao">' + data[i]['status_localizacao'] + '</td><td>descricao</td></tr>');
+        $(id_da_tabela).append('<tr><td >' + data[i]['localizacao'] + '</td><td class="status_localizacao">' + data[i]['status_localizacao'] +
+            '</td><td><p>Paciente:<span class="dados-emuso" id="nome"> Vinícius Cardoso Rocha</span></p><br><p>Data de Nascimento:<span class="dados-emuso">25/05/1980</span></p><br><p>Procedimento:<span class="dados-emuso">Consulta</span></p><br><p>Tempo:<span class="dados-emuso">1:31</span></p><br></td></tr>');
     }//fim loop
     var status = document.querySelectorAll(".status_localizacao");
     coresStatus(status);
 }
 
-
-
-
-
 function error() {
     console.log('nao esta chamando a função')
 }
-
 
 //tabela pacientes
 function tabela(data) {
@@ -34,6 +30,7 @@ function tabela(data) {
 
         coresStatus(status);
         totaldePaciente();
+     
     }
 }
 
@@ -45,7 +42,7 @@ chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
 //atualiza a tabelas
 setInterval(function atualiza() {
     document.getElementById("tabela_localizacao").innerHTML = ""
-    chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
+    chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);    
 }, 3000);
 
 setInterval(function atualiza() {
@@ -82,3 +79,10 @@ function totaldePaciente() {
 function exibirTotalPaciente(data) {
     var numTotal = document.querySelector('#totaldePacientes').textContent = data[0]['totpacientes'];;
 }
+
+
+//chamadaAjax('php/selectsJson.php?parametro=dados_pacientes', dadosPaciente);
+
+
+
+
