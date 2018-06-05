@@ -1,5 +1,8 @@
 <?php
 
+
+//Header( 'Refresh: 1');
+
   require('conexao.php');// REQUSIÇÃO DO BANCO
 
   $parametro = $_GET["parametro"];//PARAMETRO

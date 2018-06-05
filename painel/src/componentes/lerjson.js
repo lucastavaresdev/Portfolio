@@ -44,29 +44,19 @@ function tabela(data) {
 
 
 chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-//chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
+chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
 
 
 //atualiza a tabelas
-// setInterval(function atualiza() {
-//     // document.getElementById("tabela").innerHTML = ""
-//     //chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-//     document.getElementById("tabela_localizacao").innerHTML = ""
-//     chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
-// }, 3000);
+setInterval(function atualiza() {
+    document.getElementById("tabela_localizacao").innerHTML = ""
+    chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
+}, 3000);
 
-
-//atualiza a tabelas
-// setInterval(function atualiza() {
-// //     // document.getElementById("tabela").innerHTML = ""
-// //     //chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-//      document.getElementById("tabela_localizacao").innerHTML = ""
-//      chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
-//  }, 3000);
-
-$("#tabela_localizacao").load(chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao));
-
-
+setInterval(function atualiza() {
+    document.getElementById("tabela").innerHTML = ""
+    chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
+}, 10000);
 
 
 
