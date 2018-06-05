@@ -6,12 +6,11 @@ function localizacao(data) {
     tabela_localizacao(data, '#tabela_localizacao')
 }
 
-    chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-    chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
+
 setInterval(function () {
     chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
     chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
-},5000);
+}, 500);
 
 
 

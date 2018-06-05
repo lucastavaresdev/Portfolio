@@ -1,7 +1,7 @@
 <?php
 
 
-Header( 'Refresh: 5');
+//Header( 'Refresh: 5');
 
 require('conexao.php');// REQUSIÇÃO DO BANCO
 
