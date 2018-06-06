@@ -1,2 +1,2 @@
 node_modules/
-src/php/conexao.php
+*.php
