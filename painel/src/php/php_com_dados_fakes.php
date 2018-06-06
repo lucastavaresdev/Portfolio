@@ -39,7 +39,34 @@ $parametro = $_GET["parametro"];//PARAMETRO
     $json = json_encode( $result );
     echo $json; 
   }
-?>
 
+
+  /////////////////////////////////////////outra solução
+  
+
+  
+  function geraJson($select, $conexao){
+    $sql = $select;
+    $stmt = $conexao->prepare( $sql );
+    $stmt->execute();
+    $result = $stmt->fetchAll( PDO::FETCH_ASSOC );
+//    $json = json_encode( $result );
+
+
+      $novo = array();
+
+
+      foreach ($result as $key => $value) {
+        foreach ($value as $k => $v) {
+          $novo[$key][$k] = utf8_encode($v);
+        }
+      }
+
+
+    $json = json_encode($novo);
+      
+   echo $json; 
+   
+?>
 
 
