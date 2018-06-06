@@ -1,3 +1,3 @@
 node_modules/
 src/php/conexao.php
-src/php/selectsJson.php
+./src/php/selectsJson.php
