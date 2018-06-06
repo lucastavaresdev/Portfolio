@@ -1,12 +1,21 @@
+conexao.php
+
 <?php
+    try{
+    $conexao = new PDO("mysql:host=localhost;dbname=painel", "root", ""); 
+    }catch(PDOException $e){
+        echo "Erro gerado " . $e->getMessage(); 
+    }
+?>
+
+transformar em json
 
 
-//Header( 'Refresh: 5');
+<?php
 
 require('conexao.php');// REQUSIÇÃO DO BANCO
 
 $parametro = $_GET["parametro"];//PARAMETRO
-
 
 
   if($parametro === 'agendamento'){
@@ -30,8 +39,34 @@ $parametro = $_GET["parametro"];//PARAMETRO
     $json = json_encode( $result );
     echo $json; 
   }
+
+
+  /////////////////////////////////////////outra solução
+  
+
+  
+  function geraJson($select, $conexao){
+    $sql = $select;
+    $stmt = $conexao->prepare( $sql );
+    $stmt->execute();
+    $result = $stmt->fetchAll( PDO::FETCH_ASSOC );
+//    $json = json_encode( $result );
+
+
+      $novo = array();
+
+
+      foreach ($result as $key => $value) {
+        foreach ($value as $k => $v) {
+          $novo[$key][$k] = utf8_encode($v);
+        }
+      }
+
+
+    $json = json_encode($novo);
+      
+   echo $json; 
+   
 ?>
-
-
 
 
