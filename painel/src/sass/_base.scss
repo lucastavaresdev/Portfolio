@@ -54,3 +54,9 @@ body{
     color: $emuso;
     font-weight: 700;
 }
+
+@media (max-device-width : 767px) {
+    main{
+        margin-top: 13%;
+    }
+}
