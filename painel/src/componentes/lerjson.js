@@ -10,15 +10,18 @@ function localizacao(data) {
 setInterval(function () {
     chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
     chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
-}, 500);
+},1000);
 
 
 
 function tabela_localizacao(data, id_da_tabela, html) {
     var html = "";
+    
     for (let i = 0; i < data.length; i++) {
-        html += '<tr><td>' + data[i].localizacao + '</td><td class="status_localizacao">' + data[i].status_localizacao + '</td><td>Descrição</td></tr>'
+        html += '<tr><td>' + data[i].setor + '</td><td class="status_localizacao">' + data[i].status_localizacao + '</td><td><p>Paciente:    <span class="dados-emuso">' + data[i].paciente + '</span></p><br><p>Data de Nascimento: <span class="dados-emuso">' + data[i].data_nascimento + '</span></p><br><p>procedimento: <span class="dados-emuso"> ' + data[i].procedimento + '</span></p><br><p>tempo: <span class="dados-emuso"> ' + data[i].tempo + '</p></td></tr>'
+    
     }
+
     document.getElementById("tabela_localizacao").innerHTML = html;
     var status = document.querySelectorAll(".status_localizacao");
     coresStatus(status);
@@ -73,3 +76,9 @@ function totaldePaciente() {
 function exibirTotalPaciente(data) {
     var numTotal = document.querySelector('#totaldePacientes').textContent = data[0]['totpacientes'];;
 }
+
+
+//<p>Paciente:<span class="dados-emuso"> Vinícius Cardoso Rocha</span></p><br>
+  //                                          <p>Data de Nascimento:<span class="dados-emuso">25/05/1980</span></p><br>
+    ///                                       <p>Procedimento:<span class="dados-emuso">Consulta</span></p><br>
+                                           //<p>Tempo:<span class="dados-emuso">1:31</span></p><br>
