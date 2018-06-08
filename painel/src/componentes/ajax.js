@@ -9,6 +9,6 @@ function chamadaAjax(urldoSelect, funcao) {
             }//fim funcao
         });//fim do ajax
     } else {
-        console.log('Erros de paramentro')
+        console.log('Erro de paramentro')
     }
 }

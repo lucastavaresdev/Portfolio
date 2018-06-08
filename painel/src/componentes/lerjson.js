@@ -8,8 +8,8 @@ function localizacao(data) {
 
 
 setInterval(function () {
-    chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-    chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
+    chamadaAjax('php/selectsJson.php?parametro=localizacao', tabela);
+    //chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
 },1000);
 
 
@@ -18,8 +18,7 @@ function tabela_localizacao(data, id_da_tabela, html) {
     var html = "";
     
     for (let i = 0; i < data.length; i++) {
-        html += '<tr><td>' + data[i].setor + '</td><td class="status_localizacao">' + data[i].status_localizacao + '</td><td><p>Paciente:    <span class="dados-emuso">' + data[i].paciente + '</span></p><br><p>Data de Nascimento: <span class="dados-emuso">' + data[i].data_nascimento + '</span></p><br><p>procedimento: <span class="dados-emuso"> ' + data[i].procedimento + '</span></p><br><p>tempo: <span class="dados-emuso"> ' + data[i].tempo + '</p></td></tr>'
-    
+        html += '<tr class="linha_pacientes"><td>' + data[i].paciente + '</td><td class="status"  class="' + data[i].setor + '">' + data[i].setor + '</td>';    
     }
 
     document.getElementById("tabela_localizacao").innerHTML = html;
@@ -28,17 +27,15 @@ function tabela_localizacao(data, id_da_tabela, html) {
 }
 
 
+//rastrio de pacientes
 function tabela(data) {
     var html = "";
-
     for (let i = 0; i < data.length; i++) {
-        html += '<tr class="linha_pacientes"><td>' + data[i].nm_paciente + '</td><td class="status"  class="' + data[i].status + '">' + data[i].status + '</td>';
+        html += '<tr class="linha_pacientes"><td>' + data[i].paciente + '</td><td class="status"  class="' + data[i].setor + '">' + data[i].setor + '</td>';
     }
     document.getElementById("tabela").innerHTML = html;
-
     var status = document.querySelectorAll(".status");
-    coresStatus(status);
-    totaldePaciente();
+   // coresStatus(status);
 }
 
 
