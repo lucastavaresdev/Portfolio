@@ -15,9 +15,9 @@ setInterval(function () {
 
 
 function retornaquantidade(data) {
-    var quantidade = ['Centro Cirurgico', 'Centro Cirurgico', 'Saida', 'Internacao'];
+    var quantidade = ['Centro Cirurgico',  'Centro Cirurgico', 'Saida', 'Internacao'];
     var seletorLocais = document.querySelectorAll('.nomesetor');
-    
+    var html = '';
     
     for (let i = 0; i < seletorLocais.length; i++) {
         result = 0 
@@ -26,8 +26,9 @@ function retornaquantidade(data) {
             if(localtela === quantidade[j]){
                 result = result + 1;
                 document.querySelectorAll('.qtdpaciente')[i].innerHTML = result;
+            }else{
+                result = 0
             }
-
         }
     }
 }
