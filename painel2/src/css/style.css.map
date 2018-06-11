@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI,GACA,UAAU,ECDN,IAAI",
+"sources": ["../sass/_base.scss","../sass/_variaveis.scss"],
+"names": [],
+"file": "style.css"
+}
