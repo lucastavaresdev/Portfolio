@@ -15,7 +15,7 @@
     <!--navbar topo-->
     <nav class="navbar navbar-expand-lg">
         <div class="navbar-brand" href="#">
-            <h1 class="tituloprincipal">Dashboard de rotina</h1>
+            <h1 class="tituloprincipal">Dashboard</h1>
         </div>
         <button href="#menu-toggle" id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,6 @@
             </span>
             </div>
     </nav>
-
     <div id="wrapper">
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
@@ -46,36 +45,43 @@
                         <img class="icone" src="img/icon-lista.png" alt="">Lista
                     </li> 
                 </a>
-
 -->
             </ul>
         </div>
->
+        >
         <div id="page-content-wrapper">
             <div class="container-fluid">
 
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-
     </div>
     <!-- /#wrapper -->
-
-
-
     <main role="main" class="col-md-9 col-lg-10 offset-md-1">
         <section>
             <div class="container-fluid mt-3">
                 <div class="row">
                     <div class="col-md-12 col-lg-6">
+                        <h1 class="h4 text-center tituloPaciente">Tracking de Paciente</h1>
+                        <table class="table">
+                            <thead class="topo_tabela">
+                                <tr class="a">
+                                    <th class="borda-topo-left" scope="col">Nome</th>
+                                    <th class="borda-topo-right" scope="col">Local</th>
+                                </tr>
+                            </thead>
+                            <tbody class="conteudo_tabela" id="tabela">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-12 col-lg-6 tablet">
                         <h1 class="h4 text-center">Salas</h1>
                         <div class="table-responsive-sm">
                             <table class="table">
                                 <thead class="topo_tabela">
                                     <tr class="a">
-                                        <th class="borda-topo-left" scope="col">Localização</th>
-                                        <th scope="col">Status</th>
-                                        <th class="borda-topo-right" scope="col">Descrição</th>
+                                        <th class="borda-topo-left" scope="col">Local</th>
+                                        <th class="borda-topo-right" scope="col">Ocupações</th>
                                     </tr>
                                 </thead>
                                 <tbody class="conteudo_tabela" id='tabela_localizacao'>
@@ -83,43 +89,9 @@
                             </table>
                         </div>
                     </div>
-
-                    <div class="col-md-12 col-lg-6 tablet">
-                        <h1 class="h4 text-center">Pacientes</h1>
-                        <table class="table">
-                            <thead class="topo_tabela">
-                                <tr class="a">
-                                    <th class="borda-topo-left" scope="col">Nome</th>
-                                    <th class="borda-topo-right" scope="col">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="conteudo_tabela"  id="tabela">
-                            </tbody>
-                        </table>
-                            <section class="row">
-                                <div class="col-md-8 col-sm-12">
-                                    <div class="chart-container">
-                                        <canvas id="graficoPacientes"></canvas>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="box">
-                                        <h2 class="dados">Total de pacientes:
-                                            <span id='totaldePacientes' class="dados-emuso">0</span>
-                                        </h2>
-                                    </div>
-
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </div>
         </section>
     </main>
 </body>
-
-
-
 
 <script src="./componentes/jquery.js"></script>
 <!-- <script src="../dist/js/app.min.js"></script> -->

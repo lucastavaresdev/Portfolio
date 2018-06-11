@@ -8,34 +8,78 @@ function localizacao(data) {
 
 
 setInterval(function () {
-    chamadaAjax('php/selectsJson.php?parametro=agendamento', tabela);
-    chamadaAjax('php/selectsJson.php?parametro=localizacao', localizacao);
+    chamadaAjax('php/selectsJson.php?parametro=localizacao', tabela);
+    chamadaAjax('php/selectsJson.php?parametro=listasetores', localizacao);
 }, 500);
 
+
+function retornaquantidade(data) {
+    chamadaAjax('php/selectsJson.php?parametro=qtdsetores', retornaquantidade);
+    var quantidade = [];
+    
+    for (i = 0;i < data.length; i++) {
+        var quantidade = data[i].qtdsetor;
+    }
+
+    var seletorLocais = document.querySelectorAll('.nomesetor'); //da tela
+    var arr = [];
+
+    for (let i = 0; i < seletorLocais.length; i++) {
+        result = 0
+        for (let j = 0; j < quantidade.length; j++) {
+            var localtela = seletorLocais[i].textContent;
+            if (localtela === quantidade[j]) {
+                result = result + 1;
+                arr[i] = +  result;
+                //debugger;
+                //document.querySelectorAll('.qtdpaciente')[i].innerHTML = result;
+            } else {
+                result = 0
+            }
+        }
+    }
+    return arr;
+}
 
 
 function tabela_localizacao(data, id_da_tabela, html) {
     var html = "";
+    var quantidade = retornaquantidade(data);
+
+
     for (let i = 0; i < data.length; i++) {
-        html += '<tr><td>' + data[i].localizacao + '</td><td class="status_localizacao">' + data[i].status_localizacao + '</td><td>Descrição</td></tr>'
+        if (typeof quantidade[i] === "undefined") {
+            var a = 0;
+        } else {
+            var a = quantidade[i]
+        }
+
+        html += '<tr class="linha_pacientes"><td class="nomesetor">' + data[i].nome + '</td><td class="status qtdpaciente">' + a + '</td>';
+
     }
+
+
     document.getElementById("tabela_localizacao").innerHTML = html;
     var status = document.querySelectorAll(".status_localizacao");
     coresStatus(status);
+
+
 }
 
 
+//rastrio de pacientes
 function tabela(data) {
     var html = "";
-
-    for (let i = 0; i < data.length; i++) {
-        html += '<tr class="linha_pacientes"><td>' + data[i].nm_paciente + '</td><td class="status"  class="' + data[i].status + '">' + data[i].status + '</td>';
+    if (data.length === 0) {
+        html += '<tr><td colspan= "2">Não ha pacientes no momento</td></tr>';
+    } else {
+        for (let i = 0; i < data.length; i++) {
+            html += '<tr class="linha_pacientes"><td>' + data[i].paciente + '</td><td class="status"  class="' + data[i].setor + '">' + data[i].setor + '</td></tr>';
+        }
     }
     document.getElementById("tabela").innerHTML = html;
-
     var status = document.querySelectorAll(".status");
-    coresStatus(status);
-    totaldePaciente();
+    // coresStatus(status);
 }
 
 
