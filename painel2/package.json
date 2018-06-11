@@ -9,6 +9,7 @@
   "author": "Lucas Tavares <lucastavaresdev@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.1.1"
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1"
   }
 }
