@@ -1,0 +1,14 @@
+{
+  "name": "painel2",
+  "version": "1.0.0",
+  "description": "Segundo painel para cliente",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Tavares <lucastavaresdev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.1.1"
+  }
+}
