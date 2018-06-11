@@ -10,37 +10,54 @@ function localizacao(data) {
 setInterval(function () {
     chamadaAjax('php/selectsJson.php?parametro=localizacao', tabela);
     chamadaAjax('php/selectsJson.php?parametro=listasetores', localizacao);
-    chamadaAjax('php/selectsJson.php?parametro=qtdsetores', retornaquantidade);
 }, 500);
 
 
 function retornaquantidade(data) {
-    var quantidade = ['Centro Cirurgico',  'Centro Cirurgico', 'Saida', 'Internacao'];
-    var seletorLocais = document.querySelectorAll('.nomesetor');
-    var html = '';
+    chamadaAjax('php/selectsJson.php?parametro=qtdsetores', retornaquantidade);
+    var quantidade = [];
     
+    for (i = 0;i < data.length; i++) {
+        var quantidade = data[i].qtdsetor;
+    }
+
+    var seletorLocais = document.querySelectorAll('.nomesetor'); //da tela
+    var arr = [];
+
     for (let i = 0; i < seletorLocais.length; i++) {
-        result = 0 
+        result = 0
         for (let j = 0; j < quantidade.length; j++) {
             var localtela = seletorLocais[i].textContent;
-            if(localtela === quantidade[j]){
+            if (localtela === quantidade[j]) {
                 result = result + 1;
-                document.querySelectorAll('.qtdpaciente')[i].innerHTML = result;
-            }else{
+                arr[i] = +  result;
+                //debugger;
+                //document.querySelectorAll('.qtdpaciente')[i].innerHTML = result;
+            } else {
                 result = 0
             }
         }
     }
+    return arr;
 }
-
 
 
 function tabela_localizacao(data, id_da_tabela, html) {
     var html = "";
+    var quantidade = retornaquantidade(data);
+
 
     for (let i = 0; i < data.length; i++) {
-        html += '<tr class="linha_pacientes"><td class="nomesetor">' + data[i].nome + '</td><td class="status qtdpaciente">' + '0' + '</td>';
+        if (typeof quantidade[i] === "undefined") {
+            var a = 0;
+        } else {
+            var a = quantidade[i]
+        }
+
+        html += '<tr class="linha_pacientes"><td class="nomesetor">' + data[i].nome + '</td><td class="status qtdpaciente">' + a + '</td>';
+
     }
+
 
     document.getElementById("tabela_localizacao").innerHTML = html;
     var status = document.querySelectorAll(".status_localizacao");
