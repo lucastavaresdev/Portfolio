@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,IAAI,GACA,UAAU,ECAK,OAAO;;ACD1B,QAAQ,GACJ,UAAU,EDDL,OAAO",
+"sources": ["../sass/_base.scss","../sass/_variaveis.scss","../sass/_partials/_sidebar.scss"],
 "names": [],
 "file": "style.css"
 }
