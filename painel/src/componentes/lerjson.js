@@ -35,9 +35,6 @@ function retornaquantidade(data) {
 
 
 
-
-
-
 function tabela_localizacao(data, id_da_tabela, html) {
     var html = "";
 
@@ -51,12 +48,6 @@ function tabela_localizacao(data, id_da_tabela, html) {
 
 
 }
-
-
-
-
-
-
 
 
 //rastrio de pacientes
