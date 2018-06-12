@@ -8,18 +8,8 @@ $parametro =$_GET['parametro'];//PARAMETRO
 //selects
 $agendamento = 'SELECT nm_paciente, tp_situacao, dt_agendamento,tp_sexo, ds_cirurgia FROM agendamento WHERE DATE(dt_agendamento) = CURDATE() order by dt_agendamento';
 
-$localizacao =  "SELECT distinct a.nm_paciente as paciente,dt_nascimento as data_nascimento ,t.id_sala, s.nome as setor, t.checkin, t.checkout, 
-timediff(checkout, checkin) as tempo from tracking_pacientes t
-left join setores s on s.id = t.id_sala
-left join gateways g on g.id = t.gateway
-left join beacons b on b.id = t.beacon
-left join agendamento a on b.id_vinculado = a.cd_aviso_cirurgia
-left join tracking_scan ts on ts.gateway = t.gateway and ts.beacon = t.beacon where (t.fechado is null and t.id_vinculado is not null and t.categoria = 'Paciente')";
-
-$listasetores = "SELECT nome, sigla, permanencia FROM setores";
-
-$qtdSetores = "SELECT  t.id_sala as setor, s.nome,count(s.nome) as qtdsetor  
-from tracking_pacientes t 
+$localizacao =  "SELECT distinct a.nm_paciente as paciente,dt_nascimento as data_nascimento, t.id_sala, s.nome as setor 
+from tracking_pacientes t
 left join setores s on s.id = t.id_sala
 left join gateways g on g.id = t.gateway
 left join beacons b on b.id = t.beacon
@@ -27,15 +17,25 @@ left join agendamento a on b.id_vinculado = a.cd_aviso_cirurgia
 left join tracking_scan ts on ts.gateway = t.gateway and ts.beacon = t.beacon
 where (t.fechado is null and t.id_vinculado is not null and t.categoria = 'Paciente')";
 
+
+
+
+$setor = "SELECT * FROM nipo.setores s
+left join (
+  select count(id) as qtdsala, id_sala
+      from tracking_pacientes
+      where fechado is null
+      group by id_sala
+  ) t
+  on t.id_sala = s.id";
+
 //parametro passado
 if($parametro === 'agendamento'){
   geraJson($agendamento , $conexao );
 }else if($parametro === 'localizacao'){
   geraJson($localizacao, $conexao);
-}else if($parametro === 'listasetores'){
-  geraJson($listasetores, $conexao);
-}else if($parametro === 'qtdsetores'){
-  geraJson($qtdSetores, $conexao);
+}else if($parametro === 'setor'){
+  geraJson($setor, $conexao);
 }
  
 
