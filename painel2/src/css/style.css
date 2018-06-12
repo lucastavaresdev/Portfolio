@@ -24,7 +24,9 @@ body { background: #F1F5F8; }
 .navbar { display: none; }
 
 #sidebar-wrapper a { font-size: 18px; color: #6F7070; margin-left: 5%; padding-right: 50%; border-left: 5px solid #f4f4f4; padding: 10px; overflow: hidden; text-decoration: none; }
-#sidebar-wrapper a:hover { padding-right: 50%; border-left: 5px solid #3E76C8; background: #F1F5F8; }
+#sidebar-wrapper a:hover { padding-right: 50%; border-left: 5px solid #3E76C8; background: #eaf0f5; }
+
+.active { border-left: 5px solid #3E76C8 !important; padding-right: 50% !important; background: #F1F5F8; }
 
 @media (max-width: 768px) { body { overflow-x: hidden; }
   #wrapper { padding-left: 0; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }

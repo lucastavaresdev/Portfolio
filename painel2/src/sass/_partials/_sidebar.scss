@@ -69,10 +69,15 @@
   &:hover{
     padding-right: 50%;
     border-left: 5px solid $azul;
-    background: $azul-acinzentado;
+    background: darken($azul-acinzentado, 2%);
   }
 }
 
+.active{
+  border-left: 5px solid $azul !important; 
+  padding-right: 50% !important;
+  background: $azul-acinzentado;
+}
 
 @media(max-width: 768px){
   body {
