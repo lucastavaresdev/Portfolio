@@ -51,4 +51,8 @@ body { background: #f8fafb; }
 .tabela_dashboard table tbody { background: #ffffff; border: 1px solid #e7e7e7; }
 .tabela_dashboard table tbody td { padding: 1%; }
 
+.cards { margin-top: 3%; margin-bottom: 3%; }
+.cards .card-header { color: #3E76C8; font-weight: 600; }
+.cards .card-title { color: #6F7070; }
+
 /*# sourceMappingURL=style.css.map */
