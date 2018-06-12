@@ -1,4 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
 body { background: #f8fafb; }
+
+h1, h2, h3, h4, h5, h6, p, span { font-family: 'Nunito Sans', sans-serif; }
+
+tr, th, td { font-family: 'Myriad Pro', sans-serif; font-weight: 200; }
 
 #wrapper { padding-left: 0; }
 
