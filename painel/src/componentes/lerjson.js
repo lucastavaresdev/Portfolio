@@ -6,58 +6,28 @@ function localizacao(data) {
     tabela_localizacao(data, '#tabela_localizacao')
 }
 
-
 setInterval(function () {
+    chamadaAjax('php/selectsJson.php?parametro=setor', localizacao);
     chamadaAjax('php/selectsJson.php?parametro=localizacao', tabela);
-    chamadaAjax('php/selectsJson.php?parametro=listasetores', localizacao);
-}, 500);
-
-
-function retornaquantidade(data) {
-    chamadaAjax('php/selectsJson.php?parametro=qtdsetores', retornaquantidade);
-    var quantidade = [];
-    
-    for (i = 0;i < data.length; i++) {
-        var quantidade = data[i].qtdsetor;
-    }
-
-    var seletorLocais = document.querySelectorAll('.nomesetor'); //da tela
-    var arr = [];
-
-    for (let i = 0; i < seletorLocais.length; i++) {
-        result = 0
-        for (let j = 0; j < quantidade.length; j++) {
-            var localtela = seletorLocais[i].textContent;
-            if (localtela === quantidade[j]) {
-                result = result + 1;
-                arr[i] = +  result;
-                //debugger;
-                //document.querySelectorAll('.qtdpaciente')[i].innerHTML = result;
-            } else {
-                result = 0
-            }
-        }
-    }
-    return arr;
-}
+},1000);
 
 
 function tabela_localizacao(data, id_da_tabela, html) {
     var html = "";
-    var quantidade = retornaquantidade(data);
-
 
     for (let i = 0; i < data.length; i++) {
-        if (typeof quantidade[i] === "undefined") {
-            var a = 0;
-        } else {
-            var a = quantidade[i]
+        if(data[i].qtdsala === ""){
+            setor = 0;
+        }else{
+            setor = data[i].qtdsala
         }
 
-        html += '<tr class="linha_pacientes"><td class="nomesetor">' + data[i].nome + '</td><td class="status qtdpaciente">' + a + '</td>';
 
+
+
+
+        html += '<tr class="linha_pacientes"><td class="nomesetor">' + data[i].nome + '</td><td class="status qtdpaciente">' + setor + '</td>';
     }
-
 
     document.getElementById("tabela_localizacao").innerHTML = html;
     var status = document.querySelectorAll(".status_localizacao");
@@ -65,6 +35,8 @@ function tabela_localizacao(data, id_da_tabela, html) {
 
 
 }
+
+
 
 
 //rastrio de pacientes
