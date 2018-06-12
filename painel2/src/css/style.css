@@ -5,6 +5,8 @@ h1, h2, h3, h4, h5, h6, p, span { font-family: 'Nunito Sans', sans-serif; }
 
 tr, th, td { font-family: 'Myriad Pro', sans-serif; font-weight: 200; }
 
+.titulo { color: #6F7070; font-size: 40px; }
+
 #wrapper { padding-left: 0; }
 
 #wrapper.toggled { padding-left: 250px; }
