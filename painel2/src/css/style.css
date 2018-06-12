@@ -20,11 +20,15 @@ body { background: #F1F5F8; }
 .sidebar-nav li { list-style: none; }
 
 .logo { margin-top: 21%; text-align: center; }
+.logo img { margin-bottom: 18%; }
 
 .navbar { display: none; }
 
-#sidebar-wrapper a { font-size: 18px; color: #6F7070; margin-left: 5%; padding-right: 50%; border-left: 5px solid #f4f4f4; padding: 10px; overflow: hidden; text-decoration: none; }
+#sidebar-wrapper li { margin-left: 5%; margin-bottom: 5%; }
+
+#sidebar-wrapper a { font-size: 18px; color: #6F7070; margin-left: 7%; border-left: 5px solid #f4f4f4; overflow: hidden; text-decoration: none; padding-bottom: 5%; padding-top: 5%; }
 #sidebar-wrapper a:hover { padding-right: 50%; border-left: 5px solid #3E76C8; background: #eaf0f5; }
+#sidebar-wrapper a img { padding: 10px; }
 
 .active { border-left: 5px solid #3E76C8 !important; padding-right: 50% !important; background: #F1F5F8; }
 
