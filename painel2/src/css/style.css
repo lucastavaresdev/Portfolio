@@ -52,7 +52,10 @@ body { background: #f8fafb; }
 .tabela_dashboard table tbody td { padding: 1%; }
 
 .cards { margin-top: 3%; margin-bottom: 3%; }
-.cards .card-header { color: #3E76C8; font-weight: 600; }
-.cards .card-title { color: #6F7070; }
+.cards .card { border: 3px solid #F1F5F8; border-radius: 15px; }
+.cards .card .card-header { color: #3E76C8; font-weight: 600; }
+.cards .card .card-title { margin-top: -0.25rem; margin-bottom: -0.25rem; color: #6F7070; font-size: 18px; }
+.cards .card .card-title img { vertical-align: 0px; }
+.cards .card .card-title span { margin-left: 3%; color: #3E76C8; font-size: 40px; }
 
 /*# sourceMappingURL=style.css.map */
