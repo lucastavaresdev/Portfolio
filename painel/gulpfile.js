@@ -25,18 +25,19 @@ gulp.task('copy', ['clean'], function () {
         'src/componentes/**/*',
         'src/css/**/*',
         'src/img/**/*',
+        'src/php/**/*',
     ], { "base": "src" })//o base mantem a estrutura
         .pipe(gulp.dest('dist'))
 })
 
 
 
-gulp.task('build-js', function(){
-    gulp.src('src/js/**/*')
-    .pipe(concat('app.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/js/'))
-})
+// gulp.task('build-js', function(){
+//     gulp.src('src/js/**/*')
+//     .pipe(concat('app.min.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest('./dist/js/'))
+// })
 
 
 // gulp.task('html', function(){
@@ -63,7 +64,7 @@ gulp.task('imagemin', function(){
 
 
 gulp.task('default', ['copy' ,], function(){
-    gulp.start('minify', 'imagemin', 'build-js')
+    gulp.start('minify', 'imagemin')
 })
 
 
