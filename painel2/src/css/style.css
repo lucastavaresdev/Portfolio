@@ -9,6 +9,7 @@ tr, th, td { font-family: 'Myriad Pro', sans-serif; font-weight: 200; }
 
 button { float: right; }
 
+@media (max-width: 768px) { .titulo { font-size: 30px; } }
 #wrapper { padding-left: 0; }
 
 #wrapper.toggled { padding-left: 250px; }
@@ -42,7 +43,7 @@ button { float: right; }
 .active { border-left: 5px solid #3E76C8 !important; padding-right: 50% !important; background: #F1F5F8; }
 
 @media (max-width: 768px) { body { overflow-x: hidden; }
-  #page-content-wrapper { padding-left: 0px; }
+  #page-content-wrapper { padding-left: 5%; padding-right: 0.5%; }
   #wrapper { padding-left: 0; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
   #wrapper.toggled { padding-left: 0px; }
   #sidebar-wrapper { border-top: 8px solid #3E76C8; z-index: 1000; position: fixed; left: 250px; width: 0; height: 100%; margin-left: -250px; overflow-y: auto; background: #ffffff; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
@@ -53,7 +54,7 @@ button { float: right; }
   .sidebar-nav > .sidebar-brand { height: 65px; font-size: 18px; line-height: 60px; }
   .sidebar-nav > .sidebar-brand a { color: #999999; }
   .sidebar-nav > .sidebar-brand a:hover { color: #fff; background: none; }
-  .navbar { display: block; } }
+  .navbar { display: block; padding: 0; } }
 .tabela_dashboard table { width: 100%; max-width: 100%; margin-bottom: 1rem; background-color: transparent; }
 .tabela_dashboard table thead .topo { background: #3E76C8; color: #ffffff; }
 .tabela_dashboard table thead th { padding: 15px; border-top: 1px solid transparent; }
@@ -67,5 +68,7 @@ button { float: right; }
 .cards .card .card-title { margin-top: -0.25rem; margin-bottom: -0.25rem; color: #6F7070; font-size: 18px; }
 .cards .card .card-title img { vertical-align: 0px; }
 .cards .card .card-title span { margin-left: 3%; color: #3E76C8; font-size: 40px; }
+
+@media (max-width: 1024px) and (orientation: landscape) { .col-lg-2 { flex: 0 0 50%; max-width: 50%; } }
 
 /*# sourceMappingURL=style.css.map */

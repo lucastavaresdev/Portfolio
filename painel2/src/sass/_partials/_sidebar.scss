@@ -97,7 +97,8 @@
     overflow-x: hidden;
   }
  #page-content-wrapper{
-      padding-left: 0px;
+      padding-left: 5%;
+      padding-right: 0.5%;
   }
   #wrapper {
     padding-left: 0;
@@ -166,6 +167,7 @@
 
   .navbar{
     display: block;
+    padding: 0;
   }
 }
 
