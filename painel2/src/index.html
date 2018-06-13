@@ -13,52 +13,113 @@
 
 <body>
     <!--navbar topo-->
-    <nav class="navbar navbar-expand-lg">
 
-        <h1 class="tituloprincipal">Dashboard</h1>
-        </div>
-        <button href="#menu-toggle" id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span>
-                <svg class="menu" viewBox="0 0 24 24" version="1.1" width="24px" height="24px">
-                    <g id="surface1">
-                        <path d="M 0 2 L 0 4 L 24 4 L 24 2 Z M 0 11 L 0 13 L 24 13 L 24 11 Z M 0 20 L 0 22 L 24 22 L 24 20 Z " />
-                    </g>
-                </svg>
-            </span>
-            </div>
-    </nav>
 
     <div id="wrapper">
-        <!-- Sidebar -->
         <div class="col-2">
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="logo">
-                            <img  src="img/logo-instituto-do-sono.png" alt=""/>
+                        <img src="img/logo-instituto-do-sono.png" alt="" />
                     </li>
                     <li>
-                        <a href="#">Dashboard </a>
+                        <a href="#" class="active">
+                            <img src="./img/icon-1.png" /> Dashboard </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/icon-2.png">Listas </a>
                     </li>
                 </ul>
             </div>
         </div>
+    </div>
 
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <main role="main" class="col-md-9 col-lg-10 offset-md-1">
-                    <section>
-                        <div class="container-fluid mt-3">
-                            <div class="row">
-                                <div class="col-md-12 col-lg-6">
-
-                                </div>
-                            </div>
-                    </section>
-                </main>
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <main>
+                <div class="row">
+                   <div class="col-9 col-md-11">
+                    <h1 class="titulo">Dashboard</h1>
+                </div>
+                    <nav class="navbar navbar-expand-lg">
+                        <button href="#menu-toggle" id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span>
+                                <svg class="menu" viewBox="0 0 24 24" version="1.1" width="24px" height="24px">
+                                    <g id="surface1">
+                                        <path d="M 0 2 L 0 4 L 24 4 L 24 2 Z M 0 11 L 0 13 L 24 13 L 24 11 Z M 0 20 L 0 22 L 24 22 L 24 20 Z " />
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                 </nav>
+                 </div>
+        <hr>
+        <section class="container-fluid mt-3 tabela_dashboard">
+            <div class="row cards">
+                <div class="col-md-6 col-lg-2 col-sm-12">
+                    <div class="card text-white mb-3 ">
+                        <div class="card-body text">
+                            <h5 class="card-title align-middle">
+                                <img src="img/icon-3.png">
+                                <span>15</span>Pacientes do dia</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <table class="table table-hover table-responsive-sm table-responsive-md table-responsive-lg">
+                        <thead>
+                            <th class="celula-invisivel" scope="col"></th>
+                            <th class="topo text-center" scope="col">Exame 1</th>
+                            <th class="topo text-center" scope="col">Exame 2</th>
+                            <th class="topo text-center" scope="col">Exame 3</th>
+                            <th class="topo text-center" scope="col">Exame 4</th>
+                            <th class="topo text-center" scope="col">Exame 5</th>
+                            <th class="topo text-center" scope="col">Exame 6</th>
+                            <th class="topo text-center" scope="col">Exame 7</th>
+                            <th class="topo text-center" scope="col">Exame 8</th>
+                            <th class="topo text-center" scope="col">Exame 9</th>
+                            <th class="topo text-center" scope="col">Exame 10</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="nome_paciente align-middle" scope="row">Cristiane dos Santos</th>
+                                <td class="text-center">true</td>
+                                <td class="text-center">true</td>
+                                <td class="text-center">false</td>
+                                <td class="text-center">false</td>
+                                <td class="text-center">true</td>
+                                <td class="text-center">true</td>
+                                <td class="text-center">true</td>
+                                <td class="text-center">false</td>
+                                <td class="text-center">false</td>
+                                <td class="text-center">true</td>
+                            </tr>
+                            <tr>
+                                <th class="nome_paciente align-middle" scope="row">Emily Fernandes Alves</th>
+                                <td class="text-center">true</td>
+                                <td class="text-center">true</td>
+                                <td class="text-center">false</td>
+                                <td class="text-center">false</td>
+                                <td class="text-center">true</td>
+                                <td class="text-center">true</td>
+                                <td class="text-center">true</td>
+                                <td class="text-center">false</td>
+                                <td class="text-center">false</td>
+                                <td class="text-center">true</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        </main>
+    </div>
+    </div>
+    </div>
 </body>
 
 <script src="./componentes/jquery.js"></script>

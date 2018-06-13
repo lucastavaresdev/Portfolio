@@ -1,0 +1,31 @@
+.tabela_dashboard{
+    table{
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        background-color: transparent;
+        thead{
+            .topo{
+                background: $azul;
+                color: $branco;
+            }
+            
+            th{
+                padding: 15px;
+                border-top: 1px solid transparent;
+            }
+            .col-topo{
+                background: $azul;
+            }
+        }
+    
+        tbody{
+            background: $branco;
+            border: 1px solid darken($cinza-claro, 5%);
+
+            td{
+                padding: 1%;
+            }
+        }
+    }
+}
