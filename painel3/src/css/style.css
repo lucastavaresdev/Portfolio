@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+h1, h2, h3, h4, h5, h6, p, span, a {
+  font-family: 'Nunito', sans-serif; }
+
 .card {
   background: #FFFFFF;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
@@ -9,5 +13,10 @@
       margin-top: 45px;
       margin-bottom: 35px;
       background: #811384; }
+  .card h1 {
+    font-size: 27px;
+    color: #811384;
+    margin-top: 21px;
+    font-weight: 400; }
 
 /*# sourceMappingURL=style.css.map */
