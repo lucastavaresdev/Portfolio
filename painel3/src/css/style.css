@@ -2,8 +2,8 @@
 h1, h2, h3, h4, h5, h6, p, span, a {
   font-family: 'Nunito', sans-serif; }
 
-html {
-  background: red; }
+body {
+  background: #F8FAFC; }
 
 .card {
   margin-top: 10px;
@@ -69,5 +69,9 @@ html {
     font-size: 18px; }
   .card img {
     max-width: 50%; } }
+footer {
+  height: 15px;
+  width: 100%;
+  background: linear-gradient(to bottom, #43a3eb 0%, #4396eb 100%); }
 
 /*# sourceMappingURL=style.css.map */

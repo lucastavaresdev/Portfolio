@@ -6,7 +6,10 @@ h1,h2,h3,h4,h5,h6,p,span,a{
     font-family: 'Nunito', sans-serif;
 }
 
-html{
-    background: red;
-    //background: $cinza-claro;
+body{
+    background: $cinza-claro;
+}
+
+@mixin padrao {
+    background: linear-gradient(to bottom, #43a3eb 0% ,#4396eb 100%); 
 }
