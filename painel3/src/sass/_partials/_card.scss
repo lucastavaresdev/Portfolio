@@ -1,10 +1,12 @@
 .card{
     background: $branco ;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
-    border: 1px solid red;
+    border-radius: 8px;
+   // border: 1px solid red;
     .card-body_alterado{
          padding: 0px;
         .linha{
+            margin-right: 0;
             .fita{
                 height: 145px;
                 margin-top: 45px;
@@ -18,5 +20,23 @@
         color: $cor_do_card;
         margin-top: 21px;
         font-weight: 400;
+        margin-bottom: 30px;
     }
+    p{
+        color: $cinza-escuro;
+        font-size: 16px;
+    }
+    .icones{
+        background: $cor_do_card;
+        border-radius: 0px 8px 8px 0px;
+        .icon{
+            margin-top: 10px;
+        }
+        p{
+            color: $branco;
+            font-size: 26px;
+        }
+
+    }
+
 }

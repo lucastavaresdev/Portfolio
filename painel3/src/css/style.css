@@ -5,18 +5,32 @@ h1, h2, h3, h4, h5, h6, p, span, a {
 .card {
   background: #FFFFFF;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
-  border: 1px solid red; }
+  border-radius: 8px; }
   .card .card-body_alterado {
     padding: 0px; }
-    .card .card-body_alterado .linha .fita {
-      height: 145px;
-      margin-top: 45px;
-      margin-bottom: 35px;
-      background: #811384; }
+    .card .card-body_alterado .linha {
+      margin-right: 0; }
+      .card .card-body_alterado .linha .fita {
+        height: 145px;
+        margin-top: 45px;
+        margin-bottom: 35px;
+        background: #811384; }
   .card h1 {
     font-size: 27px;
     color: #811384;
     margin-top: 21px;
-    font-weight: 400; }
+    font-weight: 400;
+    margin-bottom: 30px; }
+  .card p {
+    color: #333333;
+    font-size: 16px; }
+  .card .icones {
+    background: #811384;
+    border-radius: 0px 8px 8px 0px; }
+    .card .icones .icon {
+      margin-top: 10px; }
+    .card .icones p {
+      color: #FFFFFF;
+      font-size: 26px; }
 
 /*# sourceMappingURL=style.css.map */
