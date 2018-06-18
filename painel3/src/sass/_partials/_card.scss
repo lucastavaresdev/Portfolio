@@ -1,0 +1,16 @@
+.card{
+    background: $branco ;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
+    border: 1px solid red;
+    .card-body_alterado{
+         padding: 0px;
+        .linha{
+            .fita{
+                height: 145px;
+                margin-top: 45px;
+                margin-bottom: 35px;
+                background: $cor_do_card;
+            }
+        }
+    }
+}

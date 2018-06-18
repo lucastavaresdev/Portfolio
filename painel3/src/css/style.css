@@ -1,3 +1,13 @@
-
+.card {
+  background: #FFFFFF;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
+  border: 1px solid red; }
+  .card .card-body_alterado {
+    padding: 0px; }
+    .card .card-body_alterado .linha .fita {
+      height: 145px;
+      margin-top: 45px;
+      margin-bottom: 35px;
+      background: #811384; }
 
 /*# sourceMappingURL=style.css.map */
