@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+h1, h2, h3, h4, h5, h6, p, span, a {
+  font-family: 'Nunito', sans-serif; }
+
+body {
+  background: #F8FAFC; }
+
+.nav-bar {
+  background: #FFFFFF;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
+  height: 70px; }
+  .nav-bar h1 {
+    font-size: 23px;
+    color: #CCCCCC;
+    margin-left: 2.5%;
+    padding-top: 17%;
+    padding-left: 16%; }
+  .nav-bar .quadrado {
+    width: 76px;
+    height: 100%;
+    background: linear-gradient(to bottom, #43a3eb 0%, #4396eb 100%); }
+  .nav-bar img {
+    padding: 18%; }
+  .nav-bar #fechar {
+    padding: 27%; }
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  background-color: #fff;
+  position: fixed !important;
+  z-index: 1;
+  overflow: auto; }
+
+.card {
+  margin-top: 10px;
+  background: #FFFFFF;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
+  border-radius: 8px;
+  border: none; }
+  .card .card-body_alterado {
+    padding: 0px; }
+    .card .card-body_alterado .linha {
+      margin-right: 0; }
+      .card .card-body_alterado .linha .fita {
+        height: 145px;
+        margin-top: 58px;
+        margin-bottom: 35px;
+        background: #F44545;
+        width: 5px; }
+  .card h1 {
+    font-size: 27px;
+    color: #F44545;
+    margin-top: 21px;
+    font-weight: 400;
+    margin-bottom: 30px; }
+  .card p {
+    color: #333333;
+    font-size: 16px; }
+  .card .icones {
+    background: #F44545;
+    border-radius: 0px 8px 8px 0px; }
+    .card .icones .icon {
+      margin-top: 10px; }
+    .card .icones p {
+      color: #FFFFFF;
+      font-size: 26px; }
+
+@media (min-width: 520px) and (max-width: 920px) {
+  .card .card-body_alterado {
+    padding-right: 15px; }
+  .card h1 {
+    font-size: 20px; }
+  .card p {
+    font-size: 14px; }
+  .card .icones p {
+    font-size: 18px;
+    margin-bottom: 13px; }
+  .card img {
+    max-width: 50%; } }
+@media (max-width: 520px) {
+  .card .card-body_alterado {
+    padding-right: 15px; }
+    .card .card-body_alterado .linha {
+      margin-right: 0; }
+      .card .card-body_alterado .linha .fita {
+        height: 120px;
+        margin-top: 50px;
+        margin-bottom: 35px;
+        background: #F44545; }
+  .card h1 {
+    font-size: 20px; }
+  .card p {
+    font-size: 14px; }
+  .card .icones p {
+    font-size: 18px; }
+  .card img {
+    max-width: 50%; } }
+footer {
+  height: 15px;
+  width: 100%;
+  background: linear-gradient(to bottom, #43a3eb 0%, #4396eb 100%); }
+
+/*# sourceMappingURL=style.css.map */

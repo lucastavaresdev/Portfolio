@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+$cor_do_card: $vermelho-f4;
+
+
+h1,h2,h3,h4,h5,h6,p,span,a{
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background: $cinza-claro;
+}
+
+@mixin padrao {
+    background: linear-gradient(to bottom, #43a3eb 0% ,#4396eb 100%); 
+}

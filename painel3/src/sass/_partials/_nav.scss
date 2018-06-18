@@ -1,0 +1,34 @@
+.nav-bar{
+    background: $branco;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
+    height: 70px;
+    h1{
+        font-size: 23px;
+        color:  $cinza-topo;
+        margin-left: 2.5%;
+        padding-top: 17%;
+        padding-left: 16%;
+    }
+    .quadrado{
+        width: 76px;
+        height: 100%;
+        @include padrao;
+    }
+
+    img{
+        padding: 18%;
+    }
+    #fechar{
+        padding: 27%;
+    }
+}
+
+.sidebar{
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    position: fixed!important;
+    z-index: 1;
+    overflow: auto;
+}
+

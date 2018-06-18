@@ -1,0 +1,99 @@
+.card{
+    margin-top: 10px;
+    background: $branco ;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
+    border-radius: 8px;
+    border: none;
+    .card-body_alterado{
+         padding: 0px;
+        .linha{
+            margin-right: 0;
+            .fita{
+                height: 145px;
+                margin-top: 58px;
+                margin-bottom: 35px;
+                background: $cor_do_card;
+                width: 5px;
+            }
+        }
+    }
+    h1{
+        font-size: 27px;
+        color: $cor_do_card;
+        margin-top: 21px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+    p{
+        color: $cinza-escuro;
+        font-size: 16px;
+    }
+    .icones{
+        background: $cor_do_card;
+        border-radius: 0px 8px 8px 0px;
+        .icon{
+            margin-top: 10px;
+        }
+        p{
+            color: $branco;
+            font-size: 26px;
+        }
+        
+    }
+    
+}
+
+@media(min-width: 520px) and (max-width: 920px){
+    .card{
+        .card-body_alterado{
+            padding-right: 15px;
+        }
+        h1{
+            font-size: 20px;
+        }
+        p{
+            font-size: 14px;
+        }
+        .icones{
+            p{
+                font-size: 18px;    
+                margin-bottom: 13px;
+            }
+        }
+        img{
+            max-width: 50%;
+        }
+    }
+}
+
+
+@media(max-width: 520px){
+    .card{
+        .card-body_alterado{
+            padding-right: 15px;
+            .linha{
+                margin-right: 0;
+                .fita{
+                    height: 120px;
+                    margin-top: 50px;
+                    margin-bottom: 35px;
+                    background: $cor_do_card;
+                }
+            }
+        }
+        h1{
+            font-size: 20px;
+        }
+        p{
+            font-size: 14px;
+        }
+        .icones{
+            p{
+                font-size: 18px;    
+            }
+        }
+        img{
+            max-width: 50%;
+        }
+    }
+}

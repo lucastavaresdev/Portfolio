@@ -22,7 +22,7 @@ button { float: right; }
 
 #wrapper.toggled #page-content-wrapper { position: relative; margin-right: 0; }
 
-#sidebar-wrapper { z-index: 1000; position: fixed; left: 250px; width: 0; height: 100%; margin-left: -250px; overflow-y: auto; background: #ffffff; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; }
+#sidebar-wrapper { z-index: 1000; position: fixed; left: 250px; width: 0; height: 100%; margin-left: -250px; overflow-y: auto; background: #ffffff; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease; overflow-x: hidden; }
 #sidebar-wrapper a { font-size: 9px; }
 
 .sidebar-nav { width: 100%; word-wrap: break-word; padding: 0; }
