@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="row nav-bar">
             <div class="botao">
-                <div class="btn-hamburger" onclick="menu()">
+                <div class="btn-hamburger" id="btn_clicado" onclick="menu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -54,7 +54,8 @@
     <script>
 
         function menu() {
-            document.getElementById("sidebar").classList.toggle('active');
+          document.getElementById("sidebar").classList.toggle('active');
+          document.getElementById("btn_clicado").classList.toggle('fechar');
         }
 
     </script>

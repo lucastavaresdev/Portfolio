@@ -23,7 +23,8 @@ body {
       height: 3px;
       background: #FFFFFF;
       display: block;
-      margin-bottom: 13px; }
+      margin-bottom: 13px;
+      transition: 400ms; }
       .nav-bar .btn-hamburger span:last-child {
         margin-bottom: 0px; }
   .nav-bar .title {
@@ -63,6 +64,18 @@ body {
 .active {
   left: 0px !important; }
 
+.fechar {
+  padding-top: 35px !important;
+  padding-bottom: 35px !important; }
+  .fechar span:first-child {
+    transform: rotate(130deg);
+    margin-bottom: -10px !important; }
+  .fechar span:nth-child(2) {
+    display: none !important; }
+  .fechar span:last-child {
+    margin-top: 8px;
+    transform: rotate(-130deg); }
+
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
   .title h1 {
     margin-left: 10%; } }
@@ -82,8 +95,13 @@ body {
       left: 105px; }
       .nav-bar .title h1 {
         color: #CCCCCC;
-        font-size: 20px; } }
-@media only screen and (max-width: 520px) and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+        font-size: 20px; }
+
+  .fechar {
+    padding-top: 29px !important;
+    padding-bottom: 25px;
+    width: 65px; } }
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
   .title h1 {
     margin-left: 180%; } }
 .card {
