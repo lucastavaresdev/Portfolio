@@ -1,34 +1,183 @@
-.nav-bar{
-    background: $branco;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
+.nav-bar {
     height: 70px;
-    h1{
-        font-size: 23px;
-        color:  $cinza-topo;
-        margin-left: 2.5%;
-        padding-top: 17%;
-        padding-left: 16%;
+    background: $branco;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082); // .botao{
+    .botao {
+        max-width: 6%;
     }
-    .quadrado{
-        width: 76px;
-        height: 100%;
+    .btn-hamburger {
+        position: absolute;
+        padding: 18px;
+        margin-top: 0px;
+        left: 0px;
         @include padrao;
+        cursor: pointer;
+        span {
+            width: 47px;
+            height: 3px;
+            background: #FFFFFF;
+            display: block;
+            margin-bottom: 13px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
     }
-
-    img{
-        padding: 18%;
-    }
-    #fechar{
-        padding: 27%;
+    .title {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 0.3%;
+        h1 {
+            color: $cinza-topo;
+            font-size: 23px;
+        }
     }
 }
 
-.sidebar{
+#sidebar {
+    z-index: 1000;
+    position: fixed;
+    left: -200px;
+    background: $azul;
     height: 100%;
     width: 200px;
-    background-color: #fff;
-    position: fixed!important;
-    z-index: 1;
-    overflow: auto;
+    transition: 400ms;
+    ul {
+        list-style: none;
+        margin-top: 30px;
+        li {
+            width: 100%;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            border-bottom: 1px solid gray;
+            a {
+                color: $branco;
+                text-decoration: none;
+                font-family: sans-serif;
+            }
+        }
+    }
 }
 
+.active {
+    left: 0px !important;
+}
+
+//ipad pro
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .title {
+        h1 {
+            margin-left: 180%;
+        }
+    }
+}
+
+@media(max-width: 520px) {
+    .nav-bar {
+        height: 55px;
+        .btn-hamburger {
+            padding: 14px;
+            span {
+                width: 40px;
+                height: 3px;
+                margin-bottom: 9px;
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+        .title {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 0.3%;
+            h1 {
+                color: $cinza-topo;
+                font-size: 23px;
+            }
+        }
+    }
+    
+    #sidebar {
+        z-index: 1000;
+        position: fixed;
+        left: -200px;
+        background: $azul;
+        height: 100%;
+        width: 200px;
+        transition: 400ms;
+        ul {
+            list-style: none;
+            margin-top: 30px;
+            li {
+                width: 100%;
+                padding: 10px 20px;
+                box-sizing: border-box;
+                border-bottom: 1px solid gray;
+                a {
+                    color: $branco;
+                    text-decoration: none;
+                    font-family: sans-serif;
+                }
+            }
+        }
+    }
+    
+    .active {
+        left: 0px !important;
+    }
+    
+    //ipad pro
+    @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+        .title {
+            h1 {
+                margin-left: 180%;
+            }
+        }
+    }
+    
+}
+
+// @media(min-width: 520px) and (max-width: 920px) {
+//     .nav-bar {
+//         .botao {
+//             max-width: 20%;
+//         }
+//     }
+// }
+// .nav-bar{
+//     background: $branco;
+//     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
+//     height: 70px;
+//     h1{
+//         font-size: 23px;
+//         color:  $cinza-topo;
+//         margin-left: 2.5%;
+//         padding-top: 17%;
+//         padding-left: 16%;
+//     }
+//     .quadrado{
+//         width: 76px;
+//         height: 100%;
+//         @include padrao;
+//     }
+//     img{
+//         padding: 18%;
+//     }
+//     #fechar{
+//         padding: 27%;
+//     }
+// }
+// .sidebar{
+//     height: 100%;
+//     width: 200px;
+//     background-color: #fff;
+//     position: fixed!important;
+//     z-index: 1;
+//     overflow: auto;
+// }
