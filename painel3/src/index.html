@@ -12,7 +12,7 @@
 
 <body>
 
-    <div class="container-fluid">
+    <div class="container-fluid fixed-top">
         <div class="row nav-bar">
             <div class="botao">
                 <div class="btn-hamburger" id="btn_clicado" onclick="menu()">
@@ -22,12 +22,10 @@
                 </div>
             </div>
             <div class="title">
-                 <h1>Dashboard</h1> 
+                <h1>Dashboard</h1>
             </div>
         </div>
     </div>
-
-
     <div id="sidebar">
         <ul>
             <li>
@@ -44,8 +42,113 @@
             </li>
         </ul>
     </div>
-    </div>
+    <div class="container-fluid">
+        <div class="row">
 
+            <div class="col-lg-10 col-md-9 col-sm-12 cards ">
+                <div class="row">
+                    <!-- card 1 -->
+                    <div class="col-lg-4 col-sm-12 ">
+                        <div class="card">
+                            <div class="card-body card-body_alterado">
+                                <div class="row">
+                                    <div class="col-1 linha">
+                                        <div class="fita"></div>
+                                    </div>
+                                    <div class="col-9">
+                                        <h1>Oncologia</h1>
+                                        <p>Total de Pacientes Agendados: 23</p>
+                                        <p>Pacientes do Momento: 5</p>
+                                        <p>Finalizados: 10</p>
+                                    </div>
+                                    <div class="col icones text-center">
+                                        <img class="icon" src="img/icon-1.png">
+                                        <p>23</p>
+                                        <img src="img/icon-2.png">
+                                        <p>05</p>
+                                        <img src="img/icon-3.png">
+                                        <p>10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="card">
+                            <div class="card-body card-body_alterado">
+                                <div class="row">
+                                    <div class="col-1 linha">
+                                        <div class="fita"></div>
+                                    </div>
+                                    <div class="col-9">
+                                        <h1>Oncologia</h1>
+                                        <p>Total de Pacientes Agendados: 23</p>
+                                        <p>Pacientes do Momento: 5</p>
+                                        <p>Finalizados: 10</p>
+                                    </div>
+                                    <div class="col icones text-center">
+                                        <img class="icon" src="img/icon-1.png">
+                                        <p>23</p>
+                                        <img src="img/icon-2.png">
+                                        <p>05</p>
+                                        <img src="img/icon-3.png">
+                                        <p>10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="col-lg-4 col-sm-12">
+                        <div class="card">
+                            <div class="card-body card-body_alterado">
+                                <div class="row">
+                                    <div class="col-1 linha">
+                                        <div class="fita"></div>
+                                    </div>
+                                    <div class="col-9">
+                                        <h1>Oncologia</h1>
+                                        <p>Total de Pacientes Agendados: 23</p>
+                                        <p>Pacientes do Momento: 5</p>
+                                        <p>Finalizados: 10</p>
+                                    </div>
+                                    <div class="col icones text-center">
+                                        <img class="icon" src="img/icon-1.png">
+                                        <p>23</p>
+                                        <img src="img/icon-2.png">
+                                        <p>05</p>
+                                        <img src="img/icon-3.png">
+                                        <p>10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <!--live-->
+            <div class="col-lg-2 col-md-3 col-sm-12 col-12 b">
+
+
+
+
+            </div>
+        </div>
+    </div>
 
 
 
@@ -54,8 +157,8 @@
     <script>
 
         function menu() {
-          document.getElementById("sidebar").classList.toggle('active');
-          document.getElementById("btn_clicado").classList.toggle('fechar');
+            document.getElementById("sidebar").classList.toggle('active');
+            document.getElementById("btn_clicado").classList.toggle('fechar');
         }
 
     </script>

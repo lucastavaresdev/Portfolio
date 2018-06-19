@@ -5,6 +5,31 @@ h1, h2, h3, h4, h5, h6, p, span, a {
 body {
   background: #F8FAFC; }
 
+.a {
+  background: red; }
+
+.b {
+  background: #1dfc00;
+  height: 500px; }
+
+.c {
+  background: darkmagenta;
+  height: 30px;
+  border: 1px solid #FFFFFF; }
+
+.d {
+  background: #4396eb;
+  height: 800px; }
+
+html ::-webkit-scrollbar {
+  background: #F8FAFC, 30%; }
+html ::-webkit-scrollbar-button {
+  display: none; }
+html ::-webkit-scrollbar-track {
+  background: #F8FAFC; }
+html ::-webkit-scrollbar-track-piece {
+  background: #8daece; }
+
 .nav-bar {
   height: 70px;
   background: #FFFFFF;
@@ -104,39 +129,46 @@ body {
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
   .title h1 {
     margin-left: 180%; } }
-.card {
-  margin-top: 10px;
-  background: #FFFFFF;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
-  border-radius: 8px;
-  border: none; }
-  .card .card-body_alterado {
-    padding: 0px; }
-    .card .card-body_alterado .linha {
-      margin-right: 0; }
-      .card .card-body_alterado .linha .fita {
-        height: 145px;
-        margin-top: 58px;
-        margin-bottom: 35px;
-        background: #F44545;
-        width: 5px; }
-  .card h1 {
-    font-size: 27px;
-    color: #F44545;
-    margin-top: 21px;
-    font-weight: 400;
-    margin-bottom: 30px; }
-  .card p {
-    color: #333333;
-    font-size: 16px; }
-  .card .icones {
-    background: #F44545;
-    border-radius: 0px 8px 8px 0px; }
-    .card .icones .icon {
-      margin-top: 10px; }
-    .card .icones p {
-      color: #FFFFFF;
-      font-size: 26px; }
+.cards {
+  position: relative;
+  height: 880px;
+  /*valor fixo*/
+  overflow: auto;
+  margin-top: 6%; }
+  .cards .card {
+    margin-top: 10px;
+    background: #FFFFFF;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
+    border-radius: 8px;
+    border: none;
+    margin: 10px; }
+    .cards .card .card-body_alterado {
+      padding: 0px; }
+      .cards .card .card-body_alterado .linha {
+        margin-right: 0; }
+        .cards .card .card-body_alterado .linha .fita {
+          height: 145px;
+          margin-top: 58px;
+          margin-bottom: 35px;
+          background: #F44545;
+          width: 5px; }
+    .cards .card h1 {
+      font-size: 27px;
+      color: #F44545;
+      margin-top: 21px;
+      font-weight: 400;
+      margin-bottom: 30px; }
+    .cards .card p {
+      color: #333333;
+      font-size: 16px; }
+    .cards .card .icones {
+      background: #F44545;
+      border-radius: 0px 8px 8px 0px; }
+      .cards .card .icones .icon {
+        margin-top: 10px; }
+      .cards .card .icones p {
+        color: #FFFFFF;
+        font-size: 26px; }
 
 @media (min-width: 520px) and (max-width: 920px) {
   .card .card-body_alterado {

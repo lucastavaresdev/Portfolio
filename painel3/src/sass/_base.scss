@@ -13,3 +13,31 @@ body{
 @mixin padrao {
     background: linear-gradient(to bottom, #43a3eb 0% ,#4396eb 100%); 
 }
+
+.a{
+    background: red;
+
+}
+
+.b{
+    background: #1dfc00;
+    height: 500px;
+}
+.c{
+    background: darkmagenta;
+    height: 30px;
+    border: 1px solid $branco;
+}
+.d {
+    background: #4396eb;
+    height: 800px;
+}
+
+html{
+    ::-webkit-scrollbar {background:  $cinza-claro,30%}
+    ::-webkit-scrollbar-button{ display: none; }
+    ::-webkit-scrollbar-track{ background: $cinza-claro;    }
+    ::-webkit-scrollbar-track-piece { background:  darken($cinza-claro,30%)  }
+    ::-webkit-scrollbar-thumb{}
+}
+   
