@@ -19,16 +19,19 @@ body {
 
 .d {
   background: #4396eb;
-  height: 800px; }
+  height: 15px; }
 
 html ::-webkit-scrollbar {
-  background: #F8FAFC, 30%; }
+  background: red;
+  width: 8px !important; }
 html ::-webkit-scrollbar-button {
   display: none; }
-html ::-webkit-scrollbar-track {
-  background: #F8FAFC; }
 html ::-webkit-scrollbar-track-piece {
-  background: #8daece; }
+  background: #F8FAFC; }
+html ::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  width: 5px;
+  background: #dbe6f0; }
 
 .nav-bar {
   height: 70px;

@@ -30,14 +30,23 @@ body{
 }
 .d {
     background: #4396eb;
-    height: 800px;
+    height: 15px;
 }
 
 html{
-    ::-webkit-scrollbar {background:  $cinza-claro,30%}
-    ::-webkit-scrollbar-button{ display: none; }
-    ::-webkit-scrollbar-track{ background: $cinza-claro;    }
-    ::-webkit-scrollbar-track-piece { background:  darken($cinza-claro,30%)  }
-    ::-webkit-scrollbar-thumb{}
+    ::-webkit-scrollbar {background:  red;
+        width: 8px !important;
+    }
+    ::-webkit-scrollbar-button{display: none}
+    ::-webkit-scrollbar-track-piece {
+        background: $cinza-claro;
+
+    };
+    ::-webkit-scrollbar-thumb{
+        border-radius: 50px;    
+        width: 5px;;
+        background:darken($cinza-claro, 8%); 
+    
+    }
 }
    
