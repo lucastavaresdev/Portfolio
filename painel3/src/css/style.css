@@ -239,20 +239,23 @@ html ::-webkit-scrollbar-thumb {
 .bg-tab {
   background: #E9F0F5; }
 
-.card_setores .horario {
-  display: flex;
-  align-items: center; }
-  .card_setores .horario p {
-    color: #666666;
-    font-size: 12px; }
-.card_setores .card_setor {
-  position: relative;
-  border-left: 4px solid #F44545; }
-  .card_setores .card_setor h4 {
+.horario p {
+  color: #666666;
+  font-size: 14px;
+  padding-right: 18px;
+  font-weight: 400;
+  margin-top: 60px !important; }
+
+.card_setor {
+  border-left: 4px solid #F44545;
+  margin-left: 10%; }
+  .card_setor h4 {
+    padding-right: 20%;
+    padding-top: 10px;
     font-size: 16px;
     margin-top: 10px;
     margin-bottom: 2px; }
-  .card_setores .card_setor p {
+  .card_setor p {
     color: #CCCCCC;
     font-size: 13px;
     margin-bottom: 5px; }
@@ -260,7 +263,7 @@ html ::-webkit-scrollbar-thumb {
 .circle {
   position: absolute;
   left: -18px;
-  top: 31%;
+  top: 27.5%;
   width: 33px;
   height: 33px;
   background: #E9F0F5;

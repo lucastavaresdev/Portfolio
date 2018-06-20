@@ -1,32 +1,36 @@
-.card_setores {
-    .horario {
-        display: flex;
-        align-items: center;
-        p {
-            color: $cinza;
-            font-size: 12px;
-        }
+
+.horario {
+      p {
+        color: $cinza;
+        font-size: 14px;
+     
+        padding-right: 18px;
+        font-weight: 400;
+        margin-top: 60px !important;
     }
-    .card_setor {
-        position: relative;
-        border-left: 4px solid $cor_do_card;
-        h4 {
-            font-size: 16px;
-            margin-top: 10px;
-            margin-bottom: 2px;
-        }
-        p {
-            color: $cinza-topo;
-            font-size: 13px;
-            margin-bottom: 5px;
-        }
+}
+
+.card_setor {
+    border-left: 4px solid $cor_do_card;
+    margin-left: 10%;
+    h4 {
+        padding-right: 20%;
+        padding-top: 10px;
+       font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 2px;
+    }
+    p {
+        color: $cinza-topo;
+        font-size: 13px;
+        margin-bottom: 5px;
     }
 }
 
 .circle {
     position: absolute;
     left: -18px;
-    top: 31%;
+    top: 27.5%;
     width: 33px;
     height: 33px;
     background: $bg_setores;
