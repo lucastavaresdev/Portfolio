@@ -15,7 +15,7 @@ body {
 .c {
   background: darkmagenta;
   height: 30px;
-  border: 1px solid #FFFFFF; }
+  border: 1px solid #ffffff; }
 
 .d {
   background: #4396eb;
@@ -35,7 +35,7 @@ html ::-webkit-scrollbar-thumb {
 
 .nav-bar {
   height: 70px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082); }
   .nav-bar .botao {
     max-width: 6%; }
@@ -85,7 +85,7 @@ html ::-webkit-scrollbar-thumb {
       box-sizing: border-box;
       border-bottom: 1px solid gray; }
       #sidebar ul li a {
-        color: #FFFFFF;
+        color: #ffffff;
         text-decoration: none;
         font-family: sans-serif; }
 
@@ -140,7 +140,7 @@ html ::-webkit-scrollbar-thumb {
   margin-top: 6%; }
   .cards .card {
     margin-top: 10px;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.082);
     border-radius: 8px;
     border: none;
@@ -170,7 +170,7 @@ html ::-webkit-scrollbar-thumb {
       .cards .card .icones .icon {
         margin-top: 10px; }
       .cards .card .icones p {
-        color: #FFFFFF;
+        color: #ffffff;
         font-size: 26px; }
 
 @media (min-width: 520px) and (max-width: 920px) {
@@ -209,14 +209,14 @@ html ::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, #43a3eb 0%, #4396eb 100%); }
   .bg .title {
     padding-top: 32%;
-    color: #FFFFFF; }
+    color: #ffffff; }
   .bg .nav-tabs {
     display: flex;
     flex-direction: row;
     margin-top: 15%;
     border-bottom: none; }
     .bg .nav-tabs a {
-      color: #FFFFFF;
+      color: #ffffff;
       font-size: 16px;
       text-decoration: none; }
     .bg .nav-tabs .show {
@@ -225,7 +225,7 @@ html ::-webkit-scrollbar-thumb {
         content: '';
         width: 100%;
         height: 4px;
-        background: #FFFFFF;
+        background: #ffffff;
         display: block;
         float: left; }
 
@@ -247,7 +247,7 @@ html ::-webkit-scrollbar-thumb {
     font-size: 12px; }
 .card_setores .card_setor {
   position: relative;
-  border-left: 4px solid red; }
+  border-left: 4px solid #F44545; }
   .card_setores .card_setor h4 {
     font-size: 16px;
     margin-top: 10px;
@@ -259,12 +259,18 @@ html ::-webkit-scrollbar-thumb {
 
 .circle {
   position: absolute;
-  left: -16px;
-  top: 32%;
-  padding: 15px;
-  background: #F8FAFC;
-  border: 3px solid red;
-  border-radius: 100%; }
+  left: -18px;
+  top: 31%;
+  width: 33px;
+  height: 33px;
+  background: #E9F0F5;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  border-left: 3px solid #E9F0F5;
+  border-bottom: 3px solid #E9F0F5;
+  border-radius: 100%;
+  box-shadow: inset 0px 0px 0px 4px #F44545;
+  transform: rotate(45deg); }
 
 footer {
   height: 15px;

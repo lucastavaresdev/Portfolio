@@ -1,22 +1,21 @@
-.card_setores{
-    
-    .horario{
+.card_setores {
+    .horario {
         display: flex;
         align-items: center;
-        p{
+        p {
             color: $cinza;
             font-size: 12px;
         }
     }
-    .card_setor{
+    .card_setor {
         position: relative;
-        border-left: 4px solid red;
-        h4{
+        border-left: 4px solid $cor_do_card;
+        h4 {
             font-size: 16px;
             margin-top: 10px;
             margin-bottom: 2px;
         }
-        p{
+        p {
             color: $cinza-topo;
             font-size: 13px;
             margin-bottom: 5px;
@@ -24,12 +23,18 @@
     }
 }
 
-.circle{
+.circle {
     position: absolute;
-    left: -16px;
-    top: 32%;
-    padding: 15px;
-    background: $cinza-claro;
-    border: 3px solid red;
+    left: -18px;
+    top: 31%;
+    width: 33px;
+    height: 33px;
+    background: $bg_setores;
+    border-top: 3px solid $branco;
+    border-right: 3px solid $branco;
+    border-left: 3px solid $bg_setores;
+    border-bottom: 3px solid $bg_setores;
     border-radius: 100%;
+    box-shadow: inset 0px 0px 0px 4px $cor_do_card;
+    transform: rotate(45deg);
 }
