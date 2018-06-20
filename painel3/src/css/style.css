@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
-h1, h2, h3, h4, h5, h6, p, span, a {
+h1, h2, h3, h4, h5, h6, p, span, a, li, ul {
   font-family: 'Nunito', sans-serif; }
 
 body {
@@ -203,6 +203,42 @@ html ::-webkit-scrollbar-thumb {
     font-size: 18px; }
   .card img {
     max-width: 50%; } }
+.bg {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #43a3eb 0%, #4396eb 100%); }
+  .bg .title {
+    padding-top: 32%;
+    color: #FFFFFF; }
+  .bg .nav-tabs {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15%;
+    border-bottom: none; }
+    .bg .nav-tabs a {
+      color: #FFFFFF;
+      font-size: 16px;
+      text-decoration: none; }
+    .bg .nav-tabs .show {
+      transition: 400ms; }
+      .bg .nav-tabs .show::after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        background: #FFFFFF;
+        display: block;
+        float: left; }
+
+.abas {
+  margin: 0;
+  padding: 0; }
+  .abas .aba {
+    margin: 0;
+    padding: 0; }
+
+.bg-tab {
+  background: #E9F0F5; }
+
 footer {
   height: 15px;
   width: 100%;

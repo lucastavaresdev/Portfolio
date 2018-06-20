@@ -2,7 +2,7 @@
 $cor_do_card: $vermelho-f4;
 
 
-h1,h2,h3,h4,h5,h6,p,span,a{
+h1,h2,h3,h4,h5,h6,p,span,a,li,ul{
     font-family: 'Nunito', sans-serif;
 }
 
@@ -12,6 +12,11 @@ body{
 
 @mixin padrao {
     background: linear-gradient(to bottom, #43a3eb 0% ,#4396eb 100%); 
+}
+
+@mixin zero-p-m {
+    margin: 0;
+    padding: 0;
 }
 
 .a{
