@@ -239,6 +239,33 @@ html ::-webkit-scrollbar-thumb {
 .bg-tab {
   background: #E9F0F5; }
 
+.card_setores .horario {
+  display: flex;
+  align-items: center; }
+  .card_setores .horario p {
+    color: #666666;
+    font-size: 12px; }
+.card_setores .card_setor {
+  position: relative;
+  border-left: 4px solid red; }
+  .card_setores .card_setor h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 2px; }
+  .card_setores .card_setor p {
+    color: #CCCCCC;
+    font-size: 13px;
+    margin-bottom: 5px; }
+
+.circle {
+  position: absolute;
+  left: -16px;
+  top: 32%;
+  padding: 15px;
+  background: #F8FAFC;
+  border: 3px solid red;
+  border-radius: 100%; }
+
 footer {
   height: 15px;
   width: 100%;
