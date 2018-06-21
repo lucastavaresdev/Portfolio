@@ -211,7 +211,9 @@ html ::-webkit-scrollbar-thumb {
   height: 100%;
   width: 100%;
   background: linear-gradient(to bottom, #43a3eb 0%, #4396eb 100%);
-  padding: 0; }
+  padding: 0;
+  position: fixed;
+  right: 0; }
   .bg .title {
     padding-top: 32%;
     color: #ffffff; }
@@ -244,6 +246,10 @@ html ::-webkit-scrollbar-thumb {
 .bg-tab {
   background: #E9F0F5; }
 
+@media (max-width: 920px) {
+  .bg {
+    position: relative;
+    right: 0; } }
 .com {
   padding: 0px; }
   .com p {
@@ -287,7 +293,9 @@ html ::-webkit-scrollbar-thumb {
     padding-bottom: 5px; }
 
 .tab-content {
-  padding: 2px; }
+  padding: 2px;
+  overflow-y: scroll;
+  height: 800px; }
 
 footer {
   height: 15px;

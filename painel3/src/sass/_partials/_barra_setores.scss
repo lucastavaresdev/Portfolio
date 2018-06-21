@@ -3,6 +3,8 @@
     width: 100%;
     @include padrao;
     padding: 0;
+    position: fixed;
+    right: 0;
     .title {
         padding-top: 32%;
         color: $branco;
@@ -45,3 +47,10 @@
   
 }
 
+
+@media(max-width: 920px){
+    .bg {
+        position: relative;
+        right: 0; 
+    }
+}
