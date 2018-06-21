@@ -2,6 +2,7 @@
     height: 100%;
     width: 100%;
     @include padrao;
+    padding: 0;
     .title {
         padding-top: 32%;
         color: $branco;

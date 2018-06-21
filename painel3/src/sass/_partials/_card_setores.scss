@@ -1,44 +1,57 @@
-
-.horario {
-      p {
-        color: $cinza;
-        font-size: 14px;
-     
-        padding-right: 18px;
-        font-weight: 400;
-        margin-top: 60px !important;
-    }
-}
-
-.card_setor {
-    border-left: 4px solid $cor_do_card;
-    margin-left: 10%;
-    h4 {
-        padding-right: 20%;
-        padding-top: 10px;
-       font-size: 16px;
-        margin-top: 10px;
-        margin-bottom: 2px;
-    }
+.com {
+    padding: 0px;
     p {
         color: $cinza-topo;
-        font-size: 13px;
         margin-bottom: 5px;
     }
+    .card_setor {
+        border-left: 4px solid $cor_do_card;
+        h4,
+        p {
+            padding-left: 16px;
+        }
+        h4 {
+            padding-top: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 2px;
+        }
+    
+        .circle {
+            position: absolute;
+            left: -1px;
+            top: 34%;
+            width: 33px;
+            height: 33px;
+            background: $bg_setores;
+            border-top: 3px solid $branco;
+            border-right: 3px solid $branco;
+            border-left: 3px solid $bg_setores;
+            border-bottom: 3px solid $bg_setores;
+            border-radius: 100%;
+            box-shadow: inset 0px 0px 0px 4px $cor_do_card;
+            transform: rotate(45deg);
+        }
+    }
+    .hora {
+        color: darken($cinza-topo,15%);
+        font-size: 16px;
+        margin-bottom: 5px;
+        margin-top: 11%;
+    }
+    
+    .horario {
+        p {
+            color: $cinza;
+            font-size: 14px;
+            padding-right: 18px;
+            font-weight: 400;
+        }
+                .setor{
+                    padding-bottom: 5px;
+                }
+    }
 }
-
-.circle {
-    position: absolute;
-    left: -18px;
-    top: 27.5%;
-    width: 33px;
-    height: 33px;
-    background: $bg_setores;
-    border-top: 3px solid $branco;
-    border-right: 3px solid $branco;
-    border-left: 3px solid $bg_setores;
-    border-bottom: 3px solid $bg_setores;
-    border-radius: 100%;
-    box-shadow: inset 0px 0px 0px 4px $cor_do_card;
-    transform: rotate(45deg);
+.tab-content {
+    padding: 2px;
 }

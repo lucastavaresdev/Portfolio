@@ -206,7 +206,8 @@ html ::-webkit-scrollbar-thumb {
 .bg {
   height: 100%;
   width: 100%;
-  background: linear-gradient(to bottom, #43a3eb 0%, #4396eb 100%); }
+  background: linear-gradient(to bottom, #43a3eb 0%, #4396eb 100%);
+  padding: 0; }
   .bg .title {
     padding-top: 32%;
     color: #ffffff; }
@@ -239,41 +240,50 @@ html ::-webkit-scrollbar-thumb {
 .bg-tab {
   background: #E9F0F5; }
 
-.horario p {
-  color: #666666;
-  font-size: 14px;
-  padding-right: 18px;
-  font-weight: 400;
-  margin-top: 60px !important; }
-
-.card_setor {
-  border-left: 4px solid #F44545;
-  margin-left: 10%; }
-  .card_setor h4 {
-    padding-right: 20%;
-    padding-top: 10px;
-    font-size: 16px;
-    margin-top: 10px;
-    margin-bottom: 2px; }
-  .card_setor p {
+.com {
+  padding: 0px; }
+  .com p {
     color: #CCCCCC;
-    font-size: 13px;
     margin-bottom: 5px; }
+  .com .card_setor {
+    border-left: 4px solid #F44545; }
+    .com .card_setor h4,
+    .com .card_setor p {
+      padding-left: 16px; }
+    .com .card_setor h4 {
+      padding-top: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 2px; }
+    .com .card_setor .circle {
+      position: absolute;
+      left: -1px;
+      top: 34%;
+      width: 33px;
+      height: 33px;
+      background: #E9F0F5;
+      border-top: 3px solid #ffffff;
+      border-right: 3px solid #ffffff;
+      border-left: 3px solid #E9F0F5;
+      border-bottom: 3px solid #E9F0F5;
+      border-radius: 100%;
+      box-shadow: inset 0px 0px 0px 4px #F44545;
+      transform: rotate(45deg); }
+  .com .hora {
+    color: #a6a6a6;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 11%; }
+  .com .horario p {
+    color: #666666;
+    font-size: 14px;
+    padding-right: 18px;
+    font-weight: 400; }
+  .com .horario .setor {
+    padding-bottom: 5px; }
 
-.circle {
-  position: absolute;
-  left: -18px;
-  top: 27.5%;
-  width: 33px;
-  height: 33px;
-  background: #E9F0F5;
-  border-top: 3px solid #ffffff;
-  border-right: 3px solid #ffffff;
-  border-left: 3px solid #E9F0F5;
-  border-bottom: 3px solid #E9F0F5;
-  border-radius: 100%;
-  box-shadow: inset 0px 0px 0px 4px #F44545;
-  transform: rotate(45deg); }
+.tab-content {
+  padding: 2px; }
 
 footer {
   height: 15px;
