@@ -1,16 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-$cor_do_card: $vermelho-f4;
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-a,
-li,
-ul {
+
+$cor_do_card: $roxo-escuro;
+
+
+
+h1,h2,h3,h4,h5,h6,p,span,a,li,ul {
     font-family: 'Nunito', sans-serif;
 }
 
@@ -27,25 +21,6 @@ body {
     padding: 0;
 }
 
-.a {
-    background: red;
-}
-
-.b {
-    background: #1dfc00;
-    height: 500px;
-}
-
-.c {
-    background: darkmagenta;
-    height: 30px;
-    border: 1px solid $branco;
-}
-
-.d {
-    background: #4396eb;
-    height: 15px;
-}
 
 html {
     ::-webkit-scrollbar {
