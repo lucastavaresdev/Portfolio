@@ -33,6 +33,10 @@ html ::-webkit-scrollbar-thumb {
   width: 5px;
   background: #dbe6f0; }
 
+.linha {
+  margin-left: 0;
+  margin-right: 0; }
+
 .nav-bar {
   height: 70px;
   background: #ffffff;
