@@ -140,11 +140,11 @@ html ::-webkit-scrollbar-thumb {
           height: 145px;
           margin-top: 58px;
           margin-bottom: 35px;
-          background: #352B59;
+          background: #F44545;
           width: 5px; }
     .cards .card h1 {
       font-size: 27px;
-      color: #352B59;
+      color: #F44545;
       margin-top: 21px;
       font-weight: 400;
       margin-bottom: 30px; }
@@ -152,7 +152,7 @@ html ::-webkit-scrollbar-thumb {
       color: #333333;
       font-size: 16px; }
     .cards .card .icones {
-      background: #352B59;
+      background: #F44545;
       border-radius: 0px 8px 8px 0px; }
       .cards .card .icones .icon {
         margin-top: 10px; }
@@ -183,7 +183,7 @@ html ::-webkit-scrollbar-thumb {
           height: 120px;
           margin-top: 50px;
           margin-bottom: 35px;
-          background: #352B59; }
+          background: #F44545; }
     .card h1 {
       font-size: 20px; }
     .card p {
@@ -241,7 +241,7 @@ html ::-webkit-scrollbar-thumb {
     color: #CCCCCC;
     margin-bottom: 5px; }
   .com .card_setor {
-    border-left: 4px solid #352B59; }
+    border-left: 4px solid #F44545; }
     .com .card_setor h4,
     .com .card_setor p {
       padding-left: 16px; }
@@ -262,7 +262,7 @@ html ::-webkit-scrollbar-thumb {
       border-left: 3px solid #E9F0F5;
       border-bottom: 3px solid #E9F0F5;
       border-radius: 100%;
-      box-shadow: inset 0px 0px 0px 4px #352B59;
+      box-shadow: inset 0px 0px 0px 4px #F44545;
       transform: rotate(45deg); }
   .com .hora {
     color: #a6a6a6;
