@@ -21,6 +21,15 @@ html ::-webkit-scrollbar-thumb {
   margin-left: 0;
   margin-right: 0; }
 
+.verde {
+  background: #2E807D !important; }
+
+.roxo {
+  background: #811384 !important; }
+
+.roxo-c {
+  color: #811384 !important; }
+
 .nav-bar {
   height: 70px;
   background: #ffffff;
