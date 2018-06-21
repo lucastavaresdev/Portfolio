@@ -1,19 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 $cor_do_card: $vermelho-f4;
-
-
-h1,h2,h3,h4,h5,h6,p,span,a,li,ul{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+ul {
     font-family: 'Nunito', sans-serif;
 }
 
-body{
+body {
     background: $cinza-claro;
 }
 
-
-
 @mixin padrao {
-    background: linear-gradient(to bottom, #43a3eb 0% ,#4396eb 100%); 
+    background: linear-gradient(to bottom, #43a3eb 0%, #4396eb 100%);
 }
 
 @mixin zero-p-m {
@@ -21,44 +27,48 @@ body{
     padding: 0;
 }
 
-
-.a{
+.a {
     background: red;
-
 }
 
-.b{
+.b {
     background: #1dfc00;
     height: 500px;
 }
-.c{
+
+.c {
     background: darkmagenta;
     height: 30px;
     border: 1px solid $branco;
 }
+
 .d {
     background: #4396eb;
     height: 15px;
 }
 
-html{
-    ::-webkit-scrollbar {background:  red;
+html {
+    ::-webkit-scrollbar {
+        background: red;
         width: 8px !important;
     }
-    ::-webkit-scrollbar-button{display: none}
+    ::-webkit-scrollbar-button {
+        display: none
+    }
     ::-webkit-scrollbar-track-piece {
         background: $cinza-claro;
-
-    };
-    ::-webkit-scrollbar-thumb{
-        border-radius: 50px;    
-        width: 5px;;
-        background:darken($cinza-claro, 8%); 
-    
+    }
+    ;
+    ::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        width: 5px;
+        ;
+        background: darken($cinza-claro, 8%);
     }
 }
-   
-.linha{
+
+.linha {
     margin-left: 0;
     margin-right: 0;
 }
+

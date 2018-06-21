@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
-h1, h2, h3, h4, h5, h6, p, span, a, li, ul {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+ul {
   font-family: 'Nunito', sans-serif; }
 
 body {
@@ -137,11 +147,10 @@ html ::-webkit-scrollbar-thumb {
   .title h1 {
     margin-left: 180%; } }
 .cards {
-  position: relative;
-  height: 880px;
-  /*valor fixo*/
+  height: 100%;
   overflow: auto;
-  margin-top: 6%; }
+  margin-top: 4%;
+  overflow-y: scroll; }
   .cards .card {
     margin-top: 10px;
     background: #ffffff;
@@ -177,7 +186,7 @@ html ::-webkit-scrollbar-thumb {
         color: #ffffff;
         font-size: 26px; }
 
-@media (min-width: 520px) and (max-width: 920px) {
+@media (min-width: 620px) and (max-width: 920px) {
   .card .card-body_alterado {
     padding-right: 15px; }
   .card h1 {
@@ -189,24 +198,26 @@ html ::-webkit-scrollbar-thumb {
     margin-bottom: 13px; }
   .card img {
     max-width: 50%; } }
-@media (max-width: 520px) {
-  .card .card-body_alterado {
-    padding-right: 15px; }
-    .card .card-body_alterado .linha {
-      margin-right: 0; }
-      .card .card-body_alterado .linha .fita {
-        height: 120px;
-        margin-top: 50px;
-        margin-bottom: 35px;
-        background: #F44545; }
-  .card h1 {
-    font-size: 20px; }
-  .card p {
-    font-size: 14px; }
-  .card .icones p {
-    font-size: 18px; }
-  .card img {
-    max-width: 50%; } }
+@media (max-width: 620px) {
+  .card {
+    margin-left: 0 !important; }
+    .card .card-body_alterado {
+      padding-right: 15px; }
+      .card .card-body_alterado .linha {
+        margin-right: 0; }
+        .card .card-body_alterado .linha .fita {
+          height: 120px;
+          margin-top: 50px;
+          margin-bottom: 35px;
+          background: #F44545; }
+    .card h1 {
+      font-size: 20px; }
+    .card p {
+      font-size: 14px; }
+    .card .icones p {
+      font-size: 18px; }
+    .card img {
+      max-width: 50%; } }
 .bg {
   height: 100%;
   width: 100%;
