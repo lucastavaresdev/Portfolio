@@ -23,19 +23,20 @@
                 <div class="row">
 
                     <div class="col-lg-4 col-sm-12 ">
-                        <div class="card">
+                        <div class="card" data-card="card1" id="card1">
                             <div class="card-body card-body_alterado">
+                                <!--id do card vem do banco-->
                                 <div class="row">
                                     <div class="col-1 linha">
-                                        <div class="fita"></div>
+                                        <div class="fita a"></div>
                                     </div>
                                     <div class="col-8">
-                                        <h1>Oncologia</h1>
+                                        <h1 class="titulo-setor">Oncologia</h1>
                                         <p>Total de Pacientes Agendados: 23</p>
                                         <p>Pacientes do Momento: 5</p>
                                         <p>Finalizados: 10</p>
                                     </div>
-                                    <div class="col icones text-center">
+                                    <div class="col icones text-center a">
                                         <img class="icon" src="img/icon-1.png">
                                         <p>23</p>
                                         <img src="img/icon-2.png">
@@ -46,18 +47,18 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- card 3 -->
                     </div>
+                    <!-- card 3 -->
 
                     <div class="col-lg-4 col-sm-12 ">
-                        <div class="card">
+                        <div class="card" data-card="card2" id="card2">
                             <div class="card-body card-body_alterado">
                                 <div class="row">
                                     <div class="col-1 linha">
                                         <div class="fita"></div>
                                     </div>
                                     <div class="col-8">
-                                        <h1>Oncologia</h1>
+                                        <h1 class="titulo-setor">Oncologia</h1>
                                         <p>Total de Pacientes Agendados: 23</p>
                                         <p>Pacientes do Momento: 5</p>
                                         <p>Finalizados: 10</p>
@@ -84,10 +85,34 @@
         <!--fim do container-->
 
 
+        <section>
+                <div class="modal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">Modal title</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Modal body text goes here.</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+        </section>
+
 
 
 </body>
 <script src="componentes/jquery.min.js"></script>
 <script src="componentes/bootstrap.min.js"></script>
 <script src="js/script.js"></script>
+
 </html>
