@@ -306,7 +306,7 @@ html ::-webkit-scrollbar-thumb {
 .tab-content {
   padding: 2px;
   overflow-y: scroll;
-  height: 800px; }
+  height: 100%; }
 
 footer {
   height: 15px;
