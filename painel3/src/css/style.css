@@ -297,16 +297,15 @@ html ::-webkit-scrollbar-thumb {
   overflow-y: scroll;
   height: 100%; }
 
+.modal {
+  z-index: 10002; }
+
 .box-cor {
   width: 30px;
   height: 30px;
   border-radius: 5px;
   margin: 3px;
   cursor: pointer; }
-
-.example-popover {
-  background: #f1f;
-  height: 50px; }
 
 footer {
   height: 15px;
