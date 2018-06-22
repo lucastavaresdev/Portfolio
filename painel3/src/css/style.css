@@ -132,6 +132,9 @@ html ::-webkit-scrollbar-thumb {
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
   .title h1 {
     margin-left: 180%; } }
+.opcoes {
+  margin-top: 40% !important; }
+
 .cards {
   height: 100%;
   overflow: auto;
