@@ -73,6 +73,10 @@
 }
 
 @media(max-width: 620px) {
+     .cards {
+         margin-top:15%;
+    }
+
     .card {
         margin-left: 0 !important;
         .card-body_alterado {

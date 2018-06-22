@@ -185,6 +185,9 @@ html ::-webkit-scrollbar-thumb {
   .card img {
     max-width: 50%; } }
 @media (max-width: 620px) {
+  .cards {
+    margin-top: 15%; }
+
   .card {
     margin-left: 0 !important; }
     .card .card-body_alterado {
@@ -293,6 +296,17 @@ html ::-webkit-scrollbar-thumb {
   padding: 2px;
   overflow-y: scroll;
   height: 100%; }
+
+.box-cor {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 3px;
+  cursor: pointer; }
+
+.example-popover {
+  background: #f1f;
+  height: 50px; }
 
 footer {
   height: 15px;

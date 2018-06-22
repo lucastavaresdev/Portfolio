@@ -47,6 +47,17 @@ html {
     margin-right: 0;
 }
 
+@mixin bg($bg){
+    backgroud:#{$bg};
+}
+
+@mixin bg-text($text){
+    color:#{$text};
+}
+
+
+
+
 .verde{
     background: $verde !important;
 }
