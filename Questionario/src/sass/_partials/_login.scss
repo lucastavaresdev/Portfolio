@@ -1,7 +1,8 @@
 .login {
     background: $cinza;
     .logo {
-        @include bg-fonte($cor-padrao)
+        @include bg-fonte($cor-padrao);
+        font-weight: 300;
     }
     .barra {
         @include bg($cor-padrao);

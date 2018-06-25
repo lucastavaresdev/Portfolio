@@ -1,6 +1,16 @@
 $cor-padrao: $laranja;
 
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
+
+h1,h2,h3,h4,h5,h6,p,a,span{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
 @mixin bg($cor) {
     background: #{$cor}
 }
