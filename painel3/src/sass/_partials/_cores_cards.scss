@@ -1,0 +1,15 @@
+.roxo{
+    @include bg($roxo);
+ }
+
+ .roxo-c{
+    @include bg-text($roxo);
+ }
+
+.verde{
+    @include bg($verde);
+ }
+
+ .verde-c{
+    @include bg-text($verde);
+ }

@@ -8,76 +8,172 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="componentes/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
 </head>
 
 <body>
 
-
-
-    <!-- Page Content -->
-    <div class="container-fluid">
-        <div class="row nav-bar align-middle">
-            <div class="quadrado">
-                <a class="botao">
-                    <img id="abrir" src="img/abrir.png" alt='menu aberto'>
-                    <img id="fechar" src="img/fechar.png" alt='menu aberto'>
-                </a>
+    <div class="container-fluid fixed-top">
+        <div class="row nav-bar">
+            <div class="botao">
+                <div class="btn-hamburger" id="btn_clicado" onclick="menu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div>
+            <div class="title">
                 <h1>Dashboard</h1>
             </div>
         </div>
-
     </div>
+    <div id="sidebar">
+        <ul class="opcoes">
+            <li>
+                <a href="#">Home</a>
+            </li>
+        </ul>
     </div>
-
-
-    <div class="container-fluid ">
+    <div class="container-fluid b">
         <div class="row">
-            <div class="col-md-1 ">
-                <!-- Sidebar -->
-                <div class="sidebar" style="display:none" id="hamburger">
-                    <a href="#" class="w3-bar-item w3-button">Link 1</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 2</a>
-                    <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            <div class="col-lg-10 col-md-9 col-sm-12 cards ">
+                <div class="row">
+
+                    <div class="col-lg-4 col-sm-12 ">
+                        <div class="card" data-nome-do-card="Oncologia">
+                            <div class="card-body card-body_alterado">
+                                <div class="row">
+                                    <div class="col-1 linha">
+                                        <div class="fita"></div>
+                                    </div>
+                                    <div class="col-8">
+                                        <h1>Oncologia</h1>
+                                        <p>Total de Pacientes Agendados: 23</p>
+                                        <p>Pacientes do Momento: 5</p>
+                                        <p>Finalizados: 10</p>
+                                    </div>
+                                    <div class="col icones text-center">
+                                        <img class="icon" src="img/icon-1.png">
+                                        <p>23</p>
+                                        <img src="img/icon-2.png">
+                                        <p>05</p>
+                                        <img src="img/icon-3.png">
+                                        <p>10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-12 ">
+                        <div class="card">
+                            <div class="card-body card-body_alterado">
+                                <div class="row">
+                                    <div class="col-1 linha">
+                                        <div class="fita"></div>
+                                    </div>
+                                    <div class="col-8">
+                                        <h1>Oncologia</h1>
+                                        <p>Total de Pacientes Agendados: 23</p>
+                                        <p>Pacientes do Momento: 5</p>
+                                        <p>Finalizados: 10</p>
+                                    </div>
+                                    <div class="col icones text-center">
+                                        <img class="icon" src="img/icon-1.png">
+                                        <p>23</p>
+                                        <img src="img/icon-2.png">
+                                        <p>05</p>
+                                        <img src="img/icon-3.png">
+                                        <p>10</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="col-md-11">
-                <div class="w3-container">
-                    <p>This sidebar is hidden by default, (style="display:none")</p>
-                    <p>You must click on the "hamburger" icon (top left) to open it.</p>
-                    <p>The sidebar will hide a part of the page content.</p>
+
+            <!--live-->
+            <div class="col-lg-2 col-md-3 col-sm-12 col-12 bg">
+                <div class="row linha">
+                    <div class="col-12 text-center">
+                        <h2 class="title">Setores</h2>
+                    </div>
+                </div>
+                <!--fim da row do titulo -->
+                <div class="row linha">
+                    <div class="container-fluid abas">
+                        <ul class="nav nav-tabs">
+                            <li class="col aba text-center">
+                                <a data-toggle="tab" href="#home" class="active show">Live</a>
+                            </li>
+                            <li class="col aba text-center">
+                                <a data-toggle="tab" href="#menu1">Status Setor</a>
+                            </li>
+                            <li class="col aba text-center">
+                                <a data-toggle="tab" href="#menu2">Qtd. Setor</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab-content bg-tab">
+                    <div id="home" class="tab-pane fade in active show ">
+                        <div class="container-fluid com">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-3 align-self-center">
+                                        <p class="hora">12h31</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="card_setor bg-white horario">
+                                            <div class="circle"></div>
+                                            <h4>Maria dos Santos Paiva</h4>
+                                            <p>23 anos</p>
+                                            <p class="setor">Ortopedia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fim da aba1-->
+
+                    <div id="menu1" class="tab-pane fade">
+                        <h3>Menu 1</h3>
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                        </p>
+                    </div>
+
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>Menu 2</h3>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                            totam rem aperiam.</p>
+                    </div>
+
                 </div>
             </div>
-
-
+        </div>
+    </div>
+    <div class="container-fluid fixed-bottom">
+        <div class="row">
+            <footer></footer>
         </div>
     </div>
 
-
-
-
-
     <script>
-
-
+        function menu() {
+            document.getElementById("sidebar").classList.toggle('active');
+            document.getElementById("btn_clicado").classList.toggle('fechar');
+        }
     </script>
 
-    <style>
-        #fechar {
-            display: none;
-        }
-    </style>
-
-    <!-- <div class="container-fluid fixed-bottom">
-    <div class="row">
-        <footer></footer>
-    </div>
-</div> -->
-
 </body>
-<link rel="stylesheet" href="componentes/jquery.min.js">
-<link rel="stylesheet" href="componentes/bootstrap.min.js">
+<script src="componentes/jquery.min.js"></script>
+<script src="componentes/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
 
 </html>

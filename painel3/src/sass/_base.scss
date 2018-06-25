@@ -1,15 +1,72 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+
 $cor_do_card: $vermelho-f4;
 
 
-h1,h2,h3,h4,h5,h6,p,span,a{
+
+h1,h2,h3,h4,h5,h6,p,span,a,li,ul {
     font-family: 'Nunito', sans-serif;
 }
 
-body{
+body {
     background: $cinza-claro;
 }
 
 @mixin padrao {
-    background: linear-gradient(to bottom, #43a3eb 0% ,#4396eb 100%); 
+    background: linear-gradient(to bottom, #43a3eb 0%, #4396eb 100%);
+}
+
+@mixin zero-p-m {
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    ::-webkit-scrollbar {
+        background: red;
+        width: 8px !important;
+    }
+    ::-webkit-scrollbar-button {
+        display: none
+    }
+    ::-webkit-scrollbar-track-piece {
+        background: $cinza-claro;
+    }
+    ;
+    ::-webkit-scrollbar-thumb {
+        border-radius: 50px;
+        width: 5px;
+        ;
+        background: darken($cinza-claro, 8%);
+    }
+}
+
+.linha {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@mixin bg($bg){
+    backgroud:#{$bg};
+}
+
+@mixin bg-text($text){
+    color:#{$text};
+}
+
+
+
+
+.verde{
+    background: $verde !important;
+}
+.verde-c{
+    color: $verde !important;
+}
+.roxo{
+    background: $roxo !important;
+}
+.roxo-c{
+    color: $roxo !important;
 }
