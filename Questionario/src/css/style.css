@@ -1,13 +1,14 @@
 .login {
-  height: 600px;
-  background: blueviolet; }
-
-.a {
-  background: red;
-  height: 400px; }
-
-.b {
-  background: blue;
-  height: 20px; }
+  background: #F7F7F7; }
+  .login .logo {
+    color: #DC470B; }
+  .login .barra {
+    background: #DC470B;
+    height: 15px;
+    width: 100%; }
+  .login .btn_entrar {
+    background: #DC470B;
+    color: #ffffff;
+    border: none; }
 
 /*# sourceMappingURL=style.css.map */

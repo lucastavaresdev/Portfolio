@@ -1,16 +1,16 @@
-.login{
-    height: 600px;
-    background: blueviolet
-}
-
-
-
-.a{
-    background: $cor;
-    height: 400px;
-}
-
-.b{
-    background: blue;
-    height: 20px;
+.login {
+    background: $cinza;
+    .logo {
+        @include bg-fonte($cor-padrao)
+    }
+    .barra {
+        @include bg($cor-padrao);
+        height: 15px;
+        width: 100%;
+    }
+    .btn_entrar{
+        @include bg($cor-padrao);
+        @include bg-fonte($branco);
+        border: none;
+    }
 }

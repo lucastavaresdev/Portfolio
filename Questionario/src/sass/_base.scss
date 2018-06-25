@@ -1,0 +1,10 @@
+$cor-padrao: $laranja;
+
+
+@mixin bg($cor) {
+    background: #{$cor}
+}
+
+@mixin bg-fonte($cor) {
+    color: #{$cor}
+}
