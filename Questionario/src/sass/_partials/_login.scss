@@ -1,5 +1,7 @@
 .login {
-    background: $cinza;
+    background: url('../img/bg.jpg') no-repeat;
+    height: 100%;
+    background-size: cover; 
     .logo {
         @include bg-fonte($cor-padrao);
         font-weight: 300;

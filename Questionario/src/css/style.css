@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700");
+h1, h2, h3, h4, h5, h6, p, a, span {
+  font-family: 'Montserrat', sans-serif; }
+
+.r {
+  color: red; }
+
+.zzz {
+  color: blue; }
+
+.login {
+  background: url("../img/bg.jpg"); }
+  .login .logo {
+    color: #DC470B;
+    font-weight: 300; }
+  .login .barra {
+    background: #DC470B;
+    height: 15px;
+    width: 100%; }
+  .login .btn_entrar {
+    background: #DC470B;
+    color: #ffffff;
+    border: none; }
+
+/*# sourceMappingURL=style.css.map */
