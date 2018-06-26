@@ -2,22 +2,28 @@
     background: url('../img/bg.jpg') no-repeat;
     height: 100%;
     background-size: cover; 
-    .logo {
-        @include bg-fonte($cor-padrao);
-        font-weight: 300;
+    .borda{
+        border: 1px solid rgba($cinza, 0.5);
+        border-radius: 5px;
+        padding: 5% 3%;
     }
+            .logo {
+          @include bg-fonte($cor-padrao);
+          font-weight: 300;
+          padding-bottom: 20px;
+      }
 
-    .tamanho{
-        width: 100%;
-    }
+      .tamanho {
+          width: 100%;
+      }
 
-    .btn_entrar{
-        @include bg($cor-padrao);
-        @include bg-fonte($branco);
-        border: none;
-    }
+      .btn_entrar {
+          @include bg($cor-padrao);
+          @include bg-fonte($branco);
+          border: none;
+      }
 
-    .icon-cor {
-        color: darken($cinza,50%);
-    }
+      .icon-cor {
+          color: darken($cinza, 50%);
+      }
 }
