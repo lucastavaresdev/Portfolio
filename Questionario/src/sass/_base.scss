@@ -1,15 +1,16 @@
 $cor-padrao: $vermelho;
-
-
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700');
-
-h1,h2,h3,h4,h5,h6,p,a,span{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
     font-family: 'Montserrat', sans-serif;
 }
-
-
-
-
 
 @mixin bg($cor) {
     background: #{$cor};
@@ -19,9 +20,8 @@ h1,h2,h3,h4,h5,h6,p,a,span{
     color: #{$cor};
 }
 
-.r{
-    color: red
-}
-.zzz{
-    color: blue
+.uk-input:focus,
+.uk-select:focus,
+.uk-textarea:focus {
+    border:  1px solid $cor-padrao;
 }

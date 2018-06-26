@@ -6,12 +6,18 @@
         @include bg-fonte($cor-padrao);
         font-weight: 300;
     }
-.tamanho{
-    width: 100%;
-}
+
+    .tamanho{
+        width: 100%;
+    }
+
     .btn_entrar{
         @include bg($cor-padrao);
         @include bg-fonte($branco);
         border: none;
+    }
+
+    .icon-cor {
+        color: darken($cinza,50%);
     }
 }
