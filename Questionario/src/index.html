@@ -1,20 +1,34 @@
+ @@include('./templates/header.html')
 
+<body>
 
-
-     @@include('./templates/header.html')
-     
-     <body>
-         
-         <div class="barra"></div>
-         <div class="uk-container-small   uk-position-center">
-             <div class="uk-width-1-1 uk-animation-slide-bottom ">
-                 <h1 class="uk-heading-primary uk-text-center logo">Logo</h1>
-                 <form action="">
-                     <input type="text" class="uk-input" name="usuario" placeholder="Usuario">
-                     <input type="text" class="uk-input uk-margin-top" name="senha" placeholder="Senha">
-                     <button class="uk-button btn_entrar uk-align-center">Entrar</button>
-                    </form>
+    <div class="uk-position-center">
+        <div class="uk-width-medium uk-animation-slide-bottom ">
+            <!-- <h1 class="uk-heading-primary uk-text-center logo">Logo</h1> -->
+            <form action="">
+                <div>
+                    <div class="uk-margin">
+                        <div class="uk-inline tamanho">
+                            <span class="uk-form-icon" uk-icon="icon: user"></span>
+                            <input class="uk-input" type="text">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-@@include('./templates/footer.html')
+                
+                <div>
+                    <div class="uk-margin ">
+                        <div class="uk-inline tamanho">
+                            <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                            <input class="uk-input" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- <button class="uk-button btn_entrar uk-align-center">Entrar</button> -->
+            </form>
+        </div>
+    </div>
+
+    @@include('./templates/footer.html')

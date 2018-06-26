@@ -6,11 +6,9 @@
         @include bg-fonte($cor-padrao);
         font-weight: 300;
     }
-    .barra {
-        @include bg($cor-padrao);
-        height: 15px;
-        width: 100%;
-    }
+.tamanho{
+    width: 100%;
+}
     .btn_entrar{
         @include bg($cor-padrao);
         @include bg-fonte($branco);
