@@ -1,5 +1,5 @@
 .login {
-    background: url('../img/bg.jpg') no-repeat;
+    background: url('../img/bg.jpg');
     height: 100%;
     background-size: cover; 
     .borda{
@@ -7,7 +7,7 @@
         border-radius: 5px;
         padding: 5% 3%;
     }
-            .logo {
+      .logo {
           @include bg-fonte($cor-padrao);
           font-weight: 300;
           padding-bottom: 20px;
