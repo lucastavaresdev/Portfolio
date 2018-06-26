@@ -1,0 +1,7 @@
+.cards{
+    .branco{
+        $cinza-escuro: darken($cinza , 50%);
+        @include bg-fonte($cinza-escuro);
+        @include bg($branco);
+    }
+}
