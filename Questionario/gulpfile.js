@@ -82,7 +82,7 @@ gulp.task('default', ['copy' ,], function(){
 
 
 
-gulp.task('serve',['html'], function () {
+gulp.task('serve',['default'], function () {
     browserSync.init({
         server: {
             baseDir: 'dist'
