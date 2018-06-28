@@ -1,36 +1,40 @@
  @@include('./templates/header.html')
 
-<body>
+<body class="login">
 
-    <div class="uk-position-center borda">
-        <div class="uk-width-medium uk-animation-slide-bottom ">
-            <h1 class="uk-heading-primary uk-text-center logo">Logo</h1>
-            <form action="">
-                <div>
-                    <div class="uk-margin">
-                        <div class="uk-inline tamanho">
-                            <span class="uk-form-icon icon-cor" uk-icon="icon: user"></span>
-                            <input type="text" class="uk-input" name="usuario">
+    <style>
+    </style>
+
+    <div class="mdl-layout mdl-js-layout">
+        <main class="mdl-layout__content">
+
+            <div class="mdl-card mdl-shadow--6dp">
+
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Logo</h2>
+                </div>
+
+                <div class="mdl-card__supporting-text">
+                    <form action="#">
+
+                        <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label mdl-color-modifier">
+                            <input class="mdl-textfield__input " type="text" id="usuario" />
+                            <label class="mdl-textfield__label mdl-color-modifier" for="usuario">Usuario</label>
                         </div>
-                    </div>
-                </div>
 
-                <div>
-                    <div class="uk-margin ">
-                        <div class="uk-inline tamanho">
-                            <span class="uk-form-icon  icon-cor" uk-icon="icon: lock"></span>
-                            <input type="password" class="uk-input" name="senha">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="password" id="userpass" />
+                            <label class="mdl-textfield__label" for="userpass">Senha</label>
                         </div>
-                    </div>
+
+                    </form>
+
                 </div>
 
-                <div class="uk-width-1-1">
-                    <div>
-                        <button class="uk-button uk-width-1-1 btn_entrar uk-align-center">Entrar</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Entrar</button>
+
+            </div>
+        </main>
     </div>
 
     @@include('./templates/footer.html')
