@@ -1,12 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+ @@include('./templates/header.html')
+
 <body>
-    
-</body>
-</html>
+
+    <div class="uk-position-center borda">
+        <div class="uk-width-medium uk-animation-slide-bottom ">
+            <h1 class="uk-heading-primary uk-text-center logo">Logo</h1>
+            <form action="">
+                <div>
+                    <div class="uk-margin">
+                        <div class="uk-inline tamanho">
+                            <span class="uk-form-icon icon-cor" uk-icon="icon: user"></span>
+                            <input type="text" class="uk-input" name="usuario">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="uk-margin ">
+                        <div class="uk-inline tamanho">
+                            <span class="uk-form-icon  icon-cor" uk-icon="icon: lock"></span>
+                            <input type="password" class="uk-input" name="senha">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-width-1-1">
+                    <div>
+                        <button class="uk-button uk-width-1-1 btn_entrar uk-align-center">Entrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    @@include('./templates/footer.html')

@@ -1,0 +1,12 @@
+.cards{
+    .espaco{
+        margin-bottom: -20px!important;
+    }
+
+    .branco{
+        $cinza-escuro: darken($cinza , 50%);
+        @include bg-fonte($cinza-escuro);
+        @include bg($branco);
+        border-radius: 5px !important;
+    }
+}
