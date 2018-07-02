@@ -31,31 +31,65 @@
                 </div>
 
                 <div class="mdl-card__supporting-text">
-                    <form action="#">
+
+                    <form id='formlogin' method="post">
 
                         <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label mdl-color-modifier">
-                            <input class="mdl-textfield__input " type="text" id="usuario" />
+                            <input class="mdl-textfield__input " type="text" id="usuario" name="usuario" required/>
                             <label class="mdl-textfield__label mdl-color-modifier" for="usuario">Usuario</label>
                         </div>
 
                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                            <input class="mdl-textfield__input" type="password" id="userpass" />
-                            <label class="mdl-textfield__label" for="userpass">Senha</label>
+                            <input class="mdl-textfield__input" type="password" id="senha" name="senha" required/>
+                            <label class="mdl-textfield__label" for="senha">Senha</label>
                         </div>
 
+                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Entrar</button>
                     </form>
-
-                    
 
                 </div>
 
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Entrar</button>
-
+                <p id="errolog">Usuário ou senha errados!</p>
             </div>
         </main>
     </div>
 
-    </body>
-<script src="componentes/uikit.min.js"></script>
-<script src="componentes/uikit-icons.min.js"></script>
+    <script src="./componentes/jquery.js"></script>
+    <!-- <script src="./js/conexaophp.js"></script> -->
+    <!-- <script src="./componentes/jquery.js"></script> -->
+
+    <script>
+
+        var refereciaServidor = 'http://192.168.1.102/z/login.php'
+
+        $(document).ready(function () {
+
+            $('#errolog').hide(); //Esconde o elemento com id errolog
+
+            $('#formlogin').submit(function () { 	//Ao submeter formulário
+
+                var usuario = $('#usuario').val();	//Pega valor do campo email
+                var senha = $('#senha').val();	//Pega valor do campo senha
+
+                $.ajax({			//Função AJAX
+                    url: refereciaServidor,			//Arquivo php
+                    type: "post",				//Método de envio
+                    data: "usuario=" + usuario + "&senha=" + senha,	//Dados
+                    success: function (result) {			//Sucesso no AJAX
+                        if (result == 1) {
+                            console.log('usuario');
+                            location.href='home.html';	//Redireciona;
+                        } else {
+                            $('#errolog').show();		//Informa o erro
+                        }
+                    }
+                })
+                return false;	//Evita que a página seja atualizada
+            })
+        })
+        
+    </script> </body>
+  
+    <!-- <script src="./js/ajax.js"></script>
+    <script src="./js/conexaophp.js"></script> -->
 </html>
