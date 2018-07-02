@@ -1,12 +1,3 @@
-// // var refereciaServidor = 'https://swapi.co/api/films/2/'
-
-// chamadaAjax(refereciaServidor, teste);
-// // chamadaAjax(refereciaServidor + 'starwars.json', teste);
-
-// function teste(data){
-//     console.log(data.title);
-// }
-
 var refereciaServidor = 'http://192.168.1.102/z/login.php'
 
 $(document).ready(function () {
