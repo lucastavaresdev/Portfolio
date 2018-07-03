@@ -22,7 +22,7 @@ function card(data){
                      + '<p>' + data[i].Procedimento +'</p>'
                      + '</div>'
                      + '<div class="mdl-card__actions mdl-card--border">'
-                     + '<button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent">Preencher Ficha</button>'
+                     + '<a href="./questionario.html?id_paciente=' + data[i].id +  '" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent">Preencher Ficha</a>'
                      + '</div>'
                      + '</div>'
                     + '</div>'
