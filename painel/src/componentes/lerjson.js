@@ -16,7 +16,7 @@ function tabela_localizacao(data, id_da_tabela, html) {
     var html = "";
 
     for (let i = 0; i < data.length; i++) {
-        if(data[i].qtdsala === ""){
+        if(data[i].qtdsala === "" || data[i].qtdsala === null){
             setor = 0;
         }else{
             setor = data[i].qtdsala

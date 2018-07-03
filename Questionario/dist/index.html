@@ -1,49 +1,67 @@
  <!DOCTYPE html>
-<html class="login" lang="pt-br">
+<html  lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fichas</title>
-    <link rel="stylesheet" href="componentes/uikit.min.css">
-    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="./componentes/material.min.css" /> 
+    <script src="./componentes/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
 
-    <div class="uk-position-center borda">
-        <div class="uk-width-medium uk-animation-slide-bottom ">
-            <h1 class="uk-heading-primary uk-text-center logo">Logo</h1>
-            <form action="">
-                <div>
-                    <div class="uk-margin">
-                        <div class="uk-inline tamanho">
-                            <span class="uk-form-icon icon-cor" uk-icon="icon: user"></span>
-                            <input type="text" class="uk-input" name="usuario">
+
+<body class="login">
+
+    <style>
+    </style>
+
+    <div class="mdl-layout mdl-js-layout">
+        <main class="mdl-layout__content">
+
+            <div class="mdl-card mdl-shadow--6dp">
+
+                <div class="mdl-card__title">
+                    <h2 class="mdl-card__title-text">Logo</h2>
+                </div>
+
+                <div class="mdl-card__supporting-text">
+
+                    <form id='formlogin' method="post">
+
+                        <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label mdl-color-modifier">
+                            <input class="mdl-textfield__input " type="text" id="usuario" name="usuario" required/>
+                            <label class="mdl-textfield__label mdl-color-modifier" for="usuario">Usuario</label>
                         </div>
-                    </div>
-                </div>
 
-                <div>
-                    <div class="uk-margin ">
-                        <div class="uk-inline tamanho">
-                            <span class="uk-form-icon  icon-cor" uk-icon="icon: lock"></span>
-                            <input type="password" class="uk-input" name="senha">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="password" id="senha" name="senha" required/>
+                            <label class="mdl-textfield__label" for="senha">Senha</label>
                         </div>
-                    </div>
+
+                        <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Entrar</button>
+                    </form>
+
                 </div>
 
-                <div class="uk-width-1-1">
-                    <div>
-                        <button class="uk-button uk-width-1-1 btn_entrar uk-align-center">Entrar</button>
-                    </div>
-                </div>
-            </form>
-        </div>
+                <p id="errolog">Usuário ou senha errados!</p>
+            </div>
+        </main>
     </div>
 
-    </body>
-<script src="componentes/uikit.min.js"></script>
-<script src="componentes/uikit-icons.min.js"></script>
+    <script src="./componentes/jquery.js"></script>
+    <script src="./js/conexaophp.js"></script>
+
+    <script>
+
+     
+    </script> </body>
+  
+    <!-- <script src="./js/ajax.js"></script>
+    <script src="./js/conexaophp.js"></script> -->
 </html>
