@@ -94,7 +94,7 @@ gulp.task('serve',['default'], function () {
 
     //monitora alteração caso sera alteradao reload o browser
     gulp.watch('./src/sass/**/*.scss', ['sass'])
-    gulp.watch('./src/**/*.html', ['html'])
+    gulp.watch('./src/**/*.html', ['default'])
     gulp.watch('./src/js/**/*', ['default'])
 })
 

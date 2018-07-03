@@ -3,4 +3,13 @@
     box-shadow: none;
     position : fixed;
     margin-bottom: 25px;
+    .material-icons{
+        color: $branco;
+    }
+    .linha{
+        padding-left: 25px;
+    }
+    .title_ques{
+        margin-left: 25px;
+    }
 }
