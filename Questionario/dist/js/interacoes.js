@@ -1,34 +1,85 @@
 
- var url_do_select = refereciaServidor + 'selectsJson.php?';
+var url_do_select = refereciaServidor + 'selectsJson.php?';
 
 console.log(url_do_select);
 console.log()
 
-chamadaAjax( url_do_select + 'parametro=agendamento', card);
+chamadaAjax(url_do_select + 'parametro=agendamento', card);
 
-function card(data){
+function card(data) {
     html = "";
     console.log(data);
-    for(i = 0; i < data.length; i++){
-       
-        html += 
-                        '<div class="mdl-cell mdl-cell--4-col">'
-                     + '<div class="mdl-card mdl-shadow--2dp demostracao-card card">'
-                     + '<div class="mdl-card__title">'
-                     + '<h2 class="mdl-card__title-text">' + data[i].Nome + '</h2>'
-                     + '</div>'
-                     + '<div class="mdl-card__supporting-text">'
-                     + '<p>' +data[i].IH +'</p>'
-                     + '<p>' + data[i].Procedimento +'</p>'
-                     + '</div>'
-                     + '<div class="mdl-card__actions mdl-card--border">'
-                     + '<a href="./questionario.html?id_paciente=' + data[i].id +  '" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent">Preencher Ficha</a>'
-                     + '</div>'
-                     + '</div>'
-                    + '</div>'
-                    ;
+    for (i = 0; i < data.length; i++) {
+
+        html +=
+            '<div class="mdl-cell mdl-cell--4-col">'
+            + '<div class="mdl-card mdl-shadow--2dp demostracao-card card">'
+            + '<div class="mdl-card__title">'
+            + '<h2 class="mdl-card__title-text">' + data[i].Nome + '</h2>'
+            + '</div>'
+            + '<div class="mdl-card__supporting-text">'
+            + '<p>' + data[i].IH + '</p>'
+            + '<p>' + data[i].Procedimento + '</p>'
+            + '</div>'
+            + '<div class="mdl-card__actions mdl-card--border">'
+            + '<a href="./questionario.html?id_paciente=' + data[i].id + '" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent">Preencher Ficha</a>'
+            + '</div>'
+            + '</div>'
+            + '</div>'
+            ;
     }
-    document.getElementById("cards").innerHTML = html;
+
+    var cards = document.getElementById("cards");
+    if (cards) {
+        document.getElementById("cards").innerHTML = html;
+    } else {
+        console.log("Não existe Cards");
+    }
+}
+
+cria_subtitulo();
+
+function cria_subtitulo() {
+
+
+    btn_add_input_subtitulo = document.getElementById('add_subtitulo');
+
+    btn_add_input_subtitulo.addEventListener("click", function () {
+
+        // var html = "teste 1"
+        // // html = '<div class="mdl-textfield mdl-js-textfield">'
+        // //                 + '<input class="mdl-textfield__input" type="text" name="sub1" id="titulo_questionario">'
+        // //                 + '<label class="mdl-textfield__label" for="titulo_questionario">Sub-titulo</label>'
+        // //                 +' </div>';
+
+
+        /*Iria colocar o input na tela e depois o insert para salvar */
+
+        // Buscar elemento pai
+        var elemento_pai = btn_add_input_subtitulo;
+
+        // Criar elemento
+        var titulo = document.createElement('h1');
+
+        // Criar o nó de texto
+        var texto = document.createTextNode("Um título qualquer");
+
+        // Anexar o nó de texto ao elemento h1
+        titulo.appendChild(texto);
+
+        // Agora sim, inserir (anexar) o elemento filho (titulo) ao elemento pai (body)
+        elemento_pai.appendChild(titulo);
+
+
+        document.getElementById("inputs_sub").appendChild("teste");
+    });
+
+    // html = ""; 
+
+
+    //     
+
+    // document.getElementById("cards").innerHTML = html;
 
 }
 

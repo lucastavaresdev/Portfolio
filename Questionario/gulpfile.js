@@ -77,8 +77,8 @@ gulp.task('imagemin', function(){
 });
 
 
-gulp.task('default', ['copy' ,], function(){
-    gulp.start('html' ,'imagemin', 'sass' , 'build-js')
+gulp.task('default', ['copy'], function(){
+    gulp.start('html' ,'imagemin', 'sass', 'build-js')
 })
 
 
