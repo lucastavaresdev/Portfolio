@@ -6,113 +6,178 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
     <link rel="stylesheet" href="css/style.css">
+
 
 </head>
 
 <body>
-    <!--navbar topo-->
-    <nav class="navbar navbar-expand-lg">
-        <div class="navbar-brand" href="#">
-            <h1 class="tituloprincipal">Dashboard</h1>
-        </div>
-        <button href="#menu-toggle" id="menu-toggle" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span>
-                <svg class="menu" viewBox="0 0 24 24" version="1.1" width="24px" height="24px">
-                    <g id="surface1">
-                        <path d="M 0 2 L 0 4 L 24 4 L 24 2 Z M 0 11 L 0 13 L 24 13 L 24 11 Z M 0 20 L 0 22 L 24 22 L 24 20 Z " />
-                    </g>
-                </svg>
-            </span>
-            </div>
-    </nav>
-    <div id="wrapper">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#"></a>
-                </li>
-                <a href="#">
-                    <li>
-                        <img class="icone" src="img/icon-dashboard.png" alt="">Dashboard
-                    </li>
-                </a>
-                <!-- <a href="#">
-                    <li>
-                        <img class="icone" src="img/icon-lista.png" alt="">Lista
-                    </li> 
-                </a>
--->
+
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo logo">Dashbord</a>
+            <a href="#" data-target="slide-out" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
             </ul>
         </div>
-        >
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
+    </nav>
 
+    <ul id="slide-out" class="sidenav">
+
+
+    </ul>
+
+    <div class="row">
+        <div class=" sidenav-trigger barra left" data-target="slide-out">
+            <div class="open">
+                <i class="material-icons">keyboard_arrow_right </i>
             </div>
         </div>
-        <!-- /#page-content-wrapper -->
-    </div>
-    <!-- /#wrapper -->
-    <main role="main" class="col-md-9 col-lg-10 offset-md-1">
-        <section>
-            <div class="container-fluid mt-3">
-                <div class="row">
-                    <div class="col-md-12 col-lg-6">
-                        <h1 class="h4 text-center tituloPaciente">Tracking de Paciente</h1>
-                        <table class="table">
-                            <thead class="topo_tabela">
-                                <tr class="a">
-                                    <th class="borda-topo-left" scope="col">Nome</th>
-                                    <th class="borda-topo-right" scope="col">Local</th>
-                                </tr>
-                            </thead>
-                            <tbody class="conteudo_tabela" id="tabela">
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col-md-12 col-lg-6 tablet">
-                        <h1 class="h4 text-center">Salas</h1>
-                        <div class="table-responsive-sm">
-                            <table class="table">
-                                <thead class="topo_tabela">
-                                    <tr class="a">
-                                        <th class="borda-topo-left" scope="col">Local</th>
-                                        <th class="borda-topo-right" scope="col">Ocupações</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="conteudo_tabela" id='tabela_localizacao'>
-                                </tbody>
-                            </table>
+
+        <div class="col s12 conteudo">
+
+            <div class="row">
+
+                <div class="col s3">
+                    <div class="row">
+                        <div class="col s10">
+                            <div class="card-panel teal">
+                                <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                                </span>
+                            </div>
                         </div>
                     </div>
-        </section>
-    </main>
-</body>
+                </div>
+                <div class="col s3">
+                    <div class="row">
+                        <div class="col s10">
+                            <div class="card-panel teal">
+                                <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="row">
+                        <div class="col s10">
+                            <div class="card-panel teal">
+                                <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s3">
+                    <div class="row">
+                        <div class="col s10">
+                            <div class="card-panel teal">
+                                <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-<script src="./componentes/jquery.js"></script>
-<!-- <script src="../dist/js/app.min.js"></script> -->
-<script src="./componentes/bootstrap.min.js"></script>
-<script src="./componentes/ajax.js"></script>
-<script src="./componentes/Chart.min.js"></script>
-<!-- <script src="./js/app.min.js"></script>  -->
-<script src="./js/grafico.js"></script>
-<script src="componentes/lerjson.js"></script>
+
+            </div>
 
 
-<script>
-    if ($(window).width() <= 900) {
-        $("#menu-toggle").click(function (e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
+
+
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs">
+                        <li class="tab col s3">
+                            <a class="active" href="#test1">Ecocardiograma - UACJ</a>
+                        </li>
+                        <li class="tab col s3">
+                            <a href="#test2">Test 2</a>
+                        </li>
+                    </ul>
+
+                    <div id="test1" class="col s12">
+                        <table class="striped" >
+                            <thead>
+                                <tr>
+                                    <th>Hora</th>
+                                    <th>Atividade</th>
+                                    <th>IH</th>
+                                    <th>Nome do Paciente</th>
+                                    <th>Senha</th>
+                                    <th>Serviço Atual</th>
+                                    <th>Prox. Serviço</th>
+                                    <th>Status</th>
+                                    <th>Tp Esp(m)</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>9h15</td>
+                                    <td>EDA</td>
+                                    <td>7376561</td>
+                                    <td>ALINE REZENDE LUGARINE</td>
+                                    <td> - </td>
+                                    <td>ENDOSCOPIA UACJ </td>
+                                    <td> - </td>
+                                    <td>  </td>    
+                                    <td> - </td>
+                                </tr>
+                                <tr>
+                                    <td>10h15</td>
+                                    <td>EDAPD</td>
+                                    <td>7376561</td>
+                                    <td>RAFAEL REZENDE CORDEIRO</td>
+                                    <td> - </td>
+                                    <td>ENDOSCOPIA UACJ </td>
+                                    <td> - </td>
+                                    <td>  </td>    
+                                    <td> - </td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+
+
+
+                    </div>
+                    <div id="test2" class="col s12">Test 2</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="./componentes/jquery.js"></script>
+    <script src="./js/materialize.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });        
+    </script>
+    <script>
+
+        $(document).ready(function () {
+            $('.tabs').tabs();
         });
-    }
-    else {
-        $("#wrapper").toggleClass("toggled");
-    }
-</script>
+    </script>
+
 
 </html>

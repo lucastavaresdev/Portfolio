@@ -1,17 +1,57 @@
-.navbar{
-    background: $azul-escuro;
-    max-height: 50px;
-    position: fixed;
-    z-index: 1001;
-    width: 100%;
-    top: 0;
-    .tituloprincipal{
-       color: $branco;
-       padding-left: 15px;
-       font-weight: 500;
-       font-size: 19px;
+nav {
+    box-shadow: none;
+    background: $cor-primaria;
+    .sidenav-trigger {
+        display: block !important;
     }
-    .menu{
-        fill: $branco
+    .logo {
+        position: relative;
+    }
+}
+
+.barra {
+    cursor: pointer;
+    text-align: center;
+    .open {
+        position: fixed;
+        height: 100%;
+        width: 1.3%;
+        background: $cinza;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        i {
+            color: darken($cinza, 50%);
         }
+    }
+}
+
+.barra-interna {
+    cursor: pointer;
+    text-align: center;
+    .open {
+        position: fixed;
+        height: 100%;
+        width: 1.3%;
+        background: $cinza;
+        right:  0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        i {
+            color: darken($cinza, 50%);
+        }
+    }
+}
+
+@media(max-width: 920px) {
+    nav {
+        .logo {
+            position: absolute;
+        }
+    }
+    .barra {
+        display: none;
+    }
 }
