@@ -33,18 +33,35 @@
 
 
 
-
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--2-col"></div>
-        <form action="#">
+        <form method="post" id="cadastroQuestionario">
             <h4>Cadastro de Questionario</h4>
             <hr>
+            
             <div class="mdl-textfield mdl-js-textfield">
-                <input class="mdl-textfield__input" type="text" id="titulo_questionario">
+                <input class="mdl-textfield__input" type="text" name="titulo_questionario" id="titulo_questionario" >
                 <label class="mdl-textfield__label" for="titulo_questionario">Titulo do Questionario</label>
             </div>
-        </form>
+            <br>
+            <br>
+            <br>
+            <!--gerado por javascript-->
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" name="sub1" id="titulo_questionario" >
+                            <label class="mdl-textfield__label" for="titulo_questionario">Sub-titulo</label>
+                        </div>
+                        
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input" type="text" name="sub2" id="titulo_questionario" >
+                            <label class="mdl-textfield__label" for="titulo_questionario">Sub-titulo</label>
+                        </div>
 
+
+                    <br>
+
+            <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" value="Cadastrar">
+        </form>
     </div>
 </div>
 
