@@ -129,6 +129,56 @@ nav {
 .conteudo {
   padding: 1% 4% !important; }
 
+.tabela_bg {
+  background: #ffffff; }
+
+.tabs {
+  color: #7a7a7a; }
+  .tabs .tab {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #007DCC; }
+    .tabs .tab a {
+      color: #7a7a7a; }
+      .tabs .tab a.active {
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #007DCC; }
+      .tabs .tab a:hover {
+        color: #005e99; }
+      .tabs .tab a:focus.active {
+        background-color: rgba(0, 125, 204, 0.2); }
+  .tabs .indicator {
+    background: #007DCC; }
+
+.input-field label {
+  color: #007DCC; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #006db3; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #007DCC;
+  box-shadow: 0 1px 0 0 #007DCC; }
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #007DCC;
+  box-shadow: 0 1px 0 0 #007DCC; }
+
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #007DCC;
+  box-shadow: 0 1px 0 0 #007DCC; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #007DCC; }
+
 footer {
   position: absolute;
   height: 5px;
