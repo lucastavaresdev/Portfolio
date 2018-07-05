@@ -108,15 +108,26 @@ nav {
   .sidenav-overlay {
     background: none; }
 
+.dados_consolidados {
+  background: #ffffff;
+  border-bottom: 2px solid #f1f1f1; }
+  .dados_consolidados .bg-consolidado {
+    padding-top: 1.5%;
+    padding-button: 1.5%; }
+  .dados_consolidados p {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #7a7a7a; }
+  .dados_consolidados h4 {
+    line-height: 0.4;
+    font-family: Montserrat, sans-serif;
+    font-size: 39px;
+    font-weight: 400;
+    color: #007DCC; }
+
 .conteudo {
   padding: 1% 4% !important; }
-
-.box {
-  border: 2px solid #313C4C;
-  border-radius: 15px; }
-  .box .dados {
-    font-size: 18px;
-    padding: 21px 5px 14px 5px; }
 
 footer {
   position: absolute;
