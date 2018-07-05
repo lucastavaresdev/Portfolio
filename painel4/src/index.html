@@ -15,30 +15,35 @@
 </head>
 
 <body>
-
-
     <nav>
         <div class="nav-wrapper">
-            <div class="logo">Work<b>Flow</b></div>
+            <div class="logo">Work
+                <b>Flow</b>
             </div>
-        </nav>
-        
-        <ul id="slide-out" class="sidenav">
-            
-            
-        </ul>
-        
-        <!-- <a href="#" data-target="slide-out" class="sidenav-trigger">
+        </div>
+    </nav>
+
+    <!--Sidenav-->
+    <ul id="slide-out" class="sidenav">
+        <div class="sidenav-trigger right close" data-target="slide-out" id="close-navbar">
+            <div class="icon-center">
+                <i class="material-icons">keyboard_arrow_left </i>
+            </div>
+        </div>
+    </ul>
+
+    <!-- <a href="#" data-target="slide-out" class="sidenav-trigger">
             <i class="material-icons">menu</i>
         </a> -->
 
-        
     <div class="row">
-        <div class=" sidenav-trigger barra left" data-target="slide-out">
-            <div class="open">
+        <div class="sidenav-trigger left open" id="open-navbar" data-target="slide-out">
+            <div class="icon-center">
                 <i class="material-icons">keyboard_arrow_right </i>
             </div>
         </div>
+
+
 
         <div class="col s12 conteudo">
 
@@ -103,7 +108,7 @@
                     </ul>
 
                     <div id="test1" class="col s12">
-                        <table class="striped" >
+                        <table class="striped">
                             <thead>
                                 <tr>
                                     <th>Hora</th>
@@ -127,7 +132,7 @@
                                     <td> - </td>
                                     <td>ENDOSCOPIA UACJ </td>
                                     <td> - </td>
-                                    <td>  </td>    
+                                    <td> </td>
                                     <td> - </td>
                                 </tr>
                                 <tr>
@@ -138,10 +143,10 @@
                                     <td> - </td>
                                     <td>ENDOSCOPIA UACJ </td>
                                     <td> - </td>
-                                    <td>  </td>    
+                                    <td> </td>
                                     <td> - </td>
                                 </tr>
-                               
+
                             </tbody>
                         </table>
 
@@ -167,16 +172,32 @@
     <script src="./js/materialize.js"></script>
 
 
-    <script>
-        $(document).ready(function () {
-            $('.sidenav').sidenav();
-        });        
-    </script>
+
     <script>
 
         $(document).ready(function () {
             $('.tabs').tabs();
         });
+    </script>
+
+
+    <script>
+
+        var open = document.getElementById('open-navbar');
+        var close = document.getElementById('close-navbar');
+
+
+        open.addEventListener('click', function () {
+            document.querySelector('.sidenav').classList.remove('open-b');
+            document.querySelector('.sidenav').classList.add('open-a');
+        });
+
+
+        close.addEventListener('click', function () {
+            document.querySelector('.sidenav').classList.remove('open-a');
+            document.querySelector('.sidenav').classList.add('open-b');
+        });
+
     </script>
 
 
