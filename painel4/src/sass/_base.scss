@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700');
 
 h1,h2,h3,h4,h5,h6,p,a,div{
-    font-family: 'Open Sans', sans-serif;
+    font-family: $monte-serrat
 }
 
+
 body{
-    background: url(../img/bg.jpg);
+    background: $bg;
 }
+
+
+@mixin fontebase ($fonte: "Montserrat', sans-serif",$tamanho: '12px',$espessura: normal,$cor:"#00ff00") {
+    font-family: #{$fonte};
+    font-size: #{$tamanho};
+    font-weight: #{$espessura};
+    color: #{$cor}
+} 
 
 
 
