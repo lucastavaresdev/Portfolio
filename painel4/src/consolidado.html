@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <div class="logo">Work
+                <b>Flow</b>
+            </div>
+        </div>
+    </nav>
+
+    <!--Sidenav-->
+    <ul id="slide-out" class="sidenav">
+        <div class="row">
+            <div class="grid">
+                <div class="col s10 conteudo_side">
+                    <li>
+                        <div class="user-view">
+                            <div class="background bg_nav">
+                                <img class="bg_nav" src="img/nav_bg.jpg">
+                            </div>
+                            <img class="logo-sidenav" src="img/logo.png">
+                            </a>
+                            <span class="name"></span>
+                            </a>
+                            <span class=" email"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <i class="material-icons">dashboard</i>Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#!">
+                            <i class="material-icons">grid_on</i>Consolidado</a>
+                    </li>
+                    <li>
+                        <div class="divider"></div>
+                    </li>
+                    <li>
+                        <a class="subheader">Relatórios</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="#!">Tempos</a>
+                    </li>
+                    <li>
+                        <a class="waves-effect" href="#!">Fluxo de Paciente</a>
+                    </li>
+
+                </div>
+                <div class="col s1">
+                    <div class="sidenav-trigger right close" data-target="slide-out" id="close-navbar">
+                        <div class="icon-center">
+                            <i class="material-icons">keyboard_arrow_left </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ul>
+
+
+
+    <!-- <a href="#" data-target="slide-out" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a> -->
+
+    <div class="row">
+        <div class="sidenav-trigger left open" id="open-navbar" data-target="slide-out">
+            <div class="icon-center">
+                <i class="material-icons">keyboard_arrow_right </i>
+            </div>
+        </div>
+
+        <!-- <div class="row ">
+            <div class="col s12 dados_consolidados">
+                <div class="col s12 conteudo bg-consolidado">
+                    <div class="col s4 l2">
+                        <p>Qtd. Pacientes</p>
+                        <h4>19</h4>
+                    </div>
+                    <div class="col s4 l2">
+                        <p>Atendimentos</p>
+                        <h4>5/19</h4>
+                    </div>
+                    <div class="col s4 l2">
+                        <p>Maior Fluxo</p>
+                        <h4>15h</h4>
+                    </div>
+                    <div class="col s4 l2">
+                        <p>Tempo de Espera</p>
+                        <h4>2h</h4>
+                    </div>
+                    <div class="col s4 l2">
+                        <p>Tempo de Exame</p>
+                        <h4>1h</h4>
+                    </div>
+                    <div class="col s4 l2">
+                        <p>Finalizados</p>
+                        <h4>5</h4>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="col s12 conteudo">
+            <div class="row">
+                <div class="col s3">
+                    <h1 class="c_titulo">Agendamentos</h1>
+                </div>
+                <div class="col s3">
+                    <h1 class="c_titulo">04/07/2018</h1>
+                </div>
+                <div class="col s3">
+                    <h1 class="c_titulo">Tempo Restante 10:37:15</h1>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col s12 l3">
+
+                </div>
+                <div class="col s12 l3">
+
+                </div>
+                <div class="col s12 l3">
+
+                </div>
+            </div>
+
+
+
+            <div class="row">
+
+                <div class="col s12 l3">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="images/sample-1.jpg">
+                            <span class="card-title">Card Title</span>
+                        </div>
+                        <div class="card-content">
+                            <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                                I require little markup to use effectively.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="./componentes/jquery.js"></script>
+    <script src="./js/materialize.js"></script>
+
+
+
+    <script>
+
+        $(document).ready(function () {
+            $('.tabs').tabs();
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+
+
+    <script>
+
+        var open = document.getElementById('open-navbar');
+        var close = document.getElementById('close-navbar');
+
+
+        open.addEventListener('click', function () {
+            document.querySelector('.sidenav').classList.remove('open-b');
+            document.querySelector('.sidenav').classList.add('open-a');
+        });
+
+
+        close.addEventListener('click', function () {
+            document.querySelector('.sidenav').classList.remove('open-a');
+            document.querySelector('.sidenav').classList.add('open-b');
+        });
+
+    </script>
+
+
+</html>
