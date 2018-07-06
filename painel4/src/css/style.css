@@ -214,4 +214,53 @@ footer {
   background: #313C4C;
   bottom: 0px; }
 
+.c_titulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #007DCC; }
+  .c_titulo span {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #007DCC; }
+
+@media (max-width: 920px) {
+  .c_centralizando {
+    display: flex;
+    justify-content: center; }
+    .c_centralizando .c_agendamento {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; }
+
+  .c_titulo {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #007DCC;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center !important; }
+    .c_titulo span {
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #007DCC; } }
+.c_total_card {
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: #007DCC;
+  letter-spacing: 4px; }
+  .c_total_card b {
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #007DCC; }
+
+.c_linha_card_superior {
+  margin-bottom: 0; }
+
 /*# sourceMappingURL=style.css.map */
