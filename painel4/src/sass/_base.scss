@@ -43,32 +43,6 @@ body{
     margin-right: 10px;
 }
 
-.disponivel{
-    background: $disponivel;
-    @include fonte;
-}
-.emuso{
-    background: $emuso;
-    @include fonte;
-}
-.Indisponivel{
-    background: $Indisponivel;
-    @include fonte;
-}
-
-.finalizado{
-    background: $finalizado;
-    @include fonte;
-}
-.nenhum{
-    background: $branco;
-    @include fonte;
-}
-
-.dados-emuso{
-    color: $emuso;
-    font-weight: 700;
-}
 
 @media (max-device-width : 767px) {
     main{

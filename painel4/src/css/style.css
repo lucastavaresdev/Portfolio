@@ -14,35 +14,6 @@ body {
 .icone {
   margin-right: 10px; }
 
-.disponivel {
-  background: #169F85;
-  font-weight: bold;
-  color: #ffffff; }
-
-.emuso {
-  background: #2A80B9;
-  font-weight: bold;
-  color: #ffffff; }
-
-.Indisponivel {
-  background: #8F44AD;
-  font-weight: bold;
-  color: #ffffff; }
-
-.finalizado {
-  background: #565656;
-  font-weight: bold;
-  color: #ffffff; }
-
-.nenhum {
-  background: #ffffff;
-  font-weight: bold;
-  color: #ffffff; }
-
-.dados-emuso {
-  color: #2A80B9;
-  font-weight: 700; }
-
 @media (max-device-width: 767px) {
   main {
     margin-top: 13%; } }
@@ -251,13 +222,6 @@ nav {
 /* icon prefix focus color */
 .input-field .prefix.active {
   color: #007DCC; }
-
-footer {
-  position: absolute;
-  height: 5px;
-  width: 100%;
-  background: #313C4C;
-  bottom: 0px; }
 
 .c_titulo {
   font-family: Montserrat, sans-serif;
