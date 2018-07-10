@@ -1,0 +1,27 @@
+.quadrado{
+    height: 20px;
+    width: 20px;
+    p {
+    margin-left: 26px;
+    }
+}
+
+
+.nao-atendido{
+    background: $nao-iniciou !important;
+}
+.aguardando{
+    background: $aguardando !important;
+}
+.em-atendimento{
+    background: $em_atendimento  !important;
+}
+.em-atendimento-outro-servico{
+    background: $em_atendimento_em_outro_servico  !important;
+}
+.atendido{
+    background: $atendido !important;
+}
+.fastpass {
+    background: $fastpass !important;
+}

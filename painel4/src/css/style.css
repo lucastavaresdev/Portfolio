@@ -196,6 +196,30 @@ nav {
 @media (max-width: 920px) {
   .qtd_pag {
     display: none; } }
+.quadrado {
+  height: 20px;
+  width: 20px; }
+  .quadrado p {
+    margin-left: 26px; }
+
+.nao-atendido {
+  background: #ffffff !important; }
+
+.aguardando {
+  background: #FFFF00 !important; }
+
+.em-atendimento {
+  background: #00FF00 !important; }
+
+.em-atendimento-outro-servico {
+  background: #0000FF !important; }
+
+.atendido {
+  background: #FF00FF !important; }
+
+.fastpass {
+  background: #FF0000 !important; }
+
 .input-field label {
   color: #007DCC; }
 
