@@ -17,6 +17,13 @@ body{
     color: #{$cor}
 } 
 
+@mixin imagem-card-setor ($imagem) {
+    background: url(#{$imagem}) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+} 
+
 
 
 .borda-topo-left{

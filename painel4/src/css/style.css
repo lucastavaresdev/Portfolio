@@ -279,14 +279,24 @@ footer {
   margin-bottom: 0; }
 
 .cards {
-  width: 100%;
-  height: 100%;
   background: #ffffff;
   border-radius: 2px;
   padding-left: 0 !important;
-  position: relative; }
+  position: relative;
+  height: 220px;
+  width: 100%; }
   .cards .imagem-setor {
     background: url(../img/tomografia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-setor-ultra {
+    background: url(../img/ultrassom.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-setor-raiox {
+    background: url(../img/raiox.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
@@ -297,12 +307,15 @@ footer {
       margin-top: 12px; }
     .cards .c_conteudo_card p {
       line-height: 0.7;
-      font-size: 17px; }
+      font-size: 17px;
+      text-align: left !important; }
     .cards .c_conteudo_card .c_status {
       line-height: 3; }
 
 @media (max-width: 920px) {
   .cards .c_conteudo_card {
     left: 34% !important; } }
+#horas {
+  margin-top: 2%; }
 
 /*# sourceMappingURL=style.css.map */

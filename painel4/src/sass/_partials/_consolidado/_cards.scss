@@ -1,16 +1,24 @@
 .cards {
-    width: 100%;
-    height: 100%;
     background: $branco;
     border-radius: 2px;
     padding-left: 0 !important;
     position: relative;
+    height: 220px;
+    width:  100%;
+    
     .imagem-setor {
-        background: url(../img/tomografia.jpg) no-repeat center center;
-        background-size: cover;
-        position: absolute;
-        height: 100%;
+        @include imagem-card-setor('../img/tomografia.jpg')
+        
     }
+    
+    .imagem-setor-ultra {
+        @include imagem-card-setor('../img/ultrassom.jpg')
+    }
+    .imagem-setor-raiox {
+        @include imagem-card-setor('../img/raiox.jpg')
+    }
+
+
     .c_conteudo_card {
         position: relative;
         left: 26% !important;
@@ -20,6 +28,7 @@
         p {
             line-height: 0.7;
             font-size: 17px;
+            text-align: left !important;
         }
         .c_status {
             line-height: 3;
