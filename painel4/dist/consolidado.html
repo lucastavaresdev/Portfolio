@@ -8,84 +8,88 @@
     <title>Dashboard</title>
     <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/materialize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/materialize.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 
 </head>
 
 <body>
     <nav>
-        <div class="nav-wrapper">
-            <div class="logo">Work
-                <b>Flow</b>
-            </div>
-        </div>
-    </nav>
-
-    <!--Sidenav-->
-    <ul id="slide-out" class="sidenav">
-        <div class="row">
-            <div class="grid">
-                <div class="col s10 conteudo_side">
-                    <li>
-                        <div class="user-view">
-                            <div class="background bg_nav">
-                                <img class="bg_nav" src="img/nav_bg.jpg">
-                            </div>
-                            <img class="logo-sidenav" src="img/logo.png">
-                            </a>
-                            <span class="name"></span>
-                            </a>
-                            <span class=" email"></span>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#!">
-                            <i class="material-icons">dashboard</i>Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#!">
-                            <i class="material-icons">grid_on</i>Consolidado</a>
-                    </li>
-                    <li>
-                        <div class="divider"></div>
-                    </li>
-                    <li>
-                        <a class="subheader">Relatórios</a>
-                    </li>
-                    <li>
-                        <a class="waves-effect" href="#!">Tempos</a>
-                    </li>
-                    <li>
-                        <a class="waves-effect" href="#!">Fluxo de Paciente</a>
-                    </li>
-
+            <div class="nav-wrapper">
+                <div class="logo">Work
+                    <b>Flow</b>
                 </div>
-                <div class="col s1">
-                    <div class="sidenav-trigger right close" data-target="slide-out" id="close-navbar">
-                        <div class="icon-center">
-                            <i class="material-icons">keyboard_arrow_left </i>
+            </div>
+        </nav>
+    
+        <!--Sidenav-->
+        <ul id="slide-out" class="sidenav">
+            <div class="row">
+                <div class="grid">
+                    <div class="col s10 conteudo_side">
+                        <li>
+                            <div class="user-view">
+                                <div class="background bg_nav">
+                                    <img class="bg_nav" src="img/nav_bg.jpg">
+                                </div>
+                                <img class="logo-sidenav" src="img/logo.png">
+                                </a>
+                                <span class="name"></span>
+                                </a>
+                                <span class=" email"></span>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="index.html">
+                                <i class="material-icons">dashboard</i>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="consolidado.html">
+                                <i class="material-icons">grid_on</i>Consolidado</a>
+                        </li>
+                        <li>
+                            <div class="divider"></div>
+                        </li>
+                        <li>
+                            <a class="subheader">Relatórios</a>
+                        </li>
+                        <li>
+                            <a class="waves-effect" href="#!">Tempos</a>
+                        </li>
+                        <li>
+                            <a class="waves-effect" href="#!">Fluxo de Paciente</a>
+                        </li>
+    
+                    </div>
+                    <div class="col s1">
+                        <div class="sidenav-trigger right close" data-target="slide-out" id="close-navbar">
+                            <div class="icon-center">
+                                <i class="material-icons">keyboard_arrow_left </i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </ul>
+        </ul>
+    
+    
+    
+        <!-- <a href="#" data-target="slide-out" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a> -->
+    
+            <div class="row">
+                    <div class="sidenav-trigger left open" id="open-navbar" data-target="slide-out">
+                        <div class="icon-center">
+                            <i class="material-icons">keyboard_arrow_right </i>
+                        </div>
+                    </div>
 
 
 
-    <!-- <a href="#" data-target="slide-out" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-        </a> -->
-
-    <div class="row">
-        <div class="sidenav-trigger left open" id="open-navbar" data-target="slide-out">
-            <div class="icon-center">
-                <i class="material-icons">keyboard_arrow_right </i>
-            </div>
-        </div>
+ 
 
 
         <div class="col s12 conteudo espacamento">
@@ -261,9 +265,11 @@
 
 
 
+    
 
     <script src="./componentes/jquery.js"></script>
     <script src="./js/materialize.js"></script>
+    <script src="./js/sidebar.js"></script>
 
 
 
@@ -280,24 +286,7 @@
     </script>
 
 
-    <script>
-
-        var open = document.getElementById('open-navbar');
-        var close = document.getElementById('close-navbar');
-
-
-        open.addEventListener('click', function () {
-            document.querySelector('.sidenav').classList.remove('open-b');
-            document.querySelector('.sidenav').classList.add('open-a');
-        });
-
-
-        close.addEventListener('click', function () {
-            document.querySelector('.sidenav').classList.remove('open-a');
-            document.querySelector('.sidenav').classList.add('open-b');
-        });
-
-    </script>
+   
 
 
 </html>

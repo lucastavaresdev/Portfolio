@@ -23,6 +23,8 @@ gulp.task('copy', ['clean'], function () {
         'src/componentes/**/*',
         'src/js/**/*',
         'src/*.php',
+        'src/css/**/*',
+        'src/img/**/*',
     ], { "base": "src" })//o base mantem a estrutura
         .pipe(gulp.dest('dist'))
 })
@@ -78,7 +80,8 @@ gulp.task('imagemin', function(){
 
 
 gulp.task('default', ['copy'], function(){
-    gulp.start('html' ,'imagemin', 'sass', 'build-js')
+    gulp.start('html' , 'sass', 'build-js')
+    // gulp.start('html' ,'imagemin', 'sass', 'build-js')
 })
 
 
