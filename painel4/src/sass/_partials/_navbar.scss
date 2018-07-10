@@ -3,6 +3,7 @@ nav {
     background: $cor-primaria;
     height: 50px;
     border-bottom: solid 2px darken($cor-primaria,10%);
+    position: fixed;
     .logo {
         @include fontebase($monte-serrat, '26px', 300, $branco);
         margin-left: 4%;

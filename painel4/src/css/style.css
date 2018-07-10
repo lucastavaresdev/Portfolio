@@ -50,7 +50,8 @@ nav {
   box-shadow: none;
   background: #007DCC;
   height: 50px;
-  border-bottom: solid 2px #005e99; }
+  border-bottom: solid 2px #005e99;
+  position: fixed; }
   nav .logo {
     font-family: Montserrat, sans-serif;
     font-size: 26px;
