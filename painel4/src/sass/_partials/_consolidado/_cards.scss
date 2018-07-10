@@ -1,0 +1,36 @@
+.cards {
+    width: 100%;
+    height: 100%;
+    background: $branco;
+    border-radius: 2px;
+    padding-left: 0 !important;
+    position: relative;
+    .imagem-setor {
+        background: url(../img/tomografia.jpg) no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        height: 100%;
+    }
+    .c_conteudo_card {
+        position: relative;
+        left: 26% !important;
+        .c_card-title {
+            margin-top: 12px;
+        }
+        p {
+            line-height: 0.7;
+            font-size: 17px;
+        }
+        .c_status {
+            line-height: 3;
+        }
+    }
+}
+
+@media(max-width: 920px) {
+    .cards {
+        .c_conteudo_card {
+            left: 34% !important;
+        }
+    }
+}
