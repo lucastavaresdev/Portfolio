@@ -13,12 +13,22 @@ FROM agendamento
 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()
 GROUP BY HOUR(hora_servico_selecionado)";
 
+$maior_fluxo = "SELECT intervalo_de_horas ,qtd_por_hora FROM(
+        SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+2, ':00')  intervalo_de_horas, 
+        COUNT(*) as qtd_por_hora
+        FROM agendamento
+        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = CURDATE()
+        GROUP BY HOUR(hora_servico_selecionado)
+) as c order by qtd_por_hora desc limit 1;";
+
 
 //parametro passado
 if($parametro === 'agendamentos_do_dia'){
   geraJson($agendamentos_do_dia , $conexao );
 }else if($parametro === 'lista_dos_intevalos_por_hora_do_dia'){
   geraJson($lista_dos_intevalos_por_hora_do_dia, $conexao);
+}else if($parametro === 'maior_fluxo'){
+  geraJson($maior_fluxo, $conexao);
 }
  
 
