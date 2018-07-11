@@ -5,6 +5,9 @@ require('./conexao.php');// REQUSIÇÃO DO BANCO
 $parametro =$_GET['parametro'];//PARAMETRO
 
 //selects
+
+$select_dos_setores = "SELECT servico AS setor FROM servicos";
+
 $agendamentos_do_dia = "SELECT count(distinct(nome_paciente)) as agendamento_do_dia
 FROM agendamento where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()";
 
@@ -68,6 +71,8 @@ if($parametro === 'agendamentos_do_dia'){
   geraJson($maior_fluxo, $conexao);
 }else if($parametro === 'agendamentos_do_dia_por_setor'){
   geraJson($agendamentos_do_dia_por_setor, $conexao);
+}else if($parametro === 'lista_de_setores'){
+  geraJson($select_dos_setores, $conexao);
 }
  
 

@@ -3,30 +3,28 @@
 
 
 //chamadas ajax
-
+//
 chamadaAjax('php/selectsJson.php?parametro=agendamentos_do_dia_por_setor', agendamentos_do_dia_por_setor);
 
+chamadaAjax('php/selectsJson.php?parametro=lista_de_setores', lista_de_setores);
+
+
+function lista_de_setores(data){
+    console.log(data)
+}
 
 
 
 
 function agendamentos_do_dia_por_setor(data) {
-
     var html = "";
-
     elem = document.getElementById('agendimentos_do_dia');
-
     var qtd_agendamentos_do_dia = data[0].agendamento_do_dia;
-
     if (typeof qtd_agendamentos_do_dia  === 0 || typeof qtd_agendamentos_do_dia === "qtd_agendamentos_do_dia") {
         console.log("verificar o json ou query nos selects.php");
     }else{
         html += '<span>' + qtd_agendamentos_do_dia + '</span>';
     }
-
-
-
-
     elem.innerHTML = html;
 }
 
