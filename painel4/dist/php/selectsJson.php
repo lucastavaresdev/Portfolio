@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 require('./conexao.php');// REQUSIÇÃO DO BANCO
 

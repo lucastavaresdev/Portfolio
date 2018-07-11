@@ -25,6 +25,7 @@ gulp.task('copy', ['clean'], function () {
         'src/*.php',
         'src/css/**/*',
         'src/img/**/*',
+        'src/php/**/*',
     ], { "base": "src" })//o base mantem a estrutura
         .pipe(gulp.dest('dist'))
 })
