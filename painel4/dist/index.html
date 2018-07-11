@@ -14,14 +14,27 @@
 
 </head>
 
-<body>     <nav>
+<body> <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">one</a></li>
+    <li><a href="#!">two</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a></li>
+</ul>
+
+    <nav>
             <div class="nav-wrapper">
                 <div class="logo">Work
                     <b>Flow</b>
+                    <ul class="right">
+                        <li><a class="drop_topo" href="#!" data-target="dropdown1">Geral<i class="material-icons right">arrow_drop_down</i></a></li>
+                      </ul>
                 </div>
             </div>
         </nav>
-    
+
+   
+
+        </script>
         <!--Sidenav-->
         <ul id="slide-out" class="sidenav">
             <div class="row">
@@ -310,6 +323,7 @@
 
     <script src="./componentes/jquery.js"></script>
     <script src="./js/materialize.js"></script>
+    <script>$(".drop_topo").dropdown();</script> <!--Script para abrir p drop down da escola do principal-->
     <script src="./js/sidebar.js"></script>
     <script src="./js/ajax.js"></script>
     <script src="./js/lerjson.js"></script>
