@@ -46,9 +46,15 @@ s.servico as setor,
 a.proximo_servico,
 a.cod_cor_status
 FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.servico  = "COLONOSCOPIA" order by  servico;";
+where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.servico  = 'COLONOSCOPIA' order by  servico";
 
 
+
+$qtd_por_setor = "SELECT 
+count(distinct(a.nome_paciente)) as qtd_paciente,
+s.servico as setor
+FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.servico  = 'COLONOSCOPIA' order by  servico;"
 
 //parametro passado
 if($parametro === 'agendamentos_do_dia'){
