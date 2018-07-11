@@ -22,6 +22,8 @@ $maior_fluxo = "SELECT intervalo_de_horas ,qtd_por_hora FROM(
 ) as c order by qtd_por_hora desc limit 1;";
 
 
+$lista_de_setores = "SELECT servico as setor FROM servicos;";
+
 $lista_geral = "SELECT 
 distinct(a.nome_paciente) as paciente,
 a.hora_servico_selecionado as hora,
@@ -33,6 +35,20 @@ a.proximo_servico,
 a.cod_cor_status
 FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual;";
+
+$lista_por_setor = "SELECT 
+distinct(a.nome_paciente) as paciente,
+a.hora_servico_selecionado as hora,
+a.codigo_agenda as atividade,
+a.ih_paciente as IH,
+a.servico_atual,
+s.servico as setor,
+a.proximo_servico,
+a.cod_cor_status
+FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.servico  = "COLONOSCOPIA" order by  servico;";
+
+
 
 //parametro passado
 if($parametro === 'agendamentos_do_dia'){
