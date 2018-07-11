@@ -1,61 +1,75 @@
 var gulp = require('gulp')
+    , sass = require('gulp-sass')
     , include = require('gulp-file-include')
     , clean = require('gulp-clean')
     , autoprefixer = require('gulp-autoprefixer')
-    , uncss = require('postcss-uncss')
     , imagemin = require('gulp-imagemin')
     , cssnano= require('gulp-cssnano')
     , uglify = require('gulp-uglify')
     , concat = require('gulp-concat')
     , rename = require('gulp-rename')
     , browserSync = require('browser-sync')
-     , htmlmin = require('gulp-htmlmin');
 
-    gulp.task('clean', function(){
+
+gulp.task('clean', function(){
         return gulp.src('dist')
             .pipe(clean());
-    })
-
-   
+})
 
 
-//o que ira copiar
+
 gulp.task('copy', ['clean'], function () {
     gulp.src([
         'src/componentes/**/*',
-        'src/css/**/*',
-        'src/img/**/*',
-        'src/php/**/*',
+        'src/js/**/*',
+        'src/*.php',
     ], { "base": "src" })//o base mantem a estrutura
         .pipe(gulp.dest('dist'))
 })
 
 
 
-// gulp.task('build-js', function(){
-//     gulp.src('src/js/**/*')
-//     .pipe(concat('app.min.js'))
-//     .pipe(uglify())
-//     .pipe(gulp.dest('./dist/js/'))
-// })
+
+gulp.task('sass', function(){
+    return gulp.src('./src/sass/**/*.scss')
+        .pipe(sass())
+        .pipe(autoprefixer())
+        .pipe(cssnano())
+        .pipe(gulp.dest('./dist/css/'));
+})
 
 
-// gulp.task('html', function(){
-//     return gulp.src([
-//             ',
-//         ])
-//         .pipe(include())
-//         .pipe(gulp.dest('./dist/'))
-// })
+
+gulp.task('svgmin', function(){
+    return gulp.src(['src/inc/icon/*.svg,   !./src/inc/icon/*min.svg'])
+        .pipe(imagemin())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest('src/inc/icon/*.svg'))
+})
 
 
-gulp.task('minify', function() {
-    return gulp.src('./src/**/*.html')
-      .pipe(htmlmin({collapseWhitespace: true}))
-      .pipe(gulp.dest('dist'));
-  });
+gulp.task('build-js', function(){
+    gulp.src('src/js/**/*')
+    .pipe(concat('app.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js/'))
+})
 
-//reduz o tamanho da imagem
+
+gulp.task('html', function(){
+    return gulp.src([
+            './src/**/*.html',
+        ])
+        .pipe(include())
+        .pipe(gulp.dest('./dist/'))
+})
+
+
+
+
+
 gulp.task('imagemin', function(){
     return gulp.src('./src/img/**/*')
         .pipe(imagemin())
@@ -63,12 +77,13 @@ gulp.task('imagemin', function(){
 });
 
 
-gulp.task('default', ['copy' ,], function(){
-    gulp.start('minify', 'imagemin')
+gulp.task('default', ['copy'], function(){
+    gulp.start('html' ,'imagemin', 'sass', 'build-js')
 })
 
 
-gulp.task('serve',['minify'], function () {
+
+gulp.task('serve',['default'], function () {
     browserSync.init({
         server: {
             baseDir: 'dist'
@@ -78,8 +93,9 @@ gulp.task('serve',['minify'], function () {
     gulp.watch('./dist/**/*').on('change', browserSync.reload)
 
     //monitora alteração caso sera alteradao reload o browser
-     gulp.watch('./src/**/*.html', ['html'])
-    gulp.watch('.src/javascript/**/*', ['build-js'])
+    gulp.watch('./src/sass/**/*.scss', ['sass'])
+    gulp.watch('./src/**/*.html', ['default'])
+    gulp.watch('./src/js/**/*', ['default'])
 })
 
 

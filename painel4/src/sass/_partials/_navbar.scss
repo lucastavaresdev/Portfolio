@@ -1,0 +1,16 @@
+nav {
+    box-shadow: none;
+    background: $cor-primaria;
+    height: 50px;
+    border-bottom: solid 2px darken($cor-primaria,10%);
+    position: fixed;
+    .logo {
+        @include fontebase($monte-serrat, '26px', 300, $branco);
+        margin-left: 4%;
+        line-height: 53px;
+        b{
+            @include fontebase($monte-serrat, '26px', 600, $branco);
+        }
+    }
+}
+ 

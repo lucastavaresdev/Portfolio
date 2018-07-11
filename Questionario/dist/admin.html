@@ -1,12 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Fichas</title>
+
+    <link rel="stylesheet" href="./componentes/material.min.css" /> 
+    <script src="./componentes/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-    <h1>É ADMIN</h1>
-</body>
+
+
+
+
+<div class="mdl-layout__container">
+
+
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col"></div>
+        <div class="mdl-cell mdl-cell--10-col">
+
+            <h4>Cadastro de Usuario</h4>
+            <form method="post" id="cadastroUsuario">
+                <div class="mdl-textfield mdl-js-textfield">
+
+                    <input class="mdl-textfield__input" type="text" name="usuario" id="usuario">
+                    <label class="mdl-textfield__label" for="usuario">Usuario</label>
+
+                    <input class="mdl-textfield__input" type="password" name="senha" id="senha">
+                    <label class="mdl-textfield__label" for="senha">Senha</label>
+
+                    <select name="perfil">
+                        <option value="1">Admin</option>
+                        <option value="2">Usuario</option>
+                    </select>
+
+                    <input type="submit" value="Cadastrar">
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--2-col"></div>
+        <form method="post" id="cadastroQuestionario">
+            <h4>Cadastro de Questionario</h4>
+            <hr>
+
+            <div class="mdl-textfield mdl-js-textfield">
+                <input class="mdl-textfield__input" type="text" name="titulo_questionario" id="titulo_questionario">
+                <label class="mdl-textfield__label" for="titulo_questionario">Titulo do Questionario</label>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div id="inputs_sub">
+                
+                <!--gerado por javascript-->
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" name="sub1" id="subtitulo_questionario">
+                    <label class="mdl-textfield__label" for="subtitulo_questionario">Sub-titulo</label>
+                </div>
+            </div>
+            <br>
+
+            <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" value="Cadastrar">
+        </form>
+    </div>
+
+
+    <div class="a" style="height: 300px;"></div>
+
+
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--10-col"></div>
+        <div class="mdl-cell mdl-cell--2-col">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="add_subtitulo">
+                <i class="material-icons">add</i>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script src="componentes/jquery.js"></script>
+<script src="js/inserts.js"></script>
+<script src="./js/ajax.js"></script>
+<script src="./js/interacoes.js"></script> </body>
 </html>

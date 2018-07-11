@@ -14,117 +14,37 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
- <nav class="uk-navbar uk-navbar-container uk-margin bg_nav ">
-        <div class="uk-navbar-left">
-            <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-nav" href="#">
-                <span uk-navbar-toggle-icon></span>
-            </a>
-            <h4 class="uk-position-center uk-margin-remove">Ficha Hospitalar</h4>
-        </div>
-    </nav>
-    
-    <div class="uk-offcanvas-content">
-        <div id="offcanvas-nav" uk-offcanvas="overlay: true">
-            <div class="uk-offcanvas-bar">
-                <ul class="uk-nav uk-nav-default ">
-                    <button class="uk-alert-close" type="button" uk-close></button>
-                    <li class="uk-nav-header">Dashboard</li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
-<div class="uk-container">
-    <div class="uk-child-width-1-1" uk-grid>
-        <div class="uk-card uk-card-default uk-card-body uk-padding-small">
-            <h3 class="uk-card-title uk-text-center uk-text-uppercase">Infecção Primária de Corrente Sanguínea (BSI)</h3>
-        </div>
-    </div>
 
-    <form>
-        <div class="uk-child-width-1-1" uk-grid>
-            <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                <label>
-                    <input class="uk-checkbox" type="checkbox" checked>Duplo lúmen</label>
-                <label>
-                    <input class="uk-checkbox" type="checkbox"> Hemodiálise </label>
-                <label>
-                    <input class="uk-checkbox" type="checkbox">Port-o-cat</label>
-                <label>
-                    <input class="uk-checkbox" type="checkbox">PICC</label>
-            </div>
 
-            <div class="uk-child-width-1-1" uk-grid>
-                <div class="uk-width-1-1">
-                    <input class="uk-input" type="text" placeholder="Agente etiológico">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header ">
+
+
+    <div class="mdl-layout mdl-js-layout ">
+
+
+
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header navbar ">
+                <div class="mdl-layout__header-row linha">
+
+                    <button class="mdl-button mdl-js-button mdl-button--icon" onclick="history.go(-1);">
+                        <i class="material-icons">arrow_back</i>
+                    </button>
+
+                    <!--Title-->
+                    <span class="mdl-layout-title title_ques">Ficha de Notificação</span>
                 </div>
-            </div>
-            
-            
-            <div class="uk-child-width-1-2" uk-grid>
-                <div class="uk-width-1-2@s">
-                    <input class="uk-input" type="text" placeholder="Local">
-                </div>
-                <div class="uk-width-1-2@s">
-                    <input class="uk-input" type="text" placeholder="Dias de CVC">
-                </div>
-            </div>
-            
-            <div class="uk-child-width-1-1" uk-grid>
-                <p>Critério sem confirmação laboratorial
-                    <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>Open</a>
-                    <input class="uk-checkbox" type="checkbox">
-                </p>
-            </div>
-            
-            <hr class="uk-margin">
-            
-            <div class="uk-child-width-1-1" uk-grid>
-                <p>Critério sem confirmação laboratorial
-                    <a class="uk-button uk-button-default" href="#modal-center" uk-toggle>Open</a>
-                    <input class="uk-checkbox" type="checkbox">
-                </p>
-            </div>
-            
-            <hr class="uk-margin">
-            
-            <div class="uk-child-width-1-4 " uk-grid>
-                <div></div>
-                <div></div>
-                <div></div>
-                <button class="uk-button uk-button-default">Enviar</button>
-            </div>
 
-    </form>
+                <div class="mdl-layout-spacer"></div> 
+            </header>
 
 
 
 
-
-<!--Modal-->
-<div id="modal-center" class="uk-flex-top" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
-            <button class="uk-modal-close-default" type="button" uk-close></button>
-            <p>
-                    Critério crianças > 28 dias e menor ou igual 1 ano  (Considerar o dia da passagem do cateter = D1)
-                    Pelo menos um dos seguintes sinais ou sintomas:
-                    Febre (>38°C), hipotermia (<36°C), bradicardia, apnéia ou bradicardia. (não relacionados com infecção em outro sítio)
-                    
-                    Pelo menos um dos seguintes sinais ou sintomas:
-                    Febre (>38°C), hipotermia (<36°C),bradicardia, apnéia ou bradicardia.
-                    (não relacionados com infecção em outro sítio)
-                </p>
         </div>
-    </div>
 
 
 
-</div>
-
-
-
-</body>
-  
-    <!-- <script src="./js/ajax.js"></script>
-    <script src="./js/conexaophp.js"></script> -->
+        </body>
 </html>

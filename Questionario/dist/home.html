@@ -14,55 +14,75 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
- <nav class="uk-navbar uk-navbar-container uk-margin bg_nav ">
-        <div class="uk-navbar-left">
-            <a class="uk-navbar-toggle" uk-toggle="target: #offcanvas-nav" href="#">
-                <span uk-navbar-toggle-icon></span>
-            </a>
-            <h4 class="uk-position-center uk-margin-remove">Ficha Hospitalar</h4>
+
+
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header ">
+
+    <header class="mdl-layout__header navbar">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Ficha de Notificação</span>
+            <div class="mdl-layout-spacer"></div>
+            <nav class="mdl-navigation esconde-celular">
+
+            </nav>
         </div>
-    </nav>
+
+
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Ficha de Notificação</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Relatorio</a>
+        </nav>
+    </div>
+
+    <div class="mdl-layout--large card_content">
+        <div class="mdl-grid " id="cards">
+
+
+
+
+            <!-- <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet"></div> -->
+
+            <!-- <div class="mdl-cell mdl-cell--4-col">
+                <div class="mdl-card mdl-shadow--2dp demostracao-card card">
+
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Pedro Correia Cardoso</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>IDH</p>
+                        <p>CPF:</p>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent">Preencher Ficha</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col">
+                <div class="mdl-card mdl-shadow--2dp demostracao-card card">
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Pedro Correia Cardoso</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>IDH</p>
+                        <p>CPF:</p>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent">Preencher Ficha</button>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>  <!-- fim da grid-->
+    </div>    <!--Fim do container-->
+
+    <script src="./js/servidor.js"></script>
+<script src="./componentes/jquery.js"></script>
+    <script src="./js/ajax.js"></script>
+    <script src="./js/interacoes.js"></script>
     
-    <div class="uk-offcanvas-content">
-        <div id="offcanvas-nav" uk-offcanvas="overlay: true">
-            <div class="uk-offcanvas-bar">
-                <ul class="uk-nav uk-nav-default ">
-                    <button class="uk-alert-close" type="button" uk-close></button>
-                    <li class="uk-nav-header">Dashboard</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-<div class="uk-container cards">
-
-    <div class="uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
-
-        <div>
-            <div class="uk-card  uk-card-hover uk-card-body  branco uk-padding-small uk-margin-remove espaco">
-                <h3 class="uk-card-title uk-margin-small">Albert Einstein</h3>
-                <p class="uk-margin-remove uk-margin-top">IH:</p>
-                <p class="uk-margin-remove uk-margin-top">DI Hospitalar: 26/06/2018</p>
-            </div>
-        </div>
-
-        <div>
-            <div class="uk-card  uk-card-hover uk-card-body  branco uk-padding-small">
-                <h3 class="uk-card-title uk-margin-small">Albert Einstein</h3>
-                <p class="uk-margin-remove uk-margin-top">IH:</p>
-                <p class="uk-margin-remove uk-margin-top">DI Hospitalar: 26/06/2018</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-
-
-
-</body>
-  
-    <!-- <script src="./js/ajax.js"></script>
-    <script src="./js/conexaophp.js"></script> -->
+    </body>
 </html>

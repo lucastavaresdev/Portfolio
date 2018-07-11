@@ -1,0 +1,38 @@
+.quadrado {
+    height: 20px;
+    width: 20px;
+}
+
+.titulo_status {
+    line-height: 0;
+    margin: 11px;
+    margin-left: -1px;
+}
+
+.center-status{
+    margin-left: 15% !important;
+}
+
+.nao-atendido {
+    background: darken($cinza, 20%) !important;
+}
+
+.aguardando {
+    background: $aguardando !important;
+}
+
+.em-atendimento {
+    background: $em_atendimento !important;
+}
+
+.em-atendimento-outro-servico {
+    background: $em_atendimento_em_outro_servico !important;
+}
+
+.atendido {
+    background: $atendido !important;
+}
+
+.fastpass {
+    background: $fastpass !important;
+}

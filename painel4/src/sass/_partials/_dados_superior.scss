@@ -1,0 +1,27 @@
+.dados_consolidados {
+    background: $branco;
+    border-bottom: 2px solid darken($cinza, 3%);
+    .bg-consolidado {
+        padding-top: 1.5%;
+        padding-button: 1.5%;
+    }
+    p {
+        @include fontebase($monte-serrat, '15px', 400, darken($cinza, 50%));
+    }
+    h4 {
+        line-height: 0.4;
+        @include fontebase($monte-serrat, '39px', 400, $cor-primaria);
+    }
+}
+
+@media(max-width: 920px) {
+    .bg-consolidado {
+        p {
+            @include fontebase($monte-serrat, '9px', 400, darken($cinza, 50%));
+        }
+        h4 {
+            line-height: 0.4;
+            @include fontebase($monte-serrat, '23px', 400, $cor-primaria);
+        }
+    }
+}

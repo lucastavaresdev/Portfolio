@@ -1,0 +1,45 @@
+.cards {
+    background: $branco;
+    border-radius: 2px;
+    padding-left: 0 !important;
+    position: relative;
+    height: 220px;
+    width:  100%;
+    
+    .imagem-setor {
+        @include imagem-card-setor('../img/tomografia.jpg')
+        
+    }
+    
+    .imagem-setor-ultra {
+        @include imagem-card-setor('../img/ultrassom.jpg')
+    }
+    .imagem-setor-raiox {
+        @include imagem-card-setor('../img/raiox.jpg')
+    }
+
+
+    .c_conteudo_card {
+        position: relative;
+        left: 26% !important;
+        .c_card-title {
+            margin-top: 12px;
+        }
+        p {
+            line-height: 0.7;
+            font-size: 17px;
+            text-align: left !important;
+        }
+        .c_status {
+            line-height: 3;
+        }
+    }
+}
+
+@media(max-width: 920px) {
+    .cards {
+        .c_conteudo_card {
+            left: 34% !important;
+        }
+    }
+}

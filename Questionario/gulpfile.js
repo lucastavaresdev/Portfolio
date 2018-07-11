@@ -77,8 +77,8 @@ gulp.task('imagemin', function(){
 });
 
 
-gulp.task('default', ['copy' ,], function(){
-    gulp.start('html' ,'imagemin', 'sass' , 'build-js')
+gulp.task('default', ['copy'], function(){
+    gulp.start('html' ,'imagemin', 'sass', 'build-js')
 })
 
 
@@ -94,8 +94,8 @@ gulp.task('serve',['default'], function () {
 
     //monitora alteração caso sera alteradao reload o browser
     gulp.watch('./src/sass/**/*.scss', ['sass'])
-    gulp.watch('./src/**/*.html', ['html'])
-    gulp.watch('.src/js/**/*', ['build-js'])
+    gulp.watch('./src/**/*.html', ['default'])
+    gulp.watch('./src/js/**/*', ['default'])
 })
 
 
