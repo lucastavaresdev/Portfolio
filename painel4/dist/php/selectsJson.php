@@ -4,6 +4,13 @@ require('./conexao.php');// REQUSIÇÃO DO BANCO
 
 $parametro =$_GET['parametro'];//PARAMETRO
 
+if($_GET['setor']){
+  $setor =$_GET['setor'];//PARAMETRO
+}else{
+  $setor = "";//PARAMETRO
+}
+
+
 //selects
 
 $select_dos_setores = "SELECT id,servico AS setor FROM servicos";
@@ -57,10 +64,11 @@ where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.servico  =
 
 
 $qtd_por_setor = "SELECT 
-count(distinct(a.nome_paciente)) as qtd_paciente,
-s.servico as setor
+count(distinct(a.nome_paciente)) as qtd_paciente
 FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.servico  = 'COLONOSCOPIA' order by  servico";
+where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.id  = " .$setor .  " order by  servico";
+
+
 
 //parametro passado
 if($parametro === 'agendamentos_do_dia'){
@@ -73,6 +81,8 @@ if($parametro === 'agendamentos_do_dia'){
   geraJson($agendamentos_do_dia_por_setor, $conexao);
 }else if($parametro === 'lista_de_setores'){
   geraJson($select_dos_setores, $conexao);
+}else if($parametro === 'qtd_por_setor'){
+  geraJson($qtd_por_setor, $conexao);
 }
  
 

@@ -24,6 +24,12 @@ nav {
   border-bottom: solid 2px #005e99;
   position: fixed;
   z-index: 1; }
+  nav #titulo_do_setor {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 2; }
   nav .logo {
     font-family: Montserrat, sans-serif;
     font-size: 26px;
@@ -36,6 +42,18 @@ nav {
       font-size: 26px;
       font-weight: 600;
       color: #ffffff; }
+  nav ul a {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 0;
+    line-height: 1.9; }
+  nav .drop_topo i {
+    line-height: 53px; }
+
+.setor_espacamento {
+  padding-right: 0 !important; }
 
 .open {
   height: 94%;

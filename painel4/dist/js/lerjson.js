@@ -3,15 +3,66 @@
 
 
 //chamadas ajax
-//
-chamadaAjax('php/selectsJson.php?parametro=agendamentos_do_dia_por_setor', agendamentos_do_dia_por_setor);
 
-chamadaAjax('php/selectsJson.php?parametro=lista_de_setores', lista_de_setores);
+
+
+
+
+
+chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', lista_de_setores);
+chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', alteraTitulodoSetor);
+//chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', horarioComMaior);
+
+
+(function () {
+    var url_atual = window.location.href;
+
+    var parametrosDaUrl = url_atual.split("?")[1];
+
+    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_setor&${parametrosDaUrl}`, agendamentos_do_dia_por_setor);
+})();
+
+
+
+
+
+// function horarioComMaior(data){
+//    var fluxodetempo = document.getElementById('fluxo');
+
+//     fluxodetempo.innerHTML = data[0].
+// }
+
+
+
+
+function alteraTitulodoSetor(data) {
+
+    var titulo = document.getElementById('titulo_do_setor');
+    
+    var url_atual = window.location.href;
+    var id_do_setor = url_atual.split("=")[1];
+    
+    // id_do_setor = parseInt(id_do_setor);
+    for (i = 0; i < data.length; i++) {
+        id_do_setor_banco = data[i].id;
+
+        if (id_do_setor === id_do_setor_banco) {
+            var nome_do_setor = data[i].setor;
+            titulo.innerHTML = nome_do_setor;
+            return;
+        } else {
+            titulo.innerHTML = 'Geral';
+        }
+    }
+}
+
+
 
 
 function lista_de_setores(data) {
+
     var elem_drop = document.getElementById('setores_lista');
-    
+
     for (i = 0; i < data.length; i++) {
 
         var criaLI = document.createElement('li');
@@ -21,30 +72,34 @@ function lista_de_setores(data) {
         link.textContent = data[i].setor;
 
         criaLI.setAttribute("class", "dropli");
-        link.setAttribute("href", "?setor=" + data[i].id + "" );
+        link.setAttribute("href", "?setor=" + data[i].id + "");
 
         //cria a estrutura e adiciona
         elem_drop.appendChild(criaLI);
         criaLI.appendChild(link);
     }
 
-    console.log(elem_drop);
-    console.log(data);
-
 }
 
 
 
 function agendamentos_do_dia_por_setor(data) {
+
     var html = "";
+
     elem = document.getElementById('agendimentos_do_dia');
-    var qtd_agendamentos_do_dia = data[0].agendamento_do_dia;
+    elem1 = document.getElementById('atendimentos_total');
+
+    var qtd_agendamentos_do_dia = data[0].qtd_paciente;
+
     if (typeof qtd_agendamentos_do_dia === 0 || typeof qtd_agendamentos_do_dia === "qtd_agendamentos_do_dia") {
         console.log("verificar o json ou query nos selects.php");
     } else {
         html += '<span>' + qtd_agendamentos_do_dia + '</span>';
     }
+
     elem.innerHTML = html;
+    elem1.innerHTML = html;
 }
 
 
