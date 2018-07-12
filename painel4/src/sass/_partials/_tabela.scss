@@ -4,6 +4,7 @@
 
     .tabs {
         color: darken($cinza, 50%);
+        position: inherit;
         .tab {
             @include fontebase($monte-serrat, '14px', 500, $cor-primaria);
             a {

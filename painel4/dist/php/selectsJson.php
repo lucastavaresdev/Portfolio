@@ -6,7 +6,7 @@ $parametro =$_GET['parametro'];//PARAMETRO
 
 //selects
 
-$select_dos_setores = "SELECT servico AS setor FROM servicos";
+$select_dos_setores = "SELECT id,servico AS setor FROM servicos";
 
 $agendamentos_do_dia = "SELECT count(distinct(nome_paciente)) as agendamento_do_dia
 FROM agendamento where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()";

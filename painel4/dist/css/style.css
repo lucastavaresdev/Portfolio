@@ -22,7 +22,8 @@ nav {
   background: #007DCC;
   height: 50px;
   border-bottom: solid 2px #005e99;
-  position: fixed; }
+  position: fixed;
+  z-index: 1; }
   nav .logo {
     font-family: Montserrat, sans-serif;
     font-size: 26px;
@@ -144,7 +145,8 @@ nav {
   background: #ffffff; }
 
 .tabs {
-  color: #7a7a7a; }
+  color: #7a7a7a;
+  position: inherit; }
   .tabs .tab {
     font-family: Montserrat, sans-serif;
     font-size: 14px;
@@ -222,6 +224,12 @@ nav {
 /* icon prefix focus color */
 .input-field .prefix.active {
   color: #007DCC; }
+
+#setores ul {
+  position: relative;
+  z-index: 1055;
+  width: 239px !important;
+  height: 100%; }
 
 .c_titulo {
   font-family: Montserrat, sans-serif;

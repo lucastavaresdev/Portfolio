@@ -11,25 +11,27 @@ chamadaAjax('php/selectsJson.php?parametro=lista_de_setores', lista_de_setores);
 
 function lista_de_setores(data) {
     var elem_drop = document.getElementById('setores_lista');
+    
+    for (i = 0; i < data.length; i++) {
 
-    // Criar elemento
-    var titulo = document.createElement('li');
+        var criaLI = document.createElement('li');
+        var link = document.createElement('a');
 
-    // Criar o nó de texto
-    var texto = document.createTextNode("Um título qualquer");
+        //add os elem
+        link.textContent = data[i].setor;
 
-    // Anexar o nó de texto ao elemento h1
-    titulo.appendChild(texto);
+        criaLI.setAttribute("class", "dropli");
+        link.setAttribute("href", "?setor=" + data[i].id + "" );
 
-    // Agora sim, inserir (anexar) o elemento filho (titulo) ao elemento pai (body)
-    elem_drop.appendChild(titulo);
+        //cria a estrutura e adiciona
+        elem_drop.appendChild(criaLI);
+        criaLI.appendChild(link);
+    }
+
     console.log(elem_drop);
+    console.log(data);
+
 }
-
-//    <li>
-//<a href="#!">one</a>
-//</li>
-
 
 
 
