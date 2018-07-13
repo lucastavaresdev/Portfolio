@@ -25,3 +25,26 @@
         }
     }
 }
+
+.fluxo3 {
+    @include fontebase($monte-serrat, '15px', 400, darken($cinza, 50%));
+}
+
+.fluxo2 {
+    @include fontebase($monte-serrat, '15px', 400, darken($cinza, 50%));
+}
+
+.fluxo-1 {
+    li {
+        line-height: 1;
+        @include fontebase($monte-serrat, '30px', 400, $cor-primaria);
+    }
+    span {
+        white-space: nowrap;
+        line-height: 0.8;
+        @include fontebase($monte-serrat, '17px', 400, darken($cinza, 45%));
+    }
+}
+.tamanho_da_linha_titulo_fluxo{
+    line-height: 0.7;
+}

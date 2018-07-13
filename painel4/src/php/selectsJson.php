@@ -30,21 +30,21 @@ GROUP BY HOUR(hora_servico_selecionado)";
 
 //o primeiro e o segundo select  traz a lista com todos os horarios e sua devida quantidade depois 3 e 4 select traz o valor com a maior hora detre todos e faz a comparação com o primeiro 
 
-$maior_fluxo = "SELECT  qtd_por_hora, intervalo_de_horas  FROM (
-                                        SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00') as intervalo_de_horas, 
-                                          COUNT(*) as qtd_por_hora
-                                          FROM agendamento
-                                          where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = CURDATE() and codigo_servico_atual = '298'
-                                          GROUP BY HOUR(intervalo_de_horas) 
-                                        ) as lista_geral_de_horas  where qtd_por_hora = ( 
-                                          SELECT  max(qtd_por_hora) as maior_qtd FROM(
-                                                    SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+2, ':00') as intervalo_de_horas, 
-                                                    COUNT(*) as qtd_por_hora
-                                                    FROM agendamento
-                                                    where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = CURDATE() and codigo_servico_atual = '298'
-                                                    GROUP BY HOUR(intervalo_de_horas)
-                                                    ) as maior_valor
-                                        );";//intervalo com maior fluxo de pessoas no setor
+$horario_de_maior_fluxo = "SELECT  qtd_por_hora, intervalo_de_horas  FROM (
+                                                          SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00') as intervalo_de_horas, 
+                                                          COUNT(*) as qtd_por_hora
+                                                          FROM agendamento
+                                                          where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = CURDATE() and codigo_servico_atual = '$setor'
+                                                          GROUP BY HOUR(intervalo_de_horas) 
+                                                                    ) as lista_geral_de_horas  where qtd_por_hora = ( 
+                                                                      SELECT  max(qtd_por_hora) as maior_qtd FROM(
+                                                                                SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+2, ':00') as intervalo_de_horas, 
+                                                                                COUNT(*) as qtd_por_hora
+                                                                                FROM agendamento
+                                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = CURDATE() and codigo_servico_atual = '$setor'
+                                                                                GROUP BY HOUR(intervalo_de_horas)
+                                                                                ) as maior_valor
+                                                                    );";//intervalo com maior fluxo de pessoas no setor
 
 
 $lista_de_setores = "SELECT servico as setor FROM servicos;";
@@ -87,8 +87,8 @@ if($parametro === 'agendamentos_do_dia'){
   geraJson($agendamentos_do_dia , $conexao );
 }else if($parametro === 'lista_dos_intevalos_por_hora_do_dia'){
   geraJson($lista_dos_intevalos_por_hora_do_dia, $conexao);
-}else if($parametro === 'maior_fluxo'){
-  geraJson($maior_fluxo, $conexao);
+}else if($parametro === 'horario_de_maior_fluxo'){
+  geraJson($horario_de_maior_fluxo, $conexao);
 }else if($parametro === 'agendamentos_do_dia_por_setor'){
   geraJson($agendamentos_do_dia_por_setor, $conexao);
 }else if($parametro === 'lista_de_setores'){

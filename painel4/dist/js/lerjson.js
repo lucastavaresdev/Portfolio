@@ -11,28 +11,50 @@
 
 chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', lista_de_setores);
 chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', alteraTitulodoSetor);
-//chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', horarioComMaior);
 
 
 (function () {
     var url_atual = window.location.href;
-
+    
     var parametrosDaUrl = url_atual.split("?")[1];
-
+    
     chamadaAjax(`php/selectsJson.php?parametro=qtd_por_setor&${parametrosDaUrl}`, agendamentos_do_dia_por_setor);
+    chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
 })();
 
 
 
 
 
-// function horarioComMaior(data){
-//    var fluxodetempo = document.getElementById('fluxo');
+function horarioComMaiorPacientes(data){
+    var fluxodetempo = document.getElementById('fluxo');
+    var html = " ";
 
-//     fluxodetempo.innerHTML = data[0].
-// }
+    for (i = 0; i < data.length; i++) {
+       var j;
+        j = `<li>${data[i].intervalo_de_horas} <span> (${data[i].qtd_por_hora} pacientes)</span></li>`;
+        html += j ;
+    }
 
+    if(data.length === 0){
+        fluxodetempo = "Não ha paciente";
+    }else if(data.length === 1) {
+        atribuiHtml(fluxodetempo , html);
+        fluxodetempo.classList.add('fluxo-1');
+    }else if(data.length === 2) {
+        atribuiHtml(fluxodetempo , html);
+    }else if(data.length === 2) {
+        atribuiHtml(fluxodetempo , html);
+    }else{
+        fluxodetempo = "Ver Lista de Pacientes"
+    }
+   
 
+}
+
+function atribuiHtml(classouid , resultado){
+    classouid.innerHTML = resultado;
+}
 
 
 function alteraTitulodoSetor(data) {
