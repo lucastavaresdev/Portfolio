@@ -50,30 +50,24 @@
             <div id="test1" class="col s12 tabela_bg">
                 <div class="row">
 
-
                     <div class="col s12 l9  ">
                         <div class="input-field col s12 l2 qtd_pag">
-                            <!-- <select>
+                            <select id="qtd">
                                 <option value="" disabled selected>N° de Registros</option>
                                 <option value="1">10</option>
                                 <option value="2">20</option>
                                 <option value="3">30</option>
-                            </select> -->
+                            </select>
                         </div>
-
                     </div>
                     <div class="col s12 l3" >
-<!-- 
+                    <!-- 
                         <div class="input-field col s12 ">
                             <i class="material-icons prefix">search</i>
                             <input id="icon_prefix" type="text" class="validate">
                             <label for="icon_prefix">Filtro</label>
                         </div> -->
-
                     </div>
-
-
-
                 </div>
                 <table class="striped responsive-table">
                     <thead>
@@ -90,7 +84,7 @@
                         </tr>
                     </thead>
 
-                    <tbody id="listadePacientes">
+                    <tbody id="listadePacientes" class="alt_content">
                         <!-- <tr>
                             <td>9h15</td>
                             <td>EDA</td>
@@ -181,8 +175,84 @@
 </div>
 </div>
 
-@@include('./templates/frameworks.html')
+@@include('./templates/frameworks.html');
 
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript" src="componentes/jquery.pajinate.js"></script>
+
+
+
+    <div id="wrapper">
+        <div id="paging_container3" class="container">
+            <h2>Custom List Size</h2>
+            <div class="alt_page_navigation"></div>
+          
+        
+
+            <ul class="alt_content">
+                <li>
+                    <p>One</p>
+                </li>
+                <li>
+                    <p>Two</p>
+                </li>
+                <li>
+                    <p>Three</p>
+                </li>
+                <li>
+                    <p>Four</p>
+                </li>
+                <li>
+                    <p>Five</p>
+                </li>
+                <li>
+                    <p>Six</p>
+                </li>
+                <li>
+                    <p>Seven</p>
+                </li>
+                <li>
+                    <p>Eight</p>
+                </li>
+                <li>
+                    <p>Nine</p>
+                </li>
+                <li>
+                    <p>Ten</p>
+                </li>
+                <li>
+                    <p>Eleven</p>
+                </li>
+                <li>
+                    <p>Twelve</p>
+                </li>
+                <li>
+                    <p>Thirteen</p>
+                </li>
+                <li>
+                    <p>Fourteen</p>
+                </li>
+                <li>
+                    <p>Fifteen</p>
+                </li>
+                <li>
+                    <p>Sixteen</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+
+  
 
 
 <script>
