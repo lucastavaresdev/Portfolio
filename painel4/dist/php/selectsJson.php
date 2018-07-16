@@ -61,7 +61,7 @@ a.cod_cor_status
 FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual;";
 
-$lista_por_setor = "SELECT 
+$lista_do_setor = "SELECT 
 distinct(a.nome_paciente) as paciente,
 a.hora_servico_selecionado as hora,
 a.codigo_agenda as atividade,
@@ -71,7 +71,7 @@ s.servico as setor,
 a.proximo_servico,
 a.cod_cor_status
 FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.servico  = 'COLONOSCOPIA' order by  servico";
+where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and a.codigo_servico_atual = '$setor'";
 
 
 
@@ -95,6 +95,8 @@ if($parametro === 'agendamentos_do_dia'){
   geraJson($select_dos_setores, $conexao);
 }else if($parametro === 'qtd_por_setor'){
   geraJson($qtd_por_setor, $conexao);
+}else if($parametro === 'lista_do_setor'){
+  geraJson($lista_do_setor, $conexao);
 }
  
 

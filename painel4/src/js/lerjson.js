@@ -15,45 +15,75 @@ chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', alteraTitulo
 
 (function () {
     var url_atual = window.location.href;
-    
+
     var parametrosDaUrl = url_atual.split("?")[1];
-    
+
     chamadaAjax(`php/selectsJson.php?parametro=qtd_por_setor&${parametrosDaUrl}`, agendamentos_do_dia_por_setor);
     chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
+    chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
 })();
 
 
 
+function lista_de_pacientes(data) {
+
+    var tbody = document.getElementById("listadePacientes");
 
 
-function horarioComMaiorPacientes(data){
+    for (i = 0; i < 2; i++) {
+
+        var tr = document.createElement('tr');
+
+       
+            var cols = 
+               '<td>' + data[i].hora + '</td>'
+            + '<td>' + data[i].atividade + '</td>'
+            + '<td>' + data[i].IH + '</td>'
+            + '<td>' + data[i].paciente + '</td>'
+            + '<td>' + ' - ' + '</td>'
+            + '<td>' + data[i].servico_atual + '</td>'
+            + '<td>' + data[i].proximo_servico + '</td>'
+            + '<td>' + data[i].cod_cor_status + '</td>'
+            + '<td>' + ' - ' + '</td>';
+            
+            var linha = tr.innerHTML = cols;
+        
+            tbody.innerHTML += linha;
+
+    }
+}
+
+
+
+
+function horarioComMaiorPacientes(data) {
     var fluxodetempo = document.getElementById('fluxo');
     var html = " ";
 
     for (i = 0; i < data.length; i++) {
-       var j;
+        var j;
         j = `<li>${data[i].intervalo_de_horas} <span> (${data[i].qtd_por_hora} pacientes)</span></li>`;
-        html += j ;
+        html += j;
     }
 
-    if(data.length === 0){
-        fluxodetempo.innerHTML  = "Não ha paciente";
+    if (data.length === 0) {
+        fluxodetempo.innerHTML = "Não ha paciente";
         fluxodetempo.classList.add('p-msg');
-    }else if(data.length === 1) {
-        atribuiHtml(fluxodetempo , html);
+    } else if (data.length === 1) {
+        atribuiHtml(fluxodetempo, html);
         fluxodetempo.classList.add('fluxo-1');
-    }else if(data.length === 2) {
-        atribuiHtml(fluxodetempo , html);
+    } else if (data.length === 2) {
+        atribuiHtml(fluxodetempo, html);
         fluxodetempo.classList.add('fluxo-2');
-    }else{
+    } else {
         fluxodetempo.innerHTML = "Ver Lista de Pacientes"
         fluxodetempo.classList.add('p-msg');
     }
-   
+
 
 }
 
-function atribuiHtml(classouid , resultado){
+function atribuiHtml(classouid, resultado) {
     classouid.innerHTML = resultado;
 }
 
@@ -61,10 +91,10 @@ function atribuiHtml(classouid , resultado){
 function alteraTitulodoSetor(data) {
 
     var titulo = document.getElementById('titulo_do_setor');
-    
+
     var url_atual = window.location.href;
     var id_do_setor = url_atual.split("=")[1];
-    
+
     // id_do_setor = parseInt(id_do_setor);
     for (i = 0; i < data.length; i++) {
         id_do_setor_banco = data[i].id;
