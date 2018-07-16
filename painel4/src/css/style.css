@@ -145,18 +145,16 @@ nav {
   font-weight: 400;
   color: #7a7a7a; }
 
-.fluxo2 {
-  font-family: Montserrat, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  color: #7a7a7a; }
+.tamanho_da_linha_titulo_fluxo {
+  line-height: 0.7; }
 
 .fluxo-1 li {
   line-height: 1;
   font-family: Montserrat, sans-serif;
   font-size: 30px;
   font-weight: 400;
-  color: #007DCC; }
+  color: #007DCC;
+  cursor: pointer; }
 .fluxo-1 span {
   white-space: nowrap;
   line-height: 0.8;
@@ -165,8 +163,28 @@ nav {
   font-weight: 400;
   color: #868686; }
 
-.tamanho_da_linha_titulo_fluxo {
-  line-height: 0.7; }
+.fluxo-2 li {
+  line-height: 1.2;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #007DCC;
+  cursor: pointer; }
+.fluxo-2 span {
+  white-space: nowrap;
+  line-height: 0.8;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #868686; }
+
+.p-msg {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #007DCC;
+  padding-top: 13px;
+  cursor: pointer; }
 
 .conteudo {
   padding: 1% 4% !important; }

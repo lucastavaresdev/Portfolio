@@ -30,14 +30,15 @@
     @include fontebase($monte-serrat, '15px', 400, darken($cinza, 50%));
 }
 
-.fluxo2 {
-    @include fontebase($monte-serrat, '15px', 400, darken($cinza, 50%));
+.tamanho_da_linha_titulo_fluxo {
+    line-height: 0.7;
 }
 
 .fluxo-1 {
     li {
         line-height: 1;
         @include fontebase($monte-serrat, '30px', 400, $cor-primaria);
+        cursor: pointer;
     }
     span {
         white-space: nowrap;
@@ -45,6 +46,22 @@
         @include fontebase($monte-serrat, '17px', 400, darken($cinza, 45%));
     }
 }
-.tamanho_da_linha_titulo_fluxo{
-    line-height: 0.7;
+
+.fluxo-2 {
+    li {
+        line-height: 1.2;
+        @include fontebase($monte-serrat, '20px', 400, $cor-primaria);
+        cursor: pointer;
+    }
+    span {
+        white-space: nowrap;
+        line-height: 0.8;
+        @include fontebase($monte-serrat, '13px', 400, darken($cinza, 45%));
+    }
+}
+
+.p-msg {
+    @include fontebase($monte-serrat, '20px', 400, $cor-primaria);
+    padding-top: 13px;
+    cursor: pointer;
 }

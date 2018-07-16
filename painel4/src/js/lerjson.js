@@ -37,16 +37,17 @@ function horarioComMaiorPacientes(data){
     }
 
     if(data.length === 0){
-        fluxodetempo = "Não ha paciente";
+        fluxodetempo.innerHTML  = "Não ha paciente";
+        fluxodetempo.classList.add('p-msg');
     }else if(data.length === 1) {
         atribuiHtml(fluxodetempo , html);
         fluxodetempo.classList.add('fluxo-1');
     }else if(data.length === 2) {
         atribuiHtml(fluxodetempo , html);
-    }else if(data.length === 2) {
-        atribuiHtml(fluxodetempo , html);
+        fluxodetempo.classList.add('fluxo-2');
     }else{
-        fluxodetempo = "Ver Lista de Pacientes"
+        fluxodetempo.innerHTML = "Ver Lista de Pacientes"
+        fluxodetempo.classList.add('p-msg');
     }
    
 
