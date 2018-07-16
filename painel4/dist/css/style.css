@@ -234,6 +234,9 @@ nav {
 @media (max-width: 920px) {
   .qtd_pag {
     display: none; } }
+.indicator {
+  display: none; }
+
 .titulo_status {
   line-height: 0;
   margin: 11px;

@@ -63,7 +63,7 @@ where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico
 
 $lista_do_setor = "SELECT 
 distinct(a.nome_paciente) as paciente,
-a.hora_servico_selecionado as hora,
+left(a.hora_servico_selecionado, 5) as hora, 
 a.codigo_agenda as atividade,
 a.ih_paciente as IH,
 a.servico_atual,
@@ -71,7 +71,7 @@ s.servico as setor,
 a.proximo_servico,
 a.cod_cor_status
 FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and a.codigo_servico_atual = '$setor'";
+where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and a.codigo_servico_atual = $setor order by hora";
 
 
 
