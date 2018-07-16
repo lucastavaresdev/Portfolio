@@ -30,11 +30,12 @@ function lista_de_pacientes(data) {
     var tbody = document.getElementById("listadePacientes");
 
 
-    for (i = 0; i < 2; i++) {
+    for (i = 0; i < data.length; i++) {
 
         var tr = document.createElement('tr');
+            status = data[i].cod_cor_status;
 
-       
+            
             var cols = 
                '<td>' + data[i].hora + '</td>'
             + '<td>' + data[i].atividade + '</td>'
@@ -43,9 +44,10 @@ function lista_de_pacientes(data) {
             + '<td>' + ' - ' + '</td>'
             + '<td>' + data[i].servico_atual + '</td>'
             + '<td>' + data[i].proximo_servico + '</td>'
-            + '<td>' + data[i].cod_cor_status + '</td>'
+            + `<td><div  class=" status-${data[i].cod_cor_status} center-status"></div></td>`
             + '<td>' + ' - ' + '</td>';
             
+
             var linha = tr.innerHTML = cols;
         
             tbody.innerHTML += linha;

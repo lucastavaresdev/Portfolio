@@ -23,8 +23,10 @@ body{
     position: absolute;
     height: 100%;
 } 
-
-
+@mixin tamanho_status {
+    width: 25px;
+    height: 25px;
+}
 
 .borda-topo-left{
     border-top-left-radius: 25px;
