@@ -365,25 +365,49 @@ select {
 .c_linha_card_superior {
   margin-bottom: 0; }
 
+@media (max-width: 920px) {
+  .c_total_card {
+    letter-spacing: 0; } }
 .cards {
   background: #ffffff;
   border-radius: 2px;
   padding-left: 0 !important;
   position: relative;
   height: 220px;
-  width: 100%; }
-  .cards .imagem-setor {
+  width: 100%;
+  margin-bottom: 40px; }
+  .cards .imagem-img322 {
+    background: url(../img/banco_de_sangue.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img239 {
+    background: url(../img/checkup.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img235 {
+    background: url(../img/mamografia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img391 {
+    background: url(../img/ecocardiograma.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img229 {
     background: url(../img/tomografia.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-setor-ultra {
+  .cards .imagem-img231 {
     background: url(../img/ultrassom.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-setor-raiox {
-    background: url(../img/raiox.jpg) no-repeat center center;
+  .cards .imagem-img228 {
+    background: url(../img/medicina_nuclear.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }

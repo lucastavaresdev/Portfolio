@@ -5,17 +5,30 @@
     position: relative;
     height: 220px;
     width:  100%;
-    
-    .imagem-setor {
-        @include imagem-card-setor('../img/tomografia.jpg')
-        
+    margin-bottom: 40px;
+
+
+
+    .imagem-img322{
+        @include imagem-card-setor('../img/banco_de_sangue.jpg')
     }
-    
-    .imagem-setor-ultra {
+    .imagem-img239{
+        @include imagem-card-setor('../img/checkup.jpg')
+    }
+    .imagem-img235{
+        @include imagem-card-setor('../img/mamografia.jpg')
+    }
+    .imagem-img391{
+        @include imagem-card-setor('../img/ecocardiograma.jpg')
+    }
+    .imagem-img229{
+        @include imagem-card-setor('../img/tomografia.jpg')
+    }
+    .imagem-img231{
         @include imagem-card-setor('../img/ultrassom.jpg')
     }
-    .imagem-setor-raiox {
-        @include imagem-card-setor('../img/raiox.jpg')
+    .imagem-img228{
+        @include imagem-card-setor('../img/medicina_nuclear.jpg')
     }
 
 
