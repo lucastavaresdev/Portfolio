@@ -91,6 +91,7 @@ function atribuiHtml(classouid, resultado) {
 function alteraTitulodoSetor(data) {
 
     var titulo = document.getElementById('titulo_do_setor');
+    var titulo_aba = document.getElementById('aba_nome_setor');
 
     var url_atual = window.location.href;
     var id_do_setor = url_atual.split("=")[1];
@@ -102,9 +103,11 @@ function alteraTitulodoSetor(data) {
         if (id_do_setor === id_do_setor_banco) {
             var nome_do_setor = data[i].setor;
             titulo.innerHTML = nome_do_setor;
+            titulo_aba.innerHTML = nome_do_setor;
             return;
         } else {
-            titulo.innerHTML = 'Geral';
+            titulo.innerHTML = '-';
+            titulo_aba.innerHTML = '-';
         }
     }
 }
