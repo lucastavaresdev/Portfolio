@@ -4,7 +4,7 @@ require('./conexao.php');// REQUSIÇÃO DO BANCO
 
 $parametro =$_GET['parametro'];//PARAMETRO
 
-if($_GET['setor']){
+if(isset($_GET['setor'])){
   $setor =$_GET['setor'];//PARAMETRO
 }else{
   $setor = "";//PARAMETRO
@@ -49,18 +49,6 @@ $horario_de_maior_fluxo = "SELECT  qtd_por_hora, intervalo_de_horas  FROM (
 
 $lista_de_setores = "SELECT servico as setor FROM servicos;";
 
-$lista_geral = "SELECT 
-distinct(a.nome_paciente) as paciente,
-a.hora_servico_selecionado as hora,
-a.codigo_agenda as atividade,
-a.ih_paciente as IH,
-a.servico_atual,
-s.servico as setor,
-a.proximo_servico,
-a.cod_cor_status
-FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual;";
-
 $lista_do_setor = "SELECT 
 distinct(a.nome_paciente) as paciente,
 left(a.hora_servico_selecionado, 5) as hora, 
@@ -74,12 +62,20 @@ FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and a.codigo_servico_atual = $setor order by hora";
 
 
-
 $qtd_por_setor = "SELECT 
 count(distinct(a.nome_paciente)) as qtd_paciente
 FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.id  = " .$setor .  " order by  servico";
 
+//Consolidado
+$contagem_de_Pacientes_do_dia = "select count(paciente) as totaldePacientes from (
+                                                          SELECT 
+                                                          distinct(a.nome_paciente) as paciente,
+                                                          a.servico_atual,
+                                                          s.servico as setor
+                                                          FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+                                                          where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual
+                                                        ) as contagemDePacientes";
 
 
 //parametro passado
@@ -97,6 +93,8 @@ if($parametro === 'agendamentos_do_dia'){
   geraJson($qtd_por_setor, $conexao);
 }else if($parametro === 'lista_do_setor'){
   geraJson($lista_do_setor, $conexao);
+}else if($parametro === 'paciente_do_dia'){
+  geraJson($contagem_de_Pacientes_do_dia, $conexao);
 }
  
 

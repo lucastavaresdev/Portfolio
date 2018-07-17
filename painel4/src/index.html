@@ -54,7 +54,7 @@
             <div id="test1" class="col s12 tabela_bg">
 
                 <table id="tabela_pacientes">
-                <!-- <table class="striped responsive-table" id="tabela_pacientes"> -->
+                    <!-- <table class="striped responsive-table" id="tabela_pacientes"> -->
                     <thead>
                         <tr>
                             <th>Hora</th>
@@ -82,29 +82,26 @@
 
 <div class="row">
     @@include('./templates/status.html')
-
 </div>
 
 
 
 </body>
 
-<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-
-
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> 
 @@include('./templates/frameworks.html')
+<script src="./js/index.js"></script>
 
 
 <script>
-        $(document).ready(function () {
-            $('.tabs').tabs();
-        });
-    </script>
+    $(document).ready(function () {
+        $('.tabs').tabs();
+    });
+</script>
 
 
 <script>
     $(document).ready(function () {
         $('select').formSelect();
     });
-</script>
- @@include('./templates/footer.html')
+</script> @@include('./templates/footer.html')
