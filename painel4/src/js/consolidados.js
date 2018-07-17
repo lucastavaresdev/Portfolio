@@ -1,11 +1,18 @@
 
 
-chamadaAjax('php/selectsJson.php?parametro=parametro=paciente_do_dia', total_pacientes);
+chamadaAjax('php/selectsJson.php?parametro=paciente_do_dia', alterar);
 
-function total_pacientes(data){
-    console.log('teste');
+function alterar(data, id_da_alteracao){
+    exibir_numero(data, "con_agendados")
 }
 
+
+function exibir_numero(data, id_da_alteracao){
+    var id = document.getElementById(id_da_alteracao);
+    
+    id.innerHTML = data[0].totaldePacientes;
+    
+}
 
 
 

@@ -77,6 +77,14 @@ $contagem_de_Pacientes_do_dia = "select count(paciente) as totaldePacientes from
                                                           where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual
                                                         ) as contagemDePacientes";
 
+$contagem_de_Procedimento_do_dia = "select count(paciente) as procedimentos from (
+                                                          SELECT 
+                                                          a.nome_paciente as paciente,
+                                                          a.servico_atual,
+                                                          s.servico as setor
+                                                          FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+                                                          where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual
+                                                        ) as contagemDeProcedimento";
 
 //parametro passado
 if($parametro === 'agendamentos_do_dia'){
@@ -95,6 +103,8 @@ if($parametro === 'agendamentos_do_dia'){
   geraJson($lista_do_setor, $conexao);
 }else if($parametro === 'paciente_do_dia'){
   geraJson($contagem_de_Pacientes_do_dia, $conexao);
+}else if($parametro === 'procedimento_do_dia'){
+  geraJson($contagem_de_Procedimento_do_dia, $conexao);
 }
  
 
