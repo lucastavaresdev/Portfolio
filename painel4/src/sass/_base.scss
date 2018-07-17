@@ -26,6 +26,7 @@ body{
 @mixin tamanho_status {
     width: 25px;
     height: 25px;
+    color: transparent;
 }
 
 .borda-topo-left{

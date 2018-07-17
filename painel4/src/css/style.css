@@ -251,32 +251,38 @@ select {
 .status-1 {
   background: #c6c6c6 !important;
   width: 25px;
-  height: 25px; }
+  height: 25px;
+  color: transparent; }
 
 .status-2 {
   width: 25px;
   height: 25px;
+  color: transparent;
   background: #0000FF !important; }
 
 .status-3 {
   background: #FFFF00 !important;
   width: 25px;
-  height: 25px; }
+  height: 25px;
+  color: transparent; }
 
 .status-4 {
   background: #00FF00 !important;
   width: 25px;
-  height: 25px; }
+  height: 25px;
+  color: transparent; }
 
 .status-5 {
   background: #FF00FF !important;
   width: 25px;
-  height: 25px; }
+  height: 25px;
+  color: transparent; }
 
 .status-6 {
   background: #FF0000 !important;
   width: 25px;
-  height: 25px; }
+  height: 25px;
+  color: transparent; }
 
 .input-field label {
   color: #007DCC; }
