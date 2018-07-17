@@ -77,7 +77,7 @@ $contagem_de_Pacientes_do_dia = "select count(paciente) as totaldePacientes from
                                                           where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual
                                                         ) as contagemDePacientes";
 
-$contagem_de_Procedimento_do_dia = "select count(paciente) as procedimentos from (
+$contagem_de_Procedimento_do_dia = "select count(paciente) as total_procedimento from (
                                                           SELECT 
                                                           a.nome_paciente as paciente,
                                                           a.servico_atual,

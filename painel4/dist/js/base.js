@@ -48,7 +48,7 @@ function alteraTitulodoSetor(data) {
                 titulo.innerHTML = '-';
                 titulo_aba.innerHTML = '-';
             } else {
-                titulo.innerHTML = '-';
+                titulo.innerHTML = ' Painel Consolidado ';
             }
         }
     }
