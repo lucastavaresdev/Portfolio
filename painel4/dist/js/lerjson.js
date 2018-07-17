@@ -1,13 +1,4 @@
-
-
-
-
 //chamadas ajax
-
-
-
-
-
 
 chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', lista_de_setores);
 chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', alteraTitulodoSetor);
@@ -26,18 +17,12 @@ chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', alteraTitulo
 
 
 function lista_de_pacientes(data) {
-
     var tbody = document.getElementById("listadePacientes");
-
-
     for (i = 0; i < data.length; i++) {
-
         var tr = document.createElement('tr');
-            status = data[i].cod_cor_status;
-
-            
-            var cols = 
-               '<td>' + data[i].hora + '</td>'
+        status = data[i].cod_cor_status;
+        var cols =
+            '<td>' + data[i].hora + '</td>'
             + '<td>' + data[i].atividade + '</td>'
             + '<td>' + data[i].IH + '</td>'
             + '<td>' + data[i].paciente + '</td>'
@@ -46,15 +31,28 @@ function lista_de_pacientes(data) {
             + '<td>' + data[i].proximo_servico + '</td>'
             + `<td><div  class=" status-${data[i].cod_cor_status} center-status"></div></td>`
             + '<td>' + ' - ' + '</td>';
-            
-
             var linha = tr.innerHTML = cols;
-        
             tbody.innerHTML += linha;
-
+        }
+        data_table()
     }
-}
-
+    
+    function data_table() {
+        $(document).ready(function () {
+            $('#tabela_pacientes').DataTable({
+                "pagingType": "full_numbers",
+                // "lengthMenu": [ 10, 25, 50, 75, 100],
+                "language": {
+                    "lengthMenu": " Quantidade por Pagina _MENU_  ",
+                    "zeroRecords": "Sem agenda para hoje",
+                    "info": "Total de Pagina _PAGE_ of _PAGES_",
+                    "infoEmpty": " dsadsa   ",
+                    "infoFiltered": "(filtered from _MAX_ total records)",
+                    "search": "Filtrar:"
+                }
+            });
+        });
+    }
 
 
 

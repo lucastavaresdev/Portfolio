@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "chart.js": "^2.7.2",
+    "datatables": "^1.10.18",
     "gulp-file-include": "^2.0.1",
     "gulp-htmlmin": "^4.0.0",
     "gulp-wait": "0.0.2",

@@ -237,6 +237,9 @@ nav {
 .indicator {
   display: none; }
 
+select {
+  display: block; }
+
 .titulo_status {
   line-height: 0;
   margin: 11px;
