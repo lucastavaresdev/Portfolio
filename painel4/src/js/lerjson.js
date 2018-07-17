@@ -42,13 +42,20 @@ function lista_de_pacientes(data) {
             $('#tabela_pacientes').DataTable({
                 "pagingType": "full_numbers",
                 // "lengthMenu": [ 10, 25, 50, 75, 100],
+             
                 "language": {
                     "lengthMenu": " Quantidade por Pagina _MENU_  ",
-                    "zeroRecords": "Sem agenda para hoje",
-                    "info": "Total de Pagina _PAGE_ of _PAGES_",
-                    "infoEmpty": " dsadsa   ",
+                    "zeroRecords": "Não encontrado pacientes",
+                    "info": "Total de Pagina _PAGE_ de _PAGES_",
+                    "infoEmpty": " ",
                     "infoFiltered": "(filtered from _MAX_ total records)",
-                    "search": "Filtrar:"
+                    "search": "Filtrar:",
+                    "paginate": {
+                        "first": " ",
+                        "next": "Proxima",
+                        "previous": "Anterior",
+                        "last": " "
+                      }
                 }
             });
         });
