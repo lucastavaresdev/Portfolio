@@ -24,7 +24,7 @@ function pergarId(id_da_alteracao) {
 
 //cards por setor
 
-chamadaAjax('php/selectsJson.php?parametro=lista_de_setores', setores);
+chamadaAjax('php/selectsJson.php?parametro=consolidado_cards_com_dados', setores);
 
 function setores(data) {
     var local_do_card = document.getElementById('con_card_setores');
@@ -39,22 +39,37 @@ function setores(data) {
             + "<div class='col s8 l9 c_conteudo_card'>"
             + "<h1 class='c_titulo c_card-title'>" + data[i].setor + "</h1>"
             + "<p>Paciente:"
-            + "<b class='right'>8</b>"
+            + "<b class='right' id=pacientes" + data[i].id + ">" + data[i].agendamento_do_dia + "</b>"
             + "</p>"
-            + "<p>Medicos:"
-            + "<b class='right'>2</b>"
+            + "<p>Procedimentos:"
+            + "<b class='right'>" + data[i].exames + "</b>"
             + "</p>"
             + "<p>Colaboradores:"
-            + "<b class='right'>3</b>"
+            + "<b class='right'> - </b>"
             + "</p>"
             + "<p>Equipamentos:"
-            + "<b class='right'>2</b>"
+            + "<b class='right'> - </b>"
             + "</p>"
-            + "<b class='c_status'>Status: Operacional</b>"
+            + "<b class='c_status'>Status: - </b>"
             + "</div>"
             + "</div>"
             + "</div>";
 
-        }
-        local_do_card.innerHTML = html;
+    }
+    local_do_card.innerHTML = html;
+    // for (let i = 0; i < data.length; i++) {
+    //     numeroPacientes(data[i].id, i)
+    // }
+}
+
+
+
+
+function numeroPacientes(numero_do_setor, contador) {
+  
+    var elem = document.getElementById(`pacientes${numero_do_setor}`);
+
+    elem.innerHTML = contador;
+
+    
 }

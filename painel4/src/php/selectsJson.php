@@ -86,6 +86,14 @@ $contagem_de_Procedimento_do_dia = "select count(paciente) as total_procedimento
                                                           where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual
                                                         ) as contagemDeProcedimento";
 
+
+
+$contagem_de_pacientes_por_setor = "SELECT a.codigo_servico_atual as id,s.servico as setor ,count(distinct(a.nome_paciente)) as agendamento_do_dia, count(a.nome_paciente) as exames
+                                                                    FROM agendamento as a 
+                                                                    inner join servicos as s on a.codigo_servico_atual = s.id
+                                                                    where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by(codigo_servico_atual);";
+
+
 //parametro passado
 if($parametro === 'agendamentos_do_dia'){
   geraJson($agendamentos_do_dia , $conexao );
@@ -105,6 +113,8 @@ if($parametro === 'agendamentos_do_dia'){
   geraJson($contagem_de_Pacientes_do_dia, $conexao);
 }else if($parametro === 'procedimento_do_dia'){
   geraJson($contagem_de_Procedimento_do_dia, $conexao);
+}else if($parametro === 'consolidado_cards_com_dados'){
+  geraJson($contagem_de_pacientes_por_setor, $conexao);
 }
  
 
