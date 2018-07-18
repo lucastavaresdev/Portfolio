@@ -7,10 +7,12 @@
     var url_atual = window.location.href;
 
     var parametrosDaUrl = url_atual.split("?")[1];
-
+    if(typeof parametrosDaUrl != 'undefined'){
     chamadaAjax(`php/selectsJson.php?parametro=qtd_por_setor&${parametrosDaUrl}`, agendamentos_do_dia_por_setor);
     chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
+    }
+
 })();
 
 
