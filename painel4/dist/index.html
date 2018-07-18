@@ -14,77 +14,105 @@
 
 </head>
 
-<body>     <nav>
-            <div class="nav-wrapper">
+<body> <ul id="setores_lista" class="dropdown-content">
+
+</ul>
+
+<nav>
+    <div class="nav-wrapper">
+        <div class="row">
+
+            <div class="col s4">
                 <div class="logo">Work
                     <b>Flow</b>
                 </div>
             </div>
-        </nav>
-    
-        <!--Sidenav-->
-        <ul id="slide-out" class="sidenav">
-            <div class="row">
-                <div class="grid">
-                    <div class="col s10 conteudo_side">
-                        <li>
-                            <div class="user-view">
-                                <div class="background bg_nav">
-                                    <img class="bg_nav" src="img/nav_bg.jpg">
-                                </div>
-                                <img class="logo-sidenav" src="img/logo.png">
-                                </a>
-                                <span class="name"></span>
-                                </a>
-                                <span class=" email"></span>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="index.html">
-                                <i class="material-icons">dashboard</i>Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="consolidado.html">
-                                <i class="material-icons">grid_on</i>Consolidado</a>
-                        </li>
-                        <li>
-                            <div class="divider"></div>
-                        </li>
-                        <li>
-                            <a class="subheader">Relatórios</a>
-                        </li>
-                        <li>
-                            <a class="waves-effect" href="#!">Tempos</a>
-                        </li>
-                        <li>
-                            <a class="waves-effect" href="#!">Fluxo de Paciente</a>
-                        </li>
-    
-                    </div>
-                    <div class="col s1">
-                        <div class="sidenav-trigger right close" data-target="slide-out" id="close-navbar">
-                            <div class="icon-center">
-                                <i class="material-icons">keyboard_arrow_left </i>
-                            </div>
+
+            <div class="col s4 center">
+                <div id="titulo_do_setor" class="titulo_consolidado"></div>
+            </div>
+            <div class="col s4 setor_espacamento">
+                <ul id="setores" class="right">
+                    <li>
+                        <a class="drop_topo" href="#!" data-target="setores_lista">Setores
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</nav>
+
+
+
+</script>
+<!--Sidenav-->
+<ul id="slide-out" class="sidenav">
+    <div class="row">
+        <div class="grid">
+            <div class="col s10 conteudo_side">
+                <li>
+                    <div class="user-view">
+                        <div class="background bg_nav">
+                            <img class="bg_nav" src="img/nav_bg.jpg">
                         </div>
+                        <img class="logo-sidenav" src="img/logo.png">
+                        </a>
+                        <span class="name"></span>
+                        </a>
+                        <span class=" email"></span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="material-icons">dashboard</i>Dashboard</a>
+                </li>
+                <li>
+                    <a href="consolidado.html">
+                        <i class="material-icons">grid_on</i>Consolidado</a>
+                </li>
+                <li>
+                    <div class="divider"></div>
+                </li>
+                <li>
+                    <a class="subheader">Relatórios</a>
+                </li>
+                <li>
+                    <a class="waves-effect" href="#!">Tempos</a>
+                </li>
+                <li>
+                    <a class="waves-effect" href="#!">Fluxo de Paciente</a>
+                </li>
+
+            </div>
+            <div class="col s1">
+                <div class="sidenav-trigger right close" data-target="slide-out" id="close-navbar">
+                    <div class="icon-center">
+                        <i class="material-icons">keyboard_arrow_left </i>
                     </div>
                 </div>
             </div>
-        </ul>
-    
-    
-    
-        <!-- <a href="#" data-target="slide-out" class="sidenav-trigger">
+        </div>
+    </div>
+</ul>
+
+
+
+<!-- <a href="#" data-target="slide-out" class="sidenav-trigger">
                 <i class="material-icons">menu</i>
             </a> -->
-    
-            <div class="row">
-                    <div class="sidenav-trigger left open" id="open-navbar" data-target="slide-out">
-                        <div class="icon-center">
-                            <i class="material-icons">keyboard_arrow_right </i>
-                        </div>
-                    </div>
+
+<div class="row">
+    <div class="sidenav-trigger left open" id="open-navbar" data-target="slide-out">
+        <div class="icon-center">
+            <i class="material-icons">keyboard_arrow_right </i>
+        </div>
+    </div>
 
 
 <!--tabela-->
@@ -93,27 +121,31 @@
         <div class="col s12 conteudo bg-consolidado espacamento">
             <div class="col s4 l2">
                 <p>Agendamentos do dia</p>
-                <h4 id="agendimentos_do_dia"><span>0</span></h4>
+                <h4 id="agendimentos_do_dia">
+                    <span>0</span>
+                </h4>
+            </div>
+            <div class="col s4 l2">
+                <p>Procedimentos do dia</p>
+                <h4> - </h4>
             </div>
             <div class="col s4 l2">
                 <p>Atendimentos</p>
-                <h4>5/19</h4>
+                <h4>-/
+                    <span id="atendimentos_total">0</span>
+                </h4>
             </div>
-            <div class="col s4 l2">
+            <div class="col s4 l2 tamanho_da_linha_titulo_fluxo">
                 <p>Maior Fluxo</p>
-                <h4>15h</h4>
-            </div>
-            <div class="col s4 l2">
-                <p>Tempo de Espera</p>
-                <h4>2h</h4>
+                <ul id="fluxo"></ul>
             </div>
             <div class="col s4 l2">
                 <p>Tempo de Exame</p>
-                <h4>1h</h4>
+                <h4> - </h4>
             </div>
             <div class="col s4 l2">
                 <p>Qtd de pacientes atuais</p>
-                <h4>5</h4>
+                <h4> - </h4>
             </div>
         </div>
     </div>
@@ -126,42 +158,17 @@
         <div class="col s12">
             <ul class="tabs">
                 <li class="tab col s3">
-                    <a class="active" href="#test1">Ecocardiograma - UACJ</a>
+                    <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                 </li>
-                <li class="tab col s3">
+                <!-- <li class="tab col s3">
                     <a href="#test2">Test 2</a>
-                </li>
+                </li> -->
             </ul>
 
             <div id="test1" class="col s12 tabela_bg">
-                <div class="row">
 
-
-                    <div class="col s12 l9  ">
-                        <div class="input-field col s12 l2 qtd_pag">
-                            <select>
-                                <option value="" disabled selected>N° de Registros</option>
-                                <option value="1">10</option>
-                                <option value="2">20</option>
-                                <option value="3">30</option>
-                            </select>
-                        </div>
-
-                    </div>
-                    <div class="col s12 l3 ">
-
-                        <div class="input-field col s12 ">
-                            <i class="material-icons prefix">search</i>
-                            <input id="icon_prefix" type="text" class="validate">
-                            <label for="icon_prefix">Filtro</label>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-                <table class="striped responsive-table">
+                <table id="tabela_pacientes">
+                    <!-- <table class="striped responsive-table" id="tabela_pacientes"> -->
                     <thead>
                         <tr>
                             <th>Hora</th>
@@ -175,146 +182,102 @@
                             <th>Tp Esp(m)</th>
                         </tr>
                     </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>9h15</td>
-                            <td>EDA</td>
-                            <td>7376561</td>
-                            <td>ALINE REZENDE LUGARINE</td>
-                            <td> - </td>
-                            <td>ENDOSCOPIA UACJ </td>
-                            <td> - </td>
-                            <td>
-                                <div class="quadrado nao-atendido center-status"></div>
-                            </td>
-                            <td> - </td>
-                        </tr>
-                        <tr>
-                            <td>10h15</td>
-                            <td>EDAPD</td>
-                            <td>7376561</td>
-                            <td>RAFAEL REZENDE CORDEIRO</td>
-                            <td> - </td>
-                            <td>ENDOSCOPIA UACJ </td>
-                            <td> - </td>
-                            <td>
-                                <div class="quadrado nao-atendido em-atendimento-outro-servico center-status"></div>
-                            </td>
-                            <td> - </td>
-                        </tr>
-                        <tr>
-                            <td>11h15</td>
-                            <td>EDAPD</td>
-                            <td>7376561</td>
-                            <td>RAFAEL REZENDE CORDEIRO</td>
-                            <td> - </td>
-                            <td>ENDOSCOPIA UACJ </td>
-                            <td> - </td>
-                            <td>
-                                <div class="quadrado nao-atendido atendido center-status"></div>
-                            </td>
-                            <td> - </td>
-                        </tr>
-                        <tr>
-                            <td>11h15</td>
-                            <td>EDAPD</td>
-                            <td>7376561</td>
-                            <td>RAFAEL REZENDE CORDEIRO</td>
-                            <td> - </td>
-                            <td>ENDOSCOPIA UACJ </td>
-                            <td> - </td>
-                            <td>
-                                <div class="quadrado nao-atendido aguardando center-status"></div>
-                            </td>
-                            <td> - </td>
-                        </tr>
+                    <tbody id="listadePacientes">
 
                     </tbody>
-                </table>
             </div>
-            <div id="test2" class="col s12">Test 2</div>
+        </div>
+    </div>
+    </table>
+</div>
+<!-- <div id="test2" class="col s12">Test 2</div> -->
+</div>
+</div>
+
+<div class="row">
+    <div class="col s12 l2">
+        <div class="row">
+            <div class="col s1">
+                <div class="status-1"></div>
+            </div>
+            <div class="col s10">
+                <p class="titulo_status">Não iniciou o atendimento</p>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 l3">
+        <div class="row">
+            <div class="col s1">
+                <div class="status-2"></div>
+            </div>
+            <div class="col s10">
+                <p class="titulo_status">Em atendimento em outro serviço</p>
+            </div>
+        </div>
+    </div>
+    <div class="col s12 l2">
+        <div class="row">
+            <div class="col s1">
+                <div class="status-3"></div>
+            </div>
+            <div class="col s10">
+                <p class="titulo_status">Aguardando</p>
+            </div>
         </div>
     </div>
 
-    <div class="row">
 
-        <div class="col s12 l2">
-            <div class="row">
-                <div class="col s1">
-                    <div class="quadrado nao-atendido"></div>
-                </div>
-                <div class="col s10">
-                    <p class="titulo_status">Não iniciou o atendimento</p>
-                </div>
+    <div class="col s12 l2">
+        <div class="row">
+            <div class="col s1">
+                <div class="status-4"></div>
+            </div>
+            <div class="col s10">
+                <p class="titulo_status">Em atendimento</p>
             </div>
         </div>
-        <div class="col s12 l3">
-            <div class="row">
-                <div class="col s1">
-                    <div class="quadrado nao-atendido em-atendimento-outro-servico"></div>
-                </div>
-                <div class="col s10">
-                    <p class="titulo_status">Em atendimento em outro serviço</p>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 l2">
-            <div class="row">
-                <div class="col s1">
-                    <div class="quadrado nao-atendido aguardando"></div>
-                </div>
-                <div class="col s10">
-                    <p class="titulo_status">Aguardando</p>
-                </div>
-            </div>
-        </div>
+    </div>
 
-
-        <div class="col s12 l2">
-            <div class="row">
-                <div class="col s1">
-                    <div class="quadrado nao-atendido em-atendimento"></div>
-                </div>
-                <div class="col s10">
-                    <p class="titulo_status">Em atendimento</p>
-                </div>
+    <div class="col s12 l2">
+        <div class="row">
+            <div class="col s1">
+                <div class="status-5"></div>
+            </div>
+            <div class="col s10">
+                <p class="titulo_status">Atendido</p>
             </div>
         </div>
-
-        <div class="col s12 l2">
-            <div class="row">
-                <div class="col s1">
-                    <div class="quadrado nao-atendido atendido"></div>
-                </div>
-                <div class="col s10">
-                    <p class="titulo_status">Atendido</p>
-                </div>
+    </div>
+    <div class="col s12 l1">
+        <div class="row">
+            <div class="col s1">
+                <div class="status-6"></div>
             </div>
-        </div>
-        <div class="col s12 l1">
-            <div class="row">
-                <div class="col s1">
-                    <div class="quadrado nao-atendido fastpass"></div>
-                </div>
-                <div class="col s10">
-                    <p class="titulo_status">Fastpass</p>
-                </div>
+            <div class="col s10">
+                <p class="titulo_status">Fastpass</p>
             </div>
         </div>
     </div>
 </div>
-</div>
 
 
 
-    <script src="./componentes/jquery.js"></script>
-    <script src="./js/materialize.js"></script>
-    <script src="./js/sidebar.js"></script>
-    <script src="./js/ajax.js"></script>
-    <script src="./js/lerjson.js"></script>
+</body>
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> 
+
+<script src="./componentes/jquery.js"></script>
+<script src="./componentes/jquery.dataTables.js"></script>
+<script src="./js/ajax.js"></script>
+<script src="./js/materialize.js"></script>
+<script>$(".drop_topo").dropdown();</script>
+<!--Script para abrir p drop down da escola do principal-->
+<script src="./js/sidebar.js"></script>
+<script src="./js/base.js"></script>
 
 
+
+<script src="./js/index.js"></script>
 
 
 <script>
@@ -323,10 +286,9 @@
     });
 </script>
 
+
 <script>
     $(document).ready(function () {
         $('select').formSelect();
     });
-</script> 
-
-</html>;
+</script> </html>

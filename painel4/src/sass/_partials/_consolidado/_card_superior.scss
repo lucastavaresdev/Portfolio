@@ -9,3 +9,9 @@
 .c_linha_card_superior {
     margin-bottom: 0;
 }
+
+@media(max-width: 920px) {
+    .c_total_card {
+        letter-spacing: 0;
+    }
+}

@@ -22,7 +22,14 @@ nav {
   background: #007DCC;
   height: 50px;
   border-bottom: solid 2px #005e99;
-  position: fixed; }
+  position: fixed;
+  z-index: 1; }
+  nav #titulo_do_setor {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 2; }
   nav .logo {
     font-family: Montserrat, sans-serif;
     font-size: 26px;
@@ -35,6 +42,18 @@ nav {
       font-size: 26px;
       font-weight: 600;
       color: #ffffff; }
+  nav ul a {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 0;
+    line-height: 1.9; }
+  nav .drop_topo i {
+    line-height: 53px; }
+
+.setor_espacamento {
+  padding-right: 0 !important; }
 
 .open {
   height: 94%;
@@ -120,6 +139,53 @@ nav {
     font-size: 23px;
     font-weight: 400;
     color: #007DCC; } }
+.fluxo3 {
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #7a7a7a; }
+
+.tamanho_da_linha_titulo_fluxo {
+  line-height: 0.7; }
+
+.fluxo-1 li {
+  line-height: 1;
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #007DCC;
+  cursor: pointer; }
+.fluxo-1 span {
+  white-space: nowrap;
+  line-height: 0.8;
+  font-family: Montserrat, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #868686; }
+
+.fluxo-2 li {
+  line-height: 1.2;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #007DCC;
+  cursor: pointer; }
+.fluxo-2 span {
+  white-space: nowrap;
+  line-height: 0.8;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #868686; }
+
+.p-msg {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #007DCC;
+  padding-top: 13px;
+  cursor: pointer; }
+
 .conteudo {
   padding: 1% 4% !important; }
 
@@ -144,7 +210,8 @@ nav {
   background: #ffffff; }
 
 .tabs {
-  color: #7a7a7a; }
+  color: #7a7a7a;
+  position: inherit; }
   .tabs .tab {
     font-family: Montserrat, sans-serif;
     font-size: 14px;
@@ -167,35 +234,55 @@ nav {
 @media (max-width: 920px) {
   .qtd_pag {
     display: none; } }
-.quadrado {
-  height: 20px;
-  width: 20px; }
+.indicator {
+  display: none; }
+
+select {
+  display: block; }
 
 .titulo_status {
   line-height: 0;
   margin: 11px;
-  margin-left: -1px; }
+  margin-left: 9px; }
 
 .center-status {
   margin-left: 15% !important; }
 
-.nao-atendido {
-  background: #c6c6c6 !important; }
+.status-1 {
+  background: #c6c6c6 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
 
-.aguardando {
-  background: #FFFF00 !important; }
-
-.em-atendimento {
-  background: #00FF00 !important; }
-
-.em-atendimento-outro-servico {
+.status-2 {
+  width: 25px;
+  height: 25px;
+  color: transparent;
   background: #0000FF !important; }
 
-.atendido {
-  background: #FF00FF !important; }
+.status-3 {
+  background: #FFFF00 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
 
-.fastpass {
-  background: #FF0000 !important; }
+.status-4 {
+  background: #00FF00 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-5 {
+  background: #FF00FF !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-6 {
+  background: #FF0000 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
 
 .input-field label {
   color: #007DCC; }
@@ -222,6 +309,12 @@ nav {
 /* icon prefix focus color */
 .input-field .prefix.active {
   color: #007DCC; }
+
+#setores ul {
+  position: relative;
+  z-index: 1055;
+  width: 239px !important;
+  height: 100%; }
 
 .c_titulo {
   font-family: Montserrat, sans-serif;
@@ -272,25 +365,99 @@ nav {
 .c_linha_card_superior {
   margin-bottom: 0; }
 
+@media (max-width: 920px) {
+  .c_total_card {
+    letter-spacing: 0; } }
 .cards {
   background: #ffffff;
   border-radius: 2px;
   padding-left: 0 !important;
   position: relative;
   height: 220px;
-  width: 100%; }
-  .cards .imagem-setor {
+  width: 100%;
+  margin-bottom: 40px; }
+  .cards .imagem-img225 {
+    background: url(../img/ergometria.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img226 {
+    background: url(../img/cardiopumonar.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img227 {
+    background: url(../img/mapa.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img228 {
+    background: url(../img/medicina_nuclear.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img229 {
     background: url(../img/tomografia.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-setor-ultra {
+  .cards .imagem-img230 {
+    background: url(../img/tomografia2.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img231 {
     background: url(../img/ultrassom.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
-  .cards .imagem-setor-raiox {
-    background: url(../img/raiox.jpg) no-repeat center center;
+  .cards .imagem-img232 {
+    background: url(../img/laboratorio.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img234 {
+    background: url(../img/radiologia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img235 {
+    background: url(../img/mamografia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img275 {
+    background: url(../img/endoscopia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img276 {
+    background: url(../img/setor_aritimias.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img298 {
+    background: url(../img/eletro.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img239 {
+    background: url(../img/checkup.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img322 {
+    background: url(../img/banco_de_sangue.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img335 {
+    background: url(../img/colonoscopia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img391 {
+    background: url(../img/ecocardiograma.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     height: 100%; }
