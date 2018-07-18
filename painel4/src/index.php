@@ -55,4 +55,4 @@
 
 
 
-        </html>
+        @@include('./templates/footer.html')
