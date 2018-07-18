@@ -50,26 +50,29 @@ function setores(data) {
             + "<p>Equipamentos:"
             + "<b class='right'> - </b>"
             + "</p>"
-            + "<b class='c_status'>Status: - </b>"
+            + "<b class='c_status'>Status: <span id=status" + data[i].id + ">Indisponivel</b>"
             + "</div>"
             + "</div>"
             + "</div>";
 
     }
     local_do_card.innerHTML = html;
-    // for (let i = 0; i < data.length; i++) {
-    //     numeroPacientes(data[i].id, i)
-    // }
+    for (let i = 0; i < data.length; i++) {
+        var dado = parseInt(data[i].agendamento_do_dia);
+        if(dado > 0){
+             status(data[i].id)
+        }
+    }
 }
 
 
 
 
-function numeroPacientes(numero_do_setor, contador) {
-  
-    var elem = document.getElementById(`pacientes${numero_do_setor}`);
+function status(numero_do_setor) {
+    
+    var elem = document.getElementById(`status${numero_do_setor}`);
 
-    elem.innerHTML = contador;
+    elem.innerHTML = "Operando";
 
     
 }
