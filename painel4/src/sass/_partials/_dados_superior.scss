@@ -83,13 +83,13 @@
     .fluxo-2 {
         li {
             line-height: 1.2;
-            @include fontebase($monte-serrat, '17px', 400, $cor-primaria);
+            @include fontebase($monte-serrat, '12px', 400, $cor-primaria);
             cursor: pointer;
         }
         span {
             white-space: nowrap;
             line-height: 0.8;
-            @include fontebase($monte-serrat, '13px', 400, darken($cinza, 45%));
+            @include fontebase($monte-serrat, '9px', 400, darken($cinza, 45%));
         }
     }
     

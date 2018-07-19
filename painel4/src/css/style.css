@@ -236,7 +236,7 @@ nav {
   .fluxo-2 li {
     line-height: 1.2;
     font-family: Montserrat, sans-serif;
-    font-size: 17px;
+    font-size: 12px;
     font-weight: 400;
     color: #007DCC;
     cursor: pointer; }
@@ -244,7 +244,7 @@ nav {
     white-space: nowrap;
     line-height: 0.8;
     font-family: Montserrat, sans-serif;
-    font-size: 13px;
+    font-size: 9px;
     font-weight: 400;
     color: #868686; }
 
