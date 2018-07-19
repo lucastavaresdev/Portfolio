@@ -311,6 +311,12 @@ select {
   display: block; }
 
 @media (max-width: 920px) {
+  html {
+    font-size: 13px; }
+
+  .dataTables_paginate paging_simple_numbers {
+    margin-bottom: 11px; }
+
   table.dataTable thead th, table.dataTable thead td {
     border-bottom: none !important; }
 
