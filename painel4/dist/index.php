@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -25,25 +27,31 @@
                                     <img class="logo_login" style="max-width: 200px;" ondurationchange=""class="responsive-img" src="./img/logo.png" alt="">
                                 <div class="left-align">
 
-                                    <form id="login-form" action="index.html" method="post">
+                                    <form id="login-form" action="./php/login.php" method="post">
                                         <div class="row">
 
                                             <div class="col s12 input-field">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input type="text" name="email" id="email" value="" placeholder="Login"/>
+                                                <input type="text" name="usuario" id="email" value="" placeholder="Login"/>
                                             </div>
 
                                             <div class="col s12 input-field">
                                                 <i class="material-icons prefix">lock</i>
-                                                <input type="password" name="password" id="password" value="" placeholder="senha"/>
+                                                <input type="password" name="senha" id="password" value="" placeholder="senha"/>
                                             </div>
 
                                             <div class="col s12 input-field">
-                                                <button class="btn waves-effect waves-light btn_login right" type="button" name="action">Entrar</button>
+                                                <button class="btn waves-effect waves-light btn_login right" type="submit"  name="btn_entrar">Entrar</button>
                                             </div>
                                         </div>
                                     </form>
                                     
+                                    <?php
+                                                if(isset($_GET['login']) && $_GET['login'] == "true") {
+                                                        echo "<h5>Usuario e senha incorretos</h5>";
+                                                } 
+                                    ?>
+
                                 </div>
                             </div>
                         </div>
@@ -55,4 +63,5 @@
 
 
 
-        @@include('./templates/footer.html')
+      </body>
+</html>

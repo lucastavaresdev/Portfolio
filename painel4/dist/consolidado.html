@@ -1,3 +1,11 @@
+<?php
+    if(isset($_SESSION[' ']))  {
+        header('./dashboad.html');
+    } 
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
