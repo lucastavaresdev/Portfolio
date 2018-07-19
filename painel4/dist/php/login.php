@@ -24,9 +24,13 @@
                 $count = $statement->rowCount();  
                 if($count > 0)  
                 {  
-                     $_SESSION["username"] = $_POST["usuario"];  
-                     header("location:restrito.php");  
-					}  
+                    $result = $statement->fetch(PDO::FETCH_ASSOC);
+                        
+                        $_SESSION["username"] = $_POST["usuario"];  
+                        $_SESSION["servicos"] = $result['servicos'];
+                        
+                    header("location:restrito.php");  
+                }  
 					else  
 					{  
 						header("location:../index.php?login=true");  

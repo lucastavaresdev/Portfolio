@@ -4,7 +4,8 @@
 
  if(isset($_SESSION["username"]))  
  {  
-     header("location:../dashboard.php");  
+    $setor = $_SESSION['servicos'];
+     header("location:../dashboard.php?setor=$setor");
     }  
     else  
     {  
