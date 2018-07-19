@@ -1,125 +1,9 @@
-<?php
-    if(isset($_SESSION[' ']))  {
-        header('./dashboad.html');
-    } 
-
+<?php 
+    require ('./templates/header.php');
+    require ('./templates/menu.html').
 ?>
 
 
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard</title>
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./css/materialize.css">
-    <link rel="stylesheet" href="./css/style.css">
-
-
-</head>
-
-<body> <ul id="setores_lista" class="dropdown-content">
-
-</ul>
-
-<nav>
-    <div class="nav-wrapper">
-        <div class="row">
-
-            <div class="col s4">
-                <div class="logo">Work
-                    <b>Flow</b>
-                </div>
-            </div>
-
-            <div class="col s4 center">
-                <div id="titulo_do_setor" class="titulo_consolidado"></div>
-            </div>
-            <div class="col s4 setor_espacamento">
-                <ul id="setores" class="right">
-                    <li>
-                        <a class="drop_topo" href="#!" data-target="setores_lista">Setores
-                            <i class="material-icons right">arrow_drop_down</i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-    </div>
-</nav>
-
-
-
-</script>
-<!--Sidenav-->
-<ul id="slide-out" class="sidenav">
-    <div class="row">
-        <div class="grid">
-            <div class="col s10 conteudo_side">
-                <li>
-                    <div class="user-view">
-                        <div class="background bg_nav">
-                            <img class="bg_nav" src="img/nav_bg.jpg">
-                        </div>
-                        <img class="logo-sidenav" src="img/logo.png">
-                        </a>
-                        <span class="name"></span>
-                        </a>
-                        <span class=" email"></span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <a href="dashboard.html">
-                        <i class="material-icons">dashboard</i>Dashboard</a>
-                </li>
-                <li>
-                    <a href="consolidado.html">
-                        <i class="material-icons">grid_on</i>Consolidado</a>
-                </li>
-                <li>
-                    <div class="divider"></div>
-                </li>
-                <!-- <li>
-                    <a class="subheader">Relatórios</a>
-                </li>
-                <li>
-                    <a class="waves-effect" href="#!">Tempos</a>
-                </li>
-                <li>
-                    <a class="waves-effect" href="#!">Fluxo de Paciente</a>
-                </li> -->
-
-            </div>
-            <div class="col s1">
-                <div class="sidenav-trigger right close" data-target="slide-out" id="close-navbar">
-                    <div class="icon-center">
-                        <i class="material-icons">keyboard_arrow_left </i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</ul>
-
-
-
-<!-- <a href="#" data-target="slide-out" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a> -->
-
-<div class="row">
-    <div class="sidenav-trigger left open" id="open-navbar" data-target="slide-out">
-        <div class="icon-center">
-            <i class="material-icons">keyboard_arrow_right </i>
-        </div>
-    </div>
 
  <link rel="stylesheet" href="./css/consolidado.css">
 
@@ -312,18 +196,7 @@
 
 
 
-
-<script src="./componentes/jquery.js"></script>
-<script src="./componentes/jquery.dataTables.js"></script>
-<script src="./js/ajax.js"></script>
-<script src="./js/materialize.js"></script>
-<script>$(".drop_topo").dropdown();</script>
-<!--Script para abrir p drop down da escola do principal-->
-<script src="./js/sidebar.js"></script>
-<script src="./js/base.js"></script>
-
-
-
+<?php require('./templates/frameworks.html') ?>
 
 
 

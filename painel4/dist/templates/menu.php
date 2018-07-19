@@ -52,7 +52,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="dashboard.html">
+                    <a href="dashboard.php">
                         <i class="material-icons">dashboard</i>Dashboard</a>
                 </li>
                 <li>
@@ -71,7 +71,11 @@
                 <li>
                     <a class="waves-effect" href="#!">Fluxo de Paciente</a>
                 </li> -->
-
+                <li class="sair">
+                    <a href="./php/logout.php">
+                        <i class="material-icons">clear</i>Sair
+                    </a>
+                </li>
             </div>
             <div class="col s1">
                 <div class="sidenav-trigger right close" data-target="slide-out" id="close-navbar">

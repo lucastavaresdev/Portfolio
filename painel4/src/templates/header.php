@@ -1,7 +1,7 @@
-<?php
-    if(isset($_SESSION[' ']))  {
-        header('./dashboad.html');
-    } 
+<?php 
+ if(!isset($_SESSION["username"]))  {  
+    header("location:../index.php");  
+ }
 
 ?>
 
@@ -23,3 +23,5 @@
 </head>
 
 <body>
+
+<?php echo $_SESSION["username"]; ?>

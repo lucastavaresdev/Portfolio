@@ -1,0 +1,121 @@
+<?php 
+    require ('./templates/header.php');
+    require ('./templates/menu.html');
+?>
+
+
+
+<!--tabela-->
+<div class="row">
+    <div class="col s12 dados_consolidados">
+        <div class="col s12 conteudo bg-consolidado espacamento">
+            <div class="col s4 l2">
+                <p>Agendamentos do dia</p>
+                <h4 id="agendimentos_do_dia">
+                    <span>0</span>
+                </h4>
+            </div>
+            <div class="col s4 l2">
+                <p>Procedimentos do dia</p>
+                <h4> - </h4>
+            </div>
+            <div class="col s4 l2">
+                <p>Atendimentos</p>
+                <h4>-/
+                    <span id="atendimentos_total">0</span>
+                </h4>
+            </div>
+            <div class="col s4 l2 tamanho_da_linha_titulo_fluxo">
+                <p>Maior Fluxo</p>
+                <ul id="fluxo"></ul>
+            </div>
+            <div class="col s4 l2">
+                <p>Tempo de Exame</p>
+                <h4> - </h4>
+            </div>
+            <div class="col s4 l2">
+                <p>Qtd de pacientes atuais</p>
+                <h4> - </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col s12 conteudo">
+
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s3">
+                    <a id="aba_nome_setor" class="active" href="#test1"> - </a>
+                </li>
+                <!-- <li class="tab col s3">
+                    <a href="#test2">Test 2</a>
+                </li> -->
+            </ul>
+
+            <div id="test1" class="col s12 tabela_bg">
+
+                <table id="tabela_pacientes">
+                    <!-- <table class="striped responsive-table" id="tabela_pacientes"> -->
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Atividade</th>
+                            <th>IH</th>
+                            <th>Paciente</th>
+                            <th>Senha</th>
+                            <th>Serviço Atual</th>
+                            <th>Prox. Serviço</th>
+                            <th>Status</th>
+                            <th>Tp Esp(m)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listadePacientes">
+
+                    </tbody>
+            </div>
+        </div>
+    </div>
+    </table>
+</div>
+<!-- <div id="test2" class="col s12">Test 2</div> -->
+</div>
+</div>
+
+
+
+<div class="row">
+<?php 
+    require ('./templates/status.php');
+?>
+</div>
+
+
+
+</body>
+
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> 
+<?php 
+    require ('./templates/frameworks.php');
+?>
+<script src="./js/index.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+</script> 
+
+<?php 
+    require ('./templates/footer.html');
+?>

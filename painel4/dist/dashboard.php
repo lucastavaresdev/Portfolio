@@ -1,5 +1,8 @@
-@@include('./templates/header.php') 
-@@include('./templates/menu.html')
+<?php 
+    require ('./templates/header.php');
+    require ('./templates/menu.html');
+?>
+
 
 
 <!--tabela-->
@@ -81,8 +84,12 @@
 </div>
 </div>
 
+
+
 <div class="row">
-    @@include('./templates/status.html')
+<?php 
+    require ('./templates/status.php');
+?>
 </div>
 
 
@@ -90,7 +97,9 @@
 </body>
 
 <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> 
-@@include('./templates/frameworks.html')
+<?php 
+    require ('./templates/frameworks.php');
+?>
 <script src="./js/index.js"></script>
 
 
@@ -105,4 +114,8 @@
     $(document).ready(function () {
         $('select').formSelect();
     });
-</script> @@include('./templates/footer.html')
+</script> 
+
+<?php 
+    require ('./templates/footer.html');
+?>

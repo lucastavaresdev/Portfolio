@@ -1,4 +1,9 @@
-@@include('./templates/header.php') @@include('./templates/menu.html')
+<?php 
+    require ('./templates/header.php');
+    require ('./templates/menu.html').
+?>
+
+
 
  <link rel="stylesheet" href="./css/consolidado.css">
 
@@ -191,7 +196,7 @@
 
 
 
-@@include('./templates/frameworks.html')
+<?php require('./templates/frameworks.html') ?>
 
 
 

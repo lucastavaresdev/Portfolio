@@ -109,6 +109,10 @@ nav {
 .logo-sidenav {
   width: 109%; }
 
+.sair {
+  position: absolute !important;
+  bottom: 112px !important; }
+
 .dados_consolidados {
   background: #ffffff;
   border-bottom: 2px solid #f1f1f1; }

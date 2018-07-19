@@ -17,15 +17,15 @@
                 $statement = $conexao->prepare($query);  
                 $statement->execute(  
                      array(  
-                          'username'     =>     $_POST["usuario"],  
+                          'username'     =>    $_POST["usuario"],  
                           'password'     =>     $_POST["senha"]  
                      )  
                 );  
                 $count = $statement->rowCount();  
                 if($count > 0)  
                 {  
-                     $_SESSION["username"] = $_POST["username"];  
-                     header("location:../dashboard.html");  
+                     $_SESSION["username"] = $_POST["usuario"];  
+                     header("location:restrito.php");  
 					}  
 					else  
 					{  
