@@ -1,6 +1,6 @@
 <?php 
-    require ('./templates/header.php');
-    require ('./templates/menu.html');
+    include "./templates/header.php";
+    include "./templates/menu.html";
 ?>
 
 
@@ -88,7 +88,7 @@
 
 <div class="row">
 <?php 
-    require ('./templates/status.php');
+    include './templates/status.html';
 ?>
 </div>
 
@@ -98,7 +98,7 @@
 
 <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> 
 <?php 
-    require ('./templates/frameworks.php');
+   include './templates/frameworks.html';
 ?>
 <script src="./js/index.js"></script>
 
@@ -117,5 +117,5 @@
 </script> 
 
 <?php 
-    require ('./templates/footer.html');
+   include './templates/footer.html';
 ?>

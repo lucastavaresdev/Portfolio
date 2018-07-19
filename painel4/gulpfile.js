@@ -26,6 +26,7 @@ gulp.task('copy', ['clean'], function () {
         'src/css/**/*',
         'src/img/**/*',
         'src/php/**/*',
+        './src/**/*.html',
     ], { "base": "src" })//o base mantem a estrutura
         .pipe(gulp.dest('dist'))
 })
@@ -45,13 +46,13 @@ gulp.task('html', function(){
 
 
 gulp.task('default', ['copy'], function(){
-    gulp.start('html')
+    // gulp.start('html')
     // gulp.start('html' ,'imagemin', 'sass', 'build-js')
 })
 
 
 
-gulp.task('serve',['default'], function () {
+gulp.task('serve',['copy'], function () {
     browserSync.init({
         server: {
             baseDir: 'dist'

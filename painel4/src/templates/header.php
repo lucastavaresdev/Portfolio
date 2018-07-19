@@ -1,7 +1,9 @@
-<?php 
- if(!isset($_SESSION["username"]))  {  
-    header("location:../index.php");  
- }
+<?php
+ session_start();  
+ 
+if(!isset($_SESSION["username"])){
+    header("location:./index.php");  
+}
 
 ?>
 
@@ -23,5 +25,3 @@
 </head>
 
 <body>
-
-<?php echo $_SESSION["username"]; ?>

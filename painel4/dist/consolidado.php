@@ -1,6 +1,6 @@
 <?php 
-    require ('./templates/header.php');
-    require ('./templates/menu.html').
+    include('./templates/header.php');
+    include('./templates/menu.html');
 ?>
 
 
@@ -196,7 +196,7 @@
 
 
 
-<?php require('./templates/frameworks.html') ?>
+<?php include('./templates/frameworks.html') ?>
 
 
 
