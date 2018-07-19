@@ -32,7 +32,7 @@
             <div class="container">
                 <div class="center-align">
                 <div class="row">
-                    <div class="col s5 offset-s3">
+                    <div class="col s12 l5  offset-l3">
                         <div class="card">
                             <div class="card-content">
                                     <img class="logo_login" style="max-width: 200px;" ondurationchange=""class="responsive-img" src="./img/logo.png" alt="">
