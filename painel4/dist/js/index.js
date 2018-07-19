@@ -42,10 +42,7 @@ function lista_de_pacientes(data) {
 function data_table() {
     $(document).ready(function () {
         $('#tabela_pacientes').DataTable({
-            "pagingType": "full_numbers",
-            // "lengthMenu": [ 10, 25, 50, 75, 100],
-
-            "language": {
+            language: {
                 "lengthMenu": " Quantidade por Pagina _MENU_  ",
                 "zeroRecords": "Não encontrado pacientes",
                 "info": "Total de Pagina _PAGE_ de _PAGES_",

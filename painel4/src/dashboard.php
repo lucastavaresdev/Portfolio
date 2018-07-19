@@ -10,13 +10,13 @@
     <div class="col s12 dados_consolidados">
         <div class="col s12 conteudo bg-consolidado espacamento">
             <div class="col s4 l2">
-                <p>Agendamentos do dia</p>
+                <p>Agendamentos</p>
                 <h4 id="agendimentos_do_dia">
                     <span>0</span>
                 </h4>
             </div>
             <div class="col s4 l2">
-                <p>Procedimentos do dia</p>
+                <p>Procedimentos</p>
                 <h4> - </h4>
             </div>
             <div class="col s4 l2">
@@ -57,8 +57,7 @@
 
             <div id="test1" class="col s12 tabela_bg">
 
-                <table id="tabela_pacientes">
-                    <!-- <table class="striped responsive-table" id="tabela_pacientes"> -->
+                <table id="tabela_pacientes" class="striped responsive-table">
                     <thead>
                         <tr>
                             <th>Hora</th>
@@ -96,7 +95,6 @@
 
 </body>
 
-<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> 
 <?php 
    include './templates/frameworks.html';
 ?>

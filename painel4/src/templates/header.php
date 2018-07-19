@@ -18,6 +18,7 @@ if(!isset($_SESSION["username"])){
     <title>Dashboard</title>
     <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"> 
     <link rel="stylesheet" href="./css/materialize.css">
     <link rel="stylesheet" href="./css/style.css">
 

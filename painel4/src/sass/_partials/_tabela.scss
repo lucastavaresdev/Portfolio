@@ -39,4 +39,13 @@
 
 select{
     display: block;
+    
+}
+@media (max-width: 920px){
+    table.dataTable thead th, table.dataTable thead td{
+        border-bottom: none !important;    
+    }
+    table.responsive-table td {
+        min-height: 1.8em;
+    }
 }
