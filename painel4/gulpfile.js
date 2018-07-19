@@ -26,7 +26,8 @@ gulp.task('copy', ['clean'], function () {
         'src/css/**/*',
         'src/img/**/*',
         'src/php/**/*',
-        './src/**/*.html',
+        'src/**/*.html',
+        'src/templates/*',
     ], { "base": "src" })//o base mantem a estrutura
         .pipe(gulp.dest('dist'))
 })
@@ -46,7 +47,7 @@ gulp.task('html', function(){
 
 
 gulp.task('default', ['copy'], function(){
-    // gulp.start('html')
+    gulp.start('html')
     // gulp.start('html' ,'imagemin', 'sass', 'build-js')
 })
 
