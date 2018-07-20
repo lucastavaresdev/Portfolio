@@ -55,6 +55,9 @@ nav {
 .setor_espacamento {
   padding-right: 0 !important; }
 
+.icon_mobile_menu {
+  padding-right: 10px; }
+
 @media (max-width: 920px) {
   #titulo_do_setor {
     font-family: Montserrat, sans-serif;
@@ -301,27 +304,47 @@ nav {
   .tabs .indicator {
     background: #007DCC; }
 
-@media (max-width: 920px) {
-  .qtd_pag {
-    display: none; } }
 .indicator {
   display: none; }
 
 select {
   display: block; }
+  select titulo_do_setor_mobile {
+    display: none; }
+
+drop_topo .mobile {
+  display: block; }
 
 @media (max-width: 920px) {
+  .mobile {
+    display: none; }
+
+  .mobile2 {
+    display: block; }
+    .mobile2 a {
+      color: red !important; }
+
+  .qtd_pag {
+    display: none; }
+
   html {
     font-size: 13px; }
 
   .dataTables_paginate paging_simple_numbers {
     margin-bottom: 11px; }
 
-  table.dataTable thead th, table.dataTable thead td {
+  table.dataTable thead th,
+  table.dataTable thead td {
     border-bottom: none !important; }
 
   table.responsive-table td {
-    min-height: 1.8em; } }
+    min-height: 1.8em; }
+
+  .drop_topo {
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: #ffffff; } }
 .titulo_status {
   line-height: 0;
   margin: 11px;
@@ -449,7 +472,16 @@ select {
 
 @media (max-width: 920px) {
   .c_total_card {
-    letter-spacing: 0; } }
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; } }
 .cards {
   background: #ffffff;
   border-radius: 2px;

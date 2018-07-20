@@ -13,5 +13,9 @@
 @media(max-width: 920px) {
     .c_total_card {
         letter-spacing: 0;
+        @include fontebase($monte-serrat, '20px', 300, $cor-primaria);
+                b {
+                    @include fontebase($monte-serrat, '20px', 600, $cor-primaria);
+                }
     }
 }

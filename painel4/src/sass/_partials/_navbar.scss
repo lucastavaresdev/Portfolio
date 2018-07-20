@@ -35,7 +35,11 @@ nav {
     padding-right: 0 !important;
 }
 
+.icon_mobile_menu{
+    padding-right: 10px;
+}
 @media (max-width: 920px){
+
     #titulo_do_setor {
         @include fontebase($monte-serrat, '17px !important', 300, $branco);
         line-height: 53px !important;
