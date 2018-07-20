@@ -1,0 +1,626 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700");
+h1, h2, h3, h4, h5, h6, p, a, div {
+  font-family: "Montserrat", sans-serif; }
+
+body {
+  background: #F8FAFC; }
+
+.borda-topo-left {
+  border-top-left-radius: 25px; }
+
+.borda-topo-right {
+  border-top-right-radius: 25px; }
+
+.icone {
+  margin-right: 10px; }
+
+@media (max-device-width: 767px) {
+  main {
+    margin-top: 13%; } }
+nav {
+  box-shadow: none;
+  background: #007DCC;
+  height: 50px;
+  border-bottom: solid 2px #005e99;
+  position: fixed;
+  z-index: 1; }
+  nav #titulo_do_setor {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 2; }
+  nav .logo {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    margin-left: 4%;
+    line-height: 53px; }
+    nav .logo b {
+      font-family: Montserrat, sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #ffffff; }
+  nav ul a {
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 0;
+    line-height: 1.9; }
+  nav .drop_topo i {
+    line-height: 53px; }
+
+.setor_espacamento {
+  padding-right: 0 !important; }
+
+.icon_mobile_menu {
+  padding-right: 10px; }
+
+@media (max-width: 920px) {
+  #titulo_do_setor {
+    font-family: Montserrat, sans-serif;
+    font-size: 17px !important;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 53px !important; }
+
+  .logo {
+    font-family: Montserrat, sans-serif;
+    font-size: 17px !important;
+    font-weight: 300;
+    color: #ffffff;
+    margin-left: 4%;
+    line-height: 53px; }
+    .logo b {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px !important;
+      font-weight: 300;
+      color: #ffffff; }
+
+  .drop_topo {
+    font-family: Montserrat, sans-serif;
+    font-size: 17px !important;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 53px; } }
+.open {
+  height: 94%;
+  width: 22px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.082);
+  top: 51px; }
+  .open .material-icons {
+    padding-left: 4px;
+    color: #007DCC; }
+
+.close {
+  height: 88.2%;
+  width: 22px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.082); }
+  .close .material-icons {
+    padding-left: 4px;
+    color: #007DCC; }
+
+.open-a {
+  transform: translateX(0);
+  transition: 400ms; }
+
+.open-b {
+  transform: translateX(-105%);
+  transition: 400ms; }
+
+.sidenav {
+  width: 250px;
+  top: 51px; }
+  .sidenav-overlay {
+    background: none; }
+
+.conteudo_side {
+  width: 90.333333% !important;
+  padding: 0 !important; }
+  .conteudo_side .bg_nav {
+    width: 100%;
+    height: 100%; }
+
+.logo-sidenav {
+  width: 109%; }
+
+.sair {
+  position: absolute !important;
+  bottom: 112px !important; }
+
+.dados_consolidados {
+  background: #ffffff;
+  border-bottom: 2px solid #f1f1f1; }
+  .dados_consolidados .bg-consolidado {
+    padding-top: 1.5%;
+    padding-button: 1.5%; }
+  .dados_consolidados p {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #7a7a7a; }
+  .dados_consolidados h4 {
+    line-height: 0.4;
+    font-family: Montserrat, sans-serif;
+    font-size: 39px;
+    font-weight: 400;
+    color: #007DCC; }
+
+.fluxo3 {
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #7a7a7a; }
+
+.tamanho_da_linha_titulo_fluxo {
+  line-height: 0.7; }
+
+.fluxo-1 li {
+  line-height: 1;
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #007DCC;
+  cursor: pointer; }
+.fluxo-1 span {
+  white-space: nowrap;
+  line-height: 0.8;
+  font-family: Montserrat, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #868686; }
+
+.fluxo-2 li {
+  line-height: 1.2;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #007DCC;
+  cursor: pointer; }
+.fluxo-2 span {
+  white-space: nowrap;
+  line-height: 0.8;
+  font-family: Montserrat, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #868686; }
+
+.p-msg {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #007DCC;
+  padding-top: 13px;
+  cursor: pointer; }
+
+@media (max-width: 920px) {
+  .bg-consolidado p {
+    font-family: Montserrat, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    color: #7a7a7a; }
+  .bg-consolidado h4 {
+    line-height: 0.4;
+    font-family: Montserrat, sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #007DCC; }
+
+  .fluxo-1 li {
+    line-height: 1;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #007DCC;
+    cursor: pointer; }
+  .fluxo-1 span {
+    white-space: nowrap;
+    line-height: 0.8;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #868686; }
+
+  .fluxo-2 li {
+    line-height: 1.2;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #007DCC;
+    cursor: pointer; }
+  .fluxo-2 span {
+    white-space: nowrap;
+    line-height: 0.8;
+    font-family: Montserrat, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    color: #868686; }
+
+  .fluxo3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #7a7a7a; }
+
+  .tamanho_da_linha_titulo_fluxo {
+    line-height: 0.7; } }
+.conteudo {
+  padding: 1% 4% !important; }
+
+.espacamento {
+  margin-top: 1.5%; }
+
+@media (max-width: 920px) {
+  .espacamento {
+    margin-top: 8%;
+    text-align: center; } }
+@media (max-width: 600px) {
+  .conteudo {
+    padding: 1% 4% 1% 11% !important; }
+
+  .espacamento {
+    margin-top: 12%; } }
+@media (min-width: 900px) and (max-width: 1700px) {
+  .conteudo {
+    padding-top: 40px !important; } }
+/* Ipad Pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+  .espacamento {
+    margin-top: 3.5%; } }
+.tabela_bg {
+  background: #ffffff; }
+
+.tabs {
+  color: #7a7a7a;
+  position: inherit; }
+  .tabs .tab {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #007DCC; }
+    .tabs .tab a {
+      color: #7a7a7a; }
+      .tabs .tab a.active {
+        font-family: Montserrat, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        color: #007DCC; }
+      .tabs .tab a:hover {
+        color: #005e99; }
+      .tabs .tab a:focus.active {
+        background-color: rgba(0, 125, 204, 0.2); }
+  .tabs .indicator {
+    background: #007DCC; }
+
+.indicator {
+  display: none; }
+
+select {
+  display: block; }
+  select titulo_do_setor_mobile {
+    display: none; }
+
+drop_topo .mobile {
+  display: block; }
+
+@media (max-width: 920px) {
+  .mobile {
+    display: none; }
+
+  .mobile2 {
+    display: block; }
+    .mobile2 a {
+      color: red !important; }
+
+  .qtd_pag {
+    display: none; }
+
+  html {
+    font-size: 13px; }
+
+  .dataTables_paginate paging_simple_numbers {
+    margin-bottom: 11px; }
+
+  table.dataTable thead th,
+  table.dataTable thead td {
+    border-bottom: none !important; }
+
+  table.responsive-table td {
+    min-height: 1.8em; }
+
+  .drop_topo {
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: #ffffff; } }
+.titulo_status {
+  line-height: 0;
+  margin: 11px;
+  margin-left: 9px; }
+
+.center-status {
+  margin-left: 15% !important; }
+
+.status-1 {
+  background: #c6c6c6 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-2 {
+  width: 25px;
+  height: 25px;
+  color: transparent;
+  background: #0000FF !important; }
+
+.status-3 {
+  background: #FFFF00 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-4 {
+  background: #00FF00 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-5 {
+  background: #FF00FF !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-6 {
+  background: #FF0000 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.input-field label {
+  color: #007DCC; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #006db3; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #007DCC;
+  box-shadow: 0 1px 0 0 #007DCC; }
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #007DCC;
+  box-shadow: 0 1px 0 0 #007DCC; }
+
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #007DCC;
+  box-shadow: 0 1px 0 0 #007DCC; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #007DCC; }
+
+#setores ul {
+  position: relative;
+  z-index: 1055;
+  width: 239px !important;
+  height: 100%; }
+
+.c_titulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  color: #007DCC; }
+  .c_titulo span {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #007DCC; }
+
+@media (max-width: 920px) {
+  .c_centralizando {
+    display: flex;
+    justify-content: center; }
+    .c_centralizando .c_agendamento {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; }
+
+  .c_titulo {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #007DCC;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center !important; }
+    .c_titulo span {
+      font-family: Montserrat, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #007DCC; } }
+.c_total_card {
+  font-family: Montserrat, sans-serif;
+  font-size: 30px ;
+  font-weight: 300;
+  color: #007DCC;
+  letter-spacing: 4px; }
+  .c_total_card b {
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #007DCC; }
+
+.c_linha_card_superior {
+  margin-bottom: 0; }
+
+@media (max-width: 920px) {
+  .c_total_card {
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; } }
+@media (min-width: 1300px) and (max-width: 1700px) {
+  .c_total_card {
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; } }
+@media (min-width: 900px) and (max-width: 1300px) {
+  .c_total_card {
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #007DCC; } }
+@media (min-width: 991px) and (max-width: 1800px) {
+  .c_titulo {
+    font-size: 15px; } }
+.cards {
+  background: #ffffff;
+  border-radius: 2px;
+  padding-left: 0 !important;
+  position: relative;
+  height: 220px;
+  width: 100%;
+  margin-bottom: 40px; }
+  .cards .imagem-img225 {
+    background: url(../img/ergometria.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img226 {
+    background: url(../img/cardiopumonar.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img227 {
+    background: url(../img/mapa.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img228 {
+    background: url(../img/medicina_nuclear.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img229 {
+    background: url(../img/tomografia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img230 {
+    background: url(../img/tomografia2.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img231 {
+    background: url(../img/ultrassom.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img232 {
+    background: url(../img/laboratorio.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img234 {
+    background: url(../img/radiologia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img235 {
+    background: url(../img/mamografia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img275 {
+    background: url(../img/endoscopia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img276 {
+    background: url(../img/setor_aritimias.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img298 {
+    background: url(../img/eletro.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img239 {
+    background: url(../img/checkup.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img322 {
+    background: url(../img/banco_de_sangue.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img335 {
+    background: url(../img/colonoscopia.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .imagem-img391 {
+    background: url(../img/ecocardiograma.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    height: 100%; }
+  .cards .c_conteudo_card {
+    position: relative;
+    left: 26% !important; }
+    .cards .c_conteudo_card .c_card-title {
+      margin-top: 12px; }
+    .cards .c_conteudo_card p {
+      line-height: 0.7;
+      font-size: 17px;
+      text-align: left !important; }
+    .cards .c_conteudo_card .c_status {
+      line-height: 3; }
+
+@media (max-width: 920px) {
+  .cards .c_conteudo_card {
+    left: 34% !important; } }
+#horas {
+  margin-top: 2%; }
+
+/*# sourceMappingURL=style.css.map */
