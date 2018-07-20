@@ -17,7 +17,7 @@
             </div>
             <div class="col s4 l2">
                 <p>Procedimentos</p>
-                <h4> - </h4>
+                <h4 id='qtd_procedimentos'> - </h4>
             </div>
             <div class="col s4 l2">
                 <p>Atendimentos</p>

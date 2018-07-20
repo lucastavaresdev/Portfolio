@@ -9,10 +9,22 @@
     var parametrosDaUrl = url_atual.split("?")[1];
 
     chamadaAjax(`php/selectsJson.php?parametro=qtd_por_setor&${parametrosDaUrl}`, agendamentos_do_dia_por_setor);
+    chamadaAjax(`php/selectsJson.php?parametro=qtd_procedimentos&${parametrosDaUrl}`, qtd_procedimentos);
     chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
 })();
 
+
+function qtd_procedimentos(data){
+    var elem = document.getElementById('qtd_procedimentos');
+
+    var qtd_procedimentos = data[0].qtd_procedimentos;
+    
+    elem.innerHTML = qtd_procedimentos;
+
+
+
+}
 
 
 function lista_de_pacientes(data) {
