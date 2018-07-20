@@ -275,6 +275,9 @@ nav {
 
   .espacamento {
     margin-top: 12%; } }
+@media (min-width: 900px) and (max-width: 1700px) {
+  .conteudo {
+    padding-top: 40px !important; } }
 /* Ipad Pro */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
   .espacamento {
@@ -457,7 +460,7 @@ drop_topo .mobile {
       color: #007DCC; } }
 .c_total_card {
   font-family: Montserrat, sans-serif;
-  font-size: 30px;
+  font-size: 30px ;
   font-weight: 300;
   color: #007DCC;
   letter-spacing: 4px; }
@@ -482,6 +485,33 @@ drop_topo .mobile {
       font-size: 20px;
       font-weight: 600;
       color: #007DCC; } }
+@media (min-width: 1300px) and (max-width: 1700px) {
+  .c_total_card {
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; } }
+@media (min-width: 900px) and (max-width: 1300px) {
+  .c_total_card {
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #007DCC; } }
+@media (min-width: 991px) and (max-width: 1800px) {
+  .c_titulo {
+    font-size: 15px; } }
 .cards {
   background: #ffffff;
   border-radius: 2px;
