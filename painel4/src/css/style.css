@@ -55,6 +55,36 @@ nav {
 .setor_espacamento {
   padding-right: 0 !important; }
 
+.icon_mobile_menu {
+  padding-right: 10px; }
+
+@media (max-width: 920px) {
+  #titulo_do_setor {
+    font-family: Montserrat, sans-serif;
+    font-size: 17px !important;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 53px !important; }
+
+  .logo {
+    font-family: Montserrat, sans-serif;
+    font-size: 17px !important;
+    font-weight: 300;
+    color: #ffffff;
+    margin-left: 4%;
+    line-height: 53px; }
+    .logo b {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px !important;
+      font-weight: 300;
+      color: #ffffff; }
+
+  .drop_topo {
+    font-family: Montserrat, sans-serif;
+    font-size: 17px !important;
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 53px; } }
 .open {
   height: 94%;
   width: 22px;
@@ -109,6 +139,10 @@ nav {
 .logo-sidenav {
   width: 109%; }
 
+.sair {
+  position: absolute !important;
+  bottom: 112px !important; }
+
 .dados_consolidados {
   background: #ffffff;
   border-bottom: 2px solid #f1f1f1; }
@@ -127,18 +161,6 @@ nav {
     font-weight: 400;
     color: #007DCC; }
 
-@media (max-width: 920px) {
-  .bg-consolidado p {
-    font-family: Montserrat, sans-serif;
-    font-size: 9px;
-    font-weight: 400;
-    color: #7a7a7a; }
-  .bg-consolidado h4 {
-    line-height: 0.4;
-    font-family: Montserrat, sans-serif;
-    font-size: 23px;
-    font-weight: 400;
-    color: #007DCC; } }
 .fluxo3 {
   font-family: Montserrat, sans-serif;
   font-size: 15px;
@@ -186,6 +208,57 @@ nav {
   padding-top: 13px;
   cursor: pointer; }
 
+@media (max-width: 920px) {
+  .bg-consolidado p {
+    font-family: Montserrat, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    color: #7a7a7a; }
+  .bg-consolidado h4 {
+    line-height: 0.4;
+    font-family: Montserrat, sans-serif;
+    font-size: 23px;
+    font-weight: 400;
+    color: #007DCC; }
+
+  .fluxo-1 li {
+    line-height: 1;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #007DCC;
+    cursor: pointer; }
+  .fluxo-1 span {
+    white-space: nowrap;
+    line-height: 0.8;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #868686; }
+
+  .fluxo-2 li {
+    line-height: 1.2;
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #007DCC;
+    cursor: pointer; }
+  .fluxo-2 span {
+    white-space: nowrap;
+    line-height: 0.8;
+    font-family: Montserrat, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    color: #868686; }
+
+  .fluxo3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #7a7a7a; }
+
+  .tamanho_da_linha_titulo_fluxo {
+    line-height: 0.7; } }
 .conteudo {
   padding: 1% 4% !important; }
 
@@ -202,6 +275,9 @@ nav {
 
   .espacamento {
     margin-top: 12%; } }
+@media (min-width: 900px) and (max-width: 1700px) {
+  .conteudo {
+    padding-top: 40px !important; } }
 /* Ipad Pro */
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
   .espacamento {
@@ -231,15 +307,47 @@ nav {
   .tabs .indicator {
     background: #007DCC; }
 
-@media (max-width: 920px) {
-  .qtd_pag {
-    display: none; } }
 .indicator {
   display: none; }
 
 select {
   display: block; }
+  select titulo_do_setor_mobile {
+    display: none; }
 
+drop_topo .mobile {
+  display: block; }
+
+@media (max-width: 920px) {
+  .mobile {
+    display: none; }
+
+  .mobile2 {
+    display: block; }
+    .mobile2 a {
+      color: red !important; }
+
+  .qtd_pag {
+    display: none; }
+
+  html {
+    font-size: 13px; }
+
+  .dataTables_paginate paging_simple_numbers {
+    margin-bottom: 11px; }
+
+  table.dataTable thead th,
+  table.dataTable thead td {
+    border-bottom: none !important; }
+
+  table.responsive-table td {
+    min-height: 1.8em; }
+
+  .drop_topo {
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: #ffffff; } }
 .titulo_status {
   line-height: 0;
   margin: 11px;
@@ -352,7 +460,7 @@ select {
       color: #007DCC; } }
 .c_total_card {
   font-family: Montserrat, sans-serif;
-  font-size: 30px;
+  font-size: 30px ;
   font-weight: 300;
   color: #007DCC;
   letter-spacing: 4px; }
@@ -367,7 +475,43 @@ select {
 
 @media (max-width: 920px) {
   .c_total_card {
-    letter-spacing: 0; } }
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; } }
+@media (min-width: 1300px) and (max-width: 1700px) {
+  .c_total_card {
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #007DCC; } }
+@media (min-width: 900px) and (max-width: 1300px) {
+  .c_total_card {
+    letter-spacing: 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    color: #007DCC; }
+    .c_total_card b {
+      font-family: Montserrat, sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: #007DCC; } }
+@media (min-width: 991px) and (max-width: 1800px) {
+  .c_titulo {
+    font-size: 15px; } }
 .cards {
   background: #ffffff;
   border-radius: 2px;

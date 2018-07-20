@@ -4,6 +4,7 @@ chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', alteraTitulo
 
 function lista_de_setores(data) {
     var elem_drop = document.getElementById('setores_lista');
+    
     for (i = 0; i < data.length; i++) {
 
         var criaLI = document.createElement('li');
@@ -48,8 +49,9 @@ function alteraTitulodoSetor(data) {
                 titulo.innerHTML = '-';
                 titulo_aba.innerHTML = '-';
             } else {
-                titulo.innerHTML = ' Painel Consolidado ';
+                titulo.innerHTML = '   ';
             }
         }
     }
 }
+

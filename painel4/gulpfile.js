@@ -26,6 +26,8 @@ gulp.task('copy', ['clean'], function () {
         'src/css/**/*',
         'src/img/**/*',
         'src/php/**/*',
+        'src/**/*.html',
+        'src/templates/*',
     ], { "base": "src" })//o base mantem a estrutura
         .pipe(gulp.dest('dist'))
 })
@@ -36,6 +38,7 @@ gulp.task('copy', ['clean'], function () {
 gulp.task('html', function(){
     return gulp.src([
             './src/**/*.html',
+            './src/**/*.php',
         ])
         .pipe(include())
         .pipe(gulp.dest('./dist/'))
@@ -50,7 +53,7 @@ gulp.task('default', ['copy'], function(){
 
 
 
-gulp.task('serve',['default'], function () {
+gulp.task('serve',['copy'], function () {
     browserSync.init({
         server: {
             baseDir: 'dist'
@@ -62,6 +65,7 @@ gulp.task('serve',['default'], function () {
     //monitora alteração caso sera alteradao reload o browser
  gulp.watch('./src/css/**/*.css', ['default'])
     gulp.watch('./src/**/*.html', ['default'])
+    gulp.watch('./src/**/*.php', ['default'])
     gulp.watch('./src/js/**/*', ['default'])
 })
 

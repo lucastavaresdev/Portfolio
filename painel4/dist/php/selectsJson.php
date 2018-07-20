@@ -67,6 +67,11 @@ count(distinct(a.nome_paciente)) as qtd_paciente
 FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.id  = " .$setor .  " order by  servico";
 
+$procedimentos = "SELECT 
+count(a.nome_paciente) as qtd_procedimentos
+FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.id  = " .$setor .  " order by  servico";
+
 //Consolidado
 $contagem_de_Pacientes_do_dia = "select count(paciente) as totaldePacientes from (
                                                           SELECT 
@@ -115,6 +120,8 @@ if($parametro === 'agendamentos_do_dia'){
   geraJson($contagem_de_Procedimento_do_dia, $conexao);
 }else if($parametro === 'consolidado_cards_com_dados'){
   geraJson($contagem_de_pacientes_por_setor, $conexao);
+}else if($parametro === 'qtd_procedimentos'){
+  geraJson($procedimentos, $conexao);
 }
  
 

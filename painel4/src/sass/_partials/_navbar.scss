@@ -34,3 +34,28 @@ nav {
 .setor_espacamento {
     padding-right: 0 !important;
 }
+
+.icon_mobile_menu{
+    padding-right: 10px;
+}
+@media (max-width: 920px){
+
+    #titulo_do_setor {
+        @include fontebase($monte-serrat, '17px !important', 300, $branco);
+        line-height: 53px !important;
+    }
+    .logo {
+        @include fontebase($monte-serrat, '17px !important', 300, $branco);
+        margin-left: 4%;
+        line-height: 53px;
+        b {
+            @include fontebase($monte-serrat, '17px !important', 300, $branco);
+        }
+    }
+    .drop_topo{
+        @include fontebase($monte-serrat, '17px !important', 300, $branco);
+        line-height: 53px;
+
+    }
+
+}

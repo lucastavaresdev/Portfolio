@@ -14,17 +14,8 @@
     }
 }
 
-@media(max-width: 920px) {
-    .bg-consolidado {
-        p {
-            @include fontebase($monte-serrat, '9px', 400, darken($cinza, 50%));
-        }
-        h4 {
-            line-height: 0.4;
-            @include fontebase($monte-serrat, '23px', 400, $cor-primaria);
-        }
-    }
-}
+
+
 
 .fluxo3 {
     @include fontebase($monte-serrat, '15px', 400, darken($cinza, 50%));
@@ -64,4 +55,55 @@
     @include fontebase($monte-serrat, '20px', 400, $cor-primaria);
     padding-top: 13px;
     cursor: pointer;
+}
+
+
+
+
+@media(max-width: 920px) {
+    .bg-consolidado {
+        p {
+            @include fontebase($monte-serrat, '9px', 400, darken($cinza, 50%));
+        }
+        h4 {
+            line-height: 0.4;
+            @include fontebase($monte-serrat, '23px', 400, $cor-primaria);
+        }
+    }
+    
+    .fluxo-1 {
+        li {
+            line-height: 1;
+            @include fontebase($monte-serrat, '17px', 400, $cor-primaria);
+            cursor: pointer;
+        }
+        span {
+            white-space: nowrap;
+            line-height: 0.8;
+            @include fontebase($monte-serrat, '12px', 400, darken($cinza, 45%));
+        }
+    }
+    
+    
+    .fluxo-2 {
+        li {
+            line-height: 1.2;
+            @include fontebase($monte-serrat, '12px', 400, $cor-primaria);
+            cursor: pointer;
+        }
+        span {
+            white-space: nowrap;
+            line-height: 0.8;
+            @include fontebase($monte-serrat, '9px', 400, darken($cinza, 45%));
+        }
+    }
+    
+    .fluxo3 {
+        @include fontebase($monte-serrat, '15px', 400, darken($cinza, 50%));
+    }
+    
+    .tamanho_da_linha_titulo_fluxo {
+        line-height: 0.7;
+    }
+    
 }
