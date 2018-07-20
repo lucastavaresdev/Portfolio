@@ -14,7 +14,7 @@
 <div class="col s12 conteudo espacamento">
     <div class="row">
         <div class="col s12 l3 c_centralizando">
-            <h1 class="c_titulo left c_agendamento">Painel Consolidado</h1>
+            <h1 class="c_titulo left c_agendamento">Consolidado</h1>
         </div>
         <div class="col s6 l4 center  ">
             <h1 class="c_titulo" id="con_data_atual">--/--/--</h1>
