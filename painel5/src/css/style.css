@@ -137,7 +137,9 @@ nav {
     height: 100%; }
 
 .logo-sidenav {
-  width: 109%; }
+  width: 109%;
+  margin-top: 30px;
+  margin-bottom: 13px; }
 
 .sair {
   position: absolute !important;
