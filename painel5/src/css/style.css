@@ -19,9 +19,9 @@ body {
     margin-top: 13%; } }
 nav {
   box-shadow: none;
-  background: #007DCC;
+  background: #225730;
   height: 50px;
-  border-bottom: solid 2px #005e99;
+  border-bottom: solid 2px #14321c;
   position: fixed;
   z-index: 1; }
   nav #titulo_do_setor {
@@ -98,7 +98,7 @@ nav {
   top: 51px; }
   .open .material-icons {
     padding-left: 4px;
-    color: #007DCC; }
+    color: #225730; }
 
 .close {
   height: 88.2%;
@@ -113,7 +113,7 @@ nav {
   box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.082); }
   .close .material-icons {
     padding-left: 4px;
-    color: #007DCC; }
+    color: #225730; }
 
 .open-a {
   transform: translateX(0);
@@ -159,7 +159,7 @@ nav {
     font-family: Montserrat, sans-serif;
     font-size: 39px;
     font-weight: 400;
-    color: #007DCC; }
+    color: #225730; }
 
 .fluxo3 {
   font-family: Montserrat, sans-serif;
@@ -175,7 +175,7 @@ nav {
   font-family: Montserrat, sans-serif;
   font-size: 30px;
   font-weight: 400;
-  color: #007DCC;
+  color: #225730;
   cursor: pointer; }
 .fluxo-1 span {
   white-space: nowrap;
@@ -190,7 +190,7 @@ nav {
   font-family: Montserrat, sans-serif;
   font-size: 20px;
   font-weight: 400;
-  color: #007DCC;
+  color: #225730;
   cursor: pointer; }
 .fluxo-2 span {
   white-space: nowrap;
@@ -204,7 +204,7 @@ nav {
   font-family: Montserrat, sans-serif;
   font-size: 20px;
   font-weight: 400;
-  color: #007DCC;
+  color: #225730;
   padding-top: 13px;
   cursor: pointer; }
 
@@ -219,14 +219,14 @@ nav {
     font-family: Montserrat, sans-serif;
     font-size: 23px;
     font-weight: 400;
-    color: #007DCC; }
+    color: #225730; }
 
   .fluxo-1 li {
     line-height: 1;
     font-family: Montserrat, sans-serif;
     font-size: 17px;
     font-weight: 400;
-    color: #007DCC;
+    color: #225730;
     cursor: pointer; }
   .fluxo-1 span {
     white-space: nowrap;
@@ -241,7 +241,7 @@ nav {
     font-family: Montserrat, sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: #007DCC;
+    color: #225730;
     cursor: pointer; }
   .fluxo-2 span {
     white-space: nowrap;
@@ -292,20 +292,20 @@ nav {
     font-family: Montserrat, sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: #007DCC; }
+    color: #225730; }
     .tabs .tab a {
       color: #7a7a7a; }
       .tabs .tab a.active {
         font-family: Montserrat, sans-serif;
         font-size: 14px;
         font-weight: 500;
-        color: #007DCC; }
+        color: #225730; }
       .tabs .tab a:hover {
-        color: #005e99; }
+        color: #14321c; }
       .tabs .tab a:focus.active {
-        background-color: rgba(0, 125, 204, 0.2); }
+        background-color: rgba(34, 87, 48, 0.2); }
   .tabs .indicator {
-    background: #007DCC; }
+    background: #225730; }
 
 .indicator {
   display: none; }
@@ -393,30 +393,30 @@ drop_topo .mobile {
   color: transparent; }
 
 .input-field label {
-  color: #007DCC; }
+  color: #225730; }
 
 /* label focus color */
 .input-field input[type=text]:focus + label {
-  color: #006db3; }
+  color: #1b4526; }
 
 /* label underline focus color */
 .input-field input[type=text]:focus {
-  border-bottom: 1px solid #007DCC;
-  box-shadow: 0 1px 0 0 #007DCC; }
+  border-bottom: 1px solid #225730;
+  box-shadow: 0 1px 0 0 #225730; }
 
 /* valid color */
 .input-field input[type=text].valid {
-  border-bottom: 1px solid #007DCC;
-  box-shadow: 0 1px 0 0 #007DCC; }
+  border-bottom: 1px solid #225730;
+  box-shadow: 0 1px 0 0 #225730; }
 
 /* invalid color */
 .input-field input[type=text].invalid {
-  border-bottom: 1px solid #007DCC;
-  box-shadow: 0 1px 0 0 #007DCC; }
+  border-bottom: 1px solid #225730;
+  box-shadow: 0 1px 0 0 #225730; }
 
 /* icon prefix focus color */
 .input-field .prefix.active {
-  color: #007DCC; }
+  color: #225730; }
 
 #setores ul {
   position: relative;
@@ -428,12 +428,12 @@ drop_topo .mobile {
   font-family: Montserrat, sans-serif;
   font-size: 25px;
   font-weight: 400;
-  color: #007DCC; }
+  color: #225730; }
   .c_titulo span {
     font-family: Montserrat, sans-serif;
     font-size: 18px;
     font-weight: 400;
-    color: #007DCC; }
+    color: #225730; }
 
 @media (max-width: 920px) {
   .c_centralizando {
@@ -443,13 +443,13 @@ drop_topo .mobile {
       font-family: Montserrat, sans-serif;
       font-size: 20px;
       font-weight: 600;
-      color: #007DCC; }
+      color: #225730; }
 
   .c_titulo {
     font-family: Montserrat, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    color: #007DCC;
+    color: #225730;
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: center !important; }
@@ -457,18 +457,18 @@ drop_topo .mobile {
       font-family: Montserrat, sans-serif;
       font-size: 14px;
       font-weight: 400;
-      color: #007DCC; } }
+      color: #225730; } }
 .c_total_card {
   font-family: Montserrat, sans-serif;
   font-size: 30px ;
   font-weight: 300;
-  color: #007DCC;
+  color: #225730;
   letter-spacing: 4px; }
   .c_total_card b {
     font-family: Montserrat, sans-serif;
     font-size: 30px;
     font-weight: 600;
-    color: #007DCC; }
+    color: #225730; }
 
 .c_linha_card_superior {
   margin-bottom: 0; }
@@ -479,36 +479,36 @@ drop_topo .mobile {
     font-family: Montserrat, sans-serif;
     font-size: 20px;
     font-weight: 300;
-    color: #007DCC; }
+    color: #225730; }
     .c_total_card b {
       font-family: Montserrat, sans-serif;
       font-size: 20px;
       font-weight: 600;
-      color: #007DCC; } }
+      color: #225730; } }
 @media (min-width: 1300px) and (max-width: 1700px) {
   .c_total_card {
     letter-spacing: 0;
     font-family: Montserrat, sans-serif;
     font-size: 20px;
     font-weight: 300;
-    color: #007DCC; }
+    color: #225730; }
     .c_total_card b {
       font-family: Montserrat, sans-serif;
       font-size: 20px;
       font-weight: 600;
-      color: #007DCC; } }
+      color: #225730; } }
 @media (min-width: 900px) and (max-width: 1300px) {
   .c_total_card {
     letter-spacing: 0;
     font-family: Montserrat, sans-serif;
     font-size: 17px;
     font-weight: 300;
-    color: #007DCC; }
+    color: #225730; }
     .c_total_card b {
       font-family: Montserrat, sans-serif;
       font-size: 17px;
       font-weight: 600;
-      color: #007DCC; } }
+      color: #225730; } }
 @media (min-width: 991px) and (max-width: 1800px) {
   .c_titulo {
     font-size: 15px; } }
