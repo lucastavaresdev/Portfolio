@@ -11,10 +11,14 @@ if(isset($_GET['setor'])){
 }
 
 
+//dashboard
+
+$setores = "SELECT id, nome, sigla FROM setores;";
+
 
 //parametro passado
 if($parametro === 'setores'){
-  geraJson($agendamentos_do_dia , $conexao );
+  geraJson($setores , $conexao );
 
  
 
