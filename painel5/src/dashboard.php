@@ -87,7 +87,7 @@
 
 <div class="row">
 <?php 
-    include './templates/status.html';
+  //  include './templates/status.html';
 ?>
 </div>
 
