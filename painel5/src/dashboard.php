@@ -60,15 +60,12 @@
                 <table id="tabela_pacientes" class="striped responsive-table">
                     <thead>
                         <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
                             <th>Hora</th>
-                            <th>Atividade</th>
-                            <th>IH</th>
-                            <th>Paciente</th>
-                            <th>Senha</th>
-                            <th>Serviço Atual</th>
-                            <th>Prox. Serviço</th>
-                            <th>Status</th>
-                            <th>Tp Esp(m)</th>
+                            <th>Procedimento</th>
+                            <th>Cirurgião</th>
+                            <th>Localização C.C</th>
                         </tr>
                     </thead>
                     <tbody id="listadePacientes">
@@ -85,20 +82,13 @@
 
 
 
-<div class="row">
-<?php 
-  //  include './templates/status.html';
-?>
-</div>
-
-
 
 </body>
 
 <?php 
    include './templates/frameworks.html';
 ?>
-<script src="./js/index.js"></script>
+<!-- <script src="./js/index.js"></script> -->
 
 
 <script>
