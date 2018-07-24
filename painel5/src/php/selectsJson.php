@@ -19,7 +19,7 @@ $altera_titulo_do_setor = "SELECT id, nome as nome_setor, sigla FROM setores whe
 
 $lista_de_pacientes_por_setor = "SELECT a.id,  a.Hora_cirurgia, a.Cirurgia, a.nm_paciente, a.Cirurgiao, a.Centro_Cirurgico, a.Sala_Cirurgia,s.id as id_da_sala, a.Observacao
                                                           FROM agendamento as a inner join setores as s on a.Sala_Cirurgia = s.nome
-                                                          where date_format(Hora_cirurgia,'%Y %M %D') = date_format(now(),'%Y %M %D') and s.id = 39
+                                                          where date_format(Hora_cirurgia,'%Y %M %D') = date_format(now(),'%Y %M %D') and s.id = $setor
                                                           group by nm_paciente";
 
 
@@ -52,7 +52,7 @@ if ($parametro === 'setores'){
         }
       }
     $json = json_encode($novo);
-   echo $json; 
+  echo $json; 
   }
 ?>
 

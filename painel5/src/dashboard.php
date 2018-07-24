@@ -66,6 +66,7 @@
                             <th>Procedimento</th>
                             <th>Cirurgião</th>
                             <th>Localização C.C</th>
+                            <th>Observação</th>
                         </tr>
                     </thead>
                     <tbody id="listadePacientes">
@@ -88,7 +89,7 @@
 <?php 
    include './templates/frameworks.html';
 ?>
-<!-- <script src="./js/index.js"></script> -->
+<script src="./js/index.js"></script> 
 
 
 <script>
