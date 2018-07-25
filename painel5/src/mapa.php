@@ -50,9 +50,6 @@
                 <li class="tab col s3">
                     <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                 </li>
-                <!-- <li class="tab col s3">
-                    <a href="#test2">Test 2</a>
-                </li> -->
             </ul>
 
             <div id="test1" class="col s12 tabela_bg">
