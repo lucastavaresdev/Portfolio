@@ -1,20 +1,15 @@
 
 
-chamadaAjax('php/selectsJson.php?parametro=paciente_do_dia', alterarQtdPaciente);
-chamadaAjax('php/selectsJson.php?parametro=procedimento_do_dia', alterarQtdProcedimentos);
+chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_consolidado', total_de_pacientes_consolidado);
+
+
 
 
 //cards com dados totais
-function alterarQtdPaciente(data, id_da_alteracao) {
+function total_de_pacientes_consolidado(data, id_da_alteracao) {
     var id = pergarId("con_agendados");
-    id.innerHTML = data[0].totaldePacientes;
+    id.innerHTML = data[0].total_de_pacientes;
 }
-
-function alterarQtdProcedimentos(data, id_da_alteracao) {
-    var id = pergarId("con_procedimento");
-    id.innerHTML = data[0].total_procedimento;
-}
-
 
 function pergarId(id_da_alteracao) {
     var id = document.getElementById(id_da_alteracao);
@@ -23,7 +18,6 @@ function pergarId(id_da_alteracao) {
 
 
 //cards por setor
-
 chamadaAjax('php/selectsJson.php?parametro=consolidado_cards_com_dados', setores);
 
 function setores(data) {

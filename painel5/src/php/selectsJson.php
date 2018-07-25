@@ -26,7 +26,11 @@ $total_de_pacientes = "SELECT count(distinct(nm_paciente)) as total_de_pacientes
                                                           where date_format(Hora_cirurgia,'%Y %M %D') = date_format(now(),'%Y %M %D') and s.id = $setor";
 
 
+//selects Consolidado
 
+$total_de_pacientes_consolidado = "SELECT count(distinct(nm_paciente)) as total_de_pacientes
+                                                                FROM agendamento as a inner join setores as s on a.Sala_Cirurgia = s.nome
+                                                                where date_format(Hora_cirurgia,'%Y %M %D') = date_format(now(),'%Y %M %D')";
 
 
 
@@ -39,6 +43,8 @@ if ($parametro === 'setores'){
   geraJson($lista_de_pacientes_por_setor, $conexao);
 }else if($parametro === 'total_de_pacientes'){
   geraJson($total_de_pacientes, $conexao);
+}else if($parametro === 'total_de_pacientes_consolidado'){
+  geraJson($total_de_pacientes_consolidado, $conexao);
 }
 
 
