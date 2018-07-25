@@ -9,36 +9,50 @@
 
 
     chamadaAjax(`php/selectsJson.php?parametro=lista&${parametrosDaUrl}`, lista_de_pacientes);
+    chamadaAjax(`php/selectsJson.php?parametro=total_de_pacientes&${parametrosDaUrl}`, total_de_pacientes);
 })();
-
-
 
 
 
 function lista_de_pacientes(data) {
     console.log(data);
-     var tbody = document.getElementById("listadePacientes");
-     if (tbody) {
-         for (i = 0; i < data.length; i++) {
-             var tr = document.createElement('tr');
+    var tbody = document.getElementById("listadePacientes");
+    if (tbody) {
+        for (i = 0; i < data.length; i++) {
+            var tr = document.createElement('tr');
 
             var cols =
                 '<td>' + data[i].id + '</td>'
-                 + '<td>' + data[i].nm_paciente + '</td>'
-                 + '<td>' + data[i].Hora_cirurgia + '</td>'
-                 + '<td>' + data[i].Cirurgia + '</td>'
-                 + '<td>' + data[i].Cirurgiao + '</td>'
-                 + '<td>' + data[i].Centro_Cirurgico + '</td>'
-                 + '<td>' + data[i].Observacao + '</td>'
-    
-             var linha = tr.innerHTML = cols;
-             tbody.innerHTML += linha;
+                + '<td>' + data[i].nm_paciente + '</td>'
+                + '<td>' + data[i].Hora_cirurgia + '</td>'
+                + '<td>' + data[i].Cirurgia + '</td>'
+                + '<td>' + data[i].Cirurgiao + '</td>'
+                + '<td>' + data[i].Centro_Cirurgico + '</td>'
+                + '<td>' + data[i].Observacao + '</td>'
+
+            var linha = tr.innerHTML = cols;
+            tbody.innerHTML += linha;
         }
-//         data_table()
-     }
- }
+        //         data_table()
+    }
+}
 
 
+function total_de_pacientes(data) {
+    var html = "";
+    
+    elem = document.getElementById('agendimentos_do_dia');
+    if (elem) {
+        var total_de_pacientes = data[0].total_de_pacientes;
+        if (typeof total_de_pacientes === 0 || typeof total_de_pacientes === "qtd_agendamentos_do_dia") {
+            console.log("verificar o json ou query nos selects.php");
+        } else {
+            html += '<span>' + total_de_pacientes + '</span>';
+        }
+
+        elem.innerHTML = html;
+    }
+}
 
 
 
@@ -69,7 +83,7 @@ function lista_de_pacientes(data) {
 //     chamadaAjax(`php/selectsJson.php?parametro=qtd_por_setor&${parametrosDaUrl}`, agendamentos_do_dia_por_setor);
 //     chamadaAjax(`php/selectsJson.php?parametro=qtd_procedimentos&${parametrosDaUrl}`, qtd_procedimentos);
 //     chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
-   
+
 //     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
 // })();
 
@@ -78,7 +92,7 @@ function lista_de_pacientes(data) {
 //     var elem = document.getElementById('qtd_procedimentos');
 
 //     var qtd_procedimentos = data[0].qtd_procedimentos;
-    
+
 //     elem.innerHTML = qtd_procedimentos;
 
 
@@ -86,28 +100,6 @@ function lista_de_pacientes(data) {
 // }
 
 
-// function lista_de_pacientes(data) {
-//     var tbody = document.getElementById("listadePacientes");
-//     if (tbody) {
-//         for (i = 0; i < data.length; i++) {
-//             var tr = document.createElement('tr');
-
-//             var cols =
-//                 '<td>' + data[i].hora + '</td>'
-//                 + '<td>' + data[i].atividade + '</td>'
-//                 + '<td>' + data[i].IH + '</td>'
-//                 + '<td>' + data[i].paciente + '</td>'
-//                 + '<td>' + ' - ' + '</td>'
-//                 + '<td>' + data[i].servico_atual + '</td>'
-//                 + '<td>' + data[i].proximo_servico + '</td>'
-//                 + `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>`
-//                 + '<td>' + ' - ' + '</td>';
-//             var linha = tr.innerHTML = cols;
-//             tbody.innerHTML += linha;
-//         }
-//         data_table()
-//     }
-// }
 
 
 // function data_table() {
@@ -165,21 +157,3 @@ function lista_de_pacientes(data) {
 //     classouid.innerHTML = resultado;
 // }
 
-// function agendamentos_do_dia_por_setor(data) {
-//     var html = "";
-    
-//     elem = document.getElementById('agendimentos_do_dia');
-//     elem1 = document.getElementById('atendimentos_total');
-//     if(elem1 && elem){
-//     var qtd_agendamentos_do_dia = data[0].qtd_paciente;
-
-//     if (typeof qtd_agendamentos_do_dia === 0 || typeof qtd_agendamentos_do_dia === "qtd_agendamentos_do_dia") {
-//         console.log("verificar o json ou query nos selects.php");
-//     } else {
-//         html += '<span>' + qtd_agendamentos_do_dia + '</span>';
-//     }
-
-//     elem.innerHTML = html;
-//     elem1.innerHTML = html;
-// }
-// }

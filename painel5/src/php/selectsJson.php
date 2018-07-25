@@ -13,7 +13,6 @@ if(isset($_GET['setor'])){
 
 //selects dashboard
 
-//drop com a lista dos setores
 $select_dos_setores = "SELECT id, nome as nome_setor, sigla FROM setores";
 $altera_titulo_do_setor = "SELECT id, nome as nome_setor, sigla FROM setores where id = $setor";
 
@@ -21,6 +20,10 @@ $lista_de_pacientes_por_setor = "SELECT a.id,  a.Hora_cirurgia, a.Cirurgia, a.nm
                                                           FROM agendamento as a inner join setores as s on a.Sala_Cirurgia = s.nome
                                                           where date_format(Hora_cirurgia,'%Y %M %D') = date_format(now(),'%Y %M %D') and s.id = $setor
                                                           group by nm_paciente";
+
+$total_de_pacientes = "SELECT count(distinct(nm_paciente)) as total_de_pacientes
+                                                          FROM agendamento as a inner join setores as s on a.Sala_Cirurgia = s.nome
+                                                          where date_format(Hora_cirurgia,'%Y %M %D') = date_format(now(),'%Y %M %D') and s.id = $setor";
 
 
 
@@ -34,6 +37,8 @@ if ($parametro === 'setores'){
   geraJson($altera_titulo_do_setor, $conexao);
 }else if($parametro === 'lista'){
   geraJson($lista_de_pacientes_por_setor, $conexao);
+}else if($parametro === 'total_de_pacientes'){
+  geraJson($total_de_pacientes, $conexao);
 }
 
 
