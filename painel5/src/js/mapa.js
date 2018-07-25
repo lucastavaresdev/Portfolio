@@ -18,8 +18,8 @@ function lista_de_pacientes(data) {
       
 
             var cols =
-                '<td>' + data[i].sala + '</td>'
-                + '<td>' + hora + '</td>'
+                 '<td>' + hora + '</td>'
+                + '<td>' + data[i].sala + '</td>'
                 + '<td>' + data[i].nm_paciente + '</td>'
                 + '<td>' + data[i].Cirurgia + '</td>'
                 + '<td>' + data[i].Cirurgiao + '</td>'

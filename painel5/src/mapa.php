@@ -47,9 +47,7 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s3">
-                    <a id="aba_nome_setor" class="active" href="#test1"> - </a>
-                </li>
+
             </ul>
 
             <div id="test1" class="col s12 tabela_bg">
@@ -57,8 +55,8 @@
                 <table id="tabela_pacientes" class="striped responsive-table">
                     <thead>
                         <tr>
-                            <th>Sala</th>
                             <th>Hora</th>
+                            <th>Sala</th>
                             <th>Nome</th>
                             <th>Procedimento</th>
                             <th>Cirurgião</th>
