@@ -35,10 +35,10 @@ $total_de_pacientes_consolidado = "SELECT count(distinct(nm_paciente)) as total_
 
 //selects Consolidado
 
-$lista_total = "SELECT a.id,  a.Hora_cirurgia, a.Cirurgia, a.nm_paciente, a.Cirurgiao, a.Centro_Cirurgico, a.Sala_Cirurgia,s.id as id_da_sala, a.Observacao
-                                                          FROM agendamento as a inner join setores as s on a.Sala_Cirurgia = s.nome
-                                                          where date_format(Hora_cirurgia,'%Y %M %D') = date_format(now(),'%Y %M %D')
-                                                          group by nm_paciente";
+$lista_total = "SELECT right(Sala_Cirurgia, 1) as sala, Hora_cirurgia as data,date_format(Hora_cirurgia,'%k:%i') as hora, nm_paciente, Cirurgia, Cirurgiao, Anestesista, convenio
+                         FROM agendamento as a inner join setores as s on a.Sala_Cirurgia = s.nome
+                         where date_format(Hora_cirurgia,'%Y %M %D') = date_format(now(),'%Y %M %D')
+                         group by nm_paciente order by data asc";
 
 
 

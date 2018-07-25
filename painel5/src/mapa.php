@@ -57,13 +57,14 @@
                 <table id="tabela_pacientes" class="striped responsive-table">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Nome</th>
+                            <th>Sala</th>
                             <th>Hora</th>
+                            <th>Nome</th>
                             <th>Procedimento</th>
                             <th>Cirurgião</th>
-                            <th>Localização C.C</th>
-                            <th>Observação</th>
+                            <th>Anestesista</th>
+                            <th>Convenio</th>
+                            <th>Status</th>
                         </tr>
                     </thead>
                     <tbody id="listadePacientes">

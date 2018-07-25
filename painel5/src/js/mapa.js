@@ -9,14 +9,23 @@ function lista_de_pacientes(data) {
         for (i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
 
+            if(data[i].hora.length === 4){
+                hora = `0${data[i].hora}`;
+            }else{
+                hora = data[i].hora
+            }
+
+      
+
             var cols =
-                '<td>' + data[i].id + '</td>'
+                '<td>' + data[i].sala + '</td>'
+                + '<td>' + hora + '</td>'
                 + '<td>' + data[i].nm_paciente + '</td>'
-                + '<td>' + data[i].Hora_cirurgia + '</td>'
                 + '<td>' + data[i].Cirurgia + '</td>'
                 + '<td>' + data[i].Cirurgiao + '</td>'
-                + '<td>' + data[i].Centro_Cirurgico + '</td>'
-                + '<td>' + data[i].Observacao + '</td>'
+                + '<td>' + data[i].Anestesista + '</td>'
+                + '<td>' + data[i].convenio + '</td>'
+                + '<td> - </td>'
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
