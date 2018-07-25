@@ -34,6 +34,7 @@ $total_de_pacientes_consolidado = "SELECT count(distinct(nm_paciente)) as total_
 
 
 
+
 //parametro passado
 if ($parametro === 'setores'){
   geraJson($select_dos_setores, $conexao);
