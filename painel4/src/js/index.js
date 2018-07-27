@@ -15,11 +15,11 @@
 })();
 
 
-function qtd_procedimentos(data){
+function qtd_procedimentos(data) {
     var elem = document.getElementById('qtd_procedimentos');
 
     var qtd_procedimentos = data[0].qtd_procedimentos;
-    
+
     elem.innerHTML = qtd_procedimentos;
 
 
@@ -34,15 +34,15 @@ function lista_de_pacientes(data) {
             var tr = document.createElement('tr');
 
             var cols =
-                '<td>' + data[i].hora + '</td>'
-                + '<td>' + data[i].atividade + '</td>'
-                + '<td>' + data[i].IH + '</td>'
-                + '<td>' + data[i].paciente + '</td>'
-                + '<td>' + ' - ' + '</td>'
-                + '<td>' + data[i].servico_atual + '</td>'
-                + '<td>' + data[i].proximo_servico + '</td>'
-                + `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>`
-                + '<td>' + ' - ' + '</td>';
+                '<td>' + data[i].hora + '</td>' +
+                '<td>' + data[i].atividade + '</td>' +
+                '<td>' + data[i].IH + '</td>' +
+                '<td>' + data[i].paciente + '</td>' +
+                '<td>' + ' - ' + '</td>' +
+                '<td>' + data[i].servico_atual + '</td>' +
+                '<td>' + data[i].proximo_servico + '</td>' +
+                `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
+                '<td>' + ' - ' + '</td>';
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
         }
@@ -108,19 +108,19 @@ function atribuiHtml(classouid, resultado) {
 
 function agendamentos_do_dia_por_setor(data) {
     var html = "";
-    
+
     elem = document.getElementById('agendimentos_do_dia');
     elem1 = document.getElementById('atendimentos_total');
-    if(elem1 && elem){
-    var qtd_agendamentos_do_dia = data[0].qtd_paciente;
+    if (elem1 && elem) {
+        var qtd_agendamentos_do_dia = data[0].qtd_paciente;
 
-    if (typeof qtd_agendamentos_do_dia === 0 || typeof qtd_agendamentos_do_dia === "qtd_agendamentos_do_dia") {
-        console.log("verificar o json ou query nos selects.php");
-    } else {
-        html += '<span>' + qtd_agendamentos_do_dia + '</span>';
+        if (typeof qtd_agendamentos_do_dia === 0 || typeof qtd_agendamentos_do_dia === "qtd_agendamentos_do_dia") {
+            console.log("verificar o json ou query nos selects.php");
+        } else {
+            html += '<span>' + qtd_agendamentos_do_dia + '</span>';
+        }
+
+        elem.innerHTML = html;
+        elem1.innerHTML = html;
     }
-
-    elem.innerHTML = html;
-    elem1.innerHTML = html;
-}
 }
