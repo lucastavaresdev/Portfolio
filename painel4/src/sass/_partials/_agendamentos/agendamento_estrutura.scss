@@ -1,0 +1,44 @@
+.agendamento{
+    .espacamento{
+        margin-top: 5.5%;
+    }
+    .bordas{
+        border-radius: 7px;
+    }
+    
+}
+
+
+@media(max-width:600px){
+    .agendamento{
+        .espacamento{
+            margin-top: 17.5%;
+        }
+        .info{
+            margin-top: 15px;
+        }
+    }   
+}
+
+@media(min-width:601px) and (max-width:920px){
+    .agendamento{
+        .espacamento{
+            margin-top: 8.5%;
+        }
+        .info{
+            margin-top: 15px;
+        }
+    }   
+}
+
+
+
+
+.cor1{
+    background: rebeccapurple;
+    height: 350px;
+}
+.cor2{
+    background: red;
+    height: 350px;
+}
