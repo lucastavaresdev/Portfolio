@@ -424,6 +424,9 @@ drop_topo .mobile {
   width: 239px !important;
   height: 100%; }
 
+.links {
+  cursor: pointer !important; }
+
 .c_titulo {
   font-family: Montserrat, sans-serif;
   font-size: 25px;

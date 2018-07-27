@@ -8,13 +8,15 @@
 <!--tabela-->
 <div class="row">
     <div class="col s12 dados_consolidados">
-        <div class="col s12 conteudo bg-consolidado espacamento espacamento-do-topo">
-            <div class="col s4 l2">
-                <p>Agendamentos</p>
-                <h4 id="agendimentos_do_dia">
+        <div class="col s12 conteudo bg-consolidado espacamento">
+        <a  href="./agendamentos.php">    
+                <div class="col s4 l2 ">
+                    <p>Agendamentos</p>
+                    <h4 id="agendimentos_do_dia">
                     <span>0</span>
-                </h4>
-            </div>
+                    </h4>
+                </div>
+            </a>
             <div class="col s4 l2">
                 <p>Procedimentos</p>
                 <h4 id='qtd_procedimentos'> - </h4>
