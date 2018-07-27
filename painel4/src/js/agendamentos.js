@@ -10,7 +10,7 @@
 
 
 function lista_de_pacientes(data) {
-    var tbody = document.getElementById("listadePacientes");
+    var tbody = document.getElementById("listadePacientesagendamento");
     if (tbody) {
         for (i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
