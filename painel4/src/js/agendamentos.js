@@ -13,17 +13,17 @@ function cards_notificação(data) {
 
     var elem = document.getElementById('agendamemento_card_notificacao');
 
-    for (let i = 0; i < data.length; i++) {
+
+
+    for (let i = 0; i < 2; i++) {
         html += '<div class="card"> '
             + '<div class="card-content">'
-            + '<span class="card-title">' + data[i].paciente + '</span>'
-            + '<p>I am a very simple card. I am good at containing small bits of information.</p>'
+            + '<span class="card-title titulo ">' + data[i].paciente + '</span>'
+            + '<p class="cor-aviso">Paciente sem vinculo</p>'
             + '</div>'
             + '</div>';
     }
-
     elem.innerHTML = html;
-
 }
 
 

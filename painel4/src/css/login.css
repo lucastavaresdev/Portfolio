@@ -26,6 +26,9 @@ body {
 @media (max-device-width: 767px) {
   main {
     margin-top: 13%; } }
+.cor-aviso {
+  color: #E82C0C; }
+
 body {
   background-image: url("../img/bg_login.jpg");
   height: 100%;

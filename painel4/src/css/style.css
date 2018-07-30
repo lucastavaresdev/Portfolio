@@ -26,6 +26,9 @@ body {
 @media (max-device-width: 767px) {
   main {
     margin-top: 13%; } }
+.cor-aviso {
+  color: #E82C0C; }
+
 nav {
   box-shadow: none;
   background: #007DCC;
@@ -676,6 +679,49 @@ drop_topo .mobile {
   background: #f8fafc; }
 .agendamento table.dataTable.no-footer {
   border-bottom: none; }
+
+html,
+body {
+  position: relative;
+  height: 100%; }
+
+.agendamento {
+  position: relative; }
+  .agendamento #agendamemento_card_notificacao {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 0;
+    transition: background .3s ease-out .1s;
+    height: 700px; }
+    .agendamento #agendamemento_card_notificacao .titulo {
+      font-size: 17px; }
+    .agendamento #agendamemento_card_notificacao .card .card-content {
+      padding: 12px; }
+  .agendamento ::-webkit-scrollbar {
+    width: 10px; }
+  .agendamento ::-webkit-scrollbar-button {
+    display: none; }
+  .agendamento ::-webkit-scrollbar-track {
+    border-radius: 20px;
+    /* 3 */ }
+  .agendamento ::-webkit-scrollbar-track-piece {
+    border-radius: 20px;
+    background: none;
+    /* 4 */ }
+  .agendamento ::-webkit-scrollbar-thumb {
+    background: #ececec;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px; }
+  .agendamento ::-webkit-scrollbar-corner {
+    /* 6 */
+    background: fuchsia; }
+  .agendamento ::-webkit-resizer {
+    /* 7 */
+    background: springgreen; }
 
 #horas {
   margin-top: 2%; }
