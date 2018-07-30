@@ -1,6 +1,5 @@
 @import "./_variaveis.scss";
 @import "./_base.scss";
-
 @import "./_partials/_navbar.scss";
 @import "./_partials/_barra_open_close.scss";
 @import "./_partials/_sidebar.scss";
@@ -12,18 +11,9 @@
 @import "./_partials/_footer.scss";
 @import "./_partials/_drop_setores.scss";
 @import "./_partials/_links_barra_superior";
-
-
-
 @import "./_partials/_consolidado/_titulo.scss";
 @import "./_partials/_consolidado/_card_superior.scss";
 @import "./_partials/_consolidado/_cards.scss";
-
-
-
-
 @import "./_partials/_agendamentos/agendamento_estrutura.scss";
-
-
-
+@import "./_partials/_agendamentos/tabela.scss";
 @import "./_partials/_graficos/_horas.scss";
