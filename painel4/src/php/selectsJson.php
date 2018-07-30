@@ -99,6 +99,10 @@ $contagem_de_pacientes_por_setor = "SELECT a.codigo_servico_atual as id,s.servic
                                                                     where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by(codigo_servico_atual);";
 
 
+//agendamentos
+$notificacao = "SELECT * FROM notificacao;";
+
+
 //parametro passado
 if ($parametro === 'agendamentos_do_dia') {
     geraJson($agendamentos_do_dia, $conexao);
@@ -122,6 +126,8 @@ if ($parametro === 'agendamentos_do_dia') {
     geraJson($contagem_de_pacientes_por_setor, $conexao);
 } elseif ($parametro === 'qtd_procedimentos') {
     geraJson($procedimentos, $conexao);
+} elseif ($parametro === 'notificacao') {
+    geraJson($notificacao, $conexao);
 }
  
 

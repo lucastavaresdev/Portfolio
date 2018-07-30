@@ -1,5 +1,5 @@
 <?php 
-    include "./templates/header.php";
+         include "./templates/header.php";
            include "./templates/menu.html";
 ?>
 
@@ -46,18 +46,17 @@
 			</div>
 
 	</div>
-
-
-
-
 	</div>
 </section>
 
 
+
+
 <?php 
    include './templates/frameworks.html';
-?>
-<script src="./js/agendamentos.js"></script>
+   ?>
+   <script src="./js/agendamentos.js"></script>
+
 
 <script>
     $(document).ready(function () {
@@ -74,3 +73,4 @@
 
 <?php 
    include './templates/footer.html';
+   ?>
