@@ -4,10 +4,47 @@
     var parametrosDaUrl = url_atual.split("?")[1];
 
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
+    chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, cards_notificação);
 })();
 
 
+function cards_notificação(data) {
+    var html = ""
 
+    var elem = document.getElementById('agendamemento_card_notificacao');
+
+    for (let i = 0; i < data.length; i++) {
+        html += '<div class="card"> '
+            + '<div class="card-content">'
+            + '<span class="card-title">' + data[i].paciente + '</span>'
+            + '<p>I am a very simple card. I am good at containing small bits of information.</p>'
+            + '</div>'
+            + '</div>';
+    }
+
+    elem.innerHTML = html;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*================================================================================= */
+//tabela
 
 function lista_de_pacientes(data) {
     var tbody = document.getElementById("listadePacientesagendamento");
