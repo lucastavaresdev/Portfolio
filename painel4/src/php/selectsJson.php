@@ -4,10 +4,10 @@ require('./conexao.php');// REQUSIÇÃO DO BANCO
 
 $parametro =$_GET['parametro'];//PARAMETRO
 
-if(isset($_GET['setor'])){
-  $setor =$_GET['setor'];//PARAMETRO
-}else{
-  $setor = "";//PARAMETRO
+if (isset($_GET['setor'])) {
+    $setor =$_GET['setor'];//PARAMETRO
+} else {
+    $setor = "";//PARAMETRO
 }
 
 
@@ -28,7 +28,7 @@ GROUP BY HOUR(hora_servico_selecionado)";
 
 //este select traz o horario de maior valor porem se 2 horarios tiverem o mesma quantidade de pessoas ele lista os dois
 
-//o primeiro e o segundo select  traz a lista com todos os horarios e sua devida quantidade depois 3 e 4 select traz o valor com a maior hora detre todos e faz a comparação com o primeiro 
+//o primeiro e o segundo select  traz a lista com todos os horarios e sua devida quantidade depois 3 e 4 select traz o valor com a maior hora detre todos e faz a comparação com o primeiro
 
 $horario_de_maior_fluxo = "SELECT  qtd_por_hora, intervalo_de_horas  FROM (
                                                           SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00') as intervalo_de_horas, 
@@ -100,47 +100,48 @@ $contagem_de_pacientes_por_setor = "SELECT a.codigo_servico_atual as id,s.servic
 
 
 //parametro passado
-if($parametro === 'agendamentos_do_dia'){
-  geraJson($agendamentos_do_dia , $conexao );
-}else if($parametro === 'lista_dos_intevalos_por_hora_do_dia'){
-  geraJson($lista_dos_intevalos_por_hora_do_dia, $conexao);
-}else if($parametro === 'horario_de_maior_fluxo'){
-  geraJson($horario_de_maior_fluxo, $conexao);
-}else if($parametro === 'agendamentos_do_dia_por_setor'){
-  geraJson($agendamentos_do_dia_por_setor, $conexao);
-}else if($parametro === 'lista_de_setores'){
-  geraJson($select_dos_setores, $conexao);
-}else if($parametro === 'qtd_por_setor'){
-  geraJson($qtd_por_setor, $conexao);
-}else if($parametro === 'lista_do_setor'){
-  geraJson($lista_do_setor, $conexao);
-}else if($parametro === 'paciente_do_dia'){
-  geraJson($contagem_de_Pacientes_do_dia, $conexao);
-}else if($parametro === 'procedimento_do_dia'){
-  geraJson($contagem_de_Procedimento_do_dia, $conexao);
-}else if($parametro === 'consolidado_cards_com_dados'){
-  geraJson($contagem_de_pacientes_por_setor, $conexao);
-}else if($parametro === 'qtd_procedimentos'){
-  geraJson($procedimentos, $conexao);
+if ($parametro === 'agendamentos_do_dia') {
+    geraJson($agendamentos_do_dia, $conexao);
+} elseif ($parametro === 'lista_dos_intevalos_por_hora_do_dia') {
+    geraJson($lista_dos_intevalos_por_hora_do_dia, $conexao);
+} elseif ($parametro === 'horario_de_maior_fluxo') {
+    geraJson($horario_de_maior_fluxo, $conexao);
+} elseif ($parametro === 'agendamentos_do_dia_por_setor') {
+    geraJson($agendamentos_do_dia_por_setor, $conexao);
+} elseif ($parametro === 'lista_de_setores') {
+    geraJson($select_dos_setores, $conexao);
+} elseif ($parametro === 'qtd_por_setor') {
+    geraJson($qtd_por_setor, $conexao);
+} elseif ($parametro === 'lista_do_setor') {
+    geraJson($lista_do_setor, $conexao);
+} elseif ($parametro === 'paciente_do_dia') {
+    geraJson($contagem_de_Pacientes_do_dia, $conexao);
+} elseif ($parametro === 'procedimento_do_dia') {
+    geraJson($contagem_de_Procedimento_do_dia, $conexao);
+} elseif ($parametro === 'consolidado_cards_com_dados') {
+    geraJson($contagem_de_pacientes_por_setor, $conexao);
+} elseif ($parametro === 'qtd_procedimentos') {
+    geraJson($procedimentos, $conexao);
 }
  
 
  
 
 //retorna e exibe o json
-  function geraJson($select, $conexao){
-    $sql = $select;
-    $stmt = $conexao->prepare( $sql );
-    $stmt->execute();
-    $result = $stmt->fetchAll( PDO::FETCH_ASSOC );
-    $novo = array();
+  function geraJson($select, $conexao)
+  {
+      $sql = $select;
+      $stmt = $conexao->prepare($sql);
+      $stmt->execute();
+      $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      $novo = array();
       foreach ($result as $key => $value) {
-        foreach ($value as $k => $v) {
-          $novo[$key][$k] = $v;
-        }
+          foreach ($value as $k => $v) {
+              $novo[$key][$k] = $v;
+          }
       }
-    $json = json_encode($novo);
-   echo $json; 
+      $json = json_encode($novo);
+      echo $json;
   }
 ?>
 

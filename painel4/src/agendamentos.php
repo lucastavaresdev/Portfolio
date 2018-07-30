@@ -20,7 +20,7 @@
 				
 
 
-						<div id="test1" class="col s12 tabela_bg">
+						<div id="tabela_conteudo" class="col s12 tabela_bg">
 								<table id="tabela_pacientes" class="striped responsive-table">
 									<thead>
 										<tr>
@@ -28,9 +28,7 @@
 											<th>Atividade</th>
 											<th>IH</th>
 											<th>Paciente</th>
-											<th>Senha</th>
-											<th>Serviço Atual</th>
-											<th>Prox. Serviço</th>
+											<th>Localização</th>
 											<th>Status</th>
 											<th>Tp Esp(m)</th>
 										</tr>
@@ -45,9 +43,22 @@
             </div>
         </div>
 			<div class="col  s12 l3 info ">
-				<div class="cor2 bordas">1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam consequatur doloremque consequuntur , possimus ullam,
-					adipisci explicabo provident ad soluta totam repudiandae fugit doloribus, quidem voluptates tempore beatae iusto cum
-					laudantium.					
+				<div class="cor2 bordas">
+				
+				<div class="row">
+					<div class="col s12" id="agendamemento_card_notificacao">
+						<div class="card">
+								<div class="card-content">
+									<span class="card-title" id=''> </span>
+									<p>I am a very simple card. I am good at containing small bits of information.
+									I am convenient because I require little markup to use effectively.</p>
+								</div>
+						</div>
+					</div>
+				</div>
+								
+
+
 				</div>
 			</div>
 		</div>

@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700");
-h1, h2, h3, h4, h5, h6, p, a, div {
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div {
   font-family: "Montserrat", sans-serif; }
 
 body {
@@ -638,13 +647,35 @@ drop_topo .mobile {
     margin-top: 8.5%; }
   .agendamento .info {
     margin-top: 15px; } }
-.cor1 {
-  background: rebeccapurple;
-  height: 350px; }
-
-.cor2 {
-  background: red;
-  height: 350px; }
+.agendamento .tabela_bg {
+  padding: 21px !important; }
+.agendamento table {
+  border-radius: 7px !important;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  background: #007DCC; }
+  .agendamento table thead {
+    color: #ffffff; }
+    .agendamento table thead th {
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #ffffff; }
+.agendamento .dataTables_length {
+  margin-bottom: 30px; }
+.agendamento table.dataTable thead th {
+  padding: 10px 20px;
+  border-bottom: none; }
+.agendamento td,
+.agendamento th {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px; }
+.agendamento table.striped > tbody > tr:nth-child(odd) {
+  background: #f8fafc; }
+.agendamento table.dataTable.no-footer {
+  border-bottom: none; }
 
 #horas {
   margin-top: 2%; }
