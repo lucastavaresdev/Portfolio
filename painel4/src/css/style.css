@@ -726,6 +726,16 @@ body {
     /* 7 */
     background: springgreen; }
 
+.pacientes .topo {
+  margin-top: 60px; }
+.pacientes .titulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #007DCC;
+  text-align: center;
+  line-height: 21px !important; }
+
 #horas {
   margin-top: 2%; }
 

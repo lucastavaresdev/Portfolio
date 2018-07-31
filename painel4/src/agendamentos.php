@@ -6,15 +6,12 @@
 
 <section class="agendamento col s12 conteudo">
 	<div class="espacamento">
-
 		<div class="row">
 			<div class="col s12 left">
 				<h6>Agendamentos</h6>
 			</div>
 		</div>
-		
 	<div class="row ">
-
 		<div class="col s12 l9  ">
 			<div class="cor1 bordas">
 				<div id="tabela_conteudo" class="col s12 tabela_bg">
