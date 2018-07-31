@@ -6,9 +6,9 @@
 
 <section class="agendamento pacientes col s12 conteudo">
         
-        <div class="row topo">
-                <h1 class='center text-center titulo'>Atendimento</h1>
-        </div>
+        <div class="row topo"> 
+                <!-- <h1 class='center text-center titulo'>Atendimento</h1> -->
+        </div> 
         
         <div class="row">
                     <div class="row">
@@ -19,16 +19,13 @@
                                         <table id="tabela_pacientes" class="striped responsive-table">
                                             <thead>
                                                 <tr>
-                                                    <th>Hora</th>
-                                                    <th>Atividade</th>
                                                     <th>IH</th>
                                                     <th>Paciente</th>
                                                     <th>Localização</th>
                                                     <th>Status</th>
-                                                    <th>Tp Esp(m)</th>
                                                 </tr>
                                             </thead>
-                                                <tbody id="listadePacientesagendamento"></tbody>
+                                                <tbody id="lista_pacientes"></tbody>
                                         </table>
                                     </div>
                                 </div>
