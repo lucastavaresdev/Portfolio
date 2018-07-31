@@ -635,12 +635,10 @@ drop_topo .mobile {
 @media (max-width: 920px) {
   .cards .c_conteudo_card {
     left: 34% !important; } }
-.agendamento {
-  z-index: -1; }
-  .agendamento .espacamento {
-    margin-top: 2.5%; }
-  .agendamento .bordas {
-    border-radius: 7px; }
+.agendamento .espacamento {
+  margin-top: 2.5%; }
+.agendamento .bordas {
+  border-radius: 7px; }
 
 @media (max-width: 600px) {
   .agendamento .espacamento {
@@ -648,12 +646,13 @@ drop_topo .mobile {
   .agendamento .info {
     margin-top: 15px; } }
 @media (min-width: 601px) and (max-width: 920px) {
-  .agendamento {
-    z-index: -1; }
-    .agendamento .espacamento {
-      margin-top: 8.5%; }
-    .agendamento .info {
-      margin-top: 15px; } }
+  .agendamento .espacamento {
+    margin-top: 8.5%; }
+  .agendamento .info {
+    margin-top: 15px; } }
+.open {
+  z-index: 1; }
+
 .agendamento .tabela_bg {
   padding: 21px !important; }
 .agendamento table {
