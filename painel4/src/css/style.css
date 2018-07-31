@@ -97,8 +97,22 @@ nav {
     font-weight: 300;
     color: #ffffff;
     line-height: 53px; } }
+.ad .open {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 70%;
+  width: 55%;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity; }
+
 .open {
-  height: 94%;
+  height: 0%;
   width: 22px;
   position: fixed;
   display: flex;

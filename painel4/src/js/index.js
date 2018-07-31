@@ -42,7 +42,7 @@ function lista_de_pacientes(data) {
                 '<td>' + data[i].servico_atual + '</td>' +
                 '<td>' + data[i].proximo_servico + '</td>' +
                 `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
-                '<td>' + ' - ' + '</td>';
+                '<td>' + '<a class="waves-effect waves-light  modal-trigger" href="#asd"> <i class="material-icons">info_outline</i></a>' + '</td>';
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
         }

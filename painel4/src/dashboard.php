@@ -8,7 +8,7 @@
 
 <!--tabela-->
 <div class="row">
-    <div class="col s12 dados_consolidados">
+    <div class="  col s12 dados_consolidados">
         <div class="col s12 conteudo bg-consolidado espacamento">
        <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
                 <div class="col s4 l2">
@@ -45,7 +45,7 @@
 </div>
 
 
-<div class="col s12 conteudo">
+<div class="col s12 agendamento conteudo">
 
     <div class="row">
         <div class="col s12">
@@ -71,7 +71,7 @@
                             <th>Serviço Atual</th>
                             <th>Prox. Serviço</th>
                             <th>Status</th>
-                            <th>Tp Esp(m)</th>
+                            <th>Obs.</th>
                         </tr>
                     </thead>
                     <tbody id="listadePacientes">
@@ -88,6 +88,23 @@
 
 
 
+  <!-- Modal Trigger -->
+  
+
+  <!-- Modal Structure -->
+ <div class="ad">
+  <div id="asd" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+            <p>A bunch of tessssssssssssssssssssssssssssssssssssssssssssssssssssxt</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+  </div>
+
+
 <div class="row">
 <?php 
     include './templates/status.html';
@@ -102,6 +119,12 @@
    include './templates/frameworks.html';
 ?>
 <script src="./js/index.js"></script>
+
+  <script>
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+  </script>
 
 
 <script>

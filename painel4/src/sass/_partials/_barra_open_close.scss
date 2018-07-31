@@ -1,5 +1,5 @@
 .open {
-    height: 94%;
+    height: 0%;
     width: 22px;
     position: fixed;
     display: flex;
@@ -15,7 +15,7 @@
     }
 }
 
-.close{
+.close {
     height: 88.2%;
     width: 22px;
     position: fixed;
@@ -30,17 +30,14 @@
         padding-left: 4px;
         color: $cor-primaria;
     }
-
 }
 
-.open-a{
+.open-a {
     transform: translateX(0);
     transition: 400ms;
-
 }
 
-.open-b{
+.open-b {
     transform: translateX(-105%);
     transition: 400ms;
-
 }
