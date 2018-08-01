@@ -114,20 +114,8 @@ nav {
 
 /*Os !important são porque o open e da sidebar se nao tiver o quebrara o suncionamento de abrir e feclhar do menu*/
 .tamanho-barra {
-  height: 100% !important;
-  width: 22px !important; }
-
-.tamanho-modal {
-  height: 300px !important;
-  max-height: 50% !important;
-  width: 50%; }
-  .tamanho-modal .btn_modal {
-    margin-top: 111px !important;
-    margin-right: 10px !important; }
-
-.open {
   z-index: 0;
-  height: 0%;
+  height: 100%;
   width: 22px;
   position: fixed;
   display: flex;
@@ -137,10 +125,19 @@ nav {
   background: #ffffff;
   box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.082);
   top: 51px; }
-  .open .material-icons {
+  .tamanho-barra .material-icons {
     padding-left: 4px;
     color: #007DCC; }
 
+.tamanho-modal {
+  height: 300px !important;
+  max-height: 50% !important;
+  width: 50%; }
+  .tamanho-modal .btn_modal {
+    margin-top: 111px !important;
+    margin-right: 10px !important; }
+
+/*Os !important são porque o open e da sidebar se nao tiver o quebrara o suncionamento de abrir e feclhar do menu*/
 .close {
   height: 88.2%;
   width: 22px;
@@ -163,6 +160,10 @@ nav {
 .open-b {
   transform: translateX(-105%);
   transition: 400ms; }
+
+.datepicker-container {
+  width: 500px;
+  height: 500px; }
 
 .sidenav {
   width: 250px;

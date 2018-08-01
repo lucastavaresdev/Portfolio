@@ -53,9 +53,9 @@
                 <li class="tab col s3">
                     <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                 </li>
-                <!-- <li class="tab col s3">
-                    <a href="#test2">Test 2</a>
-                </li> -->
+                <li class="tab col s2 right ">
+                        <input type="text" class="datepicker right">
+                </li>
             </ul>
 
             <div id="test1" class="col s12 tabela_bg">
@@ -67,7 +67,7 @@
                             <th>Atividade</th>
                             <th>IH</th>
                             <th>Paciente</th>
-                            <th>Senha</th>
+                            <th>Localização</th>
                             <th>Serviço Atual</th>
                             <th>Prox. Serviço</th>
                             <th>Status</th>
@@ -119,6 +119,14 @@
    include './templates/frameworks.html';
 ?>
 <script src="./js/index.js"></script>
+
+<!--Calendario-->
+<script>
+
+    const Calender = document.querySelector('.datepicker');
+    M.Datepicker.init(Calender,{});
+</script>
+<!---->
 
   <script>
   $(document).ready(function(){
