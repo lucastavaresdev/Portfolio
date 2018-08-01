@@ -98,6 +98,9 @@ nav {
     font-weight: 300;
     color: #ffffff;
     line-height: 53px; } }
+.datepicker-modal {
+  overflow-x: hidden; }
+
 .datepicker-select {
   display: none; }
 
@@ -359,6 +362,9 @@ select {
 
 drop_topo .mobile {
   display: block; }
+
+.obs {
+  z-index: 0; }
 
 @media (max-width: 920px) {
   .mobile {

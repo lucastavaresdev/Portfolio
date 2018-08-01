@@ -42,6 +42,10 @@ drop_topo {
     }
 }
 
+.obs {
+    z-index: 0;
+}
+
 @media (max-width: 920px) {
     .mobile {
         display: none;
