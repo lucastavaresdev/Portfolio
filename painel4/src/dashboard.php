@@ -54,7 +54,7 @@
                     <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                 </li>
                 <li class="tab col s2 right ">
-                        <input type="text"  id="busque_data" class="datepicker right">
+                        <input type="text"  id="busque_data" class="datepicker right" placeholder="Busque por uma data">
                 </li>
             </ul>
 
@@ -99,7 +99,7 @@
             <p>A bunch of tessssssssssssssssssssssssssssssssssssssssssssssssssssxt</p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="btn_modal modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#!" class="btn_modal modal-close waves-effect waves-green btn-flat">OK</a>
     </div>
   </div>
   </div>
