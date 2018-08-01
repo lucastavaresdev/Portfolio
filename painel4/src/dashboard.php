@@ -124,7 +124,19 @@
 <script>
 
     const Calender = document.querySelector('.datepicker');
-    M.Datepicker.init(Calender,{});
+    M.Datepicker.init(Calender,{
+        format: 'dd-mm-yyyy',
+        autoClose: true,
+        isRTL: true,
+        i18n:{
+            months: ['Janeiro',  'Fevereiro',  'Março',  'Abril',  'Maio',  'Junho',  'Julho',  'Agosto',  'Setembro',  'Outubro',  'Novembro',  'Dezembro'],
+            monthsShort:	[ 'Jan',  'Fev',  'Mar',  'Abr',  'Mai',  'Jun',  'Jul',  'Ago',  'Set',  'Out', 'Nov',  'Dez'],
+            weekday: [ 'Domingo',  'Segunda',  'Terça',  'Quarta',  'Quinta',  'Sexta',  'Sabado' ],
+            weekdaysShort: [  'Dom',  'Seg',  'Ter',  'Qua',  'Qui',  'Sex',  'Sab'],
+            weekdaysAbbrev:	['D','S','T','Q','Q','S','S'],
+            cancel: 'Cancelar'
+        }
+    });
 </script>
 <!---->
 
