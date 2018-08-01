@@ -50,10 +50,10 @@
     <div class="row">
         <div class="col s12">
             <ul class="tabs">
-                <li class="tab col s3">
+                <li class="tab col s12 l3">
                     <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                 </li>
-                <li class="tab col s2 right ">
+                <li class="tab col s12 l2 right ">
                         <input type="text"  id="busque_data" class="datepicker right" placeholder="Busque por uma data">
                 </li>
             </ul>
