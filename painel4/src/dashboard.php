@@ -54,13 +54,13 @@
                     <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                 </li>
                 <li class="tab col s2 right ">
-                        <input type="text" class="datepicker right">
+                        <input type="text"  id="busque_data" class="datepicker right">
                 </li>
             </ul>
 
             <div id="test1" class="col s12 tabela_bg">
 
-                <table id="tabela_pacientes" class="striped responsive-table">
+                <table id="tabela_pacientes" class="striped responsive-table tabela-cor">
                     <thead>
                         <tr>
                             <th>Hora</th>
@@ -127,7 +127,6 @@
     M.Datepicker.init(Calender,{
         format: 'dd-mm-yyyy',
         autoClose: true,
-        isRTL: true,
         i18n:{
             months: ['Janeiro',  'Fevereiro',  'Março',  'Abril',  'Maio',  'Junho',  'Julho',  'Agosto',  'Setembro',  'Outubro',  'Novembro',  'Dezembro'],
             monthsShort:	[ 'Jan',  'Fev',  'Mar',  'Abr',  'Mai',  'Jun',  'Jul',  'Ago',  'Set',  'Out', 'Nov',  'Dez'],

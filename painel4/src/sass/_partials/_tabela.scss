@@ -31,7 +31,7 @@
 
 select {
     display: block;
-    titulo_do_setor_mobile {
+    .titulo_do_setor_mobile {
         display: none
     }
 }
@@ -41,8 +41,6 @@ drop_topo {
         display: block;
     }
 }
-
-
 
 @media (max-width: 920px) {
     .mobile {

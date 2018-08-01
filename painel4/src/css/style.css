@@ -98,6 +98,15 @@ nav {
     font-weight: 300;
     color: #ffffff;
     line-height: 53px; } }
+.datepicker-select {
+  display: none; }
+
+.datepicker-date-display {
+  background-color: #007DCC; }
+
+.modal-content.datepicker-container {
+  height: 30% !important; }
+
 .ad .open {
   display: none;
   position: fixed;
@@ -129,15 +138,6 @@ nav {
     padding-left: 4px;
     color: #007DCC; }
 
-.tamanho-modal {
-  height: 300px !important;
-  max-height: 50% !important;
-  width: 50%; }
-  .tamanho-modal .btn_modal {
-    margin-top: 111px !important;
-    margin-right: 10px !important; }
-
-/*Os !important são porque o open e da sidebar se nao tiver o quebrara o suncionamento de abrir e feclhar do menu*/
 .close {
   height: 88.2%;
   width: 22px;
@@ -354,7 +354,7 @@ nav {
 
 select {
   display: block; }
-  select titulo_do_setor_mobile {
+  select .titulo_do_setor_mobile {
     display: none; }
 
 drop_topo .mobile {
@@ -685,13 +685,13 @@ drop_topo .mobile {
 
 .agendamento .tabela_bg {
   padding: 21px !important; }
-.agendamento table {
+.agendamento .tabela-cor {
   border-radius: 7px !important;
   box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
   background: #007DCC; }
-  .agendamento table thead {
+  .agendamento .tabela-cor thead {
     color: #ffffff; }
-    .agendamento table thead th {
+    .agendamento .tabela-cor thead th {
       font-family: Montserrat, sans-serif;
       font-size: 15px;
       font-weight: 500;
