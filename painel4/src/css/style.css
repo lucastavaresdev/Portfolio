@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
 h1,
@@ -111,7 +112,21 @@ nav {
   border-radius: 2px;
   will-change: top, opacity; }
 
+/*Os !important são porque o open e da sidebar se nao tiver o quebrara o suncionamento de abrir e feclhar do menu*/
+.tamanho-barra {
+  height: 100% !important;
+  width: 22px !important; }
+
+.tamanho-modal {
+  height: 300px !important;
+  max-height: 50% !important;
+  width: 50%; }
+  .tamanho-modal .btn_modal {
+    margin-top: 111px !important;
+    margin-right: 10px !important; }
+
 .open {
+  z-index: 0;
   height: 0%;
   width: 22px;
   position: fixed;

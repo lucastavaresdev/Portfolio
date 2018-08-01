@@ -92,14 +92,14 @@
   
 
   <!-- Modal Structure -->
- <div class="ad">
-  <div id="asd" class="modal">
-    <div class="modal-content">
+ <div class="ad ">
+  <div id="asd" class="modal tamanho-modal">
+    <div class="modal-content ">
       <h4>Modal Header</h4>
             <p>A bunch of tessssssssssssssssssssssssssssssssssssssssssssssssssssxt</p>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      <a href="#!" class="btn_modal modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
   </div>
   </div>

@@ -1,4 +1,22 @@
+/*Os !important são porque o open e da sidebar se nao tiver o quebrara o suncionamento de abrir e feclhar do menu*/
+
+.tamanho-barra {
+    height: 100% !important;
+    width: 22px !important;
+}
+
+.tamanho-modal {
+    height: 300px !important;
+    max-height: 50% !important;
+    width: 50%;
+    .btn_modal {
+        margin-top: 111px !important;
+        margin-right: 10px !important;
+    }
+}
+
 .open {
+    z-index: 0;
     height: 0%;
     width: 22px;
     position: fixed;
