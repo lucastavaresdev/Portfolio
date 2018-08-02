@@ -216,7 +216,12 @@ nav {
     -ms-border-radius: 7px;
     -o-border-radius: 7px; }
     .dados_consolidados .dash_btn_superior:hover {
-      background: #ececec; }
+      background: #007DCC; }
+      .dados_consolidados .dash_btn_superior:hover p,
+      .dados_consolidados .dash_btn_superior:hover h4,
+      .dados_consolidados .dash_btn_superior:hover li,
+      .dados_consolidados .dash_btn_superior:hover span {
+        color: #ffffff; }
 
 .m-fluxo p {
   padding-top: 7px; }

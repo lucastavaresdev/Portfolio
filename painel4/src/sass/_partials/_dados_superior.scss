@@ -25,7 +25,13 @@
         -ms-border-radius: 7px;
         -o-border-radius: 7px;
         &:hover {
-            background: darken($cinza, 5%);
+            background: $cor-primaria;
+            p,
+            h4,
+            li,
+            span {
+                color: $branco;
+            }
         }
     }
 }
