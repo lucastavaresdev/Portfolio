@@ -262,11 +262,11 @@ nav {
 
 .p-msg {
   font-family: Montserrat, sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 400;
   color: #007DCC;
-  padding-top: 13px;
-  cursor: pointer; }
+  cursor: pointer;
+  line-height: 1.1; }
 
 @media (max-width: 920px) {
   .bg-consolidado p {

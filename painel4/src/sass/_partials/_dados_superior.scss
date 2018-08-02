@@ -71,9 +71,9 @@
 }
 
 .p-msg {
-    @include fontebase($monte-serrat, '20px', 400, $cor-primaria);
-    padding-top: 13px;
+    @include fontebase($monte-serrat, '19px', 400, $cor-primaria);
     cursor: pointer;
+    line-height: 1.1;
 }
 
 @media(max-width: 920px) {
