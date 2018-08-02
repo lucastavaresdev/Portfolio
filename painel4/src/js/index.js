@@ -88,9 +88,6 @@ function horarioComMaiorPacientes(data) {
         } else if (data.length === 1) {
             atribuiHtml(fluxodetempo, html);
             fluxodetempo.classList.add('fluxo-1');
-        } else if (data.length === 2) {
-            atribuiHtml(fluxodetempo, html);
-            fluxodetempo.classList.add('fluxo-2');
         } else {
             fluxodetempo.innerHTML = "Ver Lista de Pacientes"
             fluxodetempo.classList.add('p-msg');
