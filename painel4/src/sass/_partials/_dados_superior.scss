@@ -30,6 +30,12 @@
     }
 }
 
+.m-fluxo {
+    p {
+        padding-top: 7px;
+    }
+}
+
 .fluxo3 {
     @include fontebase($monte-serrat, '15px', 400, darken($cinza, 50%));
 }
@@ -41,7 +47,7 @@
 .fluxo-1 {
     li {
         line-height: 1;
-        @include fontebase($monte-serrat, '30px', 400, $cor-primaria);
+        @include fontebase($monte-serrat, '22px', 400, $cor-primaria);
         cursor: pointer;
     }
     span {

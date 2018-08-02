@@ -218,6 +218,9 @@ nav {
     .dados_consolidados .dash_btn_superior:hover {
       background: #ececec; }
 
+.m-fluxo p {
+  padding-top: 7px; }
+
 .fluxo3 {
   font-family: Montserrat, sans-serif;
   font-size: 15px;
@@ -230,7 +233,7 @@ nav {
 .fluxo-1 li {
   line-height: 1;
   font-family: Montserrat, sans-serif;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 400;
   color: #007DCC;
   cursor: pointer; }

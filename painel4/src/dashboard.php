@@ -39,7 +39,7 @@
                 
                 <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
                 <div class="col s4 l2 tamanho_da_linha_titulo_fluxo">
-                    <div class="sdash_btn_superior">
+                    <div class="dash_btn_superior m-fluxo">
                         <p>Maior Fluxo</p>
                         <ul id="fluxo"></ul>
                     </div>
