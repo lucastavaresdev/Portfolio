@@ -51,6 +51,7 @@ function lista_de_pacientes(data) {
 function data_table() {
     $(document).ready(function () {
         $('#tabela_pacientes').DataTable({
+            responsive: true,
             language: {
                 "lengthMenu": " Quantidade por Pagina _MENU_  ",
                 "zeroRecords": "Não encontrado pacientes",
@@ -68,8 +69,6 @@ function data_table() {
         });
     });
 }
-
-
 
 function horarioComMaiorPacientes(data) {
     var fluxodetempo = document.getElementById('fluxo');
