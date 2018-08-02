@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
 h1,
@@ -124,7 +123,6 @@ nav {
   border-radius: 2px;
   will-change: top, opacity; }
 
-/*Os !important são porque o open e da sidebar se nao tiver o quebrara o suncionamento de abrir e feclhar do menu*/
 .tamanho-barra {
   z-index: 0;
   height: 100%;
@@ -190,7 +188,8 @@ nav {
 
 .dados_consolidados {
   background: #ffffff;
-  border-bottom: 2px solid #f1f1f1; }
+  border-bottom: 2px solid #f1f1f1;
+  z-index: 5000px; }
   .dados_consolidados .bg-consolidado {
     padding-top: 1.5%;
     padding-button: 1.5%; }
@@ -205,6 +204,19 @@ nav {
     font-size: 39px;
     font-weight: 400;
     color: #007DCC; }
+  .dados_consolidados .dash_btn_superior {
+    width: 51%;
+    height: 18%;
+    border-radius: 7px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px; }
+    .dados_consolidados .dash_btn_superior:hover {
+      background: #ececec; }
 
 .fluxo3 {
   font-family: Montserrat, sans-serif;
@@ -471,10 +483,12 @@ drop_topo .mobile {
   z-index: 1055;
   width: 239px !important;
   height: 100%; }
+#setores .icon {
+  display: none; }
 
-.links {
-  cursor: pointer !important; }
-
+@media (max-width: 920px) {
+  #setores .icon {
+    display: block; } }
 .c_titulo {
   font-family: Montserrat, sans-serif;
   font-size: 25px;

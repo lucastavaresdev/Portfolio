@@ -5,44 +5,74 @@
 ?>
 
 
-
-<!--tabela-->
 <div class="row">
     <div class="  col s12 dados_consolidados">
         <div class="col s12 conteudo bg-consolidado espacamento">
-       <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
-                <div class="col s4 l2">
-                    <p>Agendamentos</p>
-                    <h4 id="agendimentos_do_dia">
-                    <span>0</span>
+            <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+                    <div class="col s4 l2">
+                        <div class="dash_btn_superior">
+                            <p>Agendamentos</p>
+                            <h4 id="agendimentos_do_dia">
+                            <span>0</span>
+                            </h4>
+                        </div>
+                    </div>
+                    <?php echo "</a>"?> 
+            <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+            <div class="col s4 l2">
+                <div class="dash_btn_superior">
+                    <p>Atendimentos</p>
+                    <h4>-/
+                        <span id="atendimentos_total">0</span>
                     </h4>
                 </div>
-       <?php echo "</a>"    ?>
-            <div class="col s4 l2">
-                <p>Procedimentos</p>
-                <h4 id='qtd_procedimentos'> - </h4>
             </div>
-            <div class="col s4 l2">
-                <p>Atendimentos</p>
-                <h4>-/
-                    <span id="atendimentos_total">0</span>
-                </h4>
-            </div>
-            <div class="col s4 l2 tamanho_da_linha_titulo_fluxo">
-                <p>Maior Fluxo</p>
-                <ul id="fluxo"></ul>
-            </div>
-            <div class="col s4 l2">
-                <p>Tempo de Exame</p>
-                <h4> - </h4>
-            </div>
-            <div class="col s4 l2">
-                <p>Qtd de pacientes atuais</p>
-                <h4> - </h4>
-            </div>
+            <?php echo "</a>"    ?>
+            <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+                <div class="col s4 l2">
+                    <div class="dash_btn_superior">
+                        <p>Procedimentos</p>
+                        <h4 id='qtd_procedimentos'> - </h4>
+                    </div>
+                </div>
+                <?php echo "</a>"?>
+                
+                <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+                <div class="col s4 l2 tamanho_da_linha_titulo_fluxo">
+                    <div class="sdash_btn_superior">
+                        <p>Maior Fluxo</p>
+                        <ul id="fluxo"></ul>
+                    </div>
+                </div>
+                <?php echo "</a>"?>
+                
+                <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+                    <div class="col s4 l2">
+                        <div class="dash_btn_superior">
+                        <p>Tempo de Sala</p>
+                        <h4> - </h4>
+                        </div>
+                    </div>
+                <?php echo "</a>"?>
+                <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+                    <div class="col s4 l2">
+                        <div class="dash_btn_superior">
+                        <p>Qtd de pacientes atuais</p>
+                        <h4> - </h4>
+                        </div>
+                    </div>
+                <?php echo "</a>"?>
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
+
 
 
 <div class="col s12 agendamento conteudo">

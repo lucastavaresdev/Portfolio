@@ -1,5 +1,3 @@
-/*Os !important são porque o open e da sidebar se nao tiver o quebrara o suncionamento de abrir e feclhar do menu*/
-
 .tamanho-barra {
     z-index: 0;
     height: 100%;
@@ -17,8 +15,6 @@
         color: $cor-primaria;
     }
 }
-
-.open {}
 
 .close {
     height: 88.2%;

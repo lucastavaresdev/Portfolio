@@ -5,4 +5,15 @@
         width: 239px !important;
         height: 100%;
     }
+    .icon {
+        display: none;
+    }
+}
+
+@media(max-width: 920px) {
+    #setores {
+        .icon {
+            display: block;
+        }
+    }
 }
