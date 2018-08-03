@@ -68,13 +68,6 @@
 
 
 
-
-
-
-
-
-
-
 <div class="col s12 agendamento conteudo">
 
     <div class="row">
@@ -103,6 +96,7 @@
                             <th>Status</th>
                             <th>Obs.</th>
                         </tr>
+                        
                     </thead>
                     <tbody id="listadePacientes">
 
@@ -115,8 +109,6 @@
 <!-- <div id="test2" class="col s12">Test 2</div> -->
 </div>
 </div>
-
-
 
   <!-- Modal Trigger -->
   
@@ -135,6 +127,8 @@
   </div>
 
 
+
+
 <div class="row">
 <?php 
     include './templates/status.html';
@@ -149,6 +143,8 @@
    include './templates/frameworks.html';
 ?>
 <script src="./js/index.js"></script>
+
+
 
 <!--Calendario-->
 <script>
