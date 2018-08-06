@@ -3,16 +3,7 @@
     include "./templates/menu.html";
     $setor = $_GET['setor'];
 ?>
-    <style>
-        td.details-control {
-            background: url('img/details_open.png') no-repeat center center;
-            cursor: pointer;
-        }
 
-        tr.shown td.details-control {
-            background: url('img/details_open.png') no-repeat center center;
-        }
-    </style>
 
 <div class="row">
     <div class="  col s12 dados_consolidados">

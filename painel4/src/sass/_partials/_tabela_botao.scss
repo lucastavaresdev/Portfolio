@@ -1,0 +1,8 @@
+td.details-control {
+    background: url('../img/circle-down.svg') no-repeat center center;
+    cursor: pointer;
+}
+
+tr.shown td.details-control {
+    background: url('../img/circle-up.svg') no-repeat center center;
+}

@@ -374,6 +374,13 @@ drop_topo .mobile {
     font-size: 10px;
     font-weight: 300;
     color: #ffffff; } }
+td.details-control {
+  background: url("../img/circle-down.svg") no-repeat center center;
+  cursor: pointer; }
+
+tr.shown td.details-control {
+  background: url("../img/circle-up.svg") no-repeat center center; }
+
 .titulo_status {
   line-height: 0;
   margin: 11px;
