@@ -3,7 +3,16 @@
     include "./templates/menu.html";
     $setor = $_GET['setor'];
 ?>
+    <style>
+        td.details-control {
+            background: url('img/details_open.png') no-repeat center center;
+            cursor: pointer;
+        }
 
+        tr.shown td.details-control {
+            background: url('img/details_open.png') no-repeat center center;
+        }
+    </style>
 
 <div class="row">
     <div class="  col s12 dados_consolidados">
@@ -81,30 +90,34 @@
                 </li>
             </ul>
 
-            <div id="test1" class="col s12 tabela_bg">
 
-                <table id="tabela_pacientes" class="striped responsive-table tabela-cor">
-                    <thead>
-                        <tr>
-                            <th>Hora</th>
-                            <th>Atividade</th>
-                            <th>IH</th>
-                            <th>Paciente</th>
-                            <th>Localização</th>
-                            <th>Serviço Atual</th>
-                            <th>Prox. Serviço</th>
-                            <th>Status</th>
-                            <th>Obs.</th>
-                        </tr>
-                        
-                    </thead>
-                    <tbody id="listadePacientes">
+                <div id="test1" class="col s12 tabela_bg">
+                       <table id="tabela_pacientes"  class="display striped responsive-table tabela-cor" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                      <th>Hora</th>
+                                      <th>Atividade</th>
+                                      <th>IH</th>
+                                      <th>Paciente</th>
+                                      <th>Localização</th>
+                                      <th>Serviço Atual</th>
+                                      <th>Prox. Serviço</th>
+                                       <th>Status</th>
+                                <th>Obs.</th>
 
-                    </tbody>
+                                </tr>
+                            </thead>
+
+                            <tbody id="listadePacientes">
+
+                            </tbody>
+
+                        </table>
+                </div>
             </div>
         </div>
     </div>
-    </table>
 </div>
 <!-- <div id="test2" class="col s12">Test 2</div> -->
 </div>
@@ -142,7 +155,6 @@
 <?php 
    include './templates/frameworks.html';
 ?>
-<script src="./js/index.js"></script>
 
 
 
@@ -184,6 +196,8 @@
         $('select').formSelect();
     });
 </script> 
+
+<script src="./js/index.js"></script>
 
 <?php 
    include './templates/footer.html';
