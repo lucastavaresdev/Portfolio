@@ -37,7 +37,7 @@ function lista_de_pacientes(data) {
                 '<td>' + data[i].proximo_servico + '</td>' +
                 `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
                 '<td>' + '<a class="obs waves-effect waves-light  modal-trigger" href="#asd"> <i class="material-icons">info_outline</i></a>' + '</td>';
-            //                 '<td>' + ' - ' + '</td>' +
+
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -70,7 +70,20 @@ function data_table(d) {
 
     $(document).ready(function () {
         var table = $('#tabela_pacientes').DataTable({
-
+            "language": {
+                "lengthMenu": " Quantidade por Pagina _MENU_  ",
+                "zeroRecords": "Não encontrado pacientes",
+                "info": "Total de Pagina _PAGE_ de _PAGES_",
+                "infoEmpty": " ",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "search": "Filtrar:",
+                "paginate": {
+                    "first": " ",
+                    "next": "Proxima",
+                    "previous": "Anterior",
+                    "last": " "
+                }
+            },
             "columns": [
                 {
                     "className": 'details-control',
@@ -90,6 +103,7 @@ function data_table(d) {
 
             ],
             "order": [[1, 'asc']]
+
         });
 
         // Add event listener for opening and closing details
@@ -113,33 +127,7 @@ function data_table(d) {
 
 
 
-// function lista_de_pacientes(data) {
-//     var tbody = document.getElementById("listadePacientes");
-//     if (tbody) {
 
-
-//         for (i = 0; i < data.length; i++) {
-//             var tr = document.createElement('tr');
-//             var cols =
-//                 '<td class="details-control"></td>' +
-//                 '<td>' + data[i].hora + '</td>' +
-//                 '<td>' + data[i].atividade + '</td>' +
-//                 '<td>' + data[i].IH + '</td>' +
-//                 '<td>' + data[i].paciente + '</td>' +
-//                 '<td>' + ' - ' + '</td>' +
-//                 '<td>' + data[i].servico_atual + '</td>' +
-//                 '<td>' + data[i].proximo_servico + '</td>' +
-//                 `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
-//                 '<td>' + '<a class="obs waves-effect waves-light  modal-trigger" href="#asd"> <i class="material-icons">info_outline</i></a>' + '</td>';
-
-//             var linha = tr.innerHTML = cols;
-//             tbody.innerHTML += linha;
-//             // format(data)
-//         }
-//         data_table(data)
-//     }
-//     //menuclicado()
-// }
 
 // function data_table() {
 //     $(document).ready(function () {
