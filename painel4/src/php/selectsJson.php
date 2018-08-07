@@ -57,7 +57,12 @@ a.ih_paciente as IH,
 a.servico_atual,
 s.servico as setor,
 a.proximo_servico,
-a.cod_cor_status
+a.cod_cor_status,
+a.descricao_exame,
+sexo_paciente as sexo,
+data_nascimento,
+nome_medico,
+crm_medico as crm
 FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and a.codigo_servico_atual = $setor order by hora";
 

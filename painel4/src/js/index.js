@@ -126,37 +126,6 @@ function data_table(d) {
 }
 
 
-
-
-
-// function data_table() {
-//     $(document).ready(function () {
-//         $('#tabela_pacientes').DataTable({
-//             responsive: true,
-//             language: {
-//                 "lengthMenu": " Quantidade por Pagina _MENU_  ",
-//                 "zeroRecords": "Não encontrado pacientes",
-//                 "info": "Total de Pagina _PAGE_ de _PAGES_",
-//                 "infoEmpty": " ",
-//                 "infoFiltered": "(filtered from _MAX_ total records)",
-//                 "search": "Filtrar:",
-//                 "paginate": {
-//                     "first": " ",
-//                     "next": "Proxima",
-//                     "previous": "Anterior",
-//                     "last": " "
-//                 }
-//             }
-//         });
-//     });
-// }
-
-
-
-
-
-
-
 function menuclicado() {
     var tabela = document.getElementById('listadePacientes');
     var linhas = tabela.getElementsByTagName('tr')
