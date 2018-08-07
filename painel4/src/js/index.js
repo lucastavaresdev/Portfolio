@@ -50,38 +50,33 @@ function lista_de_pacientes(data) {
 }
 
 
-
 function format(d) {
-    return '<div class="row">'
-        + '<div class=" col s5  a">'
-        + 'parei aqui'
-        + '</div> '
-        + '<div class="col s6 b">'
+    //debugger
+    var sexo = d.sexo;
+    console.log(sexo)
+    if (sexo === "F") {
+        sexo = "Feminino"
+    } else {
+        sexo = "Masculino"
+    }
 
+    return '<div class="row add_info">'
+        + '<div class=" col s5">'
+        + '<div class=" col s11 offset-s1">'
+        + '<p> Nome do Paciente: ' + d.paciente + '</p>'
+        + '<p> Atividade: ' + d.atividade + '</p>'
+        + '<p> Descrição do Exame: ' + d.descricao_exame + '</p>'
+        + '<p> Médico: ' + d.nome_medico + '   CRM:' + d.crm + ' </p>'
         + '</div> '
         + '</div> '
-
-
-    // return '<table>' +
-    //     '<tr>' +
-    //     '<td>Nome:</td>' +
-    //     '<td>' + d.paciente + '</td>' +
-    //     '<td>IH:</td>' +
-    //     '<td>' + d.IH + '</td>' +
-    //     '<td>Sexo:</td>' +
-    //     '<td>' + d.sexo + '</td>' +
-    //     '<td>Data de Nascimento:</td>' +
-    //     '<td>' + d.data_nascimento + '</td>' +
-    //     '</tr>' +
-    //     '<tr>' +
-    //     '<td>Nome do medico:</td>' +
-    //     '<td>' + d.nome_medico + '</td>' +
-    //     '<td>Nome do medico:</td>' +
-    //     '<td>' + d.crm + '</td>' +
-    //     '</tr>' +
-    //     '</tr>' +
-    //     '</table>';
+        + '<div class="col s6 ">'
+        + '<p> IH: ' + d.IH + '</p>'
+        + '<p> Sexo: ' + sexo + '</p>'
+        + '<p> Data de Nascimento: ' + d.data_nascimento + '</p>'
+        + '</div> '
+        + '</div> '
 }
+
 
 function data_table(d) {
     $(document).ready(function () {
@@ -138,14 +133,18 @@ function data_table(d) {
             var row = table.row(tr);
 
             if (row.child.isShown()) {
-                // This row is already open - close it
-                row.child.hide();
-                tr.removeClass('shown');
+                $('div.add_info', row.child()).slideUp(function () {
+                    row.child.hide();
+                    tr.removeClass('shown');
+                });
             }
             else {
                 // Open this row
+
                 row.child(format(row.data())).show();
                 tr.addClass('shown');
+
+                $('div.add_info', row.child()).slideDown();
             }
         });
     });

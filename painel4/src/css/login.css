@@ -32,14 +32,6 @@ body {
 .ocutar {
   display: none; }
 
-.a {
-  background: red;
-  height: 5px; }
-
-.b {
-  background: green;
-  height: 5px; }
-
 body {
   background-image: url("../img/bg_login.jpg");
   height: 100%;

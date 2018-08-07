@@ -32,14 +32,6 @@ body {
 .ocutar {
   display: none; }
 
-.a {
-  background: red;
-  height: 5px; }
-
-.b {
-  background: green;
-  height: 5px; }
-
 nav {
   box-shadow: none;
   background: #007DCC;
@@ -391,6 +383,12 @@ td.details-control {
 
 tr.shown td.details-control {
   background: url("../img/circle-up.svg") no-repeat center center; }
+
+div.add_info {
+  display: none; }
+
+table.dataTable tbody td.no-padding {
+  padding: 0; }
 
 .titulo_status {
   line-height: 0;

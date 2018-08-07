@@ -6,3 +6,11 @@ td.details-control {
 tr.shown td.details-control {
     background: url('../img/circle-up.svg') no-repeat center center;
 }
+
+div.add_info {
+    display: none;
+}
+
+table.dataTable tbody td.no-padding {
+    padding: 0;
+}
