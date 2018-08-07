@@ -30,7 +30,7 @@ body {
   color: #E82C0C; }
 
 .ocutar {
-  display: none; }
+  display: none !important; }
 
 nav {
   box-shadow: none;

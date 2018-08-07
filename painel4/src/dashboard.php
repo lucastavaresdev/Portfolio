@@ -79,34 +79,33 @@
             </ul>
 
                 <div id="test1" class="col s12 tabela_bg">
-                       <table id="tabela_pacientes"  class="display striped  tabela-cor" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                      <th>Hora</th>
-                                      <th>Atividade</th>
-                                      <th>IH</th>
-                                      <th>Paciente</th>
-                                      <th>Localização</th>
-                                      <th>Serviço Atual</th>
-                                      <th>Prox. Serviço</th>
-                                       <th>Status</th>
-                                       <th class="ocutar">Sexo</th>
-                                       <th class="ocutar">Data de Nascimento</th>
-                                       <th class="ocutar">Descricao Exame</th>
-                                       <th class="ocutar">Nome Medico</th>
-                                       <th class="ocutar">CRM</th>
-                                      <th>Obs.</th>
+                        <table id="tabela_pacientes"  class="responsive-table tabela-cor" style="width:100%" >
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Hora</th>
+                                        <th>Atividade</th>
+                                        <th>IH</th>
+                                        <th>Paciente</th>
+                                        <th>Localização</th>
+                                        <th>Serviço Atual</th>
+                                        <th>Prox. Serviço</th>
+                                        <th>Status</th>
+                                        <th class="ocutar">Sexo</th>
+                                        <th class="ocutar">Data de Nascimento</th>
+                                        <th class="ocutar">Descricao Exame</th>
+                                        <th class="ocutar">Nome Medico</th>
+                                        <th class="ocutar">CRM</th>
+                                        <th>Obs.</th>
 
-                                </tr>
-                            </thead>
+                                    </tr>
+                                </thead>
 
-                            <tbody id="listadePacientes">
+                                <tbody id="listadePacientes">
 
-                            </tbody>
+                                </tbody>
 
-                        </table>
-                </div>
+                            </table>
             </div>
         </div>
     </div>

@@ -81,6 +81,7 @@ function format(d) {
 function data_table(d) {
     $(document).ready(function () {
         var table = $('#tabela_pacientes').DataTable({
+            responsive: true,
             "language": {
                 "lengthMenu": " Quantidade por Pagina _MENU_  ",
                 "zeroRecords": "Não encontrado pacientes",
