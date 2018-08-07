@@ -94,7 +94,12 @@
                                       <th>Serviço Atual</th>
                                       <th>Prox. Serviço</th>
                                        <th>Status</th>
-                                <th>Obs.</th>
+                                       <th class="ocutar">Sexo</th>
+                                       <th class="ocutar">Data de Nascimento</th>
+                                       <th class="ocutar">Descricao Exame</th>
+                                       <th class="ocutar">Nome Medico</th>
+                                       <th class="ocutar">CRM</th>
+                                      <th>Obs.</th>
 
                                 </tr>
                             </thead>

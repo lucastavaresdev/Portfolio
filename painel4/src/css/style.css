@@ -29,6 +29,17 @@ body {
 .cor-aviso {
   color: #E82C0C; }
 
+.ocutar {
+  display: none; }
+
+.a {
+  background: red;
+  height: 5px; }
+
+.b {
+  background: green;
+  height: 5px; }
+
 nav {
   box-shadow: none;
   background: #007DCC;

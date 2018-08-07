@@ -13,9 +13,7 @@
 
 function qtd_procedimentos(data) {
     var elem = document.getElementById('qtd_procedimentos');
-
     var qtd_procedimentos = data[0].qtd_procedimentos;
-
     elem.innerHTML = qtd_procedimentos;
 }
 
@@ -36,38 +34,56 @@ function lista_de_pacientes(data) {
                 '<td>' + data[i].servico_atual + '</td>' +
                 '<td>' + data[i].proximo_servico + '</td>' +
                 `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
+                '<td class="ocutar">' + data[i].sexo + '</td>' +
+                '<td class="ocutar">' + data[i].data_nascimento + '</td>' +
+                '<td class="ocutar">' + data[i].descricao_exame + '</td>' +
+                '<td class="ocutar">' + data[i].nome_medico + '</td>' +
+                '<td class="ocutar">' + data[i].crm + '</td>' +
                 '<td>' + '<a class="obs waves-effect waves-light  modal-trigger" href="#asd"> <i class="material-icons">info_outline</i></a>' + '</td>';
 
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
-            format(data)
         }
-        data_table()
+        data_table(data)
     }
 }
 
 
 
 function format(d) {
-    return '<table>' +
-        '<tr>' +
-        '<td>Nome Completo:</td>' +
-        '<td>' + d.paciente + '</td>' +
-        '</tr>' +
-        '<tr>' +
-        '<td>Extension number:</td>' +
-        '<td>' + '-' + '</td>' +
-        '</tr>' +
-        '<tr>' +
-        '<td>Extra info:</td>' +
-        '<td>And any further details here (images etc)...</td>' +
-        '</tr>' +
-        '</table>';
+    return '<div class="row">'
+        + '<div class=" col s5  a">'
+        + 'parei aqui'
+        + '</div> '
+        + '<div class="col s6 b">'
+
+        + '</div> '
+        + '</div> '
+
+
+    // return '<table>' +
+    //     '<tr>' +
+    //     '<td>Nome:</td>' +
+    //     '<td>' + d.paciente + '</td>' +
+    //     '<td>IH:</td>' +
+    //     '<td>' + d.IH + '</td>' +
+    //     '<td>Sexo:</td>' +
+    //     '<td>' + d.sexo + '</td>' +
+    //     '<td>Data de Nascimento:</td>' +
+    //     '<td>' + d.data_nascimento + '</td>' +
+    //     '</tr>' +
+    //     '<tr>' +
+    //     '<td>Nome do medico:</td>' +
+    //     '<td>' + d.nome_medico + '</td>' +
+    //     '<td>Nome do medico:</td>' +
+    //     '<td>' + d.crm + '</td>' +
+    //     '</tr>' +
+    //     '</tr>' +
+    //     '</table>';
 }
 
 function data_table(d) {
-
     $(document).ready(function () {
         var table = $('#tabela_pacientes').DataTable({
             "language": {
@@ -99,11 +115,21 @@ function data_table(d) {
                 { 'data': "servico_atual" },
                 { 'data': "proximo_servico" },
                 { 'data': "cod_cor_status" },
-                { 'data': " " },
+                { 'data': "sexo" },
+                { 'data': "data_nascimento" },
+                { 'data': "descricao_exame" },
+                { 'data': "nome_medico" },
+                { 'data': "crm" },
 
             ],
-            "order": [[1, 'asc']]
-
+            "order": [[1, 'asc']],
+            "columnDefs": [
+                {
+                    "targets": [14],
+                    "visible": true,
+                    "searchable": false
+                }
+            ],
         });
 
         // Add event listener for opening and closing details
@@ -179,7 +205,6 @@ function agendamentos_do_dia_por_setor(data) {
         } else {
             html += '<span>' + qtd_agendamentos_do_dia + '</span>';
         }
-
         elem.innerHTML = html;
         elem1.innerHTML = html;
     }
