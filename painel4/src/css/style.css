@@ -213,7 +213,7 @@ nav {
     border-radius: 7px;
     cursor: pointer;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.7s ease;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     -ms-border-radius: 7px;
@@ -285,6 +285,16 @@ nav {
 
   .tamanho_da_linha_titulo_fluxo {
     line-height: 0.7; } }
+.fade-in {
+  opacity: 1;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .conteudo {
   padding: 1% 4% !important; }
 

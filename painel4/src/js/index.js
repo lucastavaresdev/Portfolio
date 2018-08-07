@@ -202,7 +202,7 @@ function agendamentos_do_dia_por_setor(data) {
         if (typeof qtd_agendamentos_do_dia === 0 || typeof qtd_agendamentos_do_dia === "qtd_agendamentos_do_dia") {
             console.log("verificar o json ou query nos selects.php");
         } else {
-            html += '<span>' + qtd_agendamentos_do_dia + '</span>';
+            html = '<span>' + qtd_agendamentos_do_dia + '</span>';
         }
         elem.innerHTML = html;
         elem1.innerHTML = html;
