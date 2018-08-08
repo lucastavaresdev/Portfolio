@@ -109,35 +109,36 @@
             </div>
         </div>
     </div>
+<div class="row">
+    <?php 
+        include './templates/status.html';
+    ?>
+</div>
 </div>
 <!-- <div id="test2" class="col s12">Test 2</div> -->
 </div>
 </div>
 
   <!-- Modal Trigger -->
+
   
 
   <!-- Modal Structure -->
- <div class="ad ">
-  <div id="asd" class="modal tamanho-modal">
-    <div class="modal-content ">
-      <h4>Modal Header</h4>
-            <p>A bunch of tessssssssssssssssssssssssssssssssssssssssssssssssssssxt</p>
+    <div class="ad ">
+        <div id="asd" class="modal tamanho-modal">
+            <div class="modal-content ">
+                <h4>Modal Header</h4>
+                <p>A bunch of tessssssssssssssssssssssssssssssssssssssssssssssssssssxt</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="btn_modal modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="btn_modal modal-close waves-effect waves-green btn-flat">OK</a>
-    </div>
-  </div>
-  </div>
 
 
 
 
-<div class="row">
-<?php 
-    include './templates/status.html';
-?>
-</div>
 
 
 
@@ -156,7 +157,7 @@
     const Calender = document.querySelector('.datepicker');
     M.Datepicker.init(Calender,{
         format: 'dd-mm-yyyy',
-        autoClose: true,
+        //autoClose: true,
         i18n:{
             months: ['Janeiro',  'Fevereiro',  'Março',  'Abril',  'Maio',  'Junho',  'Julho',  'Agosto',  'Setembro',  'Outubro',  'Novembro',  'Dezembro'],
             monthsShort:	[ 'Jan',  'Fev',  'Mar',  'Abr',  'Mai',  'Jun',  'Jul',  'Ago',  'Set',  'Out', 'Nov',  'Dez'],
@@ -166,6 +167,28 @@
             cancel: 'Cancelar'
         }
     });
+
+    
+
+    const btn_ok = document.querySelector('.btn-flat.datepicker-done.waves-effect');
+    var urlAtual = window.location; // pega a url da pagina
+    
+    btn_ok.addEventListener('click', function(){
+       let dataescolhida = Calender.value; //pega a data
+       dataescolhida  = dataescolhida.split('').reverse().join(''); //reverte a data
+//parei aqui
+        let url = window.location.pathname
+
+        let setor = url.searchParams("setor");
+        console.log(setor);
+   
+       window.location = url + '?setor=225'; //redireciona com o get data
+
+       
+        console.log(a)
+    })
+
+
 </script>
 <!---->
 
