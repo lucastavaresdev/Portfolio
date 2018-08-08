@@ -16,26 +16,26 @@
                 </h4>
             </div>
             <div class="col s4 l2">
-                <p>Procedimentos</p>
-                <h4 id='qtd_procedimentos'> - </h4>
+                <!-- <p>Procedimentos</p>
+                <h4 id='qtd_procedimentos'> - </h4> -->
             </div>
             <div class="col s4 l2">
-                <p>Atendimentos</p>
-                <h4>-/
+                <!-- <p>Atendimentos</p> -->
+                <!-- <h4>-/
                     <span id="atendimentos_total">0</span>
-                </h4>
+                </h4> -->
             </div>
             <div class="col s4 l2 tamanho_da_linha_titulo_fluxo">
-                <p>Maior Fluxo</p>
-                <ul id="fluxo"></ul>
+                <!-- <p>Maior Fluxo</p>
+                <ul id="fluxo"></ul> -->
             </div>
             <div class="col s4 l2">
-                <p>Tempo de Exame</p>
-                <h4> - </h4>
+                <!-- <p>Tempo de Exame</p>
+                <h4> - </h4> -->
             </div>
             <div class="col s4 l2">
-                <p>Qtd de pacientes atuais</p>
-                <h4> - </h4>
+                <!-- <p>Qtd de pacientes atuais</p>
+                <h4> - </h4> -->
             </div>
         </div>
     </div>
@@ -60,15 +60,13 @@
                 <table id="tabela_pacientes" class="striped responsive-table">
                     <thead>
                         <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
                             <th>Hora</th>
-                            <th>Atividade</th>
-                            <th>IH</th>
-                            <th>Paciente</th>
-                            <th>Senha</th>
-                            <th>Serviço Atual</th>
-                            <th>Prox. Serviço</th>
-                            <th>Status</th>
-                            <th>Tp Esp(m)</th>
+                            <th>Procedimento</th>
+                            <th>Cirurgião</th>
+                            <th>Localização C.C</th>
+                            <th>Observação</th>
                         </tr>
                     </thead>
                     <tbody id="listadePacientes">
@@ -85,20 +83,13 @@
 
 
 
-<div class="row">
-<?php 
-    include './templates/status.html';
-?>
-</div>
-
-
 
 </body>
 
 <?php 
    include './templates/frameworks.html';
 ?>
-<script src="./js/index.js"></script>
+<script src="./js/index.js"></script> 
 
 
 <script>

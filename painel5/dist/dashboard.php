@@ -85,20 +85,13 @@
 
 
 
-<div class="row">
-<?php 
-    include './templates/status.html';
-?>
-</div>
-
-
 
 </body>
 
 <?php 
    include './templates/frameworks.html';
 ?>
-<script src="./js/index.js"></script>
+<!-- <script src="./js/index.js"></script> -->
 
 
 <script>

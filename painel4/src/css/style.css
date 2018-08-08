@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700");
-h1, h2, h3, h4, h5, h6, p, a, div {
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div {
   font-family: "Montserrat", sans-serif; }
 
 body {
@@ -17,6 +26,12 @@ body {
 @media (max-device-width: 767px) {
   main {
     margin-top: 13%; } }
+.cor-aviso {
+  color: #E82C0C; }
+
+.ocutar {
+  display: none !important; }
+
 nav {
   box-shadow: none;
   background: #007DCC;
@@ -85,8 +100,35 @@ nav {
     font-weight: 300;
     color: #ffffff;
     line-height: 53px; } }
-.open {
-  height: 94%;
+.datepicker-modal {
+  overflow-x: hidden; }
+
+.datepicker-select {
+  display: none; }
+
+.datepicker-date-display {
+  background-color: #007DCC; }
+
+.modal-content.datepicker-container {
+  height: 30% !important; }
+
+.ad .open {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 70%;
+  width: 55%;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity; }
+
+.tamanho-barra {
+  z-index: 0;
+  height: 100%;
   width: 22px;
   position: fixed;
   display: flex;
@@ -96,7 +138,7 @@ nav {
   background: #ffffff;
   box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.082);
   top: 51px; }
-  .open .material-icons {
+  .tamanho-barra .material-icons {
     padding-left: 4px;
     color: #007DCC; }
 
@@ -123,6 +165,10 @@ nav {
   transform: translateX(-105%);
   transition: 400ms; }
 
+.datepicker-container {
+  width: 500px;
+  height: 500px; }
+
 .sidenav {
   width: 250px;
   top: 51px; }
@@ -145,7 +191,8 @@ nav {
 
 .dados_consolidados {
   background: #ffffff;
-  border-bottom: 2px solid #f1f1f1; }
+  border-bottom: 2px solid #f1f1f1;
+  z-index: 5000px; }
   .dados_consolidados .bg-consolidado {
     padding-top: 1.5%;
     padding-button: 1.5%; }
@@ -160,12 +207,27 @@ nav {
     font-size: 39px;
     font-weight: 400;
     color: #007DCC; }
+  .dados_consolidados .dash_btn_superior {
+    width: 51%;
+    height: 18%;
+    border-radius: 7px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.7s ease;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px; }
+    .dados_consolidados .dash_btn_superior:hover {
+      background: #007DCC; }
+      .dados_consolidados .dash_btn_superior:hover p,
+      .dados_consolidados .dash_btn_superior:hover h4,
+      .dados_consolidados .dash_btn_superior:hover li,
+      .dados_consolidados .dash_btn_superior:hover span {
+        color: #ffffff; }
 
-.fluxo3 {
-  font-family: Montserrat, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  color: #7a7a7a; }
+.m-fluxo p {
+  padding-top: 7px; }
 
 .tamanho_da_linha_titulo_fluxo {
   line-height: 0.7; }
@@ -173,7 +235,7 @@ nav {
 .fluxo-1 li {
   line-height: 1;
   font-family: Montserrat, sans-serif;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 400;
   color: #007DCC;
   cursor: pointer; }
@@ -185,28 +247,13 @@ nav {
   font-weight: 400;
   color: #868686; }
 
-.fluxo-2 li {
-  line-height: 1.2;
-  font-family: Montserrat, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  color: #007DCC;
-  cursor: pointer; }
-.fluxo-2 span {
-  white-space: nowrap;
-  line-height: 0.8;
-  font-family: Montserrat, sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  color: #868686; }
-
 .p-msg {
   font-family: Montserrat, sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 400;
   color: #007DCC;
-  padding-top: 13px;
-  cursor: pointer; }
+  cursor: pointer;
+  line-height: 1.1; }
 
 @media (max-width: 920px) {
   .bg-consolidado p {
@@ -236,29 +283,18 @@ nav {
     font-weight: 400;
     color: #868686; }
 
-  .fluxo-2 li {
-    line-height: 1.2;
-    font-family: Montserrat, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: #007DCC;
-    cursor: pointer; }
-  .fluxo-2 span {
-    white-space: nowrap;
-    line-height: 0.8;
-    font-family: Montserrat, sans-serif;
-    font-size: 9px;
-    font-weight: 400;
-    color: #868686; }
-
-  .fluxo3 {
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    color: #7a7a7a; }
-
   .tamanho_da_linha_titulo_fluxo {
     line-height: 0.7; } }
+.fade-in {
+  opacity: 1;
+  animation: fadein 2s;
+  -webkit-animation: fadein 2s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .conteudo {
   padding: 1% 4% !important; }
 
@@ -312,11 +348,14 @@ nav {
 
 select {
   display: block; }
-  select titulo_do_setor_mobile {
+  select .titulo_do_setor_mobile {
     display: none; }
 
 drop_topo .mobile {
   display: block; }
+
+.obs {
+  z-index: 0; }
 
 @media (max-width: 920px) {
   .mobile {
@@ -348,6 +387,19 @@ drop_topo .mobile {
     font-size: 10px;
     font-weight: 300;
     color: #ffffff; } }
+td.details-control {
+  background: url("../img/circle-down.svg") no-repeat center center;
+  cursor: pointer; }
+
+tr.shown td.details-control {
+  background: url("../img/circle-up.svg") no-repeat center center; }
+
+div.add_info {
+  display: none; }
+
+table.dataTable tbody td.no-padding {
+  padding: 0; }
+
 .titulo_status {
   line-height: 0;
   margin: 11px;
@@ -423,7 +475,12 @@ drop_topo .mobile {
   z-index: 1055;
   width: 239px !important;
   height: 100%; }
+#setores .icon {
+  display: none; }
 
+@media (max-width: 920px) {
+  #setores .icon {
+    display: block; } }
 .c_titulo {
   font-family: Montserrat, sans-serif;
   font-size: 25px;
@@ -620,6 +677,107 @@ drop_topo .mobile {
 @media (max-width: 920px) {
   .cards .c_conteudo_card {
     left: 34% !important; } }
+.agendamento .espacamento {
+  margin-top: 2.5%; }
+.agendamento .bordas {
+  border-radius: 7px; }
+
+@media (max-width: 600px) {
+  .agendamento .espacamento {
+    margin-top: 17.5%; }
+  .agendamento .info {
+    margin-top: 15px; } }
+@media (min-width: 601px) and (max-width: 920px) {
+  .agendamento .espacamento {
+    margin-top: 8.5%; }
+  .agendamento .info {
+    margin-top: 15px; } }
+.open {
+  z-index: 1; }
+
+.agendamento .tabela_bg {
+  padding: 21px !important; }
+.agendamento .tabela-cor {
+  border-radius: 7px !important;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  background: #007DCC; }
+  .agendamento .tabela-cor thead {
+    color: #ffffff; }
+    .agendamento .tabela-cor thead th {
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #ffffff; }
+.agendamento .dataTables_length {
+  margin-bottom: 30px; }
+.agendamento table.dataTable thead th {
+  padding: 10px 20px;
+  border-bottom: none; }
+.agendamento td,
+.agendamento th {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px; }
+.agendamento table.striped > tbody > tr:nth-child(odd) {
+  background: #f8fafc; }
+.agendamento table.dataTable.no-footer {
+  border-bottom: none; }
+
+html,
+body {
+  position: relative;
+  height: 100%; }
+
+.agendamento {
+  position: relative; }
+  .agendamento #agendamemento_card_notificacao {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    top: 0;
+    transition: background .3s ease-out .1s;
+    height: 700px; }
+    .agendamento #agendamemento_card_notificacao .titulo {
+      font-size: 17px; }
+    .agendamento #agendamemento_card_notificacao .card .card-content {
+      padding: 12px; }
+  .agendamento ::-webkit-scrollbar {
+    width: 10px; }
+  .agendamento ::-webkit-scrollbar-button {
+    display: none; }
+  .agendamento ::-webkit-scrollbar-track {
+    border-radius: 20px;
+    /* 3 */ }
+  .agendamento ::-webkit-scrollbar-track-piece {
+    border-radius: 20px;
+    background: none;
+    /* 4 */ }
+  .agendamento ::-webkit-scrollbar-thumb {
+    background: #ececec;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px; }
+  .agendamento ::-webkit-scrollbar-corner {
+    /* 6 */
+    background: fuchsia; }
+  .agendamento ::-webkit-resizer {
+    /* 7 */
+    background: springgreen; }
+
+.pacientes .topo {
+  margin-top: 60px; }
+.pacientes .titulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #007DCC;
+  text-align: center;
+  line-height: 21px !important; }
+
 #horas {
   margin-top: 2%; }
 

@@ -27,12 +27,16 @@
   "dependencies": {
     "chart.js": "^2.7.2",
     "datatables": "^1.10.18",
+    "datatables.net": "^1.10.19",
+    "datatables.net-dt": "^1.10.19",
     "gulp-file-include": "^2.0.1",
     "gulp-htmlmin": "^4.0.0",
     "gulp-wait": "0.0.2",
     "jquery": "^3.3.1",
     "node-sass": "^4.8.1",
+    "noty": "^3.2.0-beta",
     "postcss-uncss": "^0.16.1",
+    "push.js": "^1.0.7",
     "uncss": "^0.16.2"
   }
 }

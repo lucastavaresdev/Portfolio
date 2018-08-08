@@ -33,11 +33,13 @@ main {
   left: 50%; }
 
 .logo_login {
-  padding-top: 10px; }
+  max-width: 315px !important;
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
 .btn_login {
-  background: #006db3; }
+  background: #1b4526; }
   .btn_login:hover {
-    background: #006db3; }
+    background: #1b4526; }
 
 /*# sourceMappingURL=login.css.map */
