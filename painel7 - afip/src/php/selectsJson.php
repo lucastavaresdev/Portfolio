@@ -13,7 +13,7 @@ if (isset($_GET['setor'])) {
 
 //selects
 
-$select_dos_setores = "SELECT id,servico AS setor FROM servicos";//lista de serviços
+$select_dos_setores = "SELECT id ,nome as setor FROM afip.setores where setor_valido = 1 ;";//lista de serviços
 
 $agendamentos_do_dia = "SELECT count(distinct(nome_paciente)) as agendamento_do_dia
 FROM agendamento where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()";
@@ -49,22 +49,6 @@ $horario_de_maior_fluxo = "SELECT  qtd_por_hora, intervalo_de_horas  FROM (
 
 $lista_de_setores = "SELECT servico as setor FROM servicos;";
 
-// $lista_do_setor = "SELECT
-// distinct(a.nome_paciente) as paciente,
-// left(a.hora_servico_selecionado, 5) as hora,
-// a.codigo_agenda as atividade,
-// a.ih_paciente as IH,
-// a.servico_atual,
-// s.servico as setor,
-// a.proximo_servico,
-// a.cod_cor_status,
-// a.descricao_exame,
-// sexo_paciente as sexo,
-// data_nascimento,
-// nome_medico,
-// crm_medico as crm
-// FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-// where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and a.codigo_servico_atual = $setor order by hora";
 
 $data = '2018-08-07';
 
@@ -126,33 +110,38 @@ $contagem_de_pacientes_por_setor = "SELECT a.codigo_servico_atual as id,s.servic
 //agendamentos
 $notificacao = "SELECT * FROM notificacao;";
 
+if ($parametro === 'lista_de_setores') {
+    geraJson($select_dos_setores, $conexao);
+}
+
+
 
 //parametro passado
-if ($parametro === 'agendamentos_do_dia') {
-    geraJson($agendamentos_do_dia, $conexao);
-} elseif ($parametro === 'lista_dos_intevalos_por_hora_do_dia') {
-    geraJson($lista_dos_intevalos_por_hora_do_dia, $conexao);
-} elseif ($parametro === 'horario_de_maior_fluxo') {
-    geraJson($horario_de_maior_fluxo, $conexao);
-} elseif ($parametro === 'agendamentos_do_dia_por_setor') {
-    geraJson($agendamentos_do_dia_por_setor, $conexao);
-} elseif ($parametro === 'lista_de_setores') {
-    geraJson($select_dos_setores, $conexao);
-} elseif ($parametro === 'qtd_por_setor') {
-    geraJson($qtd_por_setor, $conexao);
-} elseif ($parametro === 'lista_do_setor') {
-    geraJson($lista_do_setor, $conexao);
-} elseif ($parametro === 'paciente_do_dia') {
-    geraJson($contagem_de_Pacientes_do_dia, $conexao);
-} elseif ($parametro === 'procedimento_do_dia') {
-    geraJson($contagem_de_Procedimento_do_dia, $conexao);
-} elseif ($parametro === 'consolidado_cards_com_dados') {
-    geraJson($contagem_de_pacientes_por_setor, $conexao);
-} elseif ($parametro === 'qtd_procedimentos') {
-    geraJson($procedimentos, $conexao);
-} elseif ($parametro === 'notificacao') {
-    geraJson($notificacao, $conexao);
-}
+// if ($parametro === 'agendamentos_do_dia') {
+//     geraJson($agendamentos_do_dia, $conexao);
+// } elseif ($parametro === 'lista_dos_intevalos_por_hora_do_dia') {
+//     geraJson($lista_dos_intevalos_por_hora_do_dia, $conexao);
+// } elseif ($parametro === 'horario_de_maior_fluxo') {
+//     geraJson($horario_de_maior_fluxo, $conexao);
+// } elseif ($parametro === 'agendamentos_do_dia_por_setor') {
+//     geraJson($agendamentos_do_dia_por_setor, $conexao);
+// } elseif ($parametro === 'lista_de_setores') {
+//     geraJson($select_dos_setores, $conexao);
+// } elseif ($parametro === 'qtd_por_setor') {
+//     geraJson($qtd_por_setor, $conexao);
+// } elseif ($parametro === 'lista_do_setor') {
+//     geraJson($lista_do_setor, $conexao);
+// } elseif ($parametro === 'paciente_do_dia') {
+//     geraJson($contagem_de_Pacientes_do_dia, $conexao);
+// } elseif ($parametro === 'procedimento_do_dia') {
+//     geraJson($contagem_de_Procedimento_do_dia, $conexao);
+// } elseif ($parametro === 'consolidado_cards_com_dados') {
+//     geraJson($contagem_de_pacientes_por_setor, $conexao);
+// } elseif ($parametro === 'qtd_procedimentos') {
+//     geraJson($procedimentos, $conexao);
+// } elseif ($parametro === 'notificacao') {
+//     geraJson($notificacao, $conexao);
+// }
  
 
  
