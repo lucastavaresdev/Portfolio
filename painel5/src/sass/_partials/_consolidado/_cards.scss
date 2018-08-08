@@ -1,0 +1,99 @@
+.cards {
+    background: $branco;
+    border-radius: 2px;
+    padding-left: 0 !important;
+    position: relative;
+    height: 220px;
+    width:  100%;
+    margin-bottom: 40px;
+
+
+
+    .imagem-img27{
+        @include imagem-card-setor('../img/saida.jpg')
+    }
+
+    .imagem-img32{
+        @include imagem-card-setor('../img/cc.jpg')
+    }
+    
+    .imagem-img33{
+        @include imagem-card-setor('../img/pre.jpg')
+    }
+    
+    
+    .imagem-img34{
+        @include imagem-card-setor('../img/internacao.jpg')
+    }
+    
+    .imagem-img35{
+        @include imagem-card-setor('../img/sala1.jpg')
+    }
+    
+    .imagem-img36{
+        @include imagem-card-setor('../img/sala2.jpg')
+    }
+    .imagem-img37{
+        @include imagem-card-setor('../img/sala3.jpg')
+    }
+    .imagem-img38{
+        @include imagem-card-setor('../img/sala4.jpg')
+    }
+    .imagem-img39{
+        @include imagem-card-setor('../img/sala5.jpg')
+    }
+    .imagem-img40{
+        @include imagem-card-setor('../img/sala10.jpg')
+    }
+    .imagem-img41{
+        @include imagem-card-setor('../img/sala8.jpg')
+    }
+    .imagem-img42{
+        @include imagem-card-setor('../img/sala9.jpg')
+    }
+    .imagem-img43{
+        @include imagem-card-setor('../img/recuperacao.jpg')
+    }
+    
+    .imagem-img44{
+        @include imagem-card-setor('../img/sala6.jpg')
+    }
+    
+    .imagem-img45{
+        @include imagem-card-setor('../img/sala7.jpg')
+    }
+    .imagem-img26{
+        @include imagem-card-setor('../img/recuperacao2.jpg')
+    }
+    
+    
+    
+
+    
+ 
+
+
+    .c_conteudo_card {
+        position: relative;
+        left: 26% !important;
+        .c_card-title {
+            margin-top: 12px;
+        }
+        p {
+            line-height: 0.7;
+            font-size: 17px;
+            text-align: left !important;
+        }
+        .c_status {
+            line-height: 3;
+        }
+    }
+}
+
+@media(max-width: 920px) {
+    .cards {
+        .c_conteudo_card {
+            left: 34% !important;
+        }
+    }
+}
