@@ -1,13 +1,13 @@
 <?php 
     include "./templates/header.php";
     include "./templates/menu.html";
-    $setor = $_GET['setor'];
+    $setor = ""
 ?>
 
 <div class="row">
     <div class="  col s12 dados_consolidados">
         <div class="col s12 conteudo bg-consolidado espacamento">
-            <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+            <?php echo "<a  href='./agendamentos.php'>"    ?>
                     <div class="col s4 l2 ">
                         <div class="dash_btn_superior fade-in">
                             <p>Agendamentos</p>
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <?php echo "</a>"?> 
-            <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+            <?php echo "<a  href='./agendamentos.php'>"    ?>
             <div class="col s4 l2">
                 <div class="dash_btn_superior fade-in">
                     <p>Procedimentos Realizados</p>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <?php echo "</a>"    ?>
-            <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+            <?php echo "<a  href='./agendamentos.php'>"    ?>
                 <div class="col s4 l2">
                     <div class="dash_btn_superior fade-in">
                         <p>Procedimentos</p>
@@ -34,7 +34,7 @@
                 </div>
                 <?php echo "</a>"?>
                 
-                <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+                <?php echo "<a  href='./agendamentos.php'>"    ?>
                 <div class="col s4 l2 tamanho_da_linha_titulo_fluxo">
                     <div class="dash_btn_superior m-fluxo fade-in">
                         <p>Maior Fluxo</p>
@@ -43,7 +43,7 @@
                 </div>
                 <?php echo "</a>"?>
                 
-                <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+                <?php echo "<a  href='./agendamentos.php'>"    ?>
                     <div class="col s4 l2">
                         <div class="dash_btn_superior fade-in">
                         <p>Tempo de Sala</p>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 <?php echo "</a>"?>
-                <?php echo "<a  href='./agendamentos.php?setor=$setor'>"    ?>
+                <?php echo "<a  href='./agendamentos.php'>"    ?>
                     <div class="col s4 l2">
                         <div class="dash_btn_superior fade-in">
                         <p>Qtd de pacientes atuais</p>
