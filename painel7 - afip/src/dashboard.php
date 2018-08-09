@@ -83,8 +83,25 @@
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>Hora</th>
-                                        <th>Atividade</th>
+                                        <th>NR_ATENDIMENTO</th>
+                                        <th>DT_ENTRADA</th>
+                                        <th>IE_TIPO_ATENDIMENTO</th>
+                                        <th>CD_PESSOA_FISICA</th>
+                                        <th>DT_ALTA</th>
+                                        <th>NM_MEDICO_ATENDIMENTO</th>
+                                        <th>CD_SETOR_ATENDIMENTO</th>
+                                        <th>CD_UNIDADE_COMPL</th>
+                                        <th>CD_UNIDADE</th>
+                                        <th>CD_UNIDADE_BASICA</th>
+                                        <th>DS_CONVENIO</th>
+                                        <th>NM_UNIDADE</th>
+                                        <th>DS_MOTIVO_ALTA</th>
+                                        <th>NM_PACIENTE</th>
+                                        <th>DS_IDADE</th>
+                                        <th>IE_SEXO</th>
+                                        <th>IE_ATEND_RETORNO</th>
+                                        <th>ANOTACAO</th>
+                                        <!-- <th>Atividade</th>
                                         <th>IH</th>
                                         <th>Paciente</th>
                                         <th>Localização</th>
@@ -95,8 +112,8 @@
                                         <th class="ocutar">Data de Nascimento</th>
                                         <th class="ocutar">Descricao Exame</th>
                                         <th class="ocutar">Nome Medico</th>
-                                        <th class="ocutar">CRM</th>
-                                        <th>Obs.</th>
+                                        <th class="ocutar">CRM</th> -->
+                                        <!-- <th>Obs.</th> -->
 
                                     </tr>
                                 </thead>
@@ -135,12 +152,6 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
 
 </body>
 

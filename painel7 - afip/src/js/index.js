@@ -4,43 +4,37 @@
 
     var parametrosDaUrl = url_atual.split("?")[1];
 
+    chamadaAjax(`php/selectsJson.php?parametro=lista_de_pacientes`, lista_de_pacientes);
     // chamadaAjax(`php/selectsJson.php?parametro=qtd_por_setor&${parametrosDaUrl}`, agendamentos_do_dia_por_setor);
     // chamadaAjax(`php/selectsJson.php?parametro=qtd_procedimentos&${parametrosDaUrl}`, qtd_procedimentos);
     // chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
-    chamadaAjax(`php/selectsJson.php?parametro=lista_de_pacientes'`, lista_de_pacientes);
 })();
 
-
-function qtd_procedimentos(data) {
-    var elem = document.getElementById('qtd_procedimentos');
-    var qtd_procedimentos = data[0].qtd_procedimentos;
-    elem.innerHTML = qtd_procedimentos;
-}
-
-
 function lista_de_pacientes(data) {
-
     var tbody = document.getElementById("listadePacientes");
     if (tbody) {
         for (i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
             var cols =
                 '<td></td>' +
-                '<td>' + data[i].hora + '</td>' +
-                '<td>' + data[i].atividade + '</td>' +
-                '<td>' + data[i].IH + '</td>' +
-                '<td>' + data[i].paciente + '</td>' +
-                '<td>' + '-' + '</td>' +
-                '<td>' + data[i].servico_atual + '</td>' +
-                '<td>' + data[i].proximo_servico + '</td>' +
-                `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
-                '<td class="ocutar">' + data[i].sexo + '</td>' +
-                '<td class="ocutar">' + data[i].data_nascimento + '</td>' +
-                '<td class="ocutar">' + data[i].descricao_exame + '</td>' +
-                '<td class="ocutar">' + data[i].nome_medico + '</td>' +
-                '<td class="ocutar">' + data[i].crm + '</td>' +
-                '<td>' + '<a class="obs waves-effect waves-light  modal-trigger" href="#asd"> <i class="material-icons">info_outline</i></a>' + '</td>';
-
+                '<td>' + data[i].NR_ATENDIMENTO + '</td>' +
+                '<td>' + data[i].DT_ENTRADA + '</td>' +
+                '<td>' + data[i].IE_TIPO_ATENDIMENTO + '</td>' +
+                '<td>' + data[i].CD_PESSOA_FISICA + '</td>' +
+                '<td>' + data[i].DT_ALTA + '</td>' +
+                '<td>' + data[i].NM_MEDICO_ATENDIMENTO + '</td>' +
+                '<td>' + data[i].CD_SETOR_ATENDIMENTO + '</td>' +
+                '<td>' + data[i].CD_UNIDADE_COMPL + '</td>' +
+                '<td>' + data[i].CD_UNIDADE + '</td>' +
+                '<td>' + data[i].CD_UNIDADE_BASICA + '</td>' +
+                '<td>' + data[i].DS_CONVENIO + '</td>' +
+                '<td>' + data[i].NM_UNIDADE + '</td>' +
+                '<td>' + data[i].DS_MOTIVO_ALTA + '</td>' +
+                '<td>' + data[i].NM_PACIENTE + '</td>' +
+                '<td>' + data[i].DS_IDADE + '</td>' +
+                '<td>' + data[i].IE_SEXO + '</td>' +
+                '<td>' + data[i].IE_ATEND_RETORNO + '</td>' +
+                '<td>' + data[i].ANOTACAO + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -78,6 +72,7 @@ function format(d) {
 }
 
 
+
 function data_table(d) {
     $(document).ready(function () {
         var table = $('#tabela_pacientes').DataTable({
@@ -103,19 +98,23 @@ function data_table(d) {
                     "data": null,
                     "defaultContent": ''
                 },
-                { 'data': "hora" },
-                { 'data': "atividade" },
-                { 'data': "IH" },
-                { 'data': "paciente" },
-                { 'data': "-" },
-                { 'data': "servico_atual" },
-                { 'data': "proximo_servico" },
-                { 'data': "cod_cor_status" },
-                { 'data': "sexo" },
-                { 'data': "data_nascimento" },
-                { 'data': "descricao_exame" },
-                { 'data': "nome_medico" },
-                { 'data': "crm" },
+                { 'data': "NR_ATENDIMENTO" },
+                { 'data': "DT_ENTRADA" },
+                { 'data': "IE_TIPO_ATENDIMENTO" },
+                { 'data': "CD_PESSOA_FISICA" },
+                { 'data': "DT_ALTA" },
+                { 'data': "NM_MEDICO_ATENDIMENTO" },
+                { 'data': "CD_SETOR_ATENDIMENTO" },
+                { 'data': "CD_UNIDADE_COMPL" },
+                { 'data': "CD_UNIDADE" },
+                { 'data': "CD_UNIDADE_BASICA" },
+                { 'data': "NM_UNIDADE" },
+                { 'data': "DS_MOTIVO_ALTA" },
+                { 'data': "NM_PACIENTE" },
+                { 'data': "DS_IDADE" },
+                { 'data': "IE_SEXO" },
+                { 'data': "IE_ATEND_RETORNO" },
+                { 'data': "ANOTACAO" },
 
             ],
             "order": [[1, 'asc']],
@@ -127,6 +126,8 @@ function data_table(d) {
                 }
             ],
         });
+
+
 
         // Add event listener for opening and closing details
         $('#tabela_pacientes tbody').on('click', 'td.details-control', function () {
@@ -151,6 +152,11 @@ function data_table(d) {
     });
 }
 
+function qtd_procedimentos(data) {
+    var elem = document.getElementById('qtd_procedimentos');
+    var qtd_procedimentos = data[0].qtd_procedimentos;
+    elem.innerHTML = qtd_procedimentos;
+}
 
 function menuclicado() {
     var tabela = document.getElementById('listadePacientes');
