@@ -31,9 +31,9 @@
                 <li class="tab col s12 l3">
                     <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                 </li>
-                <li class="tab col s12 l2 right ">
+                <!-- <li class="tab col s12 l2 right ">
                         <input type="text"  id="busque_data" class="datepicker right" placeholder="Busque por uma data">
-                </li>
+                </li> -->
             </ul>
 
                 <div id="test1" class="col s12 tabela_bg">
@@ -44,6 +44,7 @@
                                         <th>N° Atendimento</th>
                                         <th>Nome Paciente</th>
                                         <th>Médico</th>
+                                        <th>Localização</th>
                                         <th>Idade</th>
                                         <th>Sexo</th>
                                         <th  class="ocutar">DT_ENTRADA</th>
@@ -72,11 +73,7 @@
             </div>
         </div>
     </div>
-<div class="row">
-    <?php 
-        include './templates/status.html';
-    ?>
-</div>
+
 </div>
 <!-- <div id="test2" class="col s12">Test 2</div> -->
 </div>

@@ -781,4 +781,10 @@ body {
 #horas {
   margin-top: 2%; }
 
+.topo-grid {
+  margin-top: 4%; }
+
+.grid-tr {
+  border-bottom: none; }
+
 /*# sourceMappingURL=style.css.map */

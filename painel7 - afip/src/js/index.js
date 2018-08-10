@@ -30,6 +30,7 @@ function lista_de_pacientes(data) {
                 '<td>' + data[i].NR_ATENDIMENTO + '</td>' +
                 '<td>' + data[i].NM_PACIENTE + '</td>' +
                 '<td>' + data[i].NM_MEDICO_ATENDIMENTO + '</td>' +
+                '<td> - </td>' +
                 '<td>' + data[i].DS_IDADE + '</td>' +
                 '<td>' + resultadoSexo + '</td>' +
                 '<td class="ocutar">' + data[i].DS_CONVENIO + '</td>' +
@@ -127,6 +128,7 @@ function data_table(d) {
                 { 'data': 'NR_ATENDIMENTO' },
                 { 'data': 'NM_PACIENTE' },
                 { 'data': 'NM_MEDICO_ATENDIMENTO' },
+                { 'data': '-' },
                 { 'data': 'DS_IDADE' },
                 { 'data': 'IE_SEXO' },
                 { 'data': 'DS_CONVENIO' },

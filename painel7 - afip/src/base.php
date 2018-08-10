@@ -3,18 +3,6 @@
     include "./templates/menu.html";
 ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
 <?php 
    include './templates/frameworks.html';
 ?>
