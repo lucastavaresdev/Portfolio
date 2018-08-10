@@ -34,7 +34,9 @@ function lista_de_pacientes(data) {
                 '<td>' + data[i].DS_IDADE + '</td>' +
                 '<td>' + data[i].IE_SEXO + '</td>' +
                 '<td>' + data[i].IE_ATEND_RETORNO + '</td>' +
-                '<td>' + data[i].ANOTACAO + '</td>';
+                '<td>' + data[i].ANOTACAO + '</td>' +
+                '<td>' + data[i].CD_CONVENIO + '</td>' +
+                '<td>' + data[i].CD_ESTABELECIMENTO + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -98,24 +100,26 @@ function data_table(d) {
                     "data": null,
                     "defaultContent": ''
                 },
-                { 'data': "NR_ATENDIMENTO" },
-                { 'data': "DT_ENTRADA" },
-                { 'data': "IE_TIPO_ATENDIMENTO" },
-                { 'data': "CD_PESSOA_FISICA" },
-                { 'data': "DT_ALTA" },
-                { 'data': "NM_MEDICO_ATENDIMENTO" },
-                { 'data': "CD_SETOR_ATENDIMENTO" },
-                { 'data': "CD_UNIDADE_COMPL" },
-                { 'data': "CD_UNIDADE" },
-                { 'data': "CD_UNIDADE_BASICA" },
-                { 'data': "NM_UNIDADE" },
-                { 'data': "DS_MOTIVO_ALTA" },
-                { 'data': "NM_PACIENTE" },
-                { 'data': "DS_IDADE" },
-                { 'data': "IE_SEXO" },
-                { 'data': "IE_ATEND_RETORNO" },
-                { 'data': "ANOTACAO" },
-
+                { 'data': 'NR_ATENDIMENTO' },
+                { 'data': 'DT_ENTRADA' },
+                { 'data': 'IE_TIPO_ATENDIMENTO' },
+                { 'data': 'CD_PESSOA_FISICA' },
+                { 'data': 'DT_ALTA' },
+                { 'data': 'NM_MEDICO_ATENDIMENTO' },
+                { 'data': 'CD_SETOR_ATENDIMENTO' },
+                { 'data': 'CD_UNIDADE_COMPL' },
+                { 'data': 'CD_UNIDADE' },
+                { 'data': 'CD_UNIDADE_BASICA' },
+                { 'data': 'DS_CONVENIO' },
+                { 'data': 'NM_UNIDADE' },
+                { 'data': 'DS_MOTIVO_ALTA' },
+                { 'data': 'NM_PACIENTE' },
+                { 'data': 'DS_IDADE' },
+                { 'data': 'IE_SEXO' },
+                { 'data': 'IE_ATEND_RETORNO' },
+                { 'data': 'ANOTACAO' },
+                { 'data': 'CD_CONVENIO' },
+                { 'data': 'CD_ESTABELECIMENTO' }
             ],
             "order": [[1, 'asc']],
             "columnDefs": [
@@ -127,7 +131,9 @@ function data_table(d) {
             ],
         });
 
-
+        function populardata(d) {
+            console.log("  { 'data': 'NR_ATENDIMENTO' }");
+        }
 
         // Add event listener for opening and closing details
         $('#tabela_pacientes tbody').on('click', 'td.details-control', function () {
