@@ -17,6 +17,8 @@ if (isset($_GET['setor'])) {
 $lista_de_pacientes = "SELECT *FROM atendimento_paciente_robo 
                                     where str_to_date(DT_ENTRADA, '%d/%m/%Y') = '2018-08-01' and CD_ESTABELECIMENTO = 22 order by dt_entrada";
 
+$agendamentos_quantidade = "SELECT Count(distinct(NM_PACIENTE)) as agendamentos_quantidade FROM atendimento_paciente_robo
+                               where str_to_date(DT_ENTRADA, '%d/%m/%Y') = '2018-08-01' and CD_ESTABELECIMENTO = 22 order by dt_entrada;";
                                      
                                 
 

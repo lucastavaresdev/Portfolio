@@ -11,54 +11,12 @@
                     <div class="col s4 l2 ">
                         <div class="dash_btn_superior fade-in">
                             <p>Agendamentos</p>
-                            <h4  id="agendimentos_do_dia">
+                            <h4  id="agendamentos_quantidade">
                             <span>0</span>
                             </h4>
                         </div>
                     </div>
                     <?php echo "</a>"?> 
-            <?php echo "<a  href='./agendamentos.php'>"    ?>
-            <div class="col s4 l2">
-                <div class="dash_btn_superior fade-in">
-                    <p>Procedimentos Realizados</p>
-                    <h4>-/<span id="atendimentos_total">0</span></h4>
-                </div>
-            </div>
-            <?php echo "</a>"    ?>
-            <?php echo "<a  href='./agendamentos.php'>"    ?>
-                <div class="col s4 l2">
-                    <div class="dash_btn_superior fade-in">
-                        <p>Procedimentos</p>
-                        <h4 id='qtd_procedimentos'>0</h4>
-                    </div>
-                </div>
-                <?php echo "</a>"?>
-                
-                <?php echo "<a  href='./agendamentos.php'>"    ?>
-                <div class="col s4 l2 tamanho_da_linha_titulo_fluxo">
-                    <div class="dash_btn_superior m-fluxo fade-in">
-                        <p>Maior Fluxo</p>
-                        <ul id="fluxo"></ul>
-                    </div>
-                </div>
-                <?php echo "</a>"?>
-                
-                <?php echo "<a  href='./agendamentos.php'>"    ?>
-                    <div class="col s4 l2">
-                        <div class="dash_btn_superior fade-in">
-                        <p>Tempo de Sala</p>
-                        <h4> - </h4>
-                        </div>
-                    </div>
-                <?php echo "</a>"?>
-                <?php echo "<a  href='./agendamentos.php'>"    ?>
-                    <div class="col s4 l2">
-                        <div class="dash_btn_superior fade-in">
-                        <p>Qtd de pacientes atuais</p>
-                        <h4> - </h4>
-                        </div>
-                    </div>
-                <?php echo "</a>"?>
         </div>
     </div>
 </div>
@@ -83,26 +41,26 @@
                                 <thead>
                                     <tr>
                                         <th></th>
-                                        <th>NR_ATENDIMENTO</th>
-                                        <th>DT_ENTRADA</th>
-                                        <th>IE_TIPO_ATENDIMENTO</th>
-                                        <th>CD_PESSOA_FISICA</th>
-                                        <th>DT_ALTA</th>
-                                        <th>NM_MEDICO_ATENDIMENTO</th>
-                                        <th>CD_SETOR_ATENDIMENTO</th>
-                                        <th>CD_UNIDADE_COMPL</th>
-                                        <th>CD_UNIDADE</th>
-                                        <th>CD_UNIDADE_BASICA</th>
-                                        <th>DS_CONVENIO</th>
-                                        <th>NM_UNIDADE</th>
-                                        <th>DS_MOTIVO_ALTA</th>
-                                        <th>NM_PACIENTE</th>
-                                        <th>DS_IDADE</th>
-                                        <th>IE_SEXO</th>
-                                        <th>IE_ATEND_RETORNO</th>
-                                        <th>ANOTACAO</th>
-                                        <th>CD_CONVENIO</th>
-                                        <th>CD_ESTABELECIMENTO</th>
+                                        <th>N° Atendimento</th>
+                                        <th>Nome Paciente</th>
+                                        <th>Médico</th>
+                                        <th>Idade</th>
+                                        <th>Sexo</th>
+                                        <th  class="ocutar">DT_ENTRADA</th>
+                                        <th  class="ocutar">IE_TIPO_ATENDIMENTO</th>
+                                        <th  class="ocutar">CD_PESSOA_FISICA</th>
+                                        <th  class="ocutar">DT_ALTA</th>
+                                        <th class="ocutar">CD_SETOR_ATENDIMENTO</th>
+                                        <th  class="ocutar">CD_UNIDADE_COMPL</th>
+                                        <th  class="ocutar">CD_UNIDADE</th>
+                                        <th  class="ocutar">CD_UNIDADE_BASICA</th>
+                                        <th class="ocutar">DS_CONVENIO</th>
+                                        <th  class="ocutar">NM_UNIDADE</th>
+                                        <th  class="ocutar">DS_MOTIVO_ALTA</th>
+                                        <th  class="ocutar">IE_ATEND_RETORNO</th>
+                                        <th class="ocutar">ANOTACAO</th>
+                                        <th  class="ocutar">CD_CONVENIO</th>
+                                        <th class="ocutar">CD_ESTABELECIMENTO</th>
                                     </tr>
                                 </thead>
 
@@ -147,8 +105,6 @@
    include './templates/frameworks.html';
 ?>
 <script src="./js/index.js"></script>
-
-
 
 <!--Calendario-->
 <script>
