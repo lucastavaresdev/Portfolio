@@ -26,82 +26,82 @@ $grid = " SELECT
                         a.NM_PACIENTE AS NM_PACIENTE,
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Análises Clínicas 11º andar') THEN 1
-                        END)) AS 'Análises Clínicas 11º andar',
+                        END)) AS 'Análises_Clínicas_11_andar',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Orientação Fisioterapica') THEN 1
-                        END)) AS 'Orientação Fisioterapica',
+                        END)) AS 'Orientação_Fisioterapica',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Ecocardiograma') THEN 1
                         END)) AS 'Ecocardiograma',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Ultrassonografia Abdomen') THEN 1
-                        END)) AS 'Ultrassonografia Abdomen',
+                        END)) AS 'Ultrassonografia_Abdomen',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Clinico Geral') THEN 1
-                        END)) AS 'Avaliação Clinico Geral',
+                        END)) AS 'Avaliação_Clinico_Geral',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Teste Ergométrico') THEN 1
-                        END)) AS 'Teste Ergométrico',
+                        END)) AS 'Teste_Ergométrico',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Raio X') THEN 1
-                        END)) AS 'Raio X',
+                        END)) AS 'Raio_X',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Oftalmológica') THEN 1
-                        END)) AS 'Avaliação Oftalmológica',
+                        END)) AS 'Avaliação_Oftalmológica',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Dermatológica') THEN 1
-                        END)) AS 'Avaliação Dermatológica',
+                        END)) AS 'Avaliação_Dermatológica',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Cardiológica') THEN 1
-                        END)) AS 'Avaliação Cardiológica',
+                        END)) AS 'Avaliação_Cardiológica',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Prova de Função Pulmonar') THEN 1
-                        END)) AS 'Prova de Função Pulmonar',
+                        END)) AS 'Prova_de_Função_Pulmonar',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Ultrassonografia Próstata') THEN 1
-                        END)) AS 'Ultrassonografia Próstata',
+                        END)) AS 'Ultrassonografia_Próstata',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Urologica') THEN 1
-                        END)) AS 'Avaliação Urologica',
+                        END)) AS 'Avaliação_Urologica',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Mental Care') THEN 1
-                        END)) AS 'Avaliação Mental Care',
+                        END)) AS 'Avaliação_Mental_Care',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Bioimpedanciometria') THEN 1
                         END)) AS 'Bioimpedanciometria',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Gastro-Procto') THEN 1
-                        END)) AS 'Avaliação Gastro-Procto',
+                        END)) AS 'Avaliação_Gastro_Procto',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Densitometria Óssea') THEN 1
-                        END)) AS 'Densitometria Óssea',
+                        END)) AS 'Densitometria_Óssea',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Audiometria') THEN 1
                         END)) AS 'Audiometria',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Nutricional') THEN 1
-                        END)) AS 'Avaliação Nutricional',
+                        END)) AS 'Avaliação_Nutricional',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Odontológica') THEN 1
-                        END)) AS 'Avaliação Odontológica',
+                        END)) AS 'Avaliação_Odontológica',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Otorrinolaringologia') THEN 1
-                        END)) AS 'Avaliação Otorrinolaringologia',
+                        END)) AS 'Avaliação_Otorrinolaringologia',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Ginecológica') THEN 1
-                        END)) AS 'Avaliação Ginecológica',
+                        END)) AS 'Avaliação_Ginecológica',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Colpocitologia') THEN 1
                         END)) AS 'Colpocitologia',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Ultrassonografia Transvaginal') THEN 1
-                        END)) AS 'Ultrassonografia Transvaginal',
+                        END)) AS 'Ultrassonografia_Transvaginal',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Ultrassonografia Mamas') THEN 1
-                        END)) AS 'Ultrassonografia Mamas',
+                        END)) AS 'Ultrassonografia_Mamas',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Complemento Mamografia') THEN 1
-                        END)) AS 'Complemento Mamografia',
+                        END)) AS 'Complemento_Mamografia',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Mamografia') THEN 1
                         END)) AS 'Mamografia',
@@ -113,43 +113,43 @@ $grid = " SELECT
                         END)) AS 'Eletrocardiograma',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Ultrassonografia Doppler') THEN 1
-                        END)) AS 'Ultrassonografia Doppler',
+                        END)) AS 'Ultrassonografia_Doppler',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Análises Clinicas 10º andar') THEN 1
-                        END)) AS 'Análises Clinicas 10º andar',
+                        END)) AS 'Análises_Clinicas_10_andar',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Ultrassonografia Pelvica') THEN 1
-                        END)) AS 'Ultrassonografia Pelvica',
+                        END)) AS 'Ultrassonografia_Pelvica',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Física') THEN 1
-                        END)) AS 'Avaliação Física',
+                        END)) AS 'Avaliação_Física',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Ultrassonografia Tireoide') THEN 1
-                        END)) AS 'Ultrassonografia Tireoide',
+                        END)) AS 'Ultrassonografia_Tireoide',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Polissonografia') THEN 1
                         END)) AS 'Polissonografia',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação do Sono') THEN 1
-                        END)) AS 'Avaliação do Sono',
+                        END)) AS 'Avaliação_do_Sono',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Eletroencefalograma') THEN 1
                         END)) AS 'Eletroencefalograma',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Pediatrica') THEN 1
-                        END)) AS 'Avaliação Pediatrica',
+                        END)) AS 'Avaliação_Pediatrica',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Fisioterápica') THEN 1
-                        END)) AS 'Avaliação Fisioterápica',
+                        END)) AS 'Avaliação_Fisioterápica',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Ultrassonografia Aparelho Urinário') THEN 1
-                        END)) AS 'Ultrassonografia Aparelho Urinário',
+                        END)) AS 'Ultrassonografia_Aparelho_Urinário',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Acuidade Visual') THEN 1
-                        END)) AS 'Acuidade Visual',
+                        END)) AS 'Acuidade_Visual',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Análises Clínicas') THEN 1
-                        END)) AS 'Análises Clínicas',
+                        END)) AS 'Análises_Clínicas',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Micológico') THEN 1
                         END)) AS 'Micológico',
@@ -158,34 +158,34 @@ $grid = " SELECT
                         END)) AS 'ULTRASSONOGRAFIA',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Fisiológica Laboratorial - Ergoespiro') THEN 1
-                        END)) AS 'Avaliação Fisiológica Laboratorial - Ergoespiro',
+                        END)) AS 'Avaliação_Fisiológica_Laboratorial_Ergoespiro',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Médica (Clinica Geral e Esforço)') THEN 1
-                        END)) AS 'Avaliação Médica (Clinica Geral e Esforço)',
+                        END)) AS 'Avaliação_Médica_Clinica_Geral_e_Esforço',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Tomografia') THEN 1
                         END)) AS 'Tomografia',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Endoscopia/Colonoscopia') THEN 1
-                        END)) AS 'Endoscopia/Colonoscopia',
+                        END)) AS 'Endoscopia_Colonoscopia',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Peso e Altura') THEN 1
                         END)) AS 'Peso e Altura',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Pressao Arterial') THEN 1
-                        END)) AS 'Pressao Arterial',
+                        END)) AS 'Pressao_Arterial',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliacao Psicossocial') THEN 1
-                        END)) AS 'Avaliacao Psicossocial',
+                        END)) AS 'Avaliacao_Psicossocial',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação de Equilibrio') THEN 1
-                        END)) AS 'Avaliação de Equilibrio',
+                        END)) AS 'Avaliação_de_Equilibrio',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Composição Corporal - Dobras Cutaneas') THEN 1
-                        END)) AS 'Avaliação Composição Corporal - Dobras Cutaneas',
+                        END)) AS 'Avaliação_Composição_Corporal_Dobras_Cutaneas',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Avaliação Neuromuscular') THEN 1
-                        END)) AS 'Avaliação Neuromuscular'
+                        END)) AS 'Avaliacao_Neuromuscular'
                     FROM
                         ((atendimentos a
                         LEFT JOIN checklist ch ON (((ch.atendimento = a.NR_ATENDIMENTO)
@@ -193,7 +193,7 @@ $grid = " SELECT
                         LEFT JOIN etapas e ON ((ch.etapa = e.id)))
                     WHERE
                         (a.DT_ENTRADA = '2018-01-08 06:00:00') 
-                    GROUP BY a.NR_ATENDIMENTO
+                    GROUP BY a.NR_ATENDIMENTO order by NM_PACIENTE
                 ";
 
 /*
