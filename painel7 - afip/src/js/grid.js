@@ -113,6 +113,15 @@ function MasculinoouFeminino(sexo) {
 function data_table(d) {
     $(document).ready(function () {
         var table = $('#tabela_pacientes').DataTable({
+            fixedColumns: true,
+            fixedColumns: {
+                leftColumns: 1
+            },
+            scrollX: true,
+            scrollCollapse: true,
+            columnDefs: [
+                { width: '100%', targets: 0 }
+            ],
             responsive: true,
             "language": {
                 "lengthMenu": " Quantidade por Pagina _MENU_  ",

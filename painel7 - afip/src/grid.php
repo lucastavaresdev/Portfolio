@@ -8,6 +8,7 @@
 
 
 
+
 <div class="col s12 agendamento conteudo">
 
     <div class="row">
@@ -18,85 +19,77 @@
                 </li>
             </ul>
 
-                <div id="test1" class="col s12 tabela_bg">
-                        <table id="tabela_pacientes"  class="responsive-table tabela-cor" style="width:100%" >
-                                <thead>
-                                    <tr>
-                                            <th></th>
-                                            <th>NM_PACIENTE</th>
-                                            <th>Analises_Clinicas_11_andar</th>
-                                            <th>Orientação_Fisioterapica</th>
-                                            <th>Ecocardiograma</th>
-                                            <th>Ultrassonografia_Abdomen</th>
-                                            <th>Avaliação_Clinico_Geral</th>
-                                            <th>Teste_Ergométrico</th>
-                                            <th>Raio_X</th>
-                                            <th>Avaliação_Oftalmológica</th>
-                                            <th>Avaliação_Dermatológica</th>
-                                            <th>Avaliação_Cardiológica</th>
-                                            <th>Prova_de_Função_Pulmonar</th>
-                                            <th>Ultrassonografia_Próstata</th>
-                                            <th>Avaliação_Urologica</th>
-                                            <th>Avaliação_Mental_Care</th>
-                                            <th>Bioimpedanciometria</th>
-                                            <th>Avaliação_Gastro_Procto</th>
-                                            <th>Densitometria_Óssea</th>
-                                            <th>Audiometria</th>
-                                            <th>Avaliação_Nutricional</th>
-                                            <th>Avaliação_Odontológica</th>
-                                            <th>Avaliação_Otorrinolaringologia</th>
-                                            <th>Avaliação_Ginecológica</th>
-                                            <th>Colpocitologia</th>
-                                            <th>Ultrassonografia_Transvaginal</th>
-                                            <th>Ultrassonografia_Mamas</th>
-                                            <th>Complemento_Mamografia</th>
-                                            <th>Mamografia</th>
-                                            <th>Colposcopia</th>
-                                            <th>Eletrocardiograma</th>
-                                            <th>Ultrassonografia_Doppler</th>
-                                            <th>Análises_Clinicas_10_andar</th>
-                                            <th>Ultrassonografia_Pelvica</th>
-                                            <th>Avaliação_Física</th>
-                                            <th>Ultrassonografia_Tireoide</th>
-                                            <th>Polissonografia</th>
-                                            <th>Avaliação_do_Sono</th>
-                                            <th>Eletroencefalograma</th>
-                                            <th>Avaliação_Pediatrica</th>
-                                            <th>Avaliação_Fisioterápica</th>
-                                            <th>Ultrassonografia_Aparelho_Urinário</th>
-                                            <th>Acuidade_Visual</th>
-                                            <th>Análises_Clínicas</th>
-                                            <th>Micológico</th>
-                                            <th>ULTRASSONOGRAFIA</th>
-                                            <th>Avaliação_Fisiológica_Laboratorial_Ergoespiro</th>
-                                            <th>Avaliação_Médica_Clinica_Geral_e_Esforço</th>
-                                            <th>Tomografia</th>
-                                            <th>Endoscopia_Colonoscopia</th>
-                                            <th>Peso e Altura</th>
-                                            <th>Pressao_Arterial</th>
-                                            <th>Avaliacao_Psicossocial</th>
-                                            <th>Avaliação_de_Equilibrio</th>
-                                            <th>Avaliação_Composição_Corporal_Dobras_Cutaneas</th>
-                                            <th>Avaliacao_Neuromuscular</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody id="grid">
-
-                                </tbody>
-
-                            </table>
-            </div>
-        </div>
+    <div class="scroll">
+            <table id="tabela_pacientes"  class="responsive-table tabela-cor">
+                    <thead >
+                        <tr>
+                            <th class="fixed"></th>
+                            <th>NM_PACIENTE</th>
+                            <th>Analises_Clinicas_11_andar</th>
+                            <th>Orientação_Fisioterapica</th>
+                            <th>Ecocardiograma</th>
+                            <th>Ultrassonografia_Abdomen</th>
+                            <th>Avaliação_Clinico_Geral</th>
+                            <th>Teste_Ergométrico</th>
+                            <th>Raio_X</th>
+                            <th>Avaliação_Oftalmológica</th>
+                            <th>Avaliação_Dermatológica</th>
+                            <th>Avaliação_Cardiológica</th>
+                            <th>Prova_de_Função_Pulmonar</th>
+                            <th>Ultrassonografia_Próstata</th>
+                            <th>Avaliação_Urologica</th>
+                            <th>Avaliação_Mental_Care</th>
+                            <th>Bioimpedanciometria</th>
+                            <th>Avaliação_Gastro_Procto</th>
+                            <th>Densitometria_Óssea</th>
+                            <th>Audiometria</th>
+                            <th>Avaliação_Nutricional</th>
+                            <th>Avaliação_Odontológica</th>
+                            <th>Avaliação_Otorrinolaringologia</th>
+                            <th>Avaliação_Ginecológica</th>
+                            <th>Colpocitologia</th>
+                            <th>Ultrassonografia_Transvaginal</th>
+                            <th>Ultrassonografia_Mamas</th>
+                            <th>Complemento_Mamografia</th>
+                            <th>Mamografia</th>
+                            <th>Colposcopia</th>
+                            <th>Eletrocardiograma</th>
+                            <th>Ultrassonografia_Doppler</th>
+                            <th>Análises_Clinicas_10_andar</th>
+                            <th>Ultrassonografia_Pelvica</th>
+                            <th>Avaliação_Física</th>
+                            <th>Ultrassonografia_Tireoide</th>
+                            <th>Polissonografia</th>
+                            <th>Avaliação_do_Sono</th>
+                            <th>Eletroencefalograma</th>
+                            <th>Avaliação_Pediatrica</th>
+                            <th>Avaliação_Fisioterápica</th>
+                            <th>Ultrassonografia_Aparelho_Urinário</th>
+                            <th>Acuidade_Visual</th>
+                            <th>Análises_Clínicas</th>
+                            <th>Micológico</th>
+                            <th>ULTRASSONOGRAFIA</th>
+                            <th>Avaliação_Fisiológica_Laboratorial_Ergoespiro</th>
+                            <th>Avaliação_Médica_Clinica_Geral_e_Esforço</th>
+                            <th>Tomografia</th>
+                            <th>Endoscopia_Colonoscopia</th>
+                            <th>Peso e Altura</th>
+                            <th>Pressao_Arterial</th>
+                            <th>Avaliacao_Psicossocial</th>
+                            <th>Avaliação_de_Equilibrio</th>
+                            <th>Avaliação_Composição_Corporal_Dobras_Cutaneas</th>
+                            <th>Avaliacao_Neuromuscular</th>
+                        </tr>
+                </thead>
+                <tbody id="grid"></tbody>
+            </table>
     </div>
-
 </div>
-<!-- <div id="test2" class="col s12">Test 2</div> -->
 </div>
 </div>
 
   <!-- Modal Trigger -->
-
+ 
   
 
   <!-- Modal Structure -->
