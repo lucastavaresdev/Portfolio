@@ -22,8 +22,7 @@ function lista_de_pacientes(data) {
             var tr = document.createElement('tr');
             // debugger
             var cols =
-                '<td>' + '' + '</td>' +
-                '<td class="gridStatus">' + data[i].NM_PACIENTE + '</td>' +
+                '<td>' + data[i].NM_PACIENTE + '</td>' +
                 '<td class="gridStatus">' + iconedeStatus(data[i].Analises_Clinicas_11_andar) + '</td>' +
                 '<td class="gridStatus">' + iconedeStatus(data[i].Orientação_Fisioterapica) + '</td>' +
                 '<td class="gridStatus">' + iconedeStatus(data[i].Ecocardiograma) + '</td>' +
@@ -113,15 +112,13 @@ function MasculinoouFeminino(sexo) {
 function data_table(d) {
     $(document).ready(function () {
         var table = $('#tabela_pacientes').DataTable({
-            fixedColumns: true,
             fixedColumns: {
-                leftColumns: 1
+                leftColumns: 1,
             },
-            scrollX: true,
-            scrollCollapse: true,
-            columnDefs: [
-                { width: '100%', targets: 0 }
-            ],
+            "sScrollY": "100%",
+            "scrollX": "100%",
+            "bScrollCollapse": true,
+            "bPaginate": true,
             responsive: true,
             "language": {
                 "lengthMenu": " Quantidade por Pagina _MENU_  ",
@@ -137,102 +134,84 @@ function data_table(d) {
                     "last": " "
                 }
             },
-            "columns": [
-                {
-                    "className": 'details-control',
-                    "orderable": false,
-                    "deferLoading": 0, // here
-                    "defaultContent": '',
-                    "data": "data[, ]"
-                },
-                { 'data': 'NM_PACIENTE' },
-                { 'data': 'Analises_Clinicas_11_andar' },
-                { 'data': 'Orientação_Fisioterapica' },
-                { 'data': 'Ecocardiograma' },
-                { 'data': 'Ultrassonografia_Abdomen' },
-                { 'data': 'Avaliação_Clinico_Geral' },
-                { 'data': 'Teste_Ergométrico' },
-                { 'data': 'Raio_X' },
-                { 'data': 'Avaliação_Oftalmológica' },
-                { 'data': 'Avaliação_Dermatológica' },
-                { 'data': 'Avaliação_Cardiológica' },
-                { 'data': 'Prova_de_Função_Pulmonar' },
-                { 'data': 'Ultrassonografia_Próstata' },
-                { 'data': 'Avaliação_Urologica' },
-                { 'data': 'Avaliação_Mental_Care' },
-                { 'data': 'Bioimpedanciometria' },
-                { 'data': 'Avaliação_Gastro_Procto' },
-                { 'data': 'Densitometria_Óssea' },
-                { 'data': 'Audiometria' },
-                { 'data': 'Avaliação_Nutricional' },
-                { 'data': 'Avaliação_Odontológica' },
-                { 'data': 'Avaliação_Otorrinolaringologia' },
-                { 'data': 'Avaliação_Ginecológica' },
-                { 'data': 'Colpocitologia' },
-                { 'data': 'Ultrassonografia_Transvaginal' },
-                { 'data': 'Ultrassonografia_Mamas' },
-                { 'data': 'Complemento_Mamografia' },
-                { 'data': 'Mamografia' },
-                { 'data': 'Colposcopia' },
-                { 'data': 'Eletrocardiograma' },
-                { 'data': 'Ultrassonografia_Doppler' },
-                { 'data': 'Análises_Clinicas_10_andar' },
-                { 'data': 'Ultrassonografia_Pelvica' },
-                { 'data': 'Avaliação_Física' },
-                { 'data': 'Ultrassonografia_Tireoide' },
-                { 'data': 'Polissonografia' },
-                { 'data': 'Avaliação_do_Sono' },
-                { 'data': 'Eletroencefalograma' },
-                { 'data': 'Avaliação_Pediatrica' },
-                { 'data': 'Avaliação_Fisioterápica' },
-                { 'data': 'Ultrassonografia_Aparelho_Urinário' },
-                { 'data': 'Acuidade_Visual' },
-                { 'data': 'Análises_Clínicas' },
-                { 'data': 'Micológico' },
-                { 'data': 'ULTRASSONOGRAFIA' },
-                { 'data': 'Avaliação_Fisiológica_Laboratorial_Ergoespiro' },
-                { 'data': 'Avaliação_Médica_Clinica_Geral_e_Esforço' },
-                { 'data': 'Tomografia' },
-                { 'data': 'Endoscopia_Colonoscopia' },
-                { 'data': 'Peso_e_  Altura' },
-                { 'data': 'Pressao_Arterial' },
-                { 'data': 'Avaliacao_Psicossocial' },
-                { 'data': 'Avaliação_de_Equilibrio' },
-                { 'data': 'Avaliação_Composição_Corporal_Dobras_Cutaneas' },
-                { 'data': 'Avaliacao_Neuromuscular' },
+            // "columns": [
+            //     {
+            //         "className": 'details-control',
+            //         "orderable": false,
+            //         "deferLoading": 0, // here
+            //         "data": "data[, ]"
+            //     },
+            //     { 'data': 'NM_PACIENTE' },
+            //     { 'data': 'Analises_Clinicas_11_andar' },
+            //     { 'data': 'Orientação_Fisioterapica' },
+            //     { 'data': 'Ecocardiograma' },
+            //     { 'data': 'Ultrassonografia_Abdomen' },
+            //     { 'data': 'Avaliação_Clinico_Geral' },
+            //     { 'data': 'Teste_Ergométrico' },
+            //     { 'data': 'Raio_X' },
+            //     { 'data': 'Avaliação_Oftalmológica' },
+            //     { 'data': 'Avaliação_Dermatológica' },
+            //     { 'data': 'Avaliação_Cardiológica' },
+            //     { 'data': 'Prova_de_Função_Pulmonar' },
+            //     { 'data': 'Ultrassonografia_Próstata' },
+            //     { 'data': 'Avaliação_Urologica' },
+            //     { 'data': 'Avaliação_Mental_Care' },
+            //     { 'data': 'Bioimpedanciometria' },
+            //     { 'data': 'Avaliação_Gastro_Procto' },
+            //     { 'data': 'Densitometria_Óssea' },
+            //     { 'data': 'Audiometria' },
+            //     { 'data': 'Avaliação_Nutricional' },
+            //     { 'data': 'Avaliação_Odontológica' },
+            //     { 'data': 'Avaliação_Otorrinolaringologia' },
+            //     { 'data': 'Avaliação_Ginecológica' },
+            //     { 'data': 'Colpocitologia' },
+            //     { 'data': 'Ultrassonografia_Transvaginal' },
+            //     { 'data': 'Ultrassonografia_Mamas' },
+            //     { 'data': 'Complemento_Mamografia' },
+            //     { 'data': 'Mamografia' },
+            //     { 'data': 'Colposcopia' },
+            //     { 'data': 'Eletrocardiograma' },
+            //     { 'data': 'Ultrassonografia_Doppler' },
+            //     { 'data': 'Análises_Clinicas_10_andar' },
+            //     { 'data': 'Ultrassonografia_Pelvica' },
+            //     { 'data': 'Avaliação_Física' },
+            //     { 'data': 'Ultrassonografia_Tireoide' },
+            //     { 'data': 'Polissonografia' },
+            //     { 'data': 'Avaliação_do_Sono' },
+            //     { 'data': 'Eletroencefalograma' },
+            //     { 'data': 'Avaliação_Pediatrica' },
+            //     { 'data': 'Avaliação_Fisioterápica' },
+            //     { 'data': 'Ultrassonografia_Aparelho_Urinário' },
+            //     { 'data': 'Acuidade_Visual' },
+            //     { 'data': 'Análises_Clínicas' },
+            //     { 'data': 'Micológico' },
+            //     { 'data': 'ULTRASSONOGRAFIA' },
+            //     { 'data': 'Avaliação_Fisiológica_Laboratorial_Ergoespiro' },
+            //     { 'data': 'Avaliação_Médica_Clinica_Geral_e_Esforço' },
+            //     { 'data': 'Tomografia' },
+            //     { 'data': 'Endoscopia_Colonoscopia' },
+            //     { 'data': 'Peso_e_  Altura' },
+            //     { 'data': 'Pressao_Arterial' },
+            //     { 'data': 'Avaliacao_Psicossocial' },
+            //     { 'data': 'Avaliação_de_Equilibrio' },
+            //     { 'data': 'Avaliação_Composição_Corporal_Dobras_Cutaneas' },
+            //     { 'data': 'Avaliacao_Neuromuscular' },
 
 
-            ],
-            "order": [[1, 'asc']],
-            "columnDefs": [
-                {
-                    "targets": [14],
-                    "visible": true,
-                    "searchable": false
-                }
-            ],
+            // ],
+            // "order": [[1, 'asc']],
+            // "columnDefs": [
+            //     {
+            //         "targets": [14],
+            //         "visible": true,
+            //         "searchable": false
+            //     }
+            // ]
         });
 
-        // Add event listener for opening and closing details
-        $('#tabela_pacientes tbody').on('click', 'td.details-control', function () {
-            var tr = $(this).closest('tr');
-            var row = table.row(tr);
 
-            if (row.child.isShown()) {
-                $('div.add_info', row.child()).slideUp(function () {
-                    row.child.hide();
-                    tr.removeClass('shown');
-                });
-            }
-            else {
-                // Open this row
 
-                row.child(format(row.data())).show();
-                tr.addClass('shown');
 
-                $('div.add_info', row.child()).slideDown();
-            }
-        });
     });
 }
 
@@ -242,27 +221,6 @@ function data_table(d) {
 /*
  * -----------Responsavel pelo dropdown de mais informações da tabela----------------------
 */
-function format(d) {
-
-    const resultadoSexo = MasculinoouFeminino(d.IE_SEXO);
-
-    return '<div class="row add_info">'
-        + '<div class=" col s6">'
-        + '<div class=" col s11 offset-s1">'
-        + '<p> Nome do Paciente: ' + d.NM_PACIENTE + '</p>'
-        + '<p> Cadastro Hospitalar: ' + d.CD_PESSOA_FISICA + '</p>'
-        + '<p> Nº de Atendimento: ' + d.NR_ATENDIMENTO + '</p>'
-        + '<p> Médico: ' + d.NM_MEDICO_ATENDIMENTO + '</p>'
-        + '</div> '
-        + '</div> '
-        + '<div class="col s6 ">'
-        + '<p>Idade: ' + d.DS_IDADE + '</p>'
-        + '<p> Sexo: ' + resultadoSexo + '</p>'
-        + '<p> Convênio: ' + '-' + '</p>'
-        + '<p> Descrição convênio: ' + d.DS_CONVENIO + '</p>'
-        + '</div> '
-        + '</div> '
-}
 
 
 /*

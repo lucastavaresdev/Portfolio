@@ -23,62 +23,62 @@
             <table id="tabela_pacientes"  class="responsive-table tabela-cor">
                     <thead >
                         <tr>
-                            <th class="fixed"></th>
-                            <th>NM_PACIENTE</th>
-                            <th>Analises_Clinicas_11_andar</th>
-                            <th>Orientação_Fisioterapica</th>
+                            <th>Nome Paciente</th>
+                            <th>Analises Clinicas 11 andar</th>
+                            <th>Orientação Fisioterapica</th>
                             <th>Ecocardiograma</th>
-                            <th>Ultrassonografia_Abdomen</th>
-                            <th>Avaliação_Clinico_Geral</th>
-                            <th>Teste_Ergométrico</th>
-                            <th>Raio_X</th>
-                            <th>Avaliação_Oftalmológica</th>
-                            <th>Avaliação_Dermatológica</th>
-                            <th>Avaliação_Cardiológica</th>
-                            <th>Prova_de_Função_Pulmonar</th>
-                            <th>Ultrassonografia_Próstata</th>
-                            <th>Avaliação_Urologica</th>
-                            <th>Avaliação_Mental_Care</th>
+                            <th>Ultrassonografia Abdomen</th>
+                            <th>Avaliação Clinico Geral</th>
+                            <th>Teste Ergométrico</th>
+                            <th>Raio X</th>
+                            <th>Avaliação Oftalmológica</th>
+                            <th>Avaliação Dermatológica</th>
+                            <th>Avaliação Cardiológica</th>
+                            <th>Prova de Função Pulmonar</th>
+                            <th>Ultrassonografia Próstata</th>
+                            <th>Avaliação Urologica</th>
+                            <th>Avaliação Mental Care</th>
                             <th>Bioimpedanciometria</th>
-                            <th>Avaliação_Gastro_Procto</th>
-                            <th>Densitometria_Óssea</th>
+                            <th>Avaliação Gastro Procto</th>
+                            <th>Densitometria Óssea</th>
                             <th>Audiometria</th>
-                            <th>Avaliação_Nutricional</th>
-                            <th>Avaliação_Odontológica</th>
-                            <th>Avaliação_Otorrinolaringologia</th>
-                            <th>Avaliação_Ginecológica</th>
+                            <th>Avaliação Nutricional</th>
+                            <th>Avaliação Odontológica</th>
+                            <th>Avaliação Otorrinolaringologia</th>
+                            <th>Avaliação Ginecológica</th>
                             <th>Colpocitologia</th>
-                            <th>Ultrassonografia_Transvaginal</th>
-                            <th>Ultrassonografia_Mamas</th>
-                            <th>Complemento_Mamografia</th>
+                            <th>Ultrassonografia Transvaginal</th>
+                            <th>Ultrassonografia Mamas</th>
+                            <th>Complemento Mamografia</th>
                             <th>Mamografia</th>
                             <th>Colposcopia</th>
                             <th>Eletrocardiograma</th>
-                            <th>Ultrassonografia_Doppler</th>
-                            <th>Análises_Clinicas_10_andar</th>
-                            <th>Ultrassonografia_Pelvica</th>
-                            <th>Avaliação_Física</th>
-                            <th>Ultrassonografia_Tireoide</th>
+                            <th>Ultrassonografia Doppler</th>
+                            <th>Análises Clinicas 10 andar</th>
+                            <th>Ultrassonografia Pelvica</th>
+                            <th>Avaliação Física</th>
+                            <th>Ultrassonografia Tireoide</th>
                             <th>Polissonografia</th>
-                            <th>Avaliação_do_Sono</th>
+                            <th>Avaliação do Sono</th>
                             <th>Eletroencefalograma</th>
-                            <th>Avaliação_Pediatrica</th>
-                            <th>Avaliação_Fisioterápica</th>
-                            <th>Ultrassonografia_Aparelho_Urinário</th>
-                            <th>Acuidade_Visual</th>
-                            <th>Análises_Clínicas</th>
+                            <th>Avaliação Pediatrica</th>
+                            <th>Avaliação Fisioterápica</th>
+                            <th>Ultrassonografia Aparelho Urinário</th>
+                            <th>Acuidade Visual</th>
+                            <th>Análises Clínicas</th>
                             <th>Micológico</th>
                             <th>ULTRASSONOGRAFIA</th>
-                            <th>Avaliação_Fisiológica_Laboratorial_Ergoespiro</th>
-                            <th>Avaliação_Médica_Clinica_Geral_e_Esforço</th>
+                            <th>Avaliação Fisiológica Laboratorial Ergoespiro</th>
+                            <th>Avaliação Médica Clinica Geral e Esforço</th>
                             <th>Tomografia</th>
-                            <th>Endoscopia_Colonoscopia</th>
+                            <th>Endoscopia Colonoscopia</th>
                             <th>Peso e Altura</th>
-                            <th>Pressao_Arterial</th>
-                            <th>Avaliacao_Psicossocial</th>
-                            <th>Avaliação_de_Equilibrio</th>
-                            <th>Avaliação_Composição_Corporal_Dobras_Cutaneas</th>
-                            <th>Avaliacao_Neuromuscular</th>
+                            <th>Pressao Arterial</th>
+                            <th>Avaliacao Psicossocial</th>
+                            <th>Avaliação de Equilibrio</th>
+                            <th>Avaliação Composição Corporal Dobras Cutaneas</th>
+                            <th>Avaliacao Neuromuscular</th>
+
                         </tr>
                 </thead>
                 <tbody id="grid"></tbody>
@@ -116,6 +116,9 @@
 
 <!---->
 
+  <script>
+ 
+  </script>
   <script>
   $(document).ready(function(){
     $('.modal').modal();
