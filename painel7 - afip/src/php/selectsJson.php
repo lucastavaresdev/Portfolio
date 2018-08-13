@@ -26,7 +26,7 @@ $grid = " SELECT
                         a.NM_PACIENTE AS NM_PACIENTE,
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Análises Clínicas 11º andar') THEN 1
-                        END)) AS 'Análises_Clínicas_11_andar',
+                        END)) AS 'Analises_Clinicas_11_andar',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Orientação Fisioterapica') THEN 1
                         END)) AS 'Orientação_Fisioterapica',

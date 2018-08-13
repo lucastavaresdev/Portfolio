@@ -1,13 +1,23 @@
 //chamadas ajax
 (function () {
+    var url_atual = window.location.href;
 
-    chamadaAjax(`php/selectsJson.php?parametro=grid`, grid);
+    var parametrosDaUrl = url_atual.split("?")[1];
+
+    chamadaAjax(`php/selectsJson.php?parametro=lista_de_pacientes`, lista_de_pacientes);
+    chamadaAjax(`php/selectsJson.php?parametro=agendamentos_quantidade`, agendamentos_quantidade);
+    // chamadaAjax(`php / selectsJson.php ? parametro = qtd_procedimentos & ${ parametrosDaUrl } `, qtd_procedimentos);
+    // chamadaAjax(`php / selectsJson.php ? parametro = horario_de_maior_fluxo & ${ parametrosDaUrl } `, horarioComMaiorPacientes);
 })();
 
 
 
-function grid(data) {
-    var tbody = document.getElementById("grid");
+/*
+ * -------------------------Agenda de Pacientes--------------------------------------
+ */
+
+function lista_de_pacientes(data) {
+    var tbody = document.getElementById("listadePacientes");
 
     if (tbody) {
         for (i = 0; i < data.length; i++) {
@@ -17,61 +27,27 @@ function grid(data) {
             var tr = document.createElement('tr');
             var cols =
                 '<td></td>' +
+                '<td>' + data[i].NR_ATENDIMENTO + '</td>' +
                 '<td>' + data[i].NM_PACIENTE + '</td>' +
-                '<td>' + data[i].Análises_Clínicas_11_andar + '</td>' +
-                '<td>' + data[i].Orientação_Fisioterapica + '</td>' +
-                '<td>' + data[i].Ecocardiograma + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Abdomen + '</td>' +
-                '<td>' + data[i].Avaliação_Clinico_Geral + '</td>' +
-                '<td>' + data[i].Teste_Ergométrico + '</td>' +
-                '<td>' + data[i].Raio_X + '</td>' +
-                '<td>' + data[i].Avaliação_Oftalmológica + '</td>' +
-                '<td>' + data[i].Avaliação_Dermatológica + '</td>' +
-                '<td>' + data[i].Avaliação_Cardiológica + '</td>' +
-                '<td>' + data[i].Prova_de_Função_Pulmonar + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Próstata + '</td>' +
-                '<td>' + data[i].Avaliação_Urologica + '</td>' +
-                '<td>' + data[i].Avaliação_Mental_Care + '</td>' +
-                '<td>' + data[i].Bioimpedanciometria + '</td>' +
-                '<td>' + data[i].Avaliação_Gastro_Procto + '</td>' +
-                '<td>' + data[i].Densitometria_Óssea + '</td>' +
-                '<td>' + data[i].Audiometria + '</td>' +
-                '<td>' + data[i].Avaliação_Nutricional + '</td>' +
-                '<td>' + data[i].Avaliação_Odontológica + '</td>' +
-                '<td>' + data[i].Avaliação_Otorrinolaringologia + '</td>' +
-                '<td>' + data[i].Avaliação_Ginecológica + '</td>' +
-                '<td>' + data[i].Colpocitologia + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Transvaginal + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Mamas + '</td>' +
-                '<td>' + data[i].Complemento_Mamografia + '</td>' +
-                '<td>' + data[i].Mamografia + '</td>' +
-                '<td>' + data[i].Colposcopia + '</td>' +
-                '<td>' + data[i].Eletrocardiograma + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Doppler + '</td>' +
-                '<td>' + data[i].Análises_Clinicas_10_andar + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Pelvica + '</td>' +
-                '<td>' + data[i].Avaliação_Física + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Tireoide + '</td>' +
-                '<td>' + data[i].Polissonografia + '</td>' +
-                '<td>' + data[i].Avaliação_do_Sono + '</td>' +
-                '<td>' + data[i].Eletroencefalograma + '</td>' +
-                '<td>' + data[i].Avaliação_Pediatrica + '</td>' +
-                '<td>' + data[i].Avaliação_Fisioterápica + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Aparelho_Urinário + '</td>' +
-                '<td>' + data[i].Acuidade_Visual + '</td>' +
-                '<td>' + data[i].Análises_Clínicas + '</td>' +
-                '<td>' + data[i].Micológico + '</td>' +
-                '<td>' + data[i].ULTRASSONOGRAFIA + '</td>' +
-                '<td>' + data[i].Avaliação_Fisiológica_Laboratorial_Ergoespiro + '</td>' +
-                '<td>' + data[i].Avaliação_Médica_Clinica_Geral_e_Esforço + '</td>' +
-                '<td>' + data[i].Tomografia + '</td>' +
-                '<td>' + data[i].Endoscopia_Colonoscopia + '</td>' +
-                '<td>' + data[i].Peso_e_Altura + '</td>' +
-                '<td>' + data[i].Pressao_Arterial + '</td>' +
-                '<td>' + data[i].Avaliacao_Psicossocial + '</td>' +
-                '<td>' + data[i].Avaliação_de_Equilibrio + '</td>' +
-                '<td>' + data[i].Avaliação_Composição_Corporal_Dobras_Cutaneas + '</td>' +
-                '<td>' + data[i].Avaliacao_Neuromuscula + '</td>';
+                '<td>' + data[i].NM_MEDICO_ATENDIMENTO + '</td>' +
+                '<td> - </td>' +
+                '<td>' + data[i].DS_IDADE + '</td>' +
+                '<td>' + resultadoSexo + '</td>' +
+                '<td class="ocutar">' + data[i].DS_CONVENIO + '</td>' +
+                '<td class="ocutar">' + data[i].DT_ENTRADA + '</td>' +
+                '<td class="ocutar">' + data[i].IE_TIPO_ATENDIMENTO + '</td>' +
+                '<td class="ocutar">' + data[i].CD_PESSOA_FISICA + '</td>' +
+                '<td class="ocutar">' + data[i].DT_ALTA + '</td>' +
+                '<td class="ocutar">' + data[i].CD_SETOR_ATENDIMENTO + '</td>' +
+                '<td class="ocutar">' + data[i].CD_UNIDADE_COMPL + '</td>' +
+                '<td class="ocutar">' + data[i].CD_UNIDADE + '</td>' +
+                '<td class="ocutar">' + data[i].CD_UNIDADE_BASICA + '</td>' +
+                '<td class="ocutar">' + data[i].NM_UNIDADE + '</td>' +
+                '<td class="ocutar">' + data[i].DS_MOTIVO_ALTA + '</td>' +
+                '<td class="ocutar">' + data[i].IE_ATEND_RETORNO + '</td>' +
+                '<td class="ocutar">' + data[i].ANOTACAO + '</td>' +
+                '<td class="ocutar">' + data[i].CD_CONVENIO + '</td>' +
+                '<td class="ocutar">' + data[i].CD_ESTABELECIMENTO + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -147,64 +123,29 @@ function data_table(d) {
                     "orderable": false,
                     "deferLoading": 0, // here
                     "defaultContent": '',
+                    "data": "data[, ]"
                 },
+                { 'data': 'NR_ATENDIMENTO' },
                 { 'data': 'NM_PACIENTE' },
-                { 'data': 'Análises_Clínicas_11_andar' },
-                { 'data': 'Orientação_Fisioterapica' },
-                { 'data': 'Ecocardiograma' },
-                { 'data': 'Ultrassonografia_Abdomen' },
-                { 'data': 'Avaliação_Clinico_Geral' },
-                { 'data': 'Teste_Ergométrico' },
-                { 'data': 'Raio_X' },
-                { 'data': 'Avaliação_Oftalmológica' },
-                { 'data': 'Avaliação_Dermatológica' },
-                { 'data': 'Avaliação_Cardiológica' },
-                { 'data': 'Prova_de_Função_Pulmonar' },
-                { 'data': 'Ultrassonografia_Próstata' },
-                { 'data': 'Avaliação_Urologica' },
-                { 'data': 'Avaliação_Mental_Care' },
-                { 'data': 'Bioimpedanciometria' },
-                { 'data': 'Avaliação_Gastro_Procto' },
-                { 'data': 'Densitometria_Óssea' },
-                { 'data': 'Audiometria' },
-                { 'data': 'Avaliação_Nutricional' },
-                { 'data': 'Avaliação_Odontológica' },
-                { 'data': 'Avaliação_Otorrinolaringologia' },
-                { 'data': 'Avaliação_Ginecológica' },
-                { 'data': 'Colpocitologia' },
-                { 'data': 'Ultrassonografia_Transvaginal' },
-                { 'data': 'Ultrassonografia_Mamas' },
-                { 'data': 'Complemento_Mamografia' },
-                { 'data': 'Mamografia' },
-                { 'data': 'Colposcopia' },
-                { 'data': 'Eletrocardiograma' },
-                { 'data': 'Ultrassonografia_Doppler' },
-                { 'data': 'Análises_Clinicas_10_andar' },
-                { 'data': 'Ultrassonografia_Pelvica' },
-                { 'data': 'Avaliação_Física' },
-                { 'data': 'Ultrassonografia_Tireoide' },
-                { 'data': 'Polissonografia' },
-                { 'data': 'Avaliação_do_Sono' },
-                { 'data': 'Eletroencefalograma' },
-                { 'data': 'Avaliação_Pediatrica' },
-                { 'data': 'Avaliação_Fisioterápica' },
-                { 'data': 'Ultrassonografia_Aparelho_Urinário' },
-                { 'data': 'Acuidade_Visual' },
-                { 'data': 'Análises_Clínicas' },
-                { 'data': 'Micológico' },
-                { 'data': 'ULTRASSONOGRAFIA' },
-                { 'data': 'Avaliação_Fisiológica_Laboratorial_Ergoespiro' },
-                { 'data': 'Avaliação_Médica_Clinica_Geral_e_Esforço' },
-                { 'data': 'Tomografia' },
-                { 'data': 'Endoscopia_Colonoscopia' },
-                { 'data': 'Peso_e_Altura' },
-                { 'data': 'Pressao_Arterial' },
-                { 'data': 'Avaliacao_Psicossocial' },
-                { 'data': 'Avaliação_de_Equilibrio' },
-                { 'data': 'Avaliação_Composição_Corporal_Dobras_Cutaneas' },
-                { 'data': 'Avaliacao_Neuromuscul' },
-
-
+                { 'data': 'NM_MEDICO_ATENDIMENTO' },
+                { 'data': '-' },
+                { 'data': 'DS_IDADE' },
+                { 'data': 'IE_SEXO' },
+                { 'data': 'DS_CONVENIO' },
+                { 'data': 'DT_ENTRADA' },
+                { 'data': 'IE_TIPO_ATENDIMENTO' },
+                { 'data': 'CD_PESSOA_FISICA' },
+                { 'data': 'DT_ALTA' },
+                { 'data': 'CD_SETOR_ATENDIMENTO' },
+                { 'data': 'CD_UNIDADE_COMPL' },
+                { 'data': 'CD_UNIDADE' },
+                { 'data': 'CD_UNIDADE_BASICA' },
+                { 'data': 'NM_UNIDADE' },
+                { 'data': 'DS_MOTIVO_ALTA' },
+                { 'data': 'IE_ATEND_RETORNO' },
+                { 'data': 'ANOTACAO' },
+                { 'data': 'CD_CONVENIO' },
+                { 'data': 'CD_ESTABELECIMENTO' },
             ],
             "order": [[1, 'asc']],
             "columnDefs": [
@@ -238,3 +179,73 @@ function data_table(d) {
         });
     });
 }
+
+
+/*
+* -----------Total de Agendamento por Setor---------------------
+*/
+
+function agendamentos_quantidade(data) {
+    var html = "";
+
+    elem = document.getElementById('agendamentos_quantidade');
+
+    if (elem) {
+        var agendamentos_quantidade = data[0].agendamentos_quantidade;
+
+        if (typeof agendamentos_quantidade === 0 || typeof agendamentos_quantidade === "agendamentos_quantidade") {
+            console.log("verificar o json ou query nos selects.php");
+        } else {
+            html = '<span>' + agendamentos_quantidade + '</span>';
+        }
+        elem.innerHTML = html;
+    }
+}
+
+
+function qtd_procedimentos(data) {
+    var elem = document.getElementById('qtd_procedimentos');
+    var qtd_procedimentos = data[0].qtd_procedimentos;
+    elem.innerHTML = qtd_procedimentos;
+}
+
+function menuclicado() {
+    var tabela = document.getElementById('listadePacientes');
+    var linhas = tabela.getElementsByTagName('tr')
+
+    for (let i = 0; i < linhas.length; i++) {
+        linhas[i].addEventListener('click', function () {
+            console.log(i)
+        })
+    }
+}
+
+function horarioComMaiorPacientes(data) {
+    var fluxodetempo = document.getElementById('fluxo');
+    var html = " ";
+
+    if (fluxodetempo) {
+        for (i = 0; i < data.length; i++) {
+            var j;
+            j = `< li > ${data[i].intervalo_de_horas} <span> (${data[i].qtd_por_hora} pacientes)</span></li > `;
+            html += j;
+        }
+
+        if (data.length === 0) {
+            fluxodetempo.innerHTML = "Não ha paciente";
+            fluxodetempo.classList.add('p-msg');
+        } else if (data.length === 1) {
+            atribuiHtml(fluxodetempo, html);
+            fluxodetempo.classList.add('fluxo-1');
+        } else {
+            fluxodetempo.innerHTML = "Ver Lista de Pacientes"
+            fluxodetempo.classList.add('p-msg');
+        }
+    }
+
+}
+
+function atribuiHtml(classouid, resultado) {
+    classouid.innerHTML = resultado;
+}
+

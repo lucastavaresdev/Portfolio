@@ -1,99 +1,98 @@
 <?php 
     include "./templates/header.php";
     include "./templates/menu.html";
-?>
-
-<?php 
-   include './templates/frameworks.html';
+    $setor = ""
 ?>
 
 
-<div class="col s12 agendamento conteudo topo-grid">
+<div class="col s12 agendamento conteudo">
 
-<div class="row">
-    <div class="col s12">
-        
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s12 l3">
+                    <a id="aba_nome_setor" class="active" href="#test1"> - </a>
+                </li>
+                <!-- <li class="tab col s12 l2 right ">
+                        <input type="text"  id="busque_data" class="datepicker right" placeholder="Busque por uma data">
+                </li> -->
+            </ul>
 
-            <div id="test1" class="col s12 tabela_bg">
-                    <table id="tabela_pacientes"  class="responsive-table tabela-cor" style="width:100%" >
-                            <thead>
+                <div id="test1" class="col s12 tabela_bg">
+                        <table id="tabela_pacientes"  class="responsive-table tabela-cor" style="width:100%" >
+                                <thead>
                                     <tr>
                                         <th></th>
-                                        <th>1</th>
-                                        <th>2</th>
-                                        <th>3</th>
-                                        <th>4</th>
-                                        <th>5</th>
-                                        <th>6</th>
-                                        <th>7</th>
-                                        <th>8</th>
-                                        <th>9</th>
-                                        <th>10</th>
-                                        <th>11</th>
-                                        <th>12</th>
-                                        <th>13</th>
-                                        <th>14</th>
-                                        <th>15</th>
-                                        <th>16</th>
-                                        <th>17</th>
-                                        <th>18</th>
-                                        <th>19</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
-                                        <th>20</th>
+                                        <th>N° Atendimento</th>
+                                        <th>Nome Paciente</th>
+                                        <th>Médico</th>
+                                        <th>Localização</th>
+                                        <th>Idade</th>
+                                        <th>Sexo</th>
+                                        <th  class="ocutar">DT_ENTRADA</th>
+                                        <th  class="ocutar">IE_TIPO_ATENDIMENTO</th>
+                                        <th  class="ocutar">CD_PESSOA_FISICA</th>
+                                        <th  class="ocutar">DT_ALTA</th>
+                                        <th class="ocutar">CD_SETOR_ATENDIMENTO</th>
+                                        <th  class="ocutar">CD_UNIDADE_COMPL</th>
+                                        <th  class="ocutar">CD_UNIDADE</th>
+                                        <th  class="ocutar">CD_UNIDADE_BASICA</th>
+                                        <th class="ocutar">DS_CONVENIO</th>
+                                        <th  class="ocutar">NM_UNIDADE</th>
+                                        <th  class="ocutar">DS_MOTIVO_ALTA</th>
+                                        <th  class="ocutar">IE_ATEND_RETORNO</th>
+                                        <th class="ocutar">ANOTACAO</th>
+                                        <th  class="ocutar">CD_CONVENIO</th>
+                                        <th class="ocutar">CD_ESTABELECIMENTO</th>
                                     </tr>
-                            </thead>
+                                </thead>
 
-                            <tbody id="grid" class="white ">
-                                <tr class='grid-tr'>
-                                
-                                </tr>
-                            </tbody>
+                                <tbody id="listadePacientes">
 
-                        </table>
+                                </tbody>
+
+                            </table>
+            </div>
         </div>
     </div>
+
 </div>
+<!-- <div id="test2" class="col s12">Test 2</div> -->
+</div>
+</div>
+
+  <!-- Modal Trigger -->
+
+  
+
+  <!-- Modal Structure -->
+    <div class="ad ">
+        <div id="asd" class="modal tamanho-modal">
+            <div class="modal-content ">
+                <h4>Modal Header</h4>
+                <p>A bunch of tessssssssssssssssssssssssssssssssssssssssssssssssssssxt</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="btn_modal modal-close waves-effect waves-green btn-flat">OK</a>
+            </div>
+        </div>
+    </div>
+
+</body>
 
 <?php 
    include './templates/frameworks.html';
 ?>
-<script src="./js/grid.js"></script>
+<script src="./js/index.js"></script>
+
+<!---->
+
+  <script>
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+  </script>
+
 
 <script>
     $(document).ready(function () {
@@ -107,6 +106,7 @@
         $('select').formSelect();
     });
 </script> 
+
 
 <?php 
    include './templates/footer.html';
