@@ -5,6 +5,9 @@
 ?>
 
 
+
+
+
 <div class="col s12 agendamento conteudo">
 
     <div class="row">
@@ -13,41 +16,72 @@
                 <li class="tab col s12 l3">
                     <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                 </li>
-                <!-- <li class="tab col s12 l2 right ">
-                        <input type="text"  id="busque_data" class="datepicker right" placeholder="Busque por uma data">
-                </li> -->
             </ul>
 
                 <div id="test1" class="col s12 tabela_bg">
                         <table id="tabela_pacientes"  class="responsive-table tabela-cor" style="width:100%" >
                                 <thead>
                                     <tr>
-                                        <th></th>
-                                        <th>N° Atendimento</th>
-                                        <th>Nome Paciente</th>
-                                        <th>Médico</th>
-                                        <th>Localização</th>
-                                        <th>Idade</th>
-                                        <th>Sexo</th>
-                                        <th  class="ocutar">DT_ENTRADA</th>
-                                        <th  class="ocutar">IE_TIPO_ATENDIMENTO</th>
-                                        <th  class="ocutar">CD_PESSOA_FISICA</th>
-                                        <th  class="ocutar">DT_ALTA</th>
-                                        <th class="ocutar">CD_SETOR_ATENDIMENTO</th>
-                                        <th  class="ocutar">CD_UNIDADE_COMPL</th>
-                                        <th  class="ocutar">CD_UNIDADE</th>
-                                        <th  class="ocutar">CD_UNIDADE_BASICA</th>
-                                        <th class="ocutar">DS_CONVENIO</th>
-                                        <th  class="ocutar">NM_UNIDADE</th>
-                                        <th  class="ocutar">DS_MOTIVO_ALTA</th>
-                                        <th  class="ocutar">IE_ATEND_RETORNO</th>
-                                        <th class="ocutar">ANOTACAO</th>
-                                        <th  class="ocutar">CD_CONVENIO</th>
-                                        <th class="ocutar">CD_ESTABELECIMENTO</th>
+                                            <th></th>
+                                            <th>NM_PACIENTE</th>
+                                            <th>Analises_Clinicas_11_andar</th>
+                                            <th>Orientação_Fisioterapica</th>
+                                            <th>Ecocardiograma</th>
+                                            <th>Ultrassonografia_Abdomen</th>
+                                            <th>Avaliação_Clinico_Geral</th>
+                                            <th>Teste_Ergométrico</th>
+                                            <th>Raio_X</th>
+                                            <th>Avaliação_Oftalmológica</th>
+                                            <th>Avaliação_Dermatológica</th>
+                                            <th>Avaliação_Cardiológica</th>
+                                            <th>Prova_de_Função_Pulmonar</th>
+                                            <th>Ultrassonografia_Próstata</th>
+                                            <th>Avaliação_Urologica</th>
+                                            <th>Avaliação_Mental_Care</th>
+                                            <th>Bioimpedanciometria</th>
+                                            <th>Avaliação_Gastro_Procto</th>
+                                            <th>Densitometria_Óssea</th>
+                                            <th>Audiometria</th>
+                                            <th>Avaliação_Nutricional</th>
+                                            <th>Avaliação_Odontológica</th>
+                                            <th>Avaliação_Otorrinolaringologia</th>
+                                            <th>Avaliação_Ginecológica</th>
+                                            <th>Colpocitologia</th>
+                                            <th>Ultrassonografia_Transvaginal</th>
+                                            <th>Ultrassonografia_Mamas</th>
+                                            <th>Complemento_Mamografia</th>
+                                            <th>Mamografia</th>
+                                            <th>Colposcopia</th>
+                                            <th>Eletrocardiograma</th>
+                                            <th>Ultrassonografia_Doppler</th>
+                                            <th>Análises_Clinicas_10_andar</th>
+                                            <th>Ultrassonografia_Pelvica</th>
+                                            <th>Avaliação_Física</th>
+                                            <th>Ultrassonografia_Tireoide</th>
+                                            <th>Polissonografia</th>
+                                            <th>Avaliação_do_Sono</th>
+                                            <th>Eletroencefalograma</th>
+                                            <th>Avaliação_Pediatrica</th>
+                                            <th>Avaliação_Fisioterápica</th>
+                                            <th>Ultrassonografia_Aparelho_Urinário</th>
+                                            <th>Acuidade_Visual</th>
+                                            <th>Análises_Clínicas</th>
+                                            <th>Micológico</th>
+                                            <th>ULTRASSONOGRAFIA</th>
+                                            <th>Avaliação_Fisiológica_Laboratorial_Ergoespiro</th>
+                                            <th>Avaliação_Médica_Clinica_Geral_e_Esforço</th>
+                                            <th>Tomografia</th>
+                                            <th>Endoscopia_Colonoscopia</th>
+                                            <th>Peso e Altura</th>
+                                            <th>Pressao_Arterial</th>
+                                            <th>Avaliacao_Psicossocial</th>
+                                            <th>Avaliação_de_Equilibrio</th>
+                                            <th>Avaliação_Composição_Corporal_Dobras_Cutaneas</th>
+                                            <th>Avaliacao_Neuromuscular</th>
                                     </tr>
                                 </thead>
 
-                                <tbody id="listadePacientes">
+                                <tbody id="grid">
 
                                 </tbody>
 
@@ -83,7 +117,9 @@
 <?php 
    include './templates/frameworks.html';
 ?>
-<script src="./js/index.js"></script>
+<script src="./js/grid.js"></script>
+
+<!--Calendario-->
 
 <!---->
 

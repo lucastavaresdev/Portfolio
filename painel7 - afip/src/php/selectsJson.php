@@ -170,7 +170,7 @@ $grid = " SELECT
                         END)) AS 'Endoscopia_Colonoscopia',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Peso e Altura') THEN 1
-                        END)) AS 'Peso e Altura',
+                        END)) AS 'Peso_e_Altura',
                         MAX((CASE
                             WHEN (e.ds_etapa = 'Pressao Arterial') THEN 1
                         END)) AS 'Pressao_Arterial',
