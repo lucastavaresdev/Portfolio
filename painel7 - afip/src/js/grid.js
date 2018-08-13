@@ -1,4 +1,4 @@
-//chamadas ajax
+//chamadas 
 (function () {
     var url_atual = window.location.href;
 
@@ -10,7 +10,7 @@
 
 
 /*
- * -------------------------Agenda de Pacientes--------------------------------------
+ * -------------------------Agenda de Pacientes--------------------------------------cancel
  */
 
 function lista_de_pacientes(data) {
@@ -23,68 +23,72 @@ function lista_de_pacientes(data) {
             // debugger
             var cols =
                 '<td>' + '' + '</td>' +
-                '<td>' + data[i].NM_PACIENTE + '</td>' +
-                '<td>' + data[i].Analises_Clinicas_11_andar + '</td>' +
-                '<td>' + data[i].Orientação_Fisioterapica + '</td>' +
-                '<td>' + data[i].Ecocardiograma + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Abdomen + '</td>' +
-                '<td>' + data[i].Avaliação_Clinico_Geral + '</td>' +
-                '<td>' + data[i].Teste_Ergométrico + '</td>' +
-                '<td>' + data[i].Raio_X + '</td>' +
-                '<td>' + data[i].Avaliação_Oftalmológica + '</td>' +
-                '<td>' + data[i].Avaliação_Dermatológica + '</td>' +
-                '<td>' + data[i].Avaliação_Cardiológica + '</td>' +
-                '<td>' + data[i].Prova_de_Função_Pulmonar + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Próstata + '</td>' +
-                '<td>' + data[i].Avaliação_Urologica + '</td>' +
-                '<td>' + data[i].Avaliação_Mental_Care + '</td>' +
-                '<td>' + data[i].Bioimpedanciometria + '</td>' +
-                '<td>' + data[i].Avaliação_Gastro_Procto + '</td>' +
-                '<td>' + data[i].Densitometria_Óssea + '</td>' +
-                '<td>' + data[i].Audiometria + '</td>' +
-                '<td>' + data[i].Avaliação_Nutricional + '</td>' +
-                '<td>' + data[i].Avaliação_Odontológica + '</td>' +
-                '<td>' + data[i].Avaliação_Otorrinolaringologia + '</td>' +
-                '<td>' + data[i].Avaliação_Ginecológica + '</td>' +
-                '<td>' + data[i].Colpocitologia + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Transvaginal + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Mamas + '</td>' +
-                '<td>' + data[i].Complemento_Mamografia + '</td>' +
-                '<td>' + data[i].Mamografia + '</td>' +
-                '<td>' + data[i].Colposcopia + '</td>' +
-                '<td>' + data[i].Eletrocardiograma + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Doppler + '</td>' +
-                '<td>' + data[i].Análises_Clinicas_10_andar + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Pelvica + '</td>' +
-                '<td>' + data[i].Avaliação_Física + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Tireoide + '</td>' +
-                '<td>' + data[i].Polissonografia + '</td>' +
-                '<td>' + data[i].Avaliação_do_Sono + '</td>' +
-                '<td>' + data[i].Eletroencefalograma + '</td>' +
-                '<td>' + data[i].Avaliação_Pediatrica + '</td>' +
-                '<td>' + data[i].Avaliação_Fisioterápica + '</td>' +
-                '<td>' + data[i].Ultrassonografia_Aparelho_Urinário + '</td>' +
-                '<td>' + data[i].Acuidade_Visual + '</td>' +
-                '<td>' + data[i].Análises_Clínicas + '</td>' +
-                '<td>' + data[i].Micológico + '</td>' +
-                '<td>' + data[i].ULTRASSONOGRAFIA + '</td>' +
-                '<td>' + data[i].Avaliação_Fisiológica_Laboratorial_Ergoespiro + '</td>' +
-                '<td>' + data[i].Avaliação_Médica_Clinica_Geral_e_Esforço + '</td>' +
-                '<td>' + data[i].Tomografia + '</td>' +
-                '<td>' + data[i].Endoscopia_Colonoscopia + '</td>' +
-                '<td>' + data[i].Peso_e_Altura + '</td>' +
-                '<td>' + data[i].Pressao_Arterial + '</td>' +
-                '<td>' + data[i].Avaliacao_Psicossocial + '</td>' +
-                '<td>' + data[i].Avaliação_de_Equilibrio + '</td>' +
-                '<td>' + data[i].Avaliação_Composição_Corporal_Dobras_Cutaneas + '</td>' +
-                '<td>' + data[i].Avaliacao_Neuromuscular + '</td>';
-
+                '<td class="gridStatus">' + data[i].NM_PACIENTE + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Analises_Clinicas_11_andar) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Orientação_Fisioterapica) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Ecocardiograma) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Ultrassonografia_Abdomen) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Clinico_Geral) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Teste_Ergométrico) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Raio_X) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Oftalmológica) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Dermatológica) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Cardiológica) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Prova_de_Função_Pulmonar) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Ultrassonografia_Próstata) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Urologica) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Mental_Care) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Bioimpedanciometria) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Gastro_Procto) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Densitometria_Óssea) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Audiometria) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Nutricional) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Odontológica) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Otorrinolaringologia) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Ginecológica) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Colpocitologia) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Ultrassonografia_Transvaginal) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Ultrassonografia_Mamas) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Complemento_Mamografia) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Mamografia) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Colposcopia) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Eletrocardiograma) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Ultrassonografia_Doppler) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Análises_Clinicas_10_andar) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Ultrassonografia_Pelvica) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Física) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Ultrassonografia_Tireoide) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Polissonografia) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_do_Sono) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Eletroencefalograma) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Pediatrica) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Fisioterápica) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Ultrassonografia_Aparelho_Urinário) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Acuidade_Visual) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Análises_Clínicas) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Micológico) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].ULTRASSONOGRAFIA) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Fisiológica_Laboratorial_Ergoespiro) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Médica_Clinica_Geral_e_Esforço) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Tomografia) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Endoscopia_Colonoscopia) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Peso_e_Altura) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Pressao_Arterial) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliacao_Psicossocial) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_de_Equilibrio) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliação_Composição_Corporal_Dobras_Cutaneas) + '</td>' +
+                '<td class="gridStatus">' + iconedeStatus(data[i].Avaliacao_Neuromuscular) + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
         }
         data_table(data)
     }
+}
+
+function iconedeStatus(coluna) {
+    coluna === null ? coluna = '<i class="material-icons grey-text" >cancel</i>' : coluna = '<i class="material-icons  blue-text">check</i>';
+    return (coluna)
 }
 
 
@@ -233,9 +237,23 @@ function format(d) {
 
     const resultadoSexo = MasculinoouFeminino(d.IE_SEXO);
 
-    return '<p>teste</p> '
+    return '<div class="row add_info">'
+        + '<div class=" col s6">'
+        + '<div class=" col s11 offset-s1">'
+        + '<p> Nome do Paciente: ' + d.NM_PACIENTE + '</p>'
+        + '<p> Cadastro Hospitalar: ' + d.CD_PESSOA_FISICA + '</p>'
+        + '<p> Nº de Atendimento: ' + d.NR_ATENDIMENTO + '</p>'
+        + '<p> Médico: ' + d.NM_MEDICO_ATENDIMENTO + '</p>'
+        + '</div> '
+        + '</div> '
+        + '<div class="col s6 ">'
+        + '<p>Idade: ' + d.DS_IDADE + '</p>'
+        + '<p> Sexo: ' + resultadoSexo + '</p>'
+        + '<p> Convênio: ' + '-' + '</p>'
+        + '<p> Descrição convênio: ' + d.DS_CONVENIO + '</p>'
+        + '</div> '
+        + '</div> '
 }
-
 
 
 /*
