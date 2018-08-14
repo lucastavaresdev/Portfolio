@@ -47,10 +47,10 @@ body {
     }
     ::-webkit-scrollbar-corner {
         /* 6 */
-        background: fuchsia;
+        background: darken($cinza, 10%);
     }
     ::-webkit-resizer {
         /* 7 */
-        background: springgreen;
+        background: darken($cinza, 10%);
     }
 }

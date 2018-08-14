@@ -32,6 +32,9 @@ body {
 .ocutar {
   display: none !important; }
 
+td {
+  border: 1px transparent solid !important; }
+
 nav {
   box-shadow: none;
   background: #bf1e24;
@@ -763,10 +766,10 @@ body {
     -o-border-radius: 20px; }
   .agendamento ::-webkit-scrollbar-corner {
     /* 6 */
-    background: fuchsia; }
+    background: #dbdbdb; }
   .agendamento ::-webkit-resizer {
     /* 7 */
-    background: springgreen; }
+    background: #dbdbdb; }
 
 .pacientes .topo {
   margin-top: 60px; }
