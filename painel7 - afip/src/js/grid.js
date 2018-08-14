@@ -136,7 +136,6 @@ function data_table(d) {
             "scrollX": "100%",
             "bScrollCollapse": true,
             "bPaginate": true,
-            responsive: true,
             "language": {
                 "lengthMenu": " Quantidade por Pagina _MENU_  ",
                 "zeroRecords": "Não encontrado pacientes",

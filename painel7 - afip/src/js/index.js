@@ -33,21 +33,21 @@ function lista_de_pacientes(data) {
                 '<td> - </td>' +
                 '<td>' + data[i].DS_IDADE + '</td>' +
                 '<td>' + resultadoSexo + '</td>' +
-                '<td class="ocutar">' + data[i].DS_CONVENIO + '</td>' +
+                '<td class="ocutar">' + data[i].SEQUENCIA + '</td>' +
                 '<td class="ocutar">' + data[i].DT_ENTRADA + '</td>' +
-                '<td class="ocutar">' + data[i].IE_TIPO_ATENDIMENTO + '</td>' +
                 '<td class="ocutar">' + data[i].CD_PESSOA_FISICA + '</td>' +
+                '<td class="ocutar">' + data[i].IE_TIPO_ATENDIMENTO + '</td>' +
                 '<td class="ocutar">' + data[i].DT_ALTA + '</td>' +
-                '<td class="ocutar">' + data[i].CD_SETOR_ATENDIMENTO + '</td>' +
+                '<td class="ocutar">' + data[i].CD_SETOR_ATENDIMENTO + '</td > ' +
+                '<td class="ocutar">' + data[i].CD_UNIDADE_BASICA + '</td>' +
                 '<td class="ocutar">' + data[i].CD_UNIDADE_COMPL + '</td>' +
                 '<td class="ocutar">' + data[i].CD_UNIDADE + '</td>' +
-                '<td class="ocutar">' + data[i].CD_UNIDADE_BASICA + '</td>' +
-                '<td class="ocutar">' + data[i].NM_UNIDADE + '</td>' +
-                '<td class="ocutar">' + data[i].DS_MOTIVO_ALTA + '</td>' +
-                '<td class="ocutar">' + data[i].IE_ATEND_RETORNO + '</td>' +
-                '<td class="ocutar">' + data[i].ANOTACAO + '</td>' +
                 '<td class="ocutar">' + data[i].CD_CONVENIO + '</td>' +
-                '<td class="ocutar">' + data[i].CD_ESTABELECIMENTO + '</td>';
+                '<td class="ocutar">' + data[i].DS_CONVENIO + '</td>' +
+                '<td class="ocutar">' + data[i].DS_MOTIVO_ALTA + '</td>' +
+                '<td class="ocutar">' + data[i].NM_UNIDADE + '</td>' +
+                '<td class="ocutar">' + data[i].IE_ATEND_RETORNO + '</td > ';
+
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -77,20 +77,21 @@ function format(d) {
 
     const resultadoSexo = MasculinoouFeminino(d.IE_SEXO);
 
+
     return '<div class="row add_info">'
         + '<div class=" col s6">'
         + '<div class=" col s11 offset-s1">'
-        + '<p> Nome do Paciente: ' + d.NM_PACIENTE + '</p>'
-        + '<p> Cadastro Hospitalar: ' + d.CD_PESSOA_FISICA + '</p>'
-        + '<p> Nº de Atendimento: ' + d.NR_ATENDIMENTO + '</p>'
-        + '<p> Médico: ' + d.NM_MEDICO_ATENDIMENTO + '</p>'
+        + '<p> Nome do Paciente: <b> ' + d.NM_PACIENTE + '</b></p>'
+        + '<p> Cadastro Hospitalar: <b> ' + d.CD_PESSOA_FISICA + '</b></p>'
+        + '<p> Nº de Atendimento: <b>  ' + d.NR_ATENDIMENTO + '</b></p>'
+        + '<p> Médico: <b> ' + d.NM_MEDICO_ATENDIMENTO + '</b></p>'
         + '</div> '
         + '</div> '
         + '<div class="col s6 ">'
-        + '<p>Idade: ' + d.DS_IDADE + '</p>'
-        + '<p> Sexo: ' + resultadoSexo + '</p>'
-        + '<p> Convênio: ' + '-' + '</p>'
-        + '<p> Descrição convênio: ' + d.DS_CONVENIO + '</p>'
+        + '<p>Idade:<b> ' + d.DS_IDADE + '</b></p>'
+        + '<p> Sexo:<b> ' + resultadoSexo + '</b></p>'
+        + '<p> Convênio:<b> ' + '-' + '</b></p>'
+        + '<p> Descrição convênio: <b>' + d.DS_CONVENIO + '</b></p>'
         + '</div> '
         + '</div> '
 }
@@ -131,21 +132,20 @@ function data_table(d) {
                 { 'data': '-' },
                 { 'data': 'DS_IDADE' },
                 { 'data': 'IE_SEXO' },
-                { 'data': 'DS_CONVENIO' },
+                { 'data': 'SEQUENCIA' },
                 { 'data': 'DT_ENTRADA' },
-                { 'data': 'IE_TIPO_ATENDIMENTO' },
                 { 'data': 'CD_PESSOA_FISICA' },
+                { 'data': 'IE_TIPO_ATENDIMENTO' },
                 { 'data': 'DT_ALTA' },
                 { 'data': 'CD_SETOR_ATENDIMENTO' },
+                { 'data': 'CD_UNIDADE_BASICA' },
                 { 'data': 'CD_UNIDADE_COMPL' },
                 { 'data': 'CD_UNIDADE' },
-                { 'data': 'CD_UNIDADE_BASICA' },
-                { 'data': 'NM_UNIDADE' },
-                { 'data': 'DS_MOTIVO_ALTA' },
-                { 'data': 'IE_ATEND_RETORNO' },
-                { 'data': 'ANOTACAO' },
                 { 'data': 'CD_CONVENIO' },
-                { 'data': 'CD_ESTABELECIMENTO' },
+                { 'data': 'DS_CONVENIO' },
+                { 'data': 'DS_MOTIVO_ALTA' },
+                { 'data': 'NM_UNIDADE' },
+                { 'data': 'IE_ATEND_RETORNO' },
             ],
             "order": [[1, 'asc']],
             "columnDefs": [

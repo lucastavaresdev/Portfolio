@@ -40,31 +40,29 @@
                         <table id="tabela_pacientes"  class="responsive-table tabela-cor" style="width:100%" >
                                 <thead>
                                     <tr>
-                                        <th></th>
-                                        <th>N° Atendimento</th>
-                                        <th>Nome Paciente</th>
-                                        <th>Médico</th>
-                                        <th>Localização</th>
-                                        <th>Idade</th>
-                                        <th>Sexo</th>
-                                        <th  class="ocutar">DT_ENTRADA</th>
-                                        <th  class="ocutar">IE_TIPO_ATENDIMENTO</th>
-                                        <th  class="ocutar">CD_PESSOA_FISICA</th>
-                                        <th  class="ocutar">DT_ALTA</th>
-                                        <th class="ocutar">CD_SETOR_ATENDIMENTO</th>
-                                        <th  class="ocutar">CD_UNIDADE_COMPL</th>
-                                        <th  class="ocutar">CD_UNIDADE</th>
-                                        <th  class="ocutar">CD_UNIDADE_BASICA</th>
-                                        <th class="ocutar">DS_CONVENIO</th>
-                                        <th  class="ocutar">NM_UNIDADE</th>
-                                        <th  class="ocutar">DS_MOTIVO_ALTA</th>
-                                        <th  class="ocutar">IE_ATEND_RETORNO</th>
-                                        <th class="ocutar">ANOTACAO</th>
-                                        <th  class="ocutar">CD_CONVENIO</th>
-                                        <th class="ocutar">CD_ESTABELECIMENTO</th>
+                                         <th></th>
+                                         <th>Nº Paciente </th>
+                                         <th>Nome Paciente </th>
+                                         <th>Nome do Médico </th>
+                                         <th>Localização</th>
+                                         <th>Idade </th>
+                                         <th>Sexo </th>
+                                         <th class="ocutar">SEQUENCIA </th>
+                                         <th class="ocutar">DT_ENTRADA </th>
+                                         <th class="ocutar">CD_PESSOA_FISICA </th>
+                                         <th class="ocutar">IE_TIPO_ATENDIMENTO </th>
+                                         <th class="ocutar">DT_ALTA </th>
+                                         <th class="ocutar">CD_SETOR_ATENDIMENTO </th>
+                                         <th class="ocutar">CD_UNIDADE_BASICA </th>
+                                         <th class="ocutar">CD_UNIDADE_COMPL </th>
+                                         <th class="ocutar">CD_UNIDADE </th>
+                                         <th class="ocutar">CD_CONVENIO </th>
+                                         <th class="ocutar">DS_CONVENIO </th>
+                                         <th class="ocutar">DS_MOTIVO_ALTA </th>
+                                         <th class="ocutar">NM_UNIDADE </th>
+                                         <th class="ocutar">IE_ATEND_RETORNO </th>
                                     </tr>
                                 </thead>
-
                                 <tbody id="listadePacientes">
 
                                 </tbody>
@@ -80,21 +78,6 @@
 </div>
 
   <!-- Modal Trigger -->
-
-  
-
-  <!-- Modal Structure -->
-    <div class="ad ">
-        <div id="asd" class="modal tamanho-modal">
-            <div class="modal-content ">
-                <h4>Modal Header</h4>
-                <p>A bunch of tessssssssssssssssssssssssssssssssssssssssssssssssssssxt</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="btn_modal modal-close waves-effect waves-green btn-flat">OK</a>
-            </div>
-        </div>
-    </div>
 
 </body>
 
