@@ -15,9 +15,9 @@ if (isset($_GET['setor'])) {
 
 //Dashboard
 
-$lista_de_pacientes = "SELECT * FROM atendimentos  WHERE (DT_ENTRADA = '2018-01-08 06:00:00');";
+$lista_de_pacientes = "SELECT * FROM atendimentos  where DT_ENTRADA = date_format(curdate(), '%d/%m/%y')";
 
-$agendamentos_quantidade = "SELECT Count(distinct(NM_PACIENTE)) as agendamentos_quantidade FROM atendimentos  WHERE (DT_ENTRADA = '2018-01-08 06:00:00');";
+$agendamentos_quantidade = "SELECT Count(distinct(NM_PACIENTE)) as agendamentos_quantidade FROM atendimentos  where DT_ENTRADA = date_format(curdate(), '%d/%m/%y');";
                                 
 
 // $lista_de_pacientes = "SELECT * FROM atendimento_paciente_robo
@@ -198,8 +198,7 @@ LEFT JOIN checklist ch ON (ch.atendimento = a.NR_ATENDIMENTO)
 LEFT JOIN etapas e ON (ch.etapa = e.id)
 LEFT JOIN status s on (s.id = ch.status)
 )
-WHERE
-(a.DT_ENTRADA = '2018-01-08 06:00:00')
+where DT_ENTRADA = date_format(curdate(), '%d/%m/%y')
 GROUP BY a.NR_ATENDIMENTO order by NM_PACIENTE";
 
 /*
