@@ -193,11 +193,12 @@ MAX((CASE
     WHEN (e.ds_etapa = 'Avaliação Neuromuscular') THEN s.descricao
 END)) AS 'Avaliação_Neuromuscular'
 FROM
-(atendimentos a
-LEFT JOIN checklist ch ON (ch.atendimento = a.NR_ATENDIMENTO)            
-LEFT JOIN etapas e ON (ch.etapa = e.id)
-LEFT JOIN status s on (s.id = ch.status)
-)
+        (atendimentos a
+        LEFT JOIN (select max(id) as id, atendimento from checklist group by atendimento, etapa) ch2 on ch2.atendimento = a.NR_ATENDIMENTO
+        LEFT JOIN checklist ch ON (ch.id = ch2.id)
+        LEFT JOIN etapas e ON (ch.etapa = e.id)        
+        LEFT JOIN status s on (s.id = ch.status)
+        )
 where DT_ENTRADA = date_format(curdate(), '%d/%m/%y')
 GROUP BY a.NR_ATENDIMENTO order by NM_PACIENTE";
 

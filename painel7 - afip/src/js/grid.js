@@ -1,12 +1,11 @@
 //chamadas 
 
-setInterval((function () {
-    var url_atual = window.location.href;
+// chamadaAjax(`php/selectsJson.php?parametro=grid`, lista_de_pacientes);
 
-    var parametrosDaUrl = url_atual.split("?")[1];
+// setInterval(function () {
+chamadaAjax(`php/selectsJson.php?parametro=grid`, lista_de_pacientes);
+// }, 5000);
 
-    chamadaAjax(`php/selectsJson.php?parametro=grid`, lista_de_pacientes);
-})(), 1000);
 
 
 
@@ -15,14 +14,17 @@ setInterval((function () {
  */
 
 function lista_de_pacientes(data) {
-    var tbody = document.getElementById("grid");
+    var html = "";
 
+
+    var tbody = document.getElementById("grid");
+    html = " ";
     if (tbody) {
         for (i = 0; i < data.length; i++) {
 
             var tr = document.createElement('tr');
             // debugger
-            var cols =
+            cols =
                 '<td>' + data[i].NM_PACIENTE + '</td>' +
                 '<td class="gridStatus">' + iconedeStatus(data[i].Acuidade_Visual) + '</td>' +
                 '<td class="gridStatus">' + iconedeStatus(data[i].Análises_Clínicas) + '</td>' +
@@ -82,7 +84,10 @@ function lista_de_pacientes(data) {
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
+
+
         }
+
         data_table(data)
     }
 }
