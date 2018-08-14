@@ -87,44 +87,7 @@
 <script src="./js/index.js"></script>
 
 <!--Calendario-->
-<script>
 
-    const Calender = document.querySelector('.datepicker');
-    M.Datepicker.init(Calender,{
-        format: 'dd-mm-yyyy',
-        //autoClose: true,
-        i18n:{
-            months: ['Janeiro',  'Fevereiro',  'Março',  'Abril',  'Maio',  'Junho',  'Julho',  'Agosto',  'Setembro',  'Outubro',  'Novembro',  'Dezembro'],
-            monthsShort:	[ 'Jan',  'Fev',  'Mar',  'Abr',  'Mai',  'Jun',  'Jul',  'Ago',  'Set',  'Out', 'Nov',  'Dez'],
-            weekday: [ 'Domingo',  'Segunda',  'Terça',  'Quarta',  'Quinta',  'Sexta',  'Sabado' ],
-            weekdaysShort: [  'Dom',  'Seg',  'Ter',  'Qua',  'Qui',  'Sex',  'Sab'],
-            weekdaysAbbrev:	['D','S','T','Q','Q','S','S'],
-            cancel: 'Cancelar'
-        }
-    });
-
-    
-
-    const btn_ok = document.querySelector('.btn-flat.datepicker-done.waves-effect');
-    var urlAtual = window.location; // pega a url da pagina
-    
-    btn_ok.addEventListener('click', function(){
-       let dataescolhida = Calender.value; //pega a data
-       dataescolhida  = dataescolhida.split('').reverse().join(''); //reverte a data
-//parei aqui
-        let url = window.location.pathname
-
-        let setor = url.searchParams("setor");
-        console.log(setor);
-   
-       window.location = url + '?setor=225'; //redireciona com o get data
-
-       
-        console.log(a)
-    })
-
-
-</script>
 <!---->
 
   <script>

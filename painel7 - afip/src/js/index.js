@@ -203,49 +203,49 @@ function agendamentos_quantidade(data) {
 }
 
 
-function qtd_procedimentos(data) {
-    var elem = document.getElementById('qtd_procedimentos');
-    var qtd_procedimentos = data[0].qtd_procedimentos;
-    elem.innerHTML = qtd_procedimentos;
-}
+// function qtd_procedimentos(data) {
+//     var elem = document.getElementById('qtd_procedimentos');
+//     var qtd_procedimentos = data[0].qtd_procedimentos;
+//     elem.innerHTML = qtd_procedimentos;
+// }
 
-function menuclicado() {
-    var tabela = document.getElementById('listadePacientes');
-    var linhas = tabela.getElementsByTagName('tr')
+// function menuclicado() {
+//     var tabela = document.getElementById('listadePacientes');
+//     var linhas = tabela.getElementsByTagName('tr')
 
-    for (let i = 0; i < linhas.length; i++) {
-        linhas[i].addEventListener('click', function () {
-            console.log(i)
-        })
-    }
-}
+//     for (let i = 0; i < linhas.length; i++) {
+//         linhas[i].addEventListener('click', function () {
+//             console.log(i)
+//         })
+//     }
+// }
 
-function horarioComMaiorPacientes(data) {
-    var fluxodetempo = document.getElementById('fluxo');
-    var html = " ";
+// function horarioComMaiorPacientes(data) {
+//     var fluxodetempo = document.getElementById('fluxo');
+//     var html = " ";
 
-    if (fluxodetempo) {
-        for (i = 0; i < data.length; i++) {
-            var j;
-            j = `< li > ${data[i].intervalo_de_horas} <span> (${data[i].qtd_por_hora} pacientes)</span></li > `;
-            html += j;
-        }
+//     if (fluxodetempo) {
+//         for (i = 0; i < data.length; i++) {
+//             var j;
+//             j = `< li > ${data[i].intervalo_de_horas} <span> (${data[i].qtd_por_hora} pacientes)</span></li > `;
+//             html += j;
+//         }
 
-        if (data.length === 0) {
-            fluxodetempo.innerHTML = "Não ha paciente";
-            fluxodetempo.classList.add('p-msg');
-        } else if (data.length === 1) {
-            atribuiHtml(fluxodetempo, html);
-            fluxodetempo.classList.add('fluxo-1');
-        } else {
-            fluxodetempo.innerHTML = "Ver Lista de Pacientes"
-            fluxodetempo.classList.add('p-msg');
-        }
-    }
+//         if (data.length === 0) {
+//             fluxodetempo.innerHTML = "Não ha paciente";
+//             fluxodetempo.classList.add('p-msg');
+//         } else if (data.length === 1) {
+//             atribuiHtml(fluxodetempo, html);
+//             fluxodetempo.classList.add('fluxo-1');
+//         } else {
+//             fluxodetempo.innerHTML = "Ver Lista de Pacientes"
+//             fluxodetempo.classList.add('p-msg');
+//         }
+//     }
 
-}
+// }
 
-function atribuiHtml(classouid, resultado) {
-    classouid.innerHTML = resultado;
-}
+// function atribuiHtml(classouid, resultado) {
+//     classouid.innerHTML = resultado;
+// }
 
