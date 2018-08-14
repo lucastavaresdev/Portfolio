@@ -13,71 +13,71 @@
 
     <div class="row">
         <div class="col s12">
-            <ul class="tabs">
+            <ul class="tabs" style="background-color: #f9f9f9;">
                 <li class="tab col s12 l3">
-                    <a id="aba_nome_setor" class="active" href="#test1"> - </a>
+                    <!-- <a id="aba_nome_setor" class="active" href="#test1"> - </a> -->
                 </li>
             </ul>
 
     <div class="scroll">
             <table id="tabela_pacientes"  class="responsive-table tabela-cor">
-                    <thead >
-                        <tr>
+                    <thead>
+                        <tr class='grid-espaco' style="height: 20px;">
                             <th  width="320">Nome Paciente</th>
-                            <th>Analises Clinicas 11 andar</th>
-                            <th>Orientação Fisioterapica</th>
-                            <th>Ecocardiograma</th>
-                            <th>Ultrassonografia Abdomen</th>
-                            <th>Avaliação Clinico Geral</th>
-                            <th>Teste Ergométrico</th>
-                            <th>Raio X</th>
-                            <th>Avaliação Oftalmológica</th>
-                            <th>Avaliação Dermatológica</th>
-                            <th>Avaliação Cardiológica</th>
-                            <th>Prova de Função Pulmonar</th>
-                            <th>Ultrassonografia Próstata</th>
-                            <th>Avaliação Urologica</th>
-                            <th>Avaliação Mental Care</th>
-                            <th>Bioimpedanciometria</th>
-                            <th>Avaliação Gastro Procto</th>
-                            <th>Densitometria Óssea</th>
-                            <th>Audiometria</th>
-                            <th>Avaliação Nutricional</th>
-                            <th>Avaliação Odontológica</th>
-                            <th>Avaliação Otorrinolaringologia</th>
-                            <th>Avaliação Ginecológica</th>
-                            <th>Colpocitologia</th>
-                            <th>Ultrassonografia Transvaginal</th>
-                            <th>Ultrassonografia Mamas</th>
-                            <th>Complemento Mamografia</th>
-                            <th>Mamografia</th>
-                            <th>Colposcopia</th>
-                            <th>Eletrocardiograma</th>
-                            <th>Ultrassonografia Doppler</th>
-                            <th>Análises Clinicas 10 andar</th>
-                            <th>Ultrassonografia Pelvica</th>
-                            <th>Avaliação Física</th>
-                            <th>Ultrassonografia Tireoide</th>
-                            <th>Polissonografia</th>
-                            <th>Avaliação do Sono</th>
-                            <th>Eletroencefalograma</th>
-                            <th>Avaliação Pediatrica</th>
-                            <th>Avaliação Fisioterápica</th>
-                            <th>Ultrassonografia Aparelho Urinário</th>
-                            <th>Acuidade Visual</th>
-                            <th>Análises Clínicas</th>
-                            <th>Micológico</th>
-                            <th>ULTRASSONOGRAFIA</th>
-                            <th>Avaliação Fisiológica Laboratorial Ergoespiro</th>
-                            <th>Avaliação Médica Clinica Geral e Esforço</th>
-                            <th>Tomografia</th>
-                            <th>Endoscopia Colonoscopia</th>
-                            <th>Peso e Altura</th>
-                            <th>Pressao Arterial</th>
-                            <th>Avaliacao Psicossocial</th>
-                            <th>Avaliação de Equilibrio</th>
-                            <th>Avaliação Composição Corporal Dobras Cutaneas</th>
-                            <th>Avaliacao Neuromuscular</th>
+                            <th class="center ">Analises Clinicas 11 andar</th>
+                            <th class="center">Orientação Fisioterapica</th>
+                            <th class="center">Ecocardiograma</th>
+                            <th class="center">Ultrassonografia Abdomen</th>
+                            <th class="center">Avaliação Clinico Geral</th>
+                            <th class="center">Teste Ergométrico</th>
+                            <th class="center">Raio X</th>
+                            <th lass="center">Avaliação Oftalmológica</th>
+                            <th class="center">Avaliação Dermatológica</th>
+                            <th class="center">Avaliação Cardiológica</th>
+                            <th class="center">Prova de Função Pulmonar</th>
+                            <th class="center">Ultrassonografia Próstata</th>
+                            <th class="center">Avaliação Urologica</th>
+                            <th class="center">Avaliação Mental Care</th>
+                            <th class="center">Bioimpedanciometria</th>
+                            <th class="center">Avaliação Gastro Procto</th>
+                            <th class="center">Densitometria Óssea</th>
+                            <th class="center">Audiometria</th>
+                            <th class="center">Avaliação Nutricional</th>
+                            <th class="center">Avaliação Odontológica</th>
+                            <th class="center">Avaliação Otorrinolaringologia</th>
+                            <th class="center">Avaliação Ginecológica</th>
+                            <th class="center">Colpocitologia</th>
+                            <th class="center">Ultrassonografia Transvaginal</th>
+                            <th class="center">Ultrassonografia Mamas</th>
+                            <th class="center">Complemento Mamografia</th>
+                            <th class="center">Mamografia</th>
+                            <th class="center">Colposcopia</th>
+                            <th class="center">Eletrocardiograma</th>
+                            <th class="center">Ultrassonografia Doppler</th>
+                            <th class="center">Análises Clinicas 10 andar</th>
+                            <th class="center">Ultrassonografia Pelvica</th>
+                            <th class="center">Avaliação Física</th>
+                            <th class="center">Ultrassonografia Tireoide</th>
+                            <th class="center">Polissonografia</th>
+                            <th class="center">Avaliação do Sono</th>
+                            <th class="center">Eletroencefalograma</th>
+                            <th class="center">Avaliação Pediatrica</th>
+                            <th class="center">Avaliação Fisioterápica</th>
+                            <th class="center">Ultrassonografia Aparelho Urinário</th>
+                            <th class="center">Acuidade Visual</th>
+                            <th class="center">Análises Clínicas</th>
+                            <th class="center">Micológico</th>
+                            <th class="center">ULTRASSONOGRAFIA</th>
+                            <th class="center">Avaliação Fisiológica Laboratorial Ergoespiro</th>
+                            <th class="center">Avaliação Médica Clinica Geral e Esforço</th>
+                            <th class="center">Tomografia</th>
+                            <th class="center">Endoscopia Colonoscopia</th>
+                            <th class="center">Peso e Altura</th>
+                            <th class="center">Pressao Arterial</th>
+                            <th class="center">Avaliacao Psicossocial</th>
+                            <th class="center">Avaliação de Equilibrio</th>
+                            <th class="center">Avaliação Composição Corporal Dobras Cutaneas</th>
+                            <th class="center">Avaliacao Neuromuscular</th>
 
                         </tr>
                 </thead>

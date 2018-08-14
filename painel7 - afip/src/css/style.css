@@ -790,4 +790,7 @@ body {
 .gridStatus {
   text-align: center; }
 
+.grid-espaco {
+  padding: 0 !important; }
+
 /*# sourceMappingURL=style.css.map */
