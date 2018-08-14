@@ -1,8 +1,8 @@
 nav {
     box-shadow: none;
-    background: $cor-primaria;
+    background: $cor-secundaria;
     height: 50px;
-    border-bottom: solid 2px darken($cor-primaria, 10%);
+    border-bottom: solid 2px darken($cor-secundaria, 10%);
     position: fixed;
     z-index: 1;
     #titulo_do_setor {
@@ -35,11 +35,11 @@ nav {
     padding-right: 0 !important;
 }
 
-.icon_mobile_menu{
+.icon_mobile_menu {
     padding-right: 10px;
 }
-@media (max-width: 920px){
 
+@media (max-width: 920px) {
     #titulo_do_setor {
         @include fontebase($monte-serrat, '17px !important', 300, $branco);
         line-height: 53px !important;
@@ -52,10 +52,8 @@ nav {
             @include fontebase($monte-serrat, '17px !important', 300, $branco);
         }
     }
-    .drop_topo{
+    .drop_topo {
         @include fontebase($monte-serrat, '17px !important', 300, $branco);
         line-height: 53px;
-
     }
-
 }

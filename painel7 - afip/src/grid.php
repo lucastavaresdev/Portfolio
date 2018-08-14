@@ -23,7 +23,7 @@
             <table id="tabela_pacientes"  class="responsive-table tabela-cor">
                     <thead >
                         <tr>
-                            <th>Nome Paciente</th>
+                            <th  width="320">Nome Paciente</th>
                             <th>Analises Clinicas 11 andar</th>
                             <th>Orientação Fisioterapica</th>
                             <th>Ecocardiograma</th>
