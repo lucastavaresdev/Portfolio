@@ -1,11 +1,12 @@
 //chamadas 
-(function () {
+
+setInterval((function () {
     var url_atual = window.location.href;
 
     var parametrosDaUrl = url_atual.split("?")[1];
 
     chamadaAjax(`php/selectsJson.php?parametro=grid`, lista_de_pacientes);
-})();
+})(), 1000);
 
 
 
