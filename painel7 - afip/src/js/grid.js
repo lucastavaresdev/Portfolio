@@ -90,19 +90,19 @@ function iconedeStatus(coluna) {
 
     switch (coluna) {
         case "Em Andamento":
-            coluna = 'Em Andamento';
+            coluna = '<i class="material-icons blue-text">linear_scale</i>';
             break;
         case "Aguardando":
-            coluna = 'Aguardando';
+            coluna = '<i class="material-icons blue-text">warning</i>';
             break;
         case "Cancelado":
-            coluna = 'Cancelado';
+            coluna = '<i class="material-icons blue-text">pan_tool</i>';
             break;
         case "Concluído":
-            coluna = 'Concluído';
+            coluna = '<i class="material-icons blue-text">thumb_up</i>';
             break;
         default:
-            coluna = 'Não ira realizar exame';
+            coluna = '<i class="material-icons grey-text" >do_not_disturb_alt</i>';
     }
     //coluna === null ? coluna = '<i class="material-icons grey-text" >cancel</i>' : coluna = '<i class="material-icons  blue-text">check</i>';
     return coluna;
