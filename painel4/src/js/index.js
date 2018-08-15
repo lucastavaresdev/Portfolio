@@ -237,16 +237,21 @@ function calendario() {
     var urlAtual = window.location; // pega a url da pagina
 
     btn_ok.addEventListener('click', function () {
+
         let dataescolhida = Calender.value; //pega a data
         dataescolhida = dataescolhida.split('-');
         datamysql = `${dataescolhida[2]}-${dataescolhida[1]}-${dataescolhida[0]}`;
 
-
+        //pega a url base do site
         let url = window.location.href
-        resultado = url.split('?');
-        resultado = resultado[0]
+        url_dividida = url.split('?');
 
-        window.location = resultado + '?setor=225&data=' + datamysql; //redireciona com o get dat
+        resultado = url_dividida[0]
+        parametros = url_dividida[1].split('&');
+
+        setor = parametros[0];
+
+        window.location = resultado + '?' + setor + '&data=' + datamysql; //redireciona com o get dat
 
     })
 }
