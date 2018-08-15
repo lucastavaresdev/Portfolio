@@ -35,6 +35,9 @@ body {
 td {
   border: 1px transparent solid !important; }
 
+tbody {
+  background: #ffffff; }
+
 body {
   background-image: url("../img/bg_login.jpg");
   height: 100%;

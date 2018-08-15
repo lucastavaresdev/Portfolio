@@ -199,7 +199,7 @@ FROM
         LEFT JOIN etapas e ON (ch.etapa = e.id)        
         LEFT JOIN status s on (s.id = ch.status)
         )
-where DT_ENTRADA = date_format(curdate(), '%d/%m/%y')
+        where date(DT_ENTRADA) = curdate()
 GROUP BY a.NR_ATENDIMENTO order by NM_PACIENTE";
 
 /*
