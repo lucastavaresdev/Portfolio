@@ -15,9 +15,9 @@ if (isset($_GET['setor'])) {
 
 //Dashboard
 
-$lista_de_pacientes = "SELECT * FROM atendimentos  where DT_ENTRADA = date_format(curdate(), '%d/%m/%y')";
+$lista_de_pacientes = "SELECT * FROM atendimentos  where date(DT_ENTRADA) = curdate()";
 
-$agendamentos_quantidade = "SELECT Count(distinct(NM_PACIENTE)) as agendamentos_quantidade FROM atendimentos  where DT_ENTRADA = date_format(curdate(), '%d/%m/%y');";
+$agendamentos_quantidade = "SELECT Count(distinct(NM_PACIENTE)) as agendamentos_quantidade FROM atendimentos   where date(DT_ENTRADA) = curdate()";
                                 
 
 // $lista_de_pacientes = "SELECT * FROM atendimento_paciente_robo
