@@ -176,16 +176,15 @@
     btn_ok.addEventListener('click', function(){
        let dataescolhida = Calender.value; //pega a data
        dataescolhida  = dataescolhida.split('').reverse().join(''); //reverte a data
-//parei aqui
-        let url = window.location.pathname
 
-        let setor = url.searchParams("setor");
-        console.log(setor);
-   
+        let url = window.location.pathname
+        console.log(url);
+
+     
        window.location = url + '?setor=225'; //redireciona com o get data
 
        
-        console.log(a)
+      
     })
 
 

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require('./conexao.php');// REQUSIÇÃO DO BANCO
 
 $parametro =$_GET['parametro'];//PARAMETRO
@@ -15,9 +15,9 @@ if (isset($_GET['setor'])) {
 
 //Dashboard
 
-$lista_de_pacientes = "SELECT * FROM atendimentos  where DT_ENTRADA = date_format(curdate(), '%d/%m/%y')";
+$lista_de_pacientes = "SELECT * FROM atendimentos  where date(DT_ENTRADA) = curdate()";
 
-$agendamentos_quantidade = "SELECT Count(distinct(NM_PACIENTE)) as agendamentos_quantidade FROM atendimentos  where DT_ENTRADA = date_format(curdate(), '%d/%m/%y');";
+$agendamentos_quantidade = "SELECT Count(distinct(NM_PACIENTE)) as agendamentos_quantidade FROM atendimentos   where date(DT_ENTRADA) = curdate()";
                                 
 
 // $lista_de_pacientes = "SELECT * FROM atendimento_paciente_robo
@@ -193,12 +193,13 @@ MAX((CASE
     WHEN (e.ds_etapa = 'Avaliação Neuromuscular') THEN s.descricao
 END)) AS 'Avaliação_Neuromuscular'
 FROM
-(atendimentos a
-LEFT JOIN checklist ch ON (ch.atendimento = a.NR_ATENDIMENTO)            
-LEFT JOIN etapas e ON (ch.etapa = e.id)
-LEFT JOIN status s on (s.id = ch.status)
-)
-where DT_ENTRADA = date_format(curdate(), '%d/%m/%y')
+        (atendimentos a
+        LEFT JOIN (select max(id) as id, atendimento from checklist group by atendimento, etapa) ch2 on ch2.atendimento = a.NR_ATENDIMENTO
+        LEFT JOIN checklist ch ON (ch.id = ch2.id)
+        LEFT JOIN etapas e ON (ch.etapa = e.id)        
+        LEFT JOIN status s on (s.id = ch.status)
+        )
+        where date(DT_ENTRADA) = curdate()
 GROUP BY a.NR_ATENDIMENTO order by NM_PACIENTE";
 
 /*

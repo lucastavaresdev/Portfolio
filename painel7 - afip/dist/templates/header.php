@@ -20,6 +20,7 @@ if (!isset($_SESSION["username"])) {
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./css/materialize.css">
     <link rel="stylesheet" href="./css/jquery.dataTables">
+    <link rel="stylesheet" href="./css/datatables.css">
     <link rel="stylesheet" href="./css/style.css">
 
 

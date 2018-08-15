@@ -17,6 +17,7 @@
             </ul>
 
     <div class="scroll">
+            <!-- <a class="btn-floating btn-large waves-effect waves-light btn-small grey right" id="reiniciar" ><i class="material-icons">refresh</i></a> -->
             <table id="tabela_pacientes"  class="responsive-table tabela-cor">
                     <thead>
                         <tr class='grid-espaco' style="height: 20px;">

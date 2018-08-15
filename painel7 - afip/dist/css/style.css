@@ -35,6 +35,9 @@ body {
 td {
   border: 1px transparent solid !important; }
 
+tbody {
+  background: #ffffff; }
+
 nav {
   box-shadow: none;
   background: #bf1e24;
