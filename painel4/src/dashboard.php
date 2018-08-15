@@ -177,13 +177,15 @@
        let dataescolhida = Calender.value; //pega a data
        dataescolhida  = dataescolhida.split('').reverse().join(''); //reverte a data
 
-        let url = window.location.pathname
-        console.log(url);
+        let url = window.location.href
+        resultado = url.split('?');
+        resultado = resultado[0]
+        console.log(resultado)
+
 
      
-       window.location = url + '?setor=225'; //redireciona com o get data
-
-       
+      // window.location = url + '?setor=225'; //redireciona com o get dat
+    
       
     })
 
