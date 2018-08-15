@@ -5,7 +5,6 @@ require('./conexao.php');// REQUSIÇÃO DO BANCO
 $parametro =$_GET['parametro'];//PARAMETRO
 
 
-
 if (isset($_GET['setor'])) {
     $setor =$_GET['setor'];//PARAMETRO
 } else {
@@ -19,9 +18,9 @@ if (isset($_GET['data'])) {
     $data  = "2018-08-15";//PARAMETRO
 }
 
-//selects
 
-$select_dos_setores = "SELECT id,servico AS setor FROM servicos";//lista de serviços
+
+$lista_dos_setores = "SELECT id, servico AS setor FROM servicos";//lista de serviços
 
 $agendamentos_do_dia = "SELECT count(distinct(nome_paciente)) as agendamento_do_dia
 FROM agendamento where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()";
@@ -128,15 +127,13 @@ comparação($parametro, $conexao, $select); //chama a função
 
 function comparação($parametro, $conexao, $select)
 {
-    $parametro == $parametro ? geraJson($select, $conexao) : 'Erro de paramentro';
+    $parametro == $parametro ? geraJson($select, $conexao) : var_dump("Erro de paramentro");
 }
+
 /*
  * ------------------------------------------------------------------------------
  */
-
-
  
-
 //retorna e exibe o json
   function geraJson($select, $conexao)
   {

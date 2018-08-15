@@ -1,10 +1,10 @@
-chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', lista_de_setores);
-chamadaAjax('php/selectsJson.php?parametro=lista_de_setores&setor', alteraTitulodoSetor);
+chamadaAjax('php/selectsJson.php?parametro=lista_dos_setores&setor', lista_de_setores);
+chamadaAjax('php/selectsJson.php?parametro=lista_dos_setores&setor', alteraTitulodoSetor);
 
 
 function lista_de_setores(data) {
     var elem_drop = document.getElementById('setores_lista');
-    
+
     for (i = 0; i < data.length; i++) {
 
         var criaLI = document.createElement('li');
@@ -29,7 +29,19 @@ function alteraTitulodoSetor(data) {
     var titulo_aba = document.getElementById('aba_nome_setor');
 
     var url_atual = window.location.href;
-    var id_do_setor = url_atual.split("=")[1];
+    console.log(url_atual);
+
+
+    var url = quebraURL(url_atual, '?');
+    var paramentros = quebraURL(url[1], '&');
+    //debugger
+    var numeroSetor = quebraURL(paramentros[0], '=');
+    var id_do_setor = numeroSetor[1];
+
+
+
+
+    // let url = window.location.href
 
     // id_do_setor = parseInt(id_do_setor);
     for (i = 0; i < data.length; i++) {
@@ -40,7 +52,7 @@ function alteraTitulodoSetor(data) {
             if (titulo_aba) {
                 titulo.innerHTML = nome_do_setor;
                 titulo_aba.innerHTML = nome_do_setor;
-            }else{
+            } else {
                 titulo.innerHTML = nome_do_setor;
             }
             return;
@@ -55,3 +67,8 @@ function alteraTitulodoSetor(data) {
     }
 }
 
+function quebraURL(URL, caractere) {
+    url_dividida = URL.split(caractere);
+    console.log(url_dividida);
+    return url_dividida
+}

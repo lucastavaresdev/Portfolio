@@ -243,15 +243,17 @@ function calendario() {
         datamysql = `${dataescolhida[2]}-${dataescolhida[1]}-${dataescolhida[0]}`;
 
         //pega a url base do site
+
         let url = window.location.href
-        url_dividida = url.split('?');
+        url_dividida = quebraURL(url, "?")
 
         resultado = url_dividida[0]
-        parametros = url_dividida[1].split('&');
+        parametros = quebraURL(url_dividida[1], "&")
 
         setor = parametros[0];
 
-        window.location = resultado + '?' + setor + '&data=' + datamysql; //redireciona com o get dat
+        window.location = resultado + '?' + setor + '&data=' + datamysql;
 
     })
 }
+
