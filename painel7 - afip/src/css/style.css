@@ -32,11 +32,17 @@ body {
 .ocutar {
   display: none !important; }
 
+td {
+  border: 1px transparent solid !important; }
+
+tbody {
+  background: #ffffff; }
+
 nav {
   box-shadow: none;
-  background: #007DCC;
+  background: #bf1e24;
   height: 50px;
-  border-bottom: solid 2px #005e99;
+  border-bottom: solid 2px #93171c;
   position: fixed;
   z-index: 1; }
   nav #titulo_do_setor {
@@ -107,7 +113,7 @@ nav {
   display: none; }
 
 .datepicker-date-display {
-  background-color: #007DCC; }
+  background-color: #c9ccd1; }
 
 .modal-content.datepicker-container {
   height: 30% !important; }
@@ -140,7 +146,7 @@ nav {
   top: 51px; }
   .tamanho-barra .material-icons {
     padding-left: 4px;
-    color: #007DCC; }
+    color: #c9ccd1; }
 
 .close {
   height: 88.2%;
@@ -155,7 +161,7 @@ nav {
   box-shadow: 2px 5px 14px rgba(0, 0, 0, 0.082); }
   .close .material-icons {
     padding-left: 4px;
-    color: #007DCC; }
+    color: #c9ccd1; }
 
 .open-a {
   transform: translateX(0);
@@ -191,7 +197,7 @@ nav {
 
 .dados_consolidados {
   background: #ffffff;
-  border-bottom: 2px solid #f1f1f1;
+  border-bottom: 2px solid #ececec;
   z-index: 5000px; }
   .dados_consolidados .bg-consolidado {
     padding-top: 1.5%;
@@ -200,13 +206,13 @@ nav {
     font-family: Montserrat, sans-serif;
     font-size: 15px;
     font-weight: 400;
-    color: #7a7a7a; }
+    color: #757575; }
   .dados_consolidados h4 {
     line-height: 0.4;
     font-family: Montserrat, sans-serif;
     font-size: 39px;
     font-weight: 400;
-    color: #007DCC; }
+    color: #c9ccd1; }
   .dados_consolidados .dash_btn_superior {
     width: 51%;
     height: 18%;
@@ -219,7 +225,7 @@ nav {
     -ms-border-radius: 7px;
     -o-border-radius: 7px; }
     .dados_consolidados .dash_btn_superior:hover {
-      background: #007DCC; }
+      background: #c9ccd1; }
       .dados_consolidados .dash_btn_superior:hover p,
       .dados_consolidados .dash_btn_superior:hover h4,
       .dados_consolidados .dash_btn_superior:hover li,
@@ -237,7 +243,7 @@ nav {
   font-family: Montserrat, sans-serif;
   font-size: 22px;
   font-weight: 400;
-  color: #007DCC;
+  color: #c9ccd1;
   cursor: pointer; }
 .fluxo-1 span {
   white-space: nowrap;
@@ -245,13 +251,13 @@ nav {
   font-family: Montserrat, sans-serif;
   font-size: 17px;
   font-weight: 400;
-  color: #868686; }
+  color: #818181; }
 
 .p-msg {
   font-family: Montserrat, sans-serif;
   font-size: 19px;
   font-weight: 400;
-  color: #007DCC;
+  color: #c9ccd1;
   cursor: pointer;
   line-height: 1.1; }
 
@@ -260,20 +266,20 @@ nav {
     font-family: Montserrat, sans-serif;
     font-size: 9px;
     font-weight: 400;
-    color: #7a7a7a; }
+    color: #757575; }
   .bg-consolidado h4 {
     line-height: 0.4;
     font-family: Montserrat, sans-serif;
     font-size: 23px;
     font-weight: 400;
-    color: #007DCC; }
+    color: #c9ccd1; }
 
   .fluxo-1 li {
     line-height: 1;
     font-family: Montserrat, sans-serif;
     font-size: 17px;
     font-weight: 400;
-    color: #007DCC;
+    color: #c9ccd1;
     cursor: pointer; }
   .fluxo-1 span {
     white-space: nowrap;
@@ -281,7 +287,7 @@ nav {
     font-family: Montserrat, sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: #868686; }
+    color: #818181; }
 
   .tamanho_da_linha_titulo_fluxo {
     line-height: 0.7; } }
@@ -322,26 +328,26 @@ nav {
   background: #ffffff; }
 
 .tabs {
-  color: #7a7a7a;
+  color: #757575;
   position: inherit; }
   .tabs .tab {
     font-family: Montserrat, sans-serif;
     font-size: 14px;
     font-weight: 500;
-    color: #007DCC; }
+    color: #c9ccd1; }
     .tabs .tab a {
-      color: #7a7a7a; }
+      color: #757575; }
       .tabs .tab a.active {
         font-family: Montserrat, sans-serif;
         font-size: 14px;
         font-weight: 500;
-        color: #007DCC; }
+        color: #c9ccd1; }
       .tabs .tab a:hover {
-        color: #005e99; }
+        color: #adb2ba; }
       .tabs .tab a:focus.active {
-        background-color: rgba(0, 125, 204, 0.2); }
+        background-color: rgba(201, 204, 209, 0.2); }
   .tabs .indicator {
-    background: #007DCC; }
+    background: #c9ccd1; }
 
 .indicator {
   display: none; }
@@ -409,7 +415,7 @@ table.dataTable tbody td.no-padding {
   margin-left: 15% !important; }
 
 .status-1 {
-  background: #c6c6c6 !important;
+  background: #c1c1c1 !important;
   width: 25px;
   height: 25px;
   color: transparent; }
@@ -445,30 +451,30 @@ table.dataTable tbody td.no-padding {
   color: transparent; }
 
 .input-field label {
-  color: #007DCC; }
+  color: #c9ccd1; }
 
 /* label focus color */
 .input-field input[type=text]:focus + label {
-  color: #006db3; }
+  color: #bbbfc5; }
 
 /* label underline focus color */
 .input-field input[type=text]:focus {
-  border-bottom: 1px solid #007DCC;
-  box-shadow: 0 1px 0 0 #007DCC; }
+  border-bottom: 1px solid #c9ccd1;
+  box-shadow: 0 1px 0 0 #c9ccd1; }
 
 /* valid color */
 .input-field input[type=text].valid {
-  border-bottom: 1px solid #007DCC;
-  box-shadow: 0 1px 0 0 #007DCC; }
+  border-bottom: 1px solid #c9ccd1;
+  box-shadow: 0 1px 0 0 #c9ccd1; }
 
 /* invalid color */
 .input-field input[type=text].invalid {
-  border-bottom: 1px solid #007DCC;
-  box-shadow: 0 1px 0 0 #007DCC; }
+  border-bottom: 1px solid #c9ccd1;
+  box-shadow: 0 1px 0 0 #c9ccd1; }
 
 /* icon prefix focus color */
 .input-field .prefix.active {
-  color: #007DCC; }
+  color: #c9ccd1; }
 
 #setores ul {
   position: relative;
@@ -485,12 +491,12 @@ table.dataTable tbody td.no-padding {
   font-family: Montserrat, sans-serif;
   font-size: 25px;
   font-weight: 400;
-  color: #007DCC; }
+  color: #c9ccd1; }
   .c_titulo span {
     font-family: Montserrat, sans-serif;
     font-size: 18px;
     font-weight: 400;
-    color: #007DCC; }
+    color: #c9ccd1; }
 
 @media (max-width: 920px) {
   .c_centralizando {
@@ -500,13 +506,13 @@ table.dataTable tbody td.no-padding {
       font-family: Montserrat, sans-serif;
       font-size: 20px;
       font-weight: 600;
-      color: #007DCC; }
+      color: #c9ccd1; }
 
   .c_titulo {
     font-family: Montserrat, sans-serif;
     font-size: 14px;
     font-weight: 400;
-    color: #007DCC;
+    color: #c9ccd1;
     margin-top: 20px;
     margin-bottom: 10px;
     text-align: center !important; }
@@ -514,18 +520,18 @@ table.dataTable tbody td.no-padding {
       font-family: Montserrat, sans-serif;
       font-size: 14px;
       font-weight: 400;
-      color: #007DCC; } }
+      color: #c9ccd1; } }
 .c_total_card {
   font-family: Montserrat, sans-serif;
   font-size: 30px ;
   font-weight: 300;
-  color: #007DCC;
+  color: #c9ccd1;
   letter-spacing: 4px; }
   .c_total_card b {
     font-family: Montserrat, sans-serif;
     font-size: 30px;
     font-weight: 600;
-    color: #007DCC; }
+    color: #c9ccd1; }
 
 .c_linha_card_superior {
   margin-bottom: 0; }
@@ -536,36 +542,36 @@ table.dataTable tbody td.no-padding {
     font-family: Montserrat, sans-serif;
     font-size: 20px;
     font-weight: 300;
-    color: #007DCC; }
+    color: #c9ccd1; }
     .c_total_card b {
       font-family: Montserrat, sans-serif;
       font-size: 20px;
       font-weight: 600;
-      color: #007DCC; } }
+      color: #c9ccd1; } }
 @media (min-width: 1300px) and (max-width: 1700px) {
   .c_total_card {
     letter-spacing: 0;
     font-family: Montserrat, sans-serif;
     font-size: 20px;
     font-weight: 300;
-    color: #007DCC; }
+    color: #c9ccd1; }
     .c_total_card b {
       font-family: Montserrat, sans-serif;
       font-size: 20px;
       font-weight: 600;
-      color: #007DCC; } }
+      color: #c9ccd1; } }
 @media (min-width: 900px) and (max-width: 1300px) {
   .c_total_card {
     letter-spacing: 0;
     font-family: Montserrat, sans-serif;
     font-size: 17px;
     font-weight: 300;
-    color: #007DCC; }
+    color: #c9ccd1; }
     .c_total_card b {
       font-family: Montserrat, sans-serif;
       font-size: 17px;
       font-weight: 600;
-      color: #007DCC; } }
+      color: #c9ccd1; } }
 @media (min-width: 991px) and (max-width: 1800px) {
   .c_titulo {
     font-size: 15px; } }
@@ -700,7 +706,7 @@ table.dataTable tbody td.no-padding {
 .agendamento .tabela-cor {
   border-radius: 7px !important;
   box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
-  background: #007DCC; }
+  background: #bf1e24; }
   .agendamento .tabela-cor thead {
     color: #ffffff; }
     .agendamento .tabela-cor thead th {
@@ -755,7 +761,7 @@ body {
     background: none;
     /* 4 */ }
   .agendamento ::-webkit-scrollbar-thumb {
-    background: #ececec;
+    background: #e7e7e7;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -763,10 +769,10 @@ body {
     -o-border-radius: 20px; }
   .agendamento ::-webkit-scrollbar-corner {
     /* 6 */
-    background: fuchsia; }
+    background: #dbdbdb; }
   .agendamento ::-webkit-resizer {
     /* 7 */
-    background: springgreen; }
+    background: #dbdbdb; }
 
 .pacientes .topo {
   margin-top: 60px; }
@@ -774,11 +780,23 @@ body {
   font-family: Montserrat, sans-serif;
   font-size: 30px;
   font-weight: 500;
-  color: #007DCC;
+  color: #c9ccd1;
   text-align: center;
   line-height: 21px !important; }
 
 #horas {
   margin-top: 2%; }
+
+.topo-grid {
+  margin-top: 4%; }
+
+.grid-tr {
+  border-bottom: none; }
+
+.gridStatus {
+  text-align: center; }
+
+.grid-espaco {
+  padding: 0 !important; }
 
 /*# sourceMappingURL=style.css.map */

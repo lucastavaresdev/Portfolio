@@ -32,6 +32,12 @@ body {
 .ocutar {
   display: none !important; }
 
+td {
+  border: 1px transparent solid !important; }
+
+tbody {
+  background: #ffffff; }
+
 body {
   background-image: url("../img/bg_login.jpg");
   height: 100%;
@@ -51,8 +57,8 @@ main {
   padding-top: 10px; }
 
 .btn_login {
-  background: #006db3; }
+  background: #bbbfc5; }
   .btn_login:hover {
-    background: #006db3; }
+    background: #bbbfc5; }
 
 /*# sourceMappingURL=login.css.map */
