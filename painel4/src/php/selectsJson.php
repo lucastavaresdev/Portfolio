@@ -10,6 +10,12 @@ if (isset($_GET['setor'])) {
     $setor = "";//PARAMETRO
 }
 
+if (isset($_GET['data'])) {
+    $data = $_GET['data'];//PARAMETRO
+} else {
+    $datadoServidor = date("Y/m/d");
+    $data  = "2018-08-15";//PARAMETRO
+}
 
 //selects
 
@@ -66,7 +72,9 @@ $lista_de_setores = "SELECT servico as setor FROM servicos;";
 // FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
 // where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and a.codigo_servico_atual = $setor order by hora";
 
-$data = '2018-08-07';
+
+//$data = '2018-08-07';
+
 
 $lista_do_setor = "SELECT 
 distinct(a.nome_paciente) as paciente,

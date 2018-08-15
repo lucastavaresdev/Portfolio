@@ -1,6 +1,8 @@
-//chamadas ajax
+
 (function () {
     var url_atual = window.location.href;
+    console.log(url_atual)
+
 
     var parametrosDaUrl = url_atual.split("?")[1];
 
@@ -10,6 +12,8 @@
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
 })();
 
+//chamadas ajax
+calendario();
 
 function qtd_procedimentos(data) {
     var elem = document.getElementById('qtd_procedimentos');
@@ -208,4 +212,41 @@ function agendamentos_do_dia_por_setor(data) {
         elem.innerHTML = html;
         elem1.innerHTML = html;
     }
+}
+
+
+
+function calendario() {
+    const Calender = document.querySelector('.datepicker');
+    M.Datepicker.init(Calender, {
+        format: 'dd-mm-yyyy',
+        //autoClose: true,
+        i18n: {
+            months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            weekday: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado'],
+            weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+            weekdaysAbbrev: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+            cancel: 'Cancelar'
+        }
+    });
+
+
+
+    const btn_ok = document.querySelector('.btn-flat.datepicker-done.waves-effect');
+    var urlAtual = window.location; // pega a url da pagina
+
+    btn_ok.addEventListener('click', function () {
+        let dataescolhida = Calender.value; //pega a data
+        dataescolhida = dataescolhida.split('-');
+        datamysql = `${dataescolhida[2]}-${dataescolhida[1]}-${dataescolhida[0]}`;
+
+
+        let url = window.location.href
+        resultado = url.split('?');
+        resultado = resultado[0]
+
+        window.location = resultado + '?setor=225&data=' + datamysql; //redireciona com o get dat
+
+    })
 }
