@@ -40,15 +40,41 @@ function lista_de_pacientes(data) {
                 '<td class="ocutar">' + data[i].descricao_exame + '</td>' +
                 '<td class="ocutar">' + data[i].nome_medico + '</td>' +
                 '<td class="ocutar">' + data[i].crm + '</td>' +
-                '<td>' + '<a class="obs waves-effect waves-light  modal-trigger" href="#asd"> <i class="material-icons">info_outline</i></a>' + '</td>';
+                `<td><a class="waves-effect waves-light btn modal-trigger" id="${data[i].IH}${data[i].atividade}"  href="#${data[i].IH}${data[i].atividade}"> <i class="material-icons">info_outline</i></a></td>`;
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
         }
         data_table(data)
+        Modal(data)
     }
 }
 
+
+function Modal(data) {
+    elemHtml = document.getElementById('modal')
+
+    for (let i = 0; i < data.length; i++) {
+        const elem = document.getElementById(data[i].IH + data[i].atividade);
+        elem.addEventListener('click', function () {
+
+            const msg = '<div id="' + data[i].IH + data[i].atividade + '" class="modal">' +
+                + '<div class="modal-content">'
+                + '<h4>Mdsadasdsadsadasdsaader</h4>'
+                + '<p>A bunch of text</p>'
+                + '</div>'
+                + '<div class="modal-footer">'
+                + '<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>'
+                + '</div>'
+                + '</div>';
+
+            elemHtml.innerHTML = msg;
+
+
+        })
+    }
+
+}
 
 function format(d) {
     const resultadoSexo = MasculinoouFeminino(d.sexo);
@@ -168,7 +194,6 @@ function qtd_de_agendamentos_do_dia_por_agenda(data) {
     var html = "";
     elem = document.getElementById('agendimentos_do_dia');
     elem1 = document.getElementById('atendimentos_total');
-    console.log(data);
 
     if (elem1 && elem) {
         var qtd_agendamentos_do_dia = data[0].qtd_paciente;

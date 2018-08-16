@@ -108,20 +108,7 @@
         <div class="row"><?php include './templates/status.html'; ?></div>
     </div>
 
-  <!-- Modal Structure -->
-    <div class="ad ">
-        <div id="asd" class="modal tamanho-modal">
-            <div class="modal-content ">
-                <h4>Modal Header</h4>
-                <p>A bunch of tessssssssssssssssssssssssssssssssssssssssssssssssssssxt</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="btn_modal modal-close waves-effect waves-green btn-flat">OK</a>
-            </div>
-        </div>
-    </div>
-
-
+<div id="modal"></div>
 
 </body>
 
@@ -129,20 +116,6 @@
    include './templates/frameworks.html';
 ?>
 <script src="./js/index.js"></script>
-
-
-
-<script>
-
-
-</script>
-
-  <script>
-  $(document).ready(function(){
-    $('.modal').modal();
-  });
-  </script>
-
 
 <script>
     $(document).ready(function () {
