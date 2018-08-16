@@ -33,6 +33,9 @@ body {
 .ocutar {
   display: none !important; }
 
+.negrito-informacoes {
+  font-weight: 500; }
+
 nav {
   box-shadow: none;
   background: #007DCC;

@@ -32,7 +32,7 @@ function lista_de_pacientes(data) {
                 '<td>' + data[i].atividade + '</td>' +
                 '<td>' + data[i].IH + '</td>' +
                 '<td>' + data[i].paciente + '</td>' +
-                '<td>' + '-' + '</td>' +
+                '<td class="ocutar">' + '-' + '</td>' +
                 '<td>' + data[i].servico_atual + '</td>' +
                 '<td>' + data[i].proximo_servico + '</td>' +
                 `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
@@ -52,32 +52,33 @@ function lista_de_pacientes(data) {
 
 
 function format(d) {
-    //debugger
-    var sexo = d.sexo;
-    console.log(sexo)
-    if (sexo === "F") {
-        sexo = "Feminino"
-    } else {
-        sexo = "Masculino"
-    }
+
+    const resultadoSexo = MasculinoouFeminino(d.sexo);
 
     return '<div class="row add_info">'
         + '<div class=" col s5">'
         + '<div class=" col s11 offset-s1">'
-        + '<p> Nome do Paciente: ' + d.paciente + '</p>'
-        + '<p> Atividade: ' + d.atividade + '</p>'
-        + '<p> Descrição do Exame: ' + d.descricao_exame + '</p>'
-        + '<p> Médico: ' + d.nome_medico + '   CRM:' + d.crm + ' </p>'
+        + '<p> Nome do Paciente:<span class="negrito-informacoes"> ' + d.paciente + '</span></p>'
+        + '<p> Atividade:<span class="negrito-informacoes"> ' + d.atividade + '</span></p>'
+        + '<p> Descrição do Exame:<span class="negrito-informacoes"> ' + d.descricao_exame + '</span></p>'
+        + '<p> Médico:<span class="negrito-informacoes"> ' + d.nome_medico + ' </span>CRM:<span class="negrito-informacoes"> ' + d.crm + ' </span></p>'
         + '</div> '
         + '</div> '
         + '<div class="col s6 ">'
-        + '<p> IH: ' + d.IH + '</p>'
-        + '<p> Sexo: ' + sexo + '</p>'
-        + '<p> Data de Nascimento: ' + d.data_nascimento + '</p>'
+        + '<p> IH:<span class="negrito-informacoes"> ' + d.IH + '</span></p>'
+        + '<p> Sexo:<span class="negrito-informacoes"> ' + resultadoSexo + '</span></p>'
+        + '<p> Data de Nascimento:<span class="negrito-informacoes"> ' + d.data_nascimento + '</span></p>'
         + '</div> '
         + '</div> '
 }
 
+function MasculinoouFeminino(sexo) {
+    if (sexo === "F") {
+        return sexo = "Feminino"
+    } else {
+        return sexo = "Masculino"
+    }
+}
 
 function data_table(d) {
     $(document).ready(function () {

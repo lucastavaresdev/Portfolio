@@ -33,6 +33,9 @@ body {
 .ocutar {
   display: none !important; }
 
+.negrito-informacoes {
+  font-weight: 500; }
+
 body {
   background-image: url("../img/bg_login.jpg");
   height: 100%;
