@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Cousine");
 h1,
 h2,
 h3,
@@ -111,6 +112,18 @@ nav {
 
 .modal-content.datepicker-container {
   height: 30% !important; }
+
+.datepicker-modal {
+  max-width: 670px; }
+
+.datepicker-container {
+  width: 670px !important; }
+
+.datepicker-controls .select-month input {
+  width: 95px !important; }
+
+.dropdown-content {
+  min-width: 137px !important; }
 
 .ad .open {
   display: none;
