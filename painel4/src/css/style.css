@@ -224,21 +224,18 @@ nav {
     font-weight: 400;
     color: #007DCC; }
   .dados_consolidados .dash_btn_superior {
-    width: 51%;
+    width: 60%;
     height: 18%;
     border-radius: 7px;
     cursor: pointer;
     text-align: center;
-    transition: all 0.7s ease;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px; }
+    transition: all 0.7s ease; }
     .dados_consolidados .dash_btn_superior:hover {
       background: #007DCC; }
       .dados_consolidados .dash_btn_superior:hover p,
       .dados_consolidados .dash_btn_superior:hover h4,
       .dados_consolidados .dash_btn_superior:hover li,
+      .dados_consolidados .dash_btn_superior:hover .p-msg,
       .dados_consolidados .dash_btn_superior:hover span {
         color: #ffffff; }
 
@@ -270,6 +267,8 @@ nav {
   color: #007DCC;
   cursor: pointer;
   line-height: 1.1; }
+  .p-msg:hover {
+    color: #ffffff; }
 
 @media (max-width: 920px) {
   .bg-consolidado p {

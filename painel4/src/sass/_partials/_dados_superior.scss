@@ -14,21 +14,18 @@
         @include fontebase($monte-serrat, '39px', 400, $cor-primaria);
     }
     .dash_btn_superior {
-        width: 51%;
+        width: 60%;
         height: 18%;
         border-radius: 7px;
         cursor: pointer;
         text-align: center;
         transition: all 0.7s ease;
-        -webkit-border-radius: 7px;
-        -moz-border-radius: 7px;
-        -ms-border-radius: 7px;
-        -o-border-radius: 7px;
         &:hover {
             background: $cor-primaria;
             p,
             h4,
             li,
+            .p-msg,
             span {
                 color: $branco;
             }
@@ -63,6 +60,9 @@
     @include fontebase($monte-serrat, '19px', 400, $cor-primaria);
     cursor: pointer;
     line-height: 1.1;
+    &:hover {
+        color: $branco;
+    }
 }
 
 @media(max-width: 920px) {
