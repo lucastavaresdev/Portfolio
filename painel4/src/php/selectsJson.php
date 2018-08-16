@@ -15,18 +15,56 @@ if (isset($_GET['data'])) {
     $data = $_GET['data'];//PARAMETRO
 } else {
     $datadoServidor = date("Y/m/d");
-    $data  = "2018-08-15";//PARAMETRO
+    $data  = $datadoServidor;//PARAMETRO
 }
 
+/*
+ * ----------------------Setores----------------------
+ */
+
+    $lista_dos_setores = "SELECT id, servico AS setor FROM servicos";//lista de serviços
+
+/*
+ * --------Quantidade de pacientes por lista de agendados---------
+ */
+
+    $qtd_de_agendamentos_do_dia_por_agenda = "SELECT count(distinct(nome_paciente)) as qtd_paciente
+                                                                                 FROM agendamento 
+                                                                                 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  '$data' 
+                                                                                 and codigo_servico_atual = $setor";
+
+/*
+ *-----------------Lista de Pacientes----------------
+ */
+    $lista_do_setor = "SELECT 
+                                  distinct(a.nome_paciente) as paciente,
+                                  left(a.hora_servico_selecionado, 5) as hora, 
+                                  a.codigo_agenda as atividade,
+                                  a.ih_paciente as IH,
+                                  a.servico_atual,
+                                  s.servico as setor,
+                                  a.proximo_servico,
+                                  a.cod_cor_status,
+                                  a.descricao_exame,
+                                  sexo_paciente as sexo,
+                                  data_nascimento,
+                                  nome_medico,
+                                  crm_medico as crm
+                                  FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+                                  where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and a.codigo_servico_atual = $setor order by hora";
+
+/*
+ *-------------------------------------------------
+ */
 
 
-$lista_dos_setores = "SELECT id, servico AS setor FROM servicos";//lista de serviços
 
-$agendamentos_do_dia = "SELECT count(distinct(nome_paciente)) as agendamento_do_dia
+
+
+//agendamentos agendamentos_do_dia_por_setor
+$qtd_de_agendamentos_dia = "SELECT count(distinct(nome_paciente)) as agendamento_do_dia
 FROM agendamento where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()";
 
-$agendamentos_do_dia_por_setor = "SELECT count(distinct(nome_paciente)) as agendamento_do_dia
-FROM agendamento where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()";
 
 $lista_dos_intevalos_por_hora_do_dia_do_hospital_inteiro = "SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00')  intervalo_de_horas, COUNT(*) as `usage`
 FROM agendamento
@@ -57,22 +95,6 @@ $horario_de_maior_fluxo = "SELECT  qtd_por_hora, intervalo_de_horas  FROM (
 $lista_de_setores = "SELECT servico as setor FROM servicos;";
 
 
-$lista_do_setor = "SELECT 
-distinct(a.nome_paciente) as paciente,
-left(a.hora_servico_selecionado, 5) as hora, 
-a.codigo_agenda as atividade,
-a.ih_paciente as IH,
-a.servico_atual,
-s.servico as setor,
-a.proximo_servico,
-a.cod_cor_status,
-a.descricao_exame,
-sexo_paciente as sexo,
-data_nascimento,
-nome_medico,
-crm_medico as crm
-FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and a.codigo_servico_atual = 225 order by hora";
 
 
 $qtd_por_setor = "SELECT 

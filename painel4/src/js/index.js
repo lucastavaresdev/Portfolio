@@ -6,7 +6,9 @@
 
     var parametrosDaUrl = url_atual.split("?")[1];
 
-    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_setor&${parametrosDaUrl}`, agendamentos_do_dia_por_setor);
+
+    chamadaAjax(`php/selectsJson.php?parametro=qtd_de_agendamentos_do_dia_por_agenda&${parametrosDaUrl}`, qtd_de_agendamentos_do_dia_por_agenda);
+
     chamadaAjax(`php/selectsJson.php?parametro=qtd_procedimentos&${parametrosDaUrl}`, qtd_procedimentos);
     chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
@@ -196,11 +198,18 @@ function atribuiHtml(classouid, resultado) {
     classouid.innerHTML = resultado;
 }
 
-function agendamentos_do_dia_por_setor(data) {
-    var html = "";
 
+/*
+ * ----------------------Quantidade de pacientes por agenda----------------------
+ */
+
+function qtd_de_agendamentos_do_dia_por_agenda(data) {
+    debugger
+    var html = "";
     elem = document.getElementById('agendimentos_do_dia');
     elem1 = document.getElementById('atendimentos_total');
+    console.log(data);
+
     if (elem1 && elem) {
         var qtd_agendamentos_do_dia = data[0].qtd_paciente;
 
@@ -209,8 +218,10 @@ function agendamentos_do_dia_por_setor(data) {
         } else {
             html = '<span>' + qtd_agendamentos_do_dia + '</span>';
         }
+
         elem.innerHTML = html;
         elem1.innerHTML = html;
+
     }
 }
 
