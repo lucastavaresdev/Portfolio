@@ -8,24 +8,20 @@
 
 
     chamadaAjax(`php/selectsJson.php?parametro=qtd_de_agendamentos_do_dia_por_agenda&${parametrosDaUrl}`, qtd_de_agendamentos_do_dia_por_agenda);
-
     chamadaAjax(`php/selectsJson.php?parametro=qtd_procedimentos&${parametrosDaUrl}`, qtd_procedimentos);
+
     chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
+    calendario();
 })();
 
-//chamadas ajax
-calendario();
 
-function qtd_procedimentos(data) {
-    var elem = document.getElementById('qtd_procedimentos');
-    var qtd_procedimentos = data[0].qtd_procedimentos;
-    elem.innerHTML = qtd_procedimentos;
-}
 
+/*
+ *---------------------Lista de Paciente---------------------------
+ */
 
 function lista_de_pacientes(data) {
-
     var tbody = document.getElementById("listadePacientes");
     if (tbody) {
         for (i = 0; i < data.length; i++) {
@@ -46,7 +42,6 @@ function lista_de_pacientes(data) {
                 '<td class="ocutar">' + data[i].nome_medico + '</td>' +
                 '<td class="ocutar">' + data[i].crm + '</td>' +
                 '<td>' + '<a class="obs waves-effect waves-light  modal-trigger" href="#asd"> <i class="material-icons">info_outline</i></a>' + '</td>';
-
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -157,17 +152,44 @@ function data_table(d) {
     });
 }
 
+/*------------------------------------------------------------------------------------------------------------------------------------*/
 
-function menuclicado() {
-    var tabela = document.getElementById('listadePacientes');
-    var linhas = tabela.getElementsByTagName('tr')
 
-    for (let i = 0; i < linhas.length; i++) {
-        linhas[i].addEventListener('click', function () {
-            console.log(i)
-        })
+/*
+ * ----------------------Quantidade de pacientes por agenda----------------------
+ */
+function qtd_de_agendamentos_do_dia_por_agenda(data) {
+    var html = "";
+    elem = document.getElementById('agendimentos_do_dia');
+    elem1 = document.getElementById('atendimentos_total');
+    console.log(data);
+
+    if (elem1 && elem) {
+        var qtd_agendamentos_do_dia = data[0].qtd_paciente;
+
+        if (typeof qtd_agendamentos_do_dia === 0 || typeof qtd_agendamentos_do_dia === "qtd_agendamentos_do_dia") {
+            console.log("verificar o json ou query nos selects.php");
+        } else {
+            html = '<span>' + qtd_agendamentos_do_dia + '</span>';
+        }
+
+        elem.innerHTML = html;
+        elem1.innerHTML = html;
+
     }
 }
+
+/*
+ * ----------------------Quantidade de Procedimentos----------------------
+ */
+
+function qtd_procedimentos(data) {
+    var elem = document.getElementById('qtd_procedimentos');
+    var qtd_procedimentos = data[0].qtd_procedimentos;
+    elem.innerHTML = qtd_procedimentos;
+}
+
+
 
 function horarioComMaiorPacientes(data) {
     var fluxodetempo = document.getElementById('fluxo');
@@ -199,31 +221,7 @@ function atribuiHtml(classouid, resultado) {
 }
 
 
-/*
- * ----------------------Quantidade de pacientes por agenda----------------------
- */
 
-function qtd_de_agendamentos_do_dia_por_agenda(data) {
-    debugger
-    var html = "";
-    elem = document.getElementById('agendimentos_do_dia');
-    elem1 = document.getElementById('atendimentos_total');
-    console.log(data);
-
-    if (elem1 && elem) {
-        var qtd_agendamentos_do_dia = data[0].qtd_paciente;
-
-        if (typeof qtd_agendamentos_do_dia === 0 || typeof qtd_agendamentos_do_dia === "qtd_agendamentos_do_dia") {
-            console.log("verificar o json ou query nos selects.php");
-        } else {
-            html = '<span>' + qtd_agendamentos_do_dia + '</span>';
-        }
-
-        elem.innerHTML = html;
-        elem1.innerHTML = html;
-
-    }
-}
 
 
 
@@ -268,3 +266,15 @@ function calendario() {
     })
 }
 
+
+
+function menuclicado() {
+    var tabela = document.getElementById('listadePacientes');
+    var linhas = tabela.getElementsByTagName('tr')
+
+    for (let i = 0; i < linhas.length; i++) {
+        linhas[i].addEventListener('click', function () {
+            console.log(i)
+        })
+    }
+}

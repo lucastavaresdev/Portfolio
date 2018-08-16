@@ -54,11 +54,39 @@ if (isset($_GET['data'])) {
                                   where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and a.codigo_servico_atual = $setor order by hora";
 
 /*
+ *---------------------Procedimentos---------------------------
+ */
+
+$qtd_procedimentos = "SELECT 
+count(a.nome_paciente) as qtd_procedimentos
+FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  '$data'  and s.id  = " .$setor .  " order by  servico";
+
+
+
+/*
  *-------------------------------------------------
  */
 
+$horario_de_maior_fluxo = "SELECT  qtd_por_hora, intervalo_de_horas  FROM (
+    SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00') as intervalo_de_horas, 
+    COUNT(*) as qtd_por_hora
+    FROM agendamento
+    where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and codigo_servico_atual = '$setor'
+    GROUP BY HOUR(intervalo_de_horas) 
+              ) as lista_geral_de_horas  where qtd_por_hora = ( 
+                SELECT  max(qtd_por_hora) as maior_qtd FROM(
+                          SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+2, ':00') as intervalo_de_horas, 
+                          COUNT(*) as qtd_por_hora
+                          FROM agendamento
+                          where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and codigo_servico_atual = '$setor'
+                          GROUP BY HOUR(intervalo_de_horas)
+                          ) as maior_valor
+              );";//intervalo com maior fluxo de pessoas no setor
 
-
+/*
+ *-------------------------------------------------
+ */
 
 
 //agendamentos agendamentos_do_dia_por_setor
@@ -75,21 +103,6 @@ GROUP BY HOUR(hora_servico_selecionado)";
 
 //o primeiro e o segundo select  traz a lista com todos os horarios e sua devida quantidade depois 3 e 4 select traz o valor com a maior hora detre todos e faz a comparação com o primeiro
 
-$horario_de_maior_fluxo = "SELECT  qtd_por_hora, intervalo_de_horas  FROM (
-                                                          SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00') as intervalo_de_horas, 
-                                                          COUNT(*) as qtd_por_hora
-                                                          FROM agendamento
-                                                          where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = CURDATE() and codigo_servico_atual = '$setor'
-                                                          GROUP BY HOUR(intervalo_de_horas) 
-                                                                    ) as lista_geral_de_horas  where qtd_por_hora = ( 
-                                                                      SELECT  max(qtd_por_hora) as maior_qtd FROM(
-                                                                                SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+2, ':00') as intervalo_de_horas, 
-                                                                                COUNT(*) as qtd_por_hora
-                                                                                FROM agendamento
-                                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = CURDATE() and codigo_servico_atual = '$setor'
-                                                                                GROUP BY HOUR(intervalo_de_horas)
-                                                                                ) as maior_valor
-                                                                    );";//intervalo com maior fluxo de pessoas no setor
 
 
 $lista_de_setores = "SELECT servico as setor FROM servicos;";
@@ -102,10 +115,7 @@ count(distinct(a.nome_paciente)) as qtd_paciente
 FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.id  = " .$setor .  " order by  servico";
 
-$procedimentos = "SELECT 
-count(a.nome_paciente) as qtd_procedimentos
-FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.id  = " .$setor .  " order by  servico";
+
 
 //Consolidado
 $contagem_de_Pacientes_do_dia = "select count(paciente) as totaldePacientes from (
