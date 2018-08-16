@@ -16,7 +16,6 @@
 })();
 
 
-
 /*
  *---------------------Lista de Paciente---------------------------
  */
@@ -52,8 +51,12 @@ function lista_de_pacientes(data) {
 
 
 function format(d) {
-
     const resultadoSexo = MasculinoouFeminino(d.sexo);
+    data_de_nascimento = d.data_nascimento;
+    const divindodataeHora = quebraURL(data_de_nascimento, "T");
+    const divididoadata = quebraURL(divindodataeHora[0], "-");
+
+    const datadeNascimento = `${divididoadata[2]}/${divididoadata[1]}/${divididoadata[0]}`;
 
     return '<div class="row add_info">'
         + '<div class=" col s5">'
@@ -67,10 +70,12 @@ function format(d) {
         + '<div class="col s6 ">'
         + '<p> IH:<span class="negrito-informacoes"> ' + d.IH + '</span></p>'
         + '<p> Sexo:<span class="negrito-informacoes"> ' + resultadoSexo + '</span></p>'
-        + '<p> Data de Nascimento:<span class="negrito-informacoes"> ' + d.data_nascimento + '</span></p>'
+        + '<p> Data de Nascimento:<span class="negrito-informacoes"> ' + datadeNascimento + '</span></p>'
         + '</div> '
         + '</div> '
 }
+
+
 
 function MasculinoouFeminino(sexo) {
     if (sexo === "F") {
@@ -240,8 +245,6 @@ function calendario() {
             cancel: 'Cancelar'
         }
     });
-
-
 
     const btn_ok = document.querySelector('.btn-flat.datepicker-done.waves-effect');
     var urlAtual = window.location; // pega a url da pagina

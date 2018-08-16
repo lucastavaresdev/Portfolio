@@ -34,16 +34,13 @@ function alteraTitulodoSetor(data) {
 
     var url = quebraURL(url_atual, '?');
     var paramentros = quebraURL(url[1], '&');
-    //debugger
     var numeroSetor = quebraURL(paramentros[0], '=');
     var id_do_setor = numeroSetor[1];
 
+    var datadapesquisa = quebraURL(paramentros[1], '=');
+    var dataquebrada = quebraURL(datadapesquisa[1], '-');;
+    datapesquisa = `${dataquebrada[2]}/${dataquebrada[1]}/${dataquebrada[0]}`;
 
-
-
-    // let url = window.location.href
-
-    // id_do_setor = parseInt(id_do_setor);
     for (i = 0; i < data.length; i++) {
         id_do_setor_banco = data[i].id;
 
@@ -51,7 +48,7 @@ function alteraTitulodoSetor(data) {
             var nome_do_setor = data[i].setor;
             if (titulo_aba) {
                 titulo.innerHTML = nome_do_setor;
-                titulo_aba.innerHTML = nome_do_setor;
+                titulo_aba.innerHTML = `${nome_do_setor} - ${datapesquisa}`;
             } else {
                 titulo.innerHTML = nome_do_setor;
             }
