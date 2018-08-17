@@ -51,7 +51,7 @@ function lista_de_pacientes(data) {
                 '<td class="ocutar">' + data[i].descricao_exame + '</td>' +
                 '<td class="ocutar">' + data[i].nome_medico + '</td>' +
                 '<td class="ocutar">' + data[i].crm + '</td>' +
-                `<td><a  id="${data[i].IH + data[i].atividade}" ><i class="material-icons">info_outline</i></a></td>`;
+                `<td><a  id="${data[i].IH + data[i].atividade}" ><i class="material-icons botao_modal">info_outline</i></a></td>`;
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -62,16 +62,17 @@ function lista_de_pacientes(data) {
 }
 
 
+
 function modal(data) {
     modal = "";
 
     for (i = 0; i < data.length; i++) {
         var IDdoModal = data[i].IH + data[i].atividade + "modal";
 
-        modal += `<div id="${IDdoModal}" data-modal="8298610TEEST" class="modal">
-        <div class="modal-content">
+        modal += `<div id="${IDdoModal}" data-modal="8298610TEEST" class="modal modal-index">
+        <div class="modal-index-content">
+        <span class="fecharModal">&times;</span>
         <p>${data[i].paciente}</p>
-        <span class="close">&times;</span>
         <p>Some text in the Modal..</p>
         </div>
         </div>
@@ -100,7 +101,7 @@ function abrirModal() {
 
 
 
-            var span = document.getElementsByClassName("close")[0];
+            var span = document.getElementsByClassName("fecharModal")[0];
 
             btn.onclick = function () {
                 modal.style.display = "block";

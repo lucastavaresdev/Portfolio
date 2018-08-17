@@ -108,7 +108,6 @@
         <div class="row"><?php include './templates/status.html'; ?></div>
     </div>
 
-<!-- Trigger/Open The Modal -->
 
 <!-- The Modal -->
 <div id="elempai">
