@@ -66,6 +66,5 @@ function alteraTitulodoSetor(data) {
 
 function quebraURL(URL, caractere) {
     url_dividida = URL.split(caractere);
-    console.log(url_dividida);
     return url_dividida
 }

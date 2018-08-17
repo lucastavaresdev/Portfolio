@@ -12,9 +12,20 @@
 
     chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
+
+    chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, dados);
+
     calendario();
 })();
 
+var cord;
+
+
+function dados(data) {
+    return data;
+}
+
+console.log(cord)
 
 /*
  *---------------------Lista de Paciente---------------------------
@@ -40,40 +51,74 @@ function lista_de_pacientes(data) {
                 '<td class="ocutar">' + data[i].descricao_exame + '</td>' +
                 '<td class="ocutar">' + data[i].nome_medico + '</td>' +
                 '<td class="ocutar">' + data[i].crm + '</td>' +
-                `<td><a class="waves-effect waves-light btn modal-trigger" id="${data[i].IH}${data[i].atividade}"  href="#${data[i].IH}${data[i].atividade}"> <i class="material-icons">info_outline</i></a></td>`;
+                `<td><a  id="${data[i].IH + data[i].atividade}" ><i class="material-icons">info_outline</i></a></td>`;
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
         }
         data_table(data)
-        Modal(data)
+        modal(data)
     }
 }
 
 
-function Modal(data) {
-    elemHtml = document.getElementById('modal')
+function modal(data) {
+    modal = "";
 
-    for (let i = 0; i < data.length; i++) {
-        const elem = document.getElementById(data[i].IH + data[i].atividade);
-        elem.addEventListener('click', function () {
+    for (i = 0; i < data.length; i++) {
+        var IDdoModal = data[i].IH + data[i].atividade + "modal";
 
-            const msg = '<div id="' + data[i].IH + data[i].atividade + '" class="modal">' +
-                + '<div class="modal-content">'
-                + '<h4>Mdsadasdsadsadasdsaader</h4>'
-                + '<p>A bunch of text</p>'
-                + '</div>'
-                + '<div class="modal-footer">'
-                + '<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>'
-                + '</div>'
-                + '</div>';
+        modal += `<div id="${IDdoModal}" data-modal="8298610TEEST" class="modal">
+        <div class="modal-content">
+        <p>${data[i].paciente}</p>
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+        </div>
+        </div>
+        </div>`
 
-            elemHtml.innerHTML = msg;
-
-
-        })
+        document.getElementById("elempai").innerHTML = modal;
     }
 
+    abrirModal()
+
+}
+
+
+function abrirModal() {
+
+    var tabela = document.getElementById('listadePacientes');
+    var linhas = tabela.getElementsByTagName('a')
+
+    for (let i = 0; i < linhas.length; i++) {
+        linhas[i].addEventListener('click', function () {
+            id = this.id
+
+            var btn = document.getElementById(id);
+
+            var modal = document.getElementById(id + 'modal');
+
+
+
+            var span = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        })
+    }
 }
 
 function format(d) {
@@ -99,6 +144,8 @@ function format(d) {
         + '<p> Data de Nascimento:<span class="negrito-informacoes"> ' + datadeNascimento + '</span></p>'
         + '</div> '
         + '</div> '
+
+
 }
 
 

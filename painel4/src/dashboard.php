@@ -108,7 +108,13 @@
         <div class="row"><?php include './templates/status.html'; ?></div>
     </div>
 
-<div id="modal"></div>
+<!-- Trigger/Open The Modal -->
+
+<!-- The Modal -->
+<div id="elempai">
+
+
+</div>
 
 </body>
 
@@ -116,6 +122,14 @@
    include './templates/frameworks.html';
 ?>
 <script src="./js/index.js"></script>
+
+
+
+<script>
+ $(document).ready(function(){
+    $('.modal').modal();
+  });
+</script>
 
 <script>
     $(document).ready(function () {
