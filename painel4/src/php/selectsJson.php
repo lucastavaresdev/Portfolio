@@ -66,7 +66,7 @@ where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  '$data'  and s.id  = " .$se
 
 
 /*
- *-------------------------------------------------
+ *--------------------Horario de Maior Fluxo-----------------------------
  */
 
 $horario_de_maior_fluxo = "SELECT  qtd_por_hora, intervalo_de_horas  FROM (
@@ -85,51 +85,24 @@ $horario_de_maior_fluxo = "SELECT  qtd_por_hora, intervalo_de_horas  FROM (
                           ) as maior_valor
               );";//intervalo com maior fluxo de pessoas no setor
 
+
+/* ------------------------ Consolidado ----------------------------- */
 /*
- *-------------------------------------------------
+ *--------------------Horario de Maior Fluxo-----------------------------
  */
 
 
-//agendamentos agendamentos_do_dia_por_setor
-$qtd_de_agendamentos_dia = "SELECT count(distinct(nome_paciente)) as agendamento_do_dia
-FROM agendamento where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()";
-
-
-$lista_dos_intevalos_por_hora_do_dia_do_hospital_inteiro = "SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00')  intervalo_de_horas, COUNT(*) as `usage`
-FROM agendamento
-where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()
-GROUP BY HOUR(hora_servico_selecionado)";
-
-//este select traz o horario de maior valor porem se 2 horarios tiverem o mesma quantidade de pessoas ele lista os dois
-
-//o primeiro e o segundo select  traz a lista com todos os horarios e sua devida quantidade depois 3 e 4 select traz o valor com a maior hora detre todos e faz a comparação com o primeiro
-
-
-
-$lista_de_setores = "SELECT servico as setor FROM servicos;";
-
-
-
-
-$qtd_por_setor = "SELECT 
-count(distinct(a.nome_paciente)) as qtd_paciente
-FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE()  and s.id  = " .$setor .  " order by  servico";
-
-
-
-//Consolidado
-$contagem_de_Pacientes_do_dia = "select count(paciente) as totaldePacientes from (
-                                                          SELECT 
-                                                          distinct(a.nome_paciente) as paciente,
-                                                          a.servico_atual,
-                                                          s.servico as setor
-                                                          FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-                                                          where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual
-                                                        ) as contagemDePacientes";
+$total_de_pacientes_de_todos_os_setores = "select count(paciente) as totaldePacientes from (
+                                                                        SELECT
+                                                                        distinct(a.nome_paciente) as paciente,
+                                                                        a.servico_atual,
+                                                                        s.servico as setor
+                                                                        FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+                                                                        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual
+                                                                        ) as contagemDePacientes";
 
 $contagem_de_Procedimento_do_dia = "select count(paciente) as total_procedimento from (
-                                                          SELECT 
+                                                          SELECT
                                                           a.nome_paciente as paciente,
                                                           a.servico_atual,
                                                           s.servico as setor
@@ -140,7 +113,7 @@ $contagem_de_Procedimento_do_dia = "select count(paciente) as total_procedimento
 
 
 $contagem_de_pacientes_por_setor = "SELECT a.codigo_servico_atual as id,s.servico as setor ,count(distinct(a.nome_paciente)) as agendamento_do_dia, count(a.nome_paciente) as exames
-                                                                    FROM agendamento as a 
+                                                                    FROM agendamento as a
                                                                     inner join servicos as s on a.codigo_servico_atual = s.id
                                                                     where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by(codigo_servico_atual);";
 

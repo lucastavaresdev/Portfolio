@@ -1,4 +1,4 @@
-<?php 
+<?php
     include('./templates/header.php');
     include('./templates/menu.html');
 ?>
