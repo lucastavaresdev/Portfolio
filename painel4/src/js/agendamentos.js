@@ -10,11 +10,7 @@
 
 function cards_notificação(data) {
     var html = ""
-
     var elem = document.getElementById('agendamemento_card_notificacao');
-
-
-
     for (let i = 0; i < 2; i++) {
         html += '<div class="card"> '
             + '<div class="card-content">'
@@ -25,11 +21,6 @@ function cards_notificação(data) {
     }
     elem.innerHTML = html;
 }
-
-
-
-/*================================================================================= */
-//tabela
 
 function lista_de_pacientes(data) {
     var tbody = document.getElementById("listadePacientesagendamento");
@@ -42,9 +33,9 @@ function lista_de_pacientes(data) {
                 '<td>' + data[i].atividade + '</td>' +
                 '<td>' + data[i].IH + '</td>' +
                 '<td>' + data[i].paciente + '</td>' +
-                '<td>' + '-' + '</td>' +
+                '<td class="ocutar">' + '-' + '</td>' +
                 `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
-                '<td>' + ' - ' + '</td>';
+                '<td class="ocutar">' + ' - ' + '</td>';
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
         }

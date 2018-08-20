@@ -7,8 +7,7 @@
     <div class="row">
         <div class="  col s12 dados_consolidados">
             <div class="col s12 conteudo bg-consolidado espacamento">
-            <?php //echo "<a  href='./agendamentos.php?setor=$setor'>"?> 
-                <?php echo "<a>"    ?>
+            <?php echo "<a  href='./agendamentos.php?setor=$setor'>"?> 
                         <div class="col s4 l2 ">
                             <div class="dash_btn_superior fade-in">
                                 <p>Agendamentos</p>
