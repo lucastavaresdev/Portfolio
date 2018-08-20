@@ -145,11 +145,14 @@ if (isset($_GET['status'])) {
  */
 
  $qtd_por_horario_de_pocedimento = "SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00')  intervalo_de_horas, COUNT(*) as Qtd
-                                                                FROM agendamento
-                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and codigo_servico_atual = 225
-                                                                GROUP BY HOUR(hora_servico_selecionado)";
+                                                              FROM agendamento
+                                                              where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and codigo_servico_atual = 225
+                                                              GROUP BY HOUR(hora_servico_selecionado)";
 
-
+$qtd_por_horario_de_pacientes = "SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00')  intervalo_de_horas, COUNT(distinct(nome_paciente)) as Qtd
+                                                        FROM agendamento
+                                                        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and codigo_servico_atual = 225
+                                                        GROUP BY HOUR(hora_servico_selecionado)";
 
 /*
  * ----------------------Comparação para gerar o json----------------------
