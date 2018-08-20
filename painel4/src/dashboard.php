@@ -1,11 +1,9 @@
-<?php 
+<?php
     include "./templates/header.php";
     $setor = $_GET['setor'];
 ?>
 
-
 <?php include "./templates/menu.html"; ?>
-    
     <div class="row">
         <div class="  col s12 dados_consolidados">
             <div class="col s12 conteudo bg-consolidado espacamento">
@@ -88,7 +86,6 @@
                                 <th>Atividade</th>
                                 <th>IH</th>
                                 <th>Paciente</th>
-                                <th class="ocutar">-</th>
                                 <th>Serviço Atual</th>
                                 <th>Prox. Serviço</th>
                                 <th>Status</th>
@@ -97,6 +94,7 @@
                                 <th class="ocutar">Descricao Exame</th>
                                 <th class="ocutar">Nome Medico</th>
                                 <th class="ocutar">CRM</th>
+                                <th class="ocutar">Anotação</th>
                                 <th>Obs.</th>
                             </tr>
                         </thead>
@@ -112,12 +110,11 @@
 <!-- The Modal -->
 <div id="elempai">
 
-
 </div>
 
 </body>
 
-<?php 
+<?php
    include './templates/frameworks.html';
 ?>
 <script src="./js/index.js"></script>
@@ -144,6 +141,6 @@
 </script> 
 
 
-<?php 
+<?php
    include './templates/footer.html';
 ?>

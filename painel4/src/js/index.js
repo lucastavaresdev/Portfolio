@@ -42,7 +42,6 @@ function lista_de_pacientes(data) {
                 '<td>' + data[i].atividade + '</td>' +
                 '<td>' + data[i].IH + '</td>' +
                 '<td>' + data[i].paciente + '</td>' +
-                '<td class="ocutar">' + '-' + '</td>' +
                 '<td>' + data[i].servico_atual + '</td>' +
                 '<td>' + data[i].proximo_servico + '</td>' +
                 `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
@@ -51,6 +50,7 @@ function lista_de_pacientes(data) {
                 '<td class="ocutar">' + data[i].descricao_exame + '</td>' +
                 '<td class="ocutar">' + data[i].nome_medico + '</td>' +
                 '<td class="ocutar">' + data[i].crm + '</td>' +
+                '<td class="ocutar">' + data[i].anotacao + '</td>' +
                 `<td><a  id="${data[i].IH + data[i].atividade}" ><i class="material-icons botao_modal">info_outline</i></a></td>`;
 
             var linha = tr.innerHTML = cols;
@@ -68,12 +68,14 @@ function modal(data) {
 
     for (i = 0; i < data.length; i++) {
         var IDdoModal = data[i].IH + data[i].atividade + "modal";
+        let obs;
+        data[i].anotacao === null ? obs = "Não há observação" : obs = data[i].anotacao;
 
         modal += `<div id="${IDdoModal}" data-modal="8298610TEEST" class="modal modal-index">
         <div class="modal-index-content">
-        <span class="fecharModal">&times;</span>
+        <span class="fecharModal"></span>
         <p>${data[i].paciente}</p>
-        <p>Some text in the Modal..</p>
+        <p>Obs: ${obs} </p>
         </div>
         </div>
         </div>`
@@ -188,7 +190,6 @@ function data_table(d) {
                 { 'data': "atividade" },
                 { 'data': "IH" },
                 { 'data': "paciente" },
-                { 'data': "-" },
                 { 'data': "servico_atual" },
                 { 'data': "proximo_servico" },
                 { 'data': "cod_cor_status" },
@@ -196,6 +197,7 @@ function data_table(d) {
                 { 'data': "data_nascimento" },
                 { 'data': "descricao_exame" },
                 { 'data': "nome_medico" },
+                { 'data': "anotacao" },
                 { 'data': "crm" },
 
             ],

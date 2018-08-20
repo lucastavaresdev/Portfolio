@@ -46,6 +46,7 @@ if (isset($_GET['data'])) {
                                   a.proximo_servico,
                                   a.cod_cor_status,
                                   a.descricao_exame,
+                                  a.anotacao,
                                   sexo_paciente as sexo,
                                   data_nascimento,
                                   nome_medico,
