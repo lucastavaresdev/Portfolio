@@ -117,6 +117,28 @@ $card_com_informacoes_do_setores = "SELECT a.codigo_servico_atual as id,s.servic
                                                                     inner join servicos as s on a.codigo_servico_atual = s.id
                                                                     where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by(codigo_servico_atual);";
 
+/*
+ *--------------------Quandade de status da unidade-----------------------------
+ */
+
+if (isset($_GET['status'])) {
+    $status = $_GET['status'];//PARAMETRO
+} else {
+    $status = 0;
+}
+
+
+ $qtd_de_status_todas_os_setores = "select count(paciente) as status_setor from (
+                                                                    SELECT
+                                                                    distinct(a.nome_paciente) as paciente,
+                                                                    a.servico_atual,
+                                                                    s.servico as setor
+                                                                    FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+                                                                    where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and cod_cor_status = $status
+                                                                ) as contagemDePacientes";
+
+
+
 
 //agendamentos
 $notificacao = "SELECT * FROM notificacao;";
