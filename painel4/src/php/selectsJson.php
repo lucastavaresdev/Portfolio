@@ -128,14 +128,15 @@ if (isset($_GET['status'])) {
 }
 
 
- $qtd_de_status_todas_os_setores = "select count(paciente) as status_setor from (
-                                                                    SELECT
-                                                                    distinct(a.nome_paciente) as paciente,
-                                                                    a.servico_atual,
-                                                                    s.servico as setor
-                                                                    FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-                                                                    where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and cod_cor_status = $status
-                                                                ) as contagemDePacientes";
+ $qtd_de_status_todas_os_setores_por_procedimento = "select count(cod_cor_status) as status_por_procedimentos from (
+                                                                SELECT
+                                                                a.nome_paciente as paciente,
+                                                                a.servico_atual,
+                                                                s.servico as setor,
+                                                                a.cod_cor_status
+                                                                FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and  cod_cor_status = $status
+                                                            ) as contagemDePacientes";
 
 
 

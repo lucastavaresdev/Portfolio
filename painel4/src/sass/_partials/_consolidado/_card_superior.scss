@@ -7,10 +7,10 @@
 }
 
 .c_total_card_inferior {
-    @include fontebase($monte-serrat, '27px ', 300, $cor-primaria);
+    @include fontebase($monte-serrat, '20px ', 300, $cor-primaria);
     letter-spacing: 2px;
     b {
-        @include fontebase($monte-serrat, '27px', 600, $cor-primaria);
+        @include fontebase($monte-serrat, '20px', 600, $cor-primaria);
     }
 }
 
@@ -36,6 +36,13 @@
             @include fontebase($monte-serrat, '20px', 600, $cor-primaria);
         }
     }
+    .c_total_card_inferior {
+        @include fontebase($monte-serrat, '20px ', 300, $cor-primaria);
+        letter-spacing: 2px;
+        b {
+            @include fontebase($monte-serrat, '20px', 600, $cor-primaria);
+        }
+    }
 }
 
 @media (min-width: 900px) and (max-width: 1300px) {
@@ -47,10 +54,10 @@
         }
     }
     .c_total_card_inferior {
-        @include fontebase($monte-serrat, '27px ', 300, $cor-primaria);
+        @include fontebase($monte-serrat, '20px ', 300, $cor-primaria);
         letter-spacing: 2px;
         b {
-            @include fontebase($monte-serrat, '27px', 600, $cor-primaria);
+            @include fontebase($monte-serrat, '20px', 600, $cor-primaria);
         }
     }
 }
@@ -59,4 +66,8 @@
     .c_titulo {
         font-size: 15px;
     }
+}
+
+.con_padding {
+    padding: 17px !important;
 }

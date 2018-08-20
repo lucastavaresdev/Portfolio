@@ -4,6 +4,13 @@ chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setore
 chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=card_com_informacoes_do_setores', card_com_informacoes_do_setores);
 
+chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=1', naoiniciado);
+//chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=2', Em_atendimento_em_outro_serviço);
+chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=3', aguardando);
+chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=4', emAtendimento);
+chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=5', atendido);
+chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=6', fastpass);
+
 
 //total_de_pacientes_de_todos_os_setores
 function total_de_pacientes_de_todos_os_setores(data, id_da_alteracao) {
@@ -16,6 +23,37 @@ function total_de_procedimentos_de_todos_os_setores(data, id_da_alteracao) {
     var id = pergarId("con_procedimento");
     id.innerHTML = data[0].total_procedimento;
 }
+
+
+//Não Iniciado
+function naoiniciado(data) {
+    var id = pergarId("con_naoIniciado");
+    id.innerHTML = data[0].status_por_procedimentos;
+}
+
+//Não Iniciado
+function aguardando(data) {
+    var id = pergarId("con_aguardando");
+    id.innerHTML = data[0].status_por_procedimentos;
+}
+function atendido(data) {
+    var id = pergarId("con_atendido");
+    id.innerHTML = data[0].status_por_procedimentos;
+}
+
+function fastpass(data) {
+    var id = pergarId("con_fastpass");
+    id.innerHTML = data[0].status_por_procedimentos;
+}
+function emAtendimento(data) {
+    var id = pergarId("con_emAtendimento");
+    id.innerHTML = data[0].status_por_procedimentos;
+}
+
+
+
+
+
 
 function pergarId(id_da_alteracao) {
     var id = document.getElementById(id_da_alteracao);
