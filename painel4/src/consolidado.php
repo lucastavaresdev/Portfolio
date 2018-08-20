@@ -80,39 +80,63 @@
     </div>
 
     <div class="row">
-        <div class="col s12 l4">
+
+        <div class="col s12 l3">
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card-panel center">
-                        <span class="c_total_card">Finalizado:
+                        <span class="c_total_card c_total_card_inferior">Não Iniciado:
                             <b class="right"> - </b>
                         </span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 l4">
+        <div class="col s12 l2">
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card-panel center">
-                        <span class="c_total_card">Cancelados:
+                        <span class="c_total_card c_total_card_inferior">Aguardando:
                             <b class="right"> - </b>
                         </span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 l4">
+        <div class="col s12 l2">
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card-panel center">
-                        <span class="c_total_card">Restando:
+                        <span class="c_total_card c_total_card_inferior">Atendido:
                             <b class="right"> - </b>
                         </span>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col s12 l2">
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="card-panel center">
+                        <span class="c_total_card c_total_card_inferior">Fastpass:
+                            <b class="right"> - </b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l3">
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="card-panel center">
+                        <span class="c_total_card c_total_card_inferior">Em atendimento:
+                            <b class="right"> - </b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <div class="row" id="con_card_setores">

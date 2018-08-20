@@ -569,6 +569,18 @@ table.dataTable tbody td.no-padding {
     font-weight: 600;
     color: #007DCC; }
 
+.c_total_card_inferior {
+  font-family: Montserrat, sans-serif;
+  font-size: 27px ;
+  font-weight: 300;
+  color: #007DCC;
+  letter-spacing: 2px; }
+  .c_total_card_inferior b {
+    font-family: Montserrat, sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    color: #007DCC; }
+
 .c_linha_card_superior {
   margin-bottom: 0; }
 
@@ -606,6 +618,18 @@ table.dataTable tbody td.no-padding {
     .c_total_card b {
       font-family: Montserrat, sans-serif;
       font-size: 17px;
+      font-weight: 600;
+      color: #007DCC; }
+
+  .c_total_card_inferior {
+    font-family: Montserrat, sans-serif;
+    font-size: 27px ;
+    font-weight: 300;
+    color: #007DCC;
+    letter-spacing: 2px; }
+    .c_total_card_inferior b {
+      font-family: Montserrat, sans-serif;
+      font-size: 27px;
       font-weight: 600;
       color: #007DCC; } }
 @media (min-width: 991px) and (max-width: 1800px) {
