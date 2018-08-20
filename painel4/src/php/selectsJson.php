@@ -101,14 +101,14 @@ $total_de_pacientes_de_todos_os_setores = "select count(paciente) as totaldePaci
                                                                         where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual
                                                                         ) as contagemDePacientes";
 
-$contagem_de_Procedimento_do_dia = "select count(paciente) as total_procedimento from (
-                                                          SELECT
-                                                          a.nome_paciente as paciente,
-                                                          a.servico_atual,
-                                                          s.servico as setor
-                                                          FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-                                                          where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual
-                                                        ) as contagemDeProcedimento";
+$total_de_procedimentos_de_todos_os_setores = "select count(paciente) as total_procedimento from (
+                                                                                SELECT
+                                                                                a.nome_paciente as paciente,
+                                                                                a.servico_atual,
+                                                                                s.servico as setor
+                                                                                FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+                                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() order by  servico and servico_atual
+                                                                                ) as contagemDeProcedimento";
 
 
 
