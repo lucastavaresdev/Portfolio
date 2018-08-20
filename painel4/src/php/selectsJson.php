@@ -141,8 +141,11 @@ if (isset($_GET['status'])) {
 
 
 
-//agendamentos
-$notificacao = "SELECT * FROM notificacao;";
+
+/*
+ *--------------------Quandade de status da unidade-----------------------------
+ */
+    
 
 
 
