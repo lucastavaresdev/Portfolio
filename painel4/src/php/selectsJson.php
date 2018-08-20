@@ -112,7 +112,7 @@ $total_de_procedimentos_de_todos_os_setores = "select count(paciente) as total_p
 
 
 
-$contagem_de_pacientes_por_setor = "SELECT a.codigo_servico_atual as id,s.servico as setor ,count(distinct(a.nome_paciente)) as agendamento_do_dia, count(a.nome_paciente) as exames
+$card_com_informacoes_do_setores = "SELECT a.codigo_servico_atual as id,s.servico as setor ,count(distinct(a.nome_paciente)) as agendamento_do_dia, count(a.nome_paciente) as exames
                                                                     FROM agendamento as a
                                                                     inner join servicos as s on a.codigo_servico_atual = s.id
                                                                     where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by(codigo_servico_atual);";

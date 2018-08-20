@@ -2,7 +2,7 @@
 
 chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setores', total_de_pacientes_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
-chamadaAjax('php/selectsJson.php?parametro=consolidado_cards_com_dados', setores);
+chamadaAjax('php/selectsJson.php?parametro=card_com_informacoes_do_setores', card_com_informacoes_do_setores);
 
 
 //total_de_pacientes_de_todos_os_setores
@@ -25,7 +25,7 @@ function pergarId(id_da_alteracao) {
 
 //cards por setor
 
-function setores(data) {
+function card_com_informacoes_do_setores(data) {
     var local_do_card = document.getElementById('con_card_setores');
     var html = " ";
 
