@@ -106,3 +106,18 @@
         opacity: 1;
     }
 }
+
+//semhover 
+.dash_btn_superior_sem_hover {
+    width: 60%;
+    height: 18%;
+    border-radius: 7px;
+    text-align: center;
+    &:hover {
+        p,
+        h4,
+        li,
+        .p-msg,
+        span {}
+    }
+}

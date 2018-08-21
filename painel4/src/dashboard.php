@@ -19,7 +19,7 @@
                         <?php echo "</a>"?> 
                 <?php echo "<a>"?>
                     <div class="col s4 l2">
-                        <div class="dash_btn_superior fade-in">
+                        <div class="dash_btn_superior_sem_hover fade-in">
                             <p>Procedimentos</p>
                             <h4 id='qtd_procedimentos'>0</h4>
                         </div>
@@ -27,7 +27,7 @@
                     <?php echo "</a>"?>
                     <?php echo "<a>"    ?>
                 <div class="col s4 l2">
-                    <div class="dash_btn_superior fade-in">
+                    <div class="dash_btn_superior_sem_hover fade-in">
                         <p>Atendimentos</p>
                         <h4>-/<span id="atendimentos_total">0</span></h4>
                     </div>
@@ -44,7 +44,7 @@
                     
                     <?php echo "<a>"    ?>
                         <div class="col s4 l2">
-                            <div class="dash_btn_superior fade-in">
+                            <div class=" dash_btn_superior_sem_hover fade-in">
                             <p>Tempo de Sala</p>
                             <h4> - </h4>
                             </div>
@@ -52,7 +52,7 @@
                     <?php echo "</a>"?>
                     <?php echo "<a>"    ?>
                         <div class="col s4 l2">
-                            <div class="dash_btn_superior fade-in">
+                            <div class="dash_btn_superior_sem_hover fade-in">
                             <p>Qtd de pacientes atuais</p>
                             <h4> - </h4>
                             </div>
