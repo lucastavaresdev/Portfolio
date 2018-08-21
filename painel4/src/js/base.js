@@ -36,9 +36,10 @@ function alteraTitulodoSetor(data) {
     var paramentros = quebraURL(url[1], '&');
     var numeroSetor = quebraURL(paramentros[0], '=');
     var id_do_setor = numeroSetor[1];
-
     var datadapesquisa = quebraURL(paramentros[1], '=');
     var dataquebrada = quebraURL(datadapesquisa[1], '-');;
+
+
     datapesquisa = `${dataquebrada[2]}/${dataquebrada[1]}/${dataquebrada[0]}`;
 
     for (i = 0; i < data.length; i++) {
@@ -46,6 +47,11 @@ function alteraTitulodoSetor(data) {
 
         if (id_do_setor === id_do_setor_banco) {
             var nome_do_setor = data[i].setor;
+
+            if (datapesquisa == "undefined/undefined/o") {
+                datapesquisa = "Hoje";
+            }
+
             if (titulo_aba) {
                 titulo.innerHTML = nome_do_setor;
                 titulo_aba.innerHTML = `${nome_do_setor} - ${datapesquisa}`;
@@ -65,6 +71,10 @@ function alteraTitulodoSetor(data) {
 }
 
 function quebraURL(URL, caractere) {
-    url_dividida = URL.split(caractere);
+    if (URL && caractere) {
+        url_dividida = URL.split(caractere);
+    } else {
+        url_dividida = 'hoje'
+    }
     return url_dividida
 }
