@@ -3,8 +3,8 @@
 
     var parametrosDaUrl = url_atual.split("?")[1];
 
-    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_procedimento`, intervaloprocedimento);
-    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_pacientes`, intervalopaciente);
+    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_procedimento&${parametrosDaUrl}`, intervaloprocedimento);
+    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_pacientes&${parametrosDaUrl}`, intervalopaciente);
 
 })();
 

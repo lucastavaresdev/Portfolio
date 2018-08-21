@@ -20,7 +20,7 @@
 						<thead>
 							<tr>
 								<th>Horario</th>
-								<th>Quantidade de Pacientes</th>
+								<th>Quantidade por Procedimento</th>
 							</tr>
 						</thead>
 							<tbody id="qtd_por_horario_de_procedimento"></tbody>

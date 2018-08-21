@@ -25,7 +25,6 @@ function dados(data) {
     return data;
 }
 
-console.log(cord)
 
 /*
  *---------------------Lista de Paciente---------------------------
@@ -290,7 +289,7 @@ function horarioComMaiorPacientes(data) {
             atribuiHtml(fluxodetempo, html);
             fluxodetempo.classList.add('fluxo-1');
         } else {
-            fluxodetempo.innerHTML = "Ver Lista de Pacientes"
+            fluxodetempo.innerHTML = "Lista de fluxo"
             fluxodetempo.classList.add('p-msg');
         }
     }
