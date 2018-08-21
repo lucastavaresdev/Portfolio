@@ -70,7 +70,7 @@ function modal(data) {
         let obs;
         data[i].anotacao === null ? obs = "Não há observação" : obs = data[i].anotacao;
 
-        modal += `<div id="${IDdoModal}" data-modal="8298610TEEST" class="modal modal-index">
+        modal += `<div id="${IDdoModal}"  class="modal modal-index">
         <div class="modal-index-content">
         <span class="fecharModal"></span>
         <p>${data[i].paciente}</p>
