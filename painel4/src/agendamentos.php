@@ -3,7 +3,7 @@
            include "./templates/menu.html";
 ?>
 
-<div class="col s12 agendamento conteudo">
+<div class="col s12 agendamento conteudo espacamento">
 
 	<div class="row">
 		<div class="col s12">

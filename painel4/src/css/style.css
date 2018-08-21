@@ -859,7 +859,25 @@ body {
   text-align: center;
   line-height: 21px !important; }
 
-#horas {
-  margin-top: 2%; }
+#qtd_por_horario_de_procedimento td,
+#qtd_por_horario_de_pacientes td {
+  background: #ffffff; }
+#qtd_por_horario_de_procedimento b,
+#qtd_por_horario_de_pacientes b {
+  color: #006db3;
+  font-weight: 600; }
+
+.maior_fluxo_subtitulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #007DCC;
+  padding-bottom: 25px; }
+
+.maior_fluxo_titulo {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #474747; }
 
 /*# sourceMappingURL=style.css.map */

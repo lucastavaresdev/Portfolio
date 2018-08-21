@@ -3,29 +3,44 @@
 
     var parametrosDaUrl = url_atual.split("?")[1];
 
-    chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
+    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_procedimento`, intervaloprocedimento);
+    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_pacientes`, intervalopaciente);
 
-    chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, cards_notificação);
 })();
 
 
-
-function lista_de_pacientes(data) {
-    var tbody = document.getElementById("listadePacientesagendamento");
+function intervaloprocedimento(data) {
+    var tbody = document.getElementById("qtd_por_horario_de_procedimento");
     if (tbody) {
         for (i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
 
             var cols =
-                '<td>' + data[i].hora + '</td>' +
-                '<td>' + data[i].atividade + '</td>'
+                '<td>' + data[i].intervalo_de_horas + '</td>' +
+                '<td><b>' + data[i].Qtd + '</b></td>'
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
         }
-        data_table()
     }
 }
+
+function intervalopaciente(data) {
+    var tbody = document.getElementById("qtd_por_horario_de_pacientes");
+    if (tbody) {
+        for (i = 0; i < data.length; i++) {
+            var tr = document.createElement('tr');
+
+            var cols =
+                '<td>' + data[i].intervalo_de_horas + '</td>' +
+                '<td><b>' + data[i].Qtd + '</b></td>'
+
+            var linha = tr.innerHTML = cols;
+            tbody.innerHTML += linha;
+        }
+    }
+}
+
 
 
 function data_table() {
