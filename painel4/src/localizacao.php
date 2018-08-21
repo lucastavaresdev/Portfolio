@@ -11,22 +11,38 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col s12 l9  ">
+		<div class="offset-l2 col s12 l8  ">
 			<div class="cor1 bordas">
 				<div id="tabela_conteudo" class="col s12 tabela_bg">
 					<table id="tabela_pacientes" class="striped responsive-table tabela-cor">
 						<thead>
 							<tr>
-								<th>Hora</th>
-								<th>Atividade</th>
-								<th>IH</th>
-								<th>Paciente</th>
-								<th class="ocutar">-</th>
-								<th>Status</th>
-								<th class="ocutar">-</th>
+								<th>Nome Paciente</th>
+								<th>Localização</th>
 							</tr>
 						</thead>
-							<tbody id="listadePacientesagendamento"></tbody>
+							<tbody id="listadePacienteslocalizacao">
+
+							<tr>
+							<td>Julio Gael Osvaldo Silva</td>
+							<td>Ecocardiograma</td>
+							</tr>
+
+							<tr>
+							<td>Heitor Rafael Lima</td>
+							<td>Ecocardiograma</td>
+							</tr>
+
+							<tr>
+							<td>Márcia Emilly Corte Real</td>
+							<td>Endoscopia</td>
+							</tr>
+
+							<tr>
+							<td>Natália Fernanda Lopes</td>
+							<td>Ultrassonografia</td>
+							</tr>
+							</tbody>
 					</table>
 				</div>
 			</div>
@@ -44,11 +60,10 @@
 
 
 
-
 <?php
    include './templates/frameworks.html';
    ?>
-   <script src="./js/localizacao.js"></script>
+   <!-- <script src="./js/localizacao.js"></script> -->
 
 
 <script>

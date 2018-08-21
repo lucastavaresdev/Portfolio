@@ -886,4 +886,7 @@ body {
   font-weight: 500;
   color: #474747; }
 
+#listadePacienteslocalizacao tr td {
+  background: #ffffff; }
+
 /*# sourceMappingURL=style.css.map */
