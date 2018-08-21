@@ -6,8 +6,10 @@
     <div class="nav-wrapper a1">
         <div class="row">
             <div class="col s4">
-                <div class="logo">Work
-                    <b>Flow</b>
+                <div class="logo">
+                    <a href="./dashboard">Work
+                        <b>Flow</b>
+                    </a>
                 </div>
             </div>
             <div class="col s4 center">

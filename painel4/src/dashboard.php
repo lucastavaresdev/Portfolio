@@ -3,7 +3,7 @@
     $setor = $_GET['setor'];
 ?>
 
-<?php include "./templates/menu.html"; ?>
+<?php include "./templates/menu.php"; ?>
     <div class="row">
         <div class="  col s12 dados_consolidados">
             <div class="col s12 conteudo bg-consolidado espacamento">

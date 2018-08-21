@@ -1,6 +1,6 @@
-<?php 
+<?php
          include "./templates/header.php";
-         include "./templates/menu.html";
+         include "./templates/menu.php";
 ?>
 
 
@@ -44,7 +44,7 @@
 </section>
 
 
-<?php 
+<?php
    include './templates/frameworks.html';
 ?>
 
@@ -64,6 +64,6 @@
     });
 </script> 
 
-<?php 
+<?php
    include './templates/footer.html';
    ?>

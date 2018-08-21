@@ -22,7 +22,7 @@ if (isset($_GET['data'])) {
  * ----------------------Setores----------------------
  */
 
-    $lista_dos_setores = "SELECT id, servico AS setor FROM servicos";//lista de serviços
+    $lista_dos_setores = "SELECT id, servico AS setor FROM servicos order by servico";//lista de serviços
 
 /*
  * --------Quantidade de pacientes por lista de agendados---------
