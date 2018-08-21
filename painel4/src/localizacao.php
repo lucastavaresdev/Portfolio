@@ -48,7 +48,7 @@
 <?php
    include './templates/frameworks.html';
    ?>
-   <script src="./js/agendamentos.js"></script>
+   <script src="./js/localizacao.js"></script>
 
 
 <script>
