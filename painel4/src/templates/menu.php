@@ -1,15 +1,21 @@
-<ul id="setores_lista" class="dropdown-content">
-
-</ul>
-
+<ul id="setores_lista" class="dropdown-content"></ul>
+<?php
+    if (isset($_GET['setor'])) {
+        $setor =$_GET['setor'];//PARAMETRO
+    } else {
+        $setor = "";//PARAMETRO
+    }
+?>
 <nav>
     <div class="nav-wrapper a1">
         <div class="row">
             <div class="col s4">
                 <div class="logo">
-                    <a href="./dashboard">Work
+                    <?php
+                    echo "<a href='./dashboard?setor=$setor'>Work
                         <b>Flow</b>
-                    </a>
+                    </a>";
+                    ?>
                 </div>
             </div>
             <div class="col s4 center">
