@@ -1,25 +1,36 @@
-//chamadas ajax
+
 (function () {
     var url_atual = window.location.href;
+    console.log(url_atual)
+
 
     var parametrosDaUrl = url_atual.split("?")[1];
 
-    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_setor&${parametrosDaUrl}`, agendamentos_do_dia_por_setor);
+
+    chamadaAjax(`php/selectsJson.php?parametro=qtd_de_agendamentos_do_dia_por_agenda&${parametrosDaUrl}`, qtd_de_agendamentos_do_dia_por_agenda);
     chamadaAjax(`php/selectsJson.php?parametro=qtd_procedimentos&${parametrosDaUrl}`, qtd_procedimentos);
+
     chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
+
+    chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, dados);
+
+    calendario();
 })();
 
+var cord;
 
-function qtd_procedimentos(data) {
-    var elem = document.getElementById('qtd_procedimentos');
-    var qtd_procedimentos = data[0].qtd_procedimentos;
-    elem.innerHTML = qtd_procedimentos;
+
+function dados(data) {
+    return data;
 }
 
 
-function lista_de_pacientes(data) {
+/*
+ *---------------------Lista de Paciente---------------------------
+ */
 
+function lista_de_pacientes(data) {
     var tbody = document.getElementById("listadePacientes");
     if (tbody) {
         for (i = 0; i < data.length; i++) {
@@ -30,7 +41,6 @@ function lista_de_pacientes(data) {
                 '<td>' + data[i].atividade + '</td>' +
                 '<td>' + data[i].IH + '</td>' +
                 '<td>' + data[i].paciente + '</td>' +
-                '<td>' + '-' + '</td>' +
                 '<td>' + data[i].servico_atual + '</td>' +
                 '<td>' + data[i].proximo_servico + '</td>' +
                 `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
@@ -39,44 +49,116 @@ function lista_de_pacientes(data) {
                 '<td class="ocutar">' + data[i].descricao_exame + '</td>' +
                 '<td class="ocutar">' + data[i].nome_medico + '</td>' +
                 '<td class="ocutar">' + data[i].crm + '</td>' +
-                '<td>' + '<a class="obs waves-effect waves-light  modal-trigger" href="#asd"> <i class="material-icons">info_outline</i></a>' + '</td>';
-
+                '<td class="ocutar">' + data[i].anotacao + '</td>' +
+                `<td><a  id="${data[i].IH + data[i].atividade}" ><i class="material-icons botao_modal">info_outline</i></a></td>`;
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
         }
         data_table(data)
+        modal(data)
     }
 }
 
 
-function format(d) {
-    //debugger
-    var sexo = d.sexo;
-    console.log(sexo)
-    if (sexo === "F") {
-        sexo = "Feminino"
-    } else {
-        sexo = "Masculino"
+
+function modal(data) {
+    modal = "";
+
+    for (i = 0; i < data.length; i++) {
+        var IDdoModal = data[i].IH + data[i].atividade + "modal";
+        let obs;
+        data[i].anotacao === null ? obs = "Não há observação" : obs = data[i].anotacao;
+
+        modal += `<div id="${IDdoModal}"  class="modal modal-index">
+        <div class="modal-index-content">
+        <span class="fecharModal"></span>
+        <p>${data[i].paciente}</p>
+        <p>Obs: ${obs} </p>
+        </div>
+        </div>
+        </div>`
+
+        document.getElementById("elempai").innerHTML = modal;
     }
+
+    abrirModal()
+
+}
+
+
+function abrirModal() {
+
+    var tabela = document.getElementById('listadePacientes');
+    var linhas = tabela.getElementsByTagName('a')
+
+    for (let i = 0; i < linhas.length; i++) {
+        linhas[i].addEventListener('click', function () {
+            id = this.id
+
+            var btn = document.getElementById(id);
+
+            var modal = document.getElementById(id + 'modal');
+
+
+
+            var span = document.getElementsByClassName("fecharModal")[0];
+
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        })
+    }
+}
+
+function format(d) {
+    const resultadoSexo = MasculinoouFeminino(d.sexo);
+    data_de_nascimento = d.data_nascimento;
+    const divindodataeHora = quebraURL(data_de_nascimento, "T");
+    const divididoadata = quebraURL(divindodataeHora[0], "-");
+
+    const datadeNascimento = `${divididoadata[2]}/${divididoadata[1]}/${divididoadata[0]}`;
 
     return '<div class="row add_info">'
         + '<div class=" col s5">'
         + '<div class=" col s11 offset-s1">'
-        + '<p> Nome do Paciente: ' + d.paciente + '</p>'
-        + '<p> Atividade: ' + d.atividade + '</p>'
-        + '<p> Descrição do Exame: ' + d.descricao_exame + '</p>'
-        + '<p> Médico: ' + d.nome_medico + '   CRM:' + d.crm + ' </p>'
+        + '<p> Nome do Paciente:<span class="negrito-informacoes"> ' + d.paciente + '</span></p>'
+        + '<p> Atividade:<span class="negrito-informacoes"> ' + d.atividade + '</span></p>'
+        + '<p> Descrição do Exame:<span class="negrito-informacoes"> ' + d.descricao_exame + '</span></p>'
+        + '<p> Médico:<span class="negrito-informacoes"> ' + d.nome_medico + ' </span>CRM:<span class="negrito-informacoes"> ' + d.crm + ' </span></p>'
         + '</div> '
         + '</div> '
         + '<div class="col s6 ">'
-        + '<p> IH: ' + d.IH + '</p>'
-        + '<p> Sexo: ' + sexo + '</p>'
-        + '<p> Data de Nascimento: ' + d.data_nascimento + '</p>'
+        + '<p> IH:<span class="negrito-informacoes"> ' + d.IH + '</span></p>'
+        + '<p> Sexo:<span class="negrito-informacoes"> ' + resultadoSexo + '</span></p>'
+        + '<p> Data de Nascimento:<span class="negrito-informacoes"> ' + datadeNascimento + '</span></p>'
         + '</div> '
         + '</div> '
+
+
 }
 
+
+
+function MasculinoouFeminino(sexo) {
+    if (sexo === "F") {
+        return sexo = "Feminino"
+    } else {
+        return sexo = "Masculino"
+    }
+}
 
 function data_table(d) {
     $(document).ready(function () {
@@ -107,7 +189,6 @@ function data_table(d) {
                 { 'data': "atividade" },
                 { 'data': "IH" },
                 { 'data': "paciente" },
-                { 'data': "-" },
                 { 'data': "servico_atual" },
                 { 'data': "proximo_servico" },
                 { 'data': "cod_cor_status" },
@@ -115,6 +196,7 @@ function data_table(d) {
                 { 'data': "data_nascimento" },
                 { 'data': "descricao_exame" },
                 { 'data': "nome_medico" },
+                { 'data': "anotacao" },
                 { 'data': "crm" },
 
             ],
@@ -151,17 +233,43 @@ function data_table(d) {
     });
 }
 
+/*------------------------------------------------------------------------------------------------------------------------------------*/
 
-function menuclicado() {
-    var tabela = document.getElementById('listadePacientes');
-    var linhas = tabela.getElementsByTagName('tr')
 
-    for (let i = 0; i < linhas.length; i++) {
-        linhas[i].addEventListener('click', function () {
-            console.log(i)
-        })
+/*
+ * ----------------------Quantidade de pacientes por agenda----------------------
+ */
+function qtd_de_agendamentos_do_dia_por_agenda(data) {
+    var html = "";
+    elem = document.getElementById('agendimentos_do_dia');
+    elem1 = document.getElementById('atendimentos_total');
+
+    if (elem1 && elem) {
+        var qtd_agendamentos_do_dia = data[0].qtd_paciente;
+
+        if (typeof qtd_agendamentos_do_dia === 0 || typeof qtd_agendamentos_do_dia === "qtd_agendamentos_do_dia") {
+            console.log("verificar o json ou query nos selects.php");
+        } else {
+            html = '<span>' + qtd_agendamentos_do_dia + '</span>';
+        }
+
+        elem.innerHTML = html;
+        elem1.innerHTML = html;
+
     }
 }
+
+/*
+ * ----------------------Quantidade de Procedimentos----------------------
+ */
+
+function qtd_procedimentos(data) {
+    var elem = document.getElementById('qtd_procedimentos');
+    var qtd_procedimentos = data[0].qtd_procedimentos;
+    elem.innerHTML = qtd_procedimentos;
+}
+
+
 
 function horarioComMaiorPacientes(data) {
     var fluxodetempo = document.getElementById('fluxo');
@@ -181,7 +289,7 @@ function horarioComMaiorPacientes(data) {
             atribuiHtml(fluxodetempo, html);
             fluxodetempo.classList.add('fluxo-1');
         } else {
-            fluxodetempo.innerHTML = "Ver Lista de Pacientes"
+            fluxodetempo.innerHTML = "Lista de fluxo"
             fluxodetempo.classList.add('p-msg');
         }
     }
@@ -192,20 +300,59 @@ function atribuiHtml(classouid, resultado) {
     classouid.innerHTML = resultado;
 }
 
-function agendamentos_do_dia_por_setor(data) {
-    var html = "";
 
-    elem = document.getElementById('agendimentos_do_dia');
-    elem1 = document.getElementById('atendimentos_total');
-    if (elem1 && elem) {
-        var qtd_agendamentos_do_dia = data[0].qtd_paciente;
 
-        if (typeof qtd_agendamentos_do_dia === 0 || typeof qtd_agendamentos_do_dia === "qtd_agendamentos_do_dia") {
-            console.log("verificar o json ou query nos selects.php");
-        } else {
-            html = '<span>' + qtd_agendamentos_do_dia + '</span>';
+
+
+
+function calendario() {
+    const Calender = document.querySelector('.datepicker');
+    M.Datepicker.init(Calender, {
+        format: 'dd-mm-yyyy',
+        //autoClose: true,
+        i18n: {
+            months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            weekday: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabado'],
+            weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+            weekdaysAbbrev: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+            cancel: 'Cancelar'
         }
-        elem.innerHTML = html;
-        elem1.innerHTML = html;
+    });
+
+    const btn_ok = document.querySelector('.btn-flat.datepicker-done.waves-effect');
+    var urlAtual = window.location; // pega a url da pagina
+
+    btn_ok.addEventListener('click', function () {
+
+        let dataescolhida = Calender.value; //pega a data
+        dataescolhida = dataescolhida.split('-');
+        datamysql = `${dataescolhida[2]}-${dataescolhida[1]}-${dataescolhida[0]}`;
+
+        //pega a url base do site
+
+        let url = window.location.href
+        url_dividida = quebraURL(url, "?")
+
+        resultado = url_dividida[0]
+        parametros = quebraURL(url_dividida[1], "&")
+
+        setor = parametros[0];
+
+        window.location = resultado + '?' + setor + '&data=' + datamysql;
+
+    })
+}
+
+
+
+function menuclicado() {
+    var tabela = document.getElementById('listadePacientes');
+    var linhas = tabela.getElementsByTagName('tr')
+
+    for (let i = 0; i < linhas.length; i++) {
+        linhas[i].addEventListener('click', function () {
+            console.log(i)
+        })
     }
 }

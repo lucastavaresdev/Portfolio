@@ -1,6 +1,6 @@
-<?php 
+<?php
          include "./templates/header.php";
-         include "./templates/menu.html";
+         include "./templates/menu.php";
 ?>
 
 
@@ -25,7 +25,37 @@
                                                     <th>Status</th>
                                                 </tr>
                                             </thead>
-                                                <tbody id="lista_pacientes"></tbody>
+                                                <tbody id="lista_pacientes">
+                                                        <tr>
+                                                        <td>9171471</td>
+                                                        <td>Julio Gael Osvaldo Silva</td>
+                                                        <td>Ecocardiograma</td>
+                                                        <td><div  class=" status-1 center-status">1</div></td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>8933958</td>
+                                                        <td>Heitor Rafael Lima</td>
+                                                        <td>Ecocardiograma</td>
+                                                        <td><div  class=" status-2 center-status">1</div></td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>9171443</td>
+                                                        <td>Márcia Emilly Corte Real</td>
+                                                        <td>Endoscopia</td>
+                                                        <td><div  class=" status-3 center-status">1</div></td>
+
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td>9171481</td>
+                                                        <td>Natália Fernanda Lopes</td>
+                                                        <td>Ultrassonografia</td>
+                                                        <td><div  class=" status-3 center-status">1</div></td>
+                                                        </tr>
+
+                                                </tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -44,7 +74,7 @@
 </section>
 
 
-<?php 
+<?php
    include './templates/frameworks.html';
 ?>
 
@@ -64,6 +94,6 @@
     });
 </script> 
 
-<?php 
+<?php
    include './templates/footer.html';
    ?>

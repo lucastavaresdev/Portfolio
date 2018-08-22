@@ -4,37 +4,36 @@
     margin-left: 9px;
 }
 
-.center-status{
+.center-status {
     margin-left: 15% !important;
 }
 
 .status-1 {
-    background: darken($cinza, 20%) !important;
-    @include tamanho_status;
-}
-
-.status-2 {
     @include tamanho_status;
     background: $em_atendimento_em_outro_servico !important;
 }
 
-.status-3 {
+.status-2 {
     background: $aguardando !important;
     @include tamanho_status;
 }
 
-.status-4 {
+.status-3 {
     background: $em_atendimento !important;
     @include tamanho_status;
 }
 
-.status-5 {
+.status-4 {
     background: $atendido !important;
     @include tamanho_status;
 }
 
-.status-6{
-    background: $fastpass !important;
+.status-5 {
+    background: darken($cinza, 20%) !important;
     @include tamanho_status;
 }
 
+.status-6 {
+    background: $fastpass !important;
+    @include tamanho_status;
+}
