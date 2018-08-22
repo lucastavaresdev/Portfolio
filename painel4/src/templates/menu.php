@@ -12,7 +12,7 @@
             <div class="col s4">
                 <div class="logo">
                     <?php
-                    echo "<a href='./dashboard?setor=$setor'>Work
+                    echo "<a href='./dashboard.php?setor=$setor'>Work
                         <b>Flow</b>
                     </a>";
                     ?>

@@ -37,10 +37,10 @@
         }
     }
     .c_total_card_inferior {
-        @include fontebase($monte-serrat, '20px ', 300, $cor-primaria);
+        @include fontebase($monte-serrat, '12px ', 300, $cor-primaria);
         letter-spacing: 2px;
         b {
-            @include fontebase($monte-serrat, '20px', 600, $cor-primaria);
+            @include fontebase($monte-serrat, '12px', 600, $cor-primaria);
         }
     }
 }
@@ -57,7 +57,8 @@
         @include fontebase($monte-serrat, '20px ', 300, $cor-primaria);
         letter-spacing: 2px;
         b {
-            @include fontebase($monte-serrat, '20px', 600, $cor-primaria);
+            @include fontebase($monte-serrat, '9px', 600, $cor-primaria);
+            padding-top: 4px;
         }
     }
 }
