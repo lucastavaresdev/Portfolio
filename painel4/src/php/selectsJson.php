@@ -38,7 +38,7 @@ if (isset($_GET['data'])) {
  */
     $lista_do_setor = "SELECT 
                                   distinct(a.nome_paciente) as paciente,
-                                  left(a.hora_servico_selecionado, 5) as hora, 
+                                  time(a.data_agendamento) as hora, 
                                   a.codigo_agenda as atividade,
                                   a.ih_paciente as IH,
                                   a.servico_atual,
