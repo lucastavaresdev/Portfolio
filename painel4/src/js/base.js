@@ -29,7 +29,6 @@ function alteraTitulodoSetor(data) {
     var titulo_aba = document.getElementById('aba_nome_setor');
 
     var url_atual = window.location.href;
-    console.log(url_atual);
 
 
     var url = quebraURL(url_atual, '?');
