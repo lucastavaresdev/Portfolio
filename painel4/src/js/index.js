@@ -67,8 +67,14 @@ function modal(data) {
 
     for (i = 0; i < data.length; i++) {
         var IDdoModal = data[i].IH + data[i].atividade + "modal";
+        var ID = data[i].IH + data[i].atividade;
         let obs;
-        data[i].anotacao === null ? obs = "Não há observação" : obs = data[i].anotacao;
+        if (data[i].anotacao === null) {
+            obs = "Não há observação"
+        } else {
+            obs = data[i].anotacao;
+            document.getElementById(ID).style.color = "#FF6347 "
+        }
 
         modal += `<div id="${IDdoModal}"  class="modal modal-index">
         <div class="modal-index-content">
