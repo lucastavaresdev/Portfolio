@@ -813,6 +813,9 @@ table.dataTable tbody td.no-padding {
 .agendamento table.dataTable.no-footer {
   border-bottom: none; }
 
+@media (max-width: 620px) {
+  .agendamento .tabela_bg {
+    padding: 0px !important; } }
 html,
 body {
   position: relative;
@@ -889,5 +892,19 @@ body {
 
 #listadePacienteslocalizacao tr td {
   background: #ffffff; }
+
+@media (max-width: 620px) {
+  .datepicker-date-display {
+    background-color: #007DCC;
+    padding-left: 355px; }
+    .datepicker-date-display .date-text,
+    .datepicker-date-display .year-text {
+      margin-left: -410px; }
+
+  .ocutarmobile {
+    display: none !important; }
+
+  table.responsive-table thead th {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

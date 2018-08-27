@@ -35,3 +35,11 @@
         border-bottom: none;
     }
 }
+
+@media (max-width: 620px) {
+    .agendamento {
+        .tabela_bg {
+            padding: 0px !important;
+        }
+    }
+}

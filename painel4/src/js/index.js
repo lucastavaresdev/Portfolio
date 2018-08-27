@@ -36,7 +36,7 @@ function lista_de_pacientes(data) {
         for (i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
             var cols =
-                '<td></td>' +
+                '<td  class="ocutarmobile"></td>' +
                 '<td>' + data[i].hora + '</td>' +
                 '<td>' + data[i].atividade + '</td>' +
                 '<td>' + data[i].IH + '</td>' +

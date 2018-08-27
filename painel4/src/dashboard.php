@@ -80,7 +80,7 @@
                     <table id="tabela_pacientes"  class="responsive-table tabela-cor" style="width:100%" >
                         <thead>
                             <tr>
-                                <th></th>
+                                <th  class="ocutarmobile"></th>
                                 <th>Hora</th>
                                 <th>Atividade</th>
                                 <th>IH</th>
