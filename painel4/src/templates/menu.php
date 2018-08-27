@@ -18,10 +18,10 @@
                     ?>
                 </div>
             </div>
-            <div class="col s4 center">
+            <div class="col s4 center titulo_mobile_estrutura">
                 <div id="titulo_do_setor" class="titulo_consolidado"></div>
             </div>
-            <div class="col s1 offset-s3 setor_espacamento">
+            <div class="col s1 offset-s3 setor_espacamento setor_mobile_estrutura">
                 <ul id="setores">
                     <div>
                         <a class="drop_topo mobile" href="#!" data-target="setores_lista">Setores

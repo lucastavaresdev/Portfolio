@@ -80,27 +80,28 @@ nav {
 @media (max-width: 920px) {
   #titulo_do_setor {
     font-family: Montserrat, sans-serif;
-    font-size: 17px !important;
+    font-size: 13px !important;
     font-weight: 300;
     color: #ffffff;
-    line-height: 53px !important; }
+    line-height: 53px !important;
+    margin-left: -50px; }
 
   .logo {
     font-family: Montserrat, sans-serif;
-    font-size: 17px !important;
+    font-size: 13px !important;
     font-weight: 300;
     color: #ffffff;
     margin-left: 4%;
     line-height: 53px; }
     .logo b {
       font-family: Montserrat, sans-serif;
-      font-size: 17px !important;
+      font-size: 13px !important;
       font-weight: 300;
       color: #ffffff; }
 
   .drop_topo {
     font-family: Montserrat, sans-serif;
-    font-size: 17px !important;
+    font-size: 13px !important;
     font-weight: 300;
     color: #ffffff;
     line-height: 53px; } }
@@ -358,7 +359,7 @@ nav {
     padding: 1% 4% 1% 11% !important; }
 
   .espacamento {
-    margin-top: 12%; } }
+    margin-top: 17%; } }
 @media (min-width: 900px) and (max-width: 1700px) {
   .conteudo {
     padding-top: 40px !important; } }
@@ -939,6 +940,16 @@ body {
     background: fuchsia; }
   .agendamento ::-webkit-resizer {
     /* 7 */
-    background: springgreen; } }
+    background: springgreen; }
+
+  .titulo_mobile_estrutura {
+    width: 50% !important; }
+
+  .setor_mobile_estrutura {
+    width: 1px !important;
+    margin-left: 13% !important; }
+
+  .dash_btn_superior .p-msg {
+    font-size: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
