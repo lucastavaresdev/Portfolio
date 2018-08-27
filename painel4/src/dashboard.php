@@ -70,12 +70,12 @@
                     <li class="tab col s12 l3">
                         <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                     </li>
-                    <li class="tab col s12 l2 right ">
-                            <input type="text"  id="busque_data" class="datepicker right mobile_caledar" placeholder="Busque por uma data">
+                    <li class="tab col s12 l2 right input-calendario ">
+                            <input type="text"  id="busque_data" class="datepicker right figuras " placeholder="Busque por uma datas">
                     </li>
                 </ul>
                 <div id="test1" class="col s12 tabela_bg">
-                    <table id="tabela_pacientes"  class="responsive-table tabela-cor" style="width:100%" >
+                    <table id="tabela_pacientes"  class="responsive-table tabela-cor " style="width:100%" >
                         <thead>
                             <tr>
                                 <th  class="ocutarmobile"></th>

@@ -66,9 +66,6 @@
         .p-msg {
             font-size: 10px;
         }
-    } //calendario
-    .mobile_caledar {
-        display: none !important;
     }
     .dados_consolidados {
         .dash_btn_superior {
@@ -78,8 +75,32 @@
             width: 80% !important;
         }
     }
-}
-
-.mobile_caledar {
-    display: block;
+    .input-calendario {
+        input {
+            border: none;
+            border-bottom: none !important;
+        }
+        .figuras {
+            display: inline-block;
+            padding-left: 24px;
+            line-height: 16px;
+            background-position: 2px center;
+            background-repeat: no-repeat;
+            background-image: url(../img/icon-calendario.jpg);
+        }
+        ::-webkit-input-placeholder {
+            color: transparent;
+        }
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: transparent;
+        }
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: transparent;
+        }
+        :-ms-input-placeholder {
+            color: transparent;
+        }
+    }
 }

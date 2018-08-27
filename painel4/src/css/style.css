@@ -952,14 +952,30 @@ body {
   .dash_btn_superior .p-msg {
     font-size: 10px; }
 
-  .mobile_caledar {
-    display: none !important; }
-
   .dados_consolidados .dash_btn_superior {
     width: 80% !important; }
   .dados_consolidados .dash_btn_superior_sem_hover {
-    width: 80% !important; } }
-.mobile_caledar {
-  display: block; }
+    width: 80% !important; }
+
+  .input-calendario input {
+    border: none;
+    border-bottom: none !important; }
+  .input-calendario .figuras {
+    display: inline-block;
+    padding-left: 24px;
+    line-height: 16px;
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    background-image: url(../img/icon-calendario.jpg); }
+  .input-calendario ::-webkit-input-placeholder {
+    color: transparent; }
+  .input-calendario :-moz-placeholder {
+    /* Firefox 18- */
+    color: transparent; }
+  .input-calendario ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: transparent; }
+  .input-calendario :-ms-input-placeholder {
+    color: transparent; } }
 
 /*# sourceMappingURL=style.css.map */
