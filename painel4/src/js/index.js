@@ -1,6 +1,7 @@
 
 (function () {
     var url_atual = window.location.href;
+    console.log(url_atual)
 
 
     var parametrosDaUrl = url_atual.split("?")[1];
@@ -56,19 +57,8 @@ function lista_de_pacientes(data) {
         }
         data_table(data)
         modal(data)
-
     }
 }
-
-
-function tempos() {
-    debugger
-    var tempodeSala = document.getElementById('6093337').innerText;
-    //tempodeSala = parseInt(tempodeSala);
-    console.log(tempodeSala);
-}
-
-
 
 
 
@@ -97,7 +87,9 @@ function modal(data) {
 
         document.getElementById("elempai").innerHTML = modal;
     }
+
     abrirModal()
+
 }
 
 
@@ -114,10 +106,12 @@ function abrirModal() {
 
             var modal = document.getElementById(id + 'modal');
 
+
+
             var span = document.getElementsByClassName("fecharModal")[0];
 
             btn.onclick = function () {
-                console.log('teste2');
+                modal.style.display = "block";
             }
 
             // When the user clicks on <span> (x), close the modal
@@ -163,7 +157,10 @@ function format(d) {
         + '<p> Tempo Total:<span class="negrito-informacoes"> ' + 0 + '</span></p>'
         + '</div> '
         + '</div> '
+
+
 }
+
 
 
 function MasculinoouFeminino(sexo) {
@@ -231,7 +228,6 @@ function data_table(d) {
 
             if (row.child.isShown()) {
                 $('div.add_info', row.child()).slideUp(function () {
-
                     row.child.hide();
                     tr.removeClass('shown');
                 });
@@ -243,8 +239,6 @@ function data_table(d) {
                 tr.addClass('shown');
 
                 $('div.add_info', row.child()).slideDown();
-                debugger
-                tempos();
             }
         });
     });
@@ -373,8 +367,3 @@ function menuclicado() {
         })
     }
 }
-
-
-
-
-
