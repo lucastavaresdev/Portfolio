@@ -77,7 +77,7 @@ function card_com_informacoes_do_setores(data) {
     for (i = 0; i < data.length; i++) {
 
         html += " <div class='col s12 l4' >"
-            + "<div class='cards z-depth-3'>"
+            + `<div class='cards z-depth-3'><a href="./dashboard.php?setor=${data[i].id}">`
             + `<div class='col s4  l3 imagem-img${data[i].id}'></div>`
             + "<div class='col s8 l9 c_conteudo_card'>"
             + "<h1 class='c_titulo c_card-title'>" + data[i].setor + "</h1>"
@@ -95,7 +95,7 @@ function card_com_informacoes_do_setores(data) {
             + "</p>"
             + "<b class='c_status'>Status: <span id=status" + data[i].id + ">Indisponivel</b>"
             + "</div>"
-            + "</div>"
+            + "</div></a>"
             + "</div>";
 
     }
