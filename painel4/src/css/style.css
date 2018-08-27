@@ -950,6 +950,16 @@ body {
     margin-left: 13% !important; }
 
   .dash_btn_superior .p-msg {
-    font-size: 10px; } }
+    font-size: 10px; }
+
+  .mobile_caledar {
+    display: none !important; }
+
+  .dados_consolidados .dash_btn_superior {
+    width: 80% !important; }
+  .dados_consolidados .dash_btn_superior_sem_hover {
+    width: 80% !important; } }
+.mobile_caledar {
+  display: block; }
 
 /*# sourceMappingURL=style.css.map */

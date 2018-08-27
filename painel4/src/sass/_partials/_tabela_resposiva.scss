@@ -66,5 +66,20 @@
         .p-msg {
             font-size: 10px;
         }
+    } //calendario
+    .mobile_caledar {
+        display: none !important;
     }
+    .dados_consolidados {
+        .dash_btn_superior {
+            width: 80% !important;
+        }
+        .dash_btn_superior_sem_hover {
+            width: 80% !important;
+        }
+    }
+}
+
+.mobile_caledar {
+    display: block;
 }

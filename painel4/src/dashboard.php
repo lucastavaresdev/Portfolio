@@ -8,7 +8,7 @@
         <div class="  col s12 dados_consolidados">
             <div class="col s12 conteudo bg-consolidado espacamento">
             <?php echo "<a  href='./agendamentos.php?setor=$setor'>"?> 
-                        <div class="col s4 l2 ">
+                        <div class="col s6 l2 ">
                             <div class="dash_btn_superior fade-in">
                                 <p>Agendamentos</p>
                                 <h4  id="agendimentos_do_dia">
@@ -18,7 +18,7 @@
                         </div>
                         <?php echo "</a>"?> 
                 <?php echo "<a>"?>
-                    <div class="col s4 l2">
+                    <div class="col s6 l2">
                         <div class="dash_btn_superior_sem_hover fade-in">
                             <p>Procedimentos</p>
                             <h4 id='qtd_procedimentos'>0</h4>
@@ -26,7 +26,7 @@
                     </div>
                     <?php echo "</a>"?>
                     <?php echo "<a>"    ?>
-                <div class="col s4 l2">
+                <div class="col s6 l2">
                     <div class="dash_btn_superior_sem_hover fade-in">
                         <p>Atendimentos</p>
                         <h4>-/<span id="atendimentos_total">0</span></h4>
@@ -34,7 +34,7 @@
                 </div>
                 <?php echo "</a>"    ?>
                 <?php echo "<a  href='./maior_fluxo.php?setor=$setor'>"?> 
-                    <div class="col s4 l2 tamanho_da_linha_titulo_fluxo">
+                    <div class="col s6 l2 tamanho_da_linha_titulo_fluxo">
                         <div class="dash_btn_superior m-fluxo fade-in">
                             <p>Maior Fluxo</p>
                             <ul id="fluxo"></ul>
@@ -43,7 +43,7 @@
                     <?php echo "</a>"?>
                     
                     <?php echo "<a>"    ?>
-                        <div class="col s4 l2">
+                        <div class="col s6 l2">
                             <div class=" dash_btn_superior_sem_hover fade-in">
                             <p>Tempo de Sala</p>
                             <h4> - </h4>
@@ -51,7 +51,7 @@
                         </div>
                     <?php echo "</a>"?>
                     <?php echo "<a>"    ?>
-                        <div class="col s4 l2">
+                        <div class="col s6 l2">
                             <div class="dash_btn_superior_sem_hover fade-in">
                             <p>Qtd de pacientes atuais</p>
                             <h4> - </h4>
@@ -73,7 +73,7 @@
                         <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                     </li>
                     <li class="tab col s12 l2 right ">
-                            <input type="text"  id="busque_data" class="datepicker right" placeholder="Busque por uma data">
+                            <input type="text"  id="busque_data" class="datepicker right mobile_caledar" placeholder="Busque por uma data">
                     </li>
                 </ul>
                 <div id="test1" class="col s12 tabela_bg">
