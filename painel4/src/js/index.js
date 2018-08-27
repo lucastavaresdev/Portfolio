@@ -184,8 +184,8 @@ function data_table(d) {
                 "search": "Filtrar:",
                 "paginate": {
                     "first": " ",
-                    "next": "Proxima",
-                    "previous": "Anterior",
+                    "next": ">",
+                    "previous": "<",
                     "last": " "
                 }
             },

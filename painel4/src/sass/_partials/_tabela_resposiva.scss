@@ -1,4 +1,7 @@
 @media (max-width: 620px) {
+    .datepicker-container {
+        width: 300px !important;
+    }
     .datepicker-date-display {
         background-color: $cor-primaria;
         padding-left: 355px;
@@ -15,6 +18,41 @@
             th {
                 display: none;
             }
+        }
+    }
+    .agendamento {
+        ::-webkit-scrollbar {
+            width: 4px;
+            background: darken($cinza, 1%);
+        }
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+        ::-webkit-scrollbar-track {
+            border-radius: 5px;
+            /*3*/
+        }
+        ::-webkit-scrollbar-track-piece {
+            border-radius: 20px;
+            background: none;
+            /* 4 */
+        }
+        ::-webkit-scrollbar-thumb {
+            width: 4px;
+            background: darken($cinza, 5%);
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+        }
+        ::-webkit-scrollbar-corner {
+            /* 6 */
+            background: fuchsia;
+        }
+        ::-webkit-resizer {
+            /* 7 */
+            background: springgreen;
         }
     }
 }

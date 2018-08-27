@@ -858,6 +858,10 @@ body {
   .agendamento ::-webkit-resizer {
     /* 7 */
     background: springgreen; }
+  .agendamento .paging_simple_numbers {
+    font-size: 11px; }
+  .agendamento .dataTables_wrapper .dataTables_filter input {
+    margin-left: 0em; }
 
 .pacientes .topo {
   margin-top: 60px; }
@@ -894,6 +898,9 @@ body {
   background: #ffffff; }
 
 @media (max-width: 620px) {
+  .datepicker-container {
+    width: 300px !important; }
+
   .datepicker-date-display {
     background-color: #007DCC;
     padding-left: 355px; }
@@ -905,6 +912,33 @@ body {
     display: none !important; }
 
   table.responsive-table thead th {
-    display: none; } }
+    display: none; }
+
+  .agendamento ::-webkit-scrollbar {
+    width: 4px;
+    background: #f6f6f6; }
+  .agendamento ::-webkit-scrollbar-button {
+    display: none; }
+  .agendamento ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    /*3*/ }
+  .agendamento ::-webkit-scrollbar-track-piece {
+    border-radius: 20px;
+    background: none;
+    /* 4 */ }
+  .agendamento ::-webkit-scrollbar-thumb {
+    width: 4px;
+    background: #ececec;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px; }
+  .agendamento ::-webkit-scrollbar-corner {
+    /* 6 */
+    background: fuchsia; }
+  .agendamento ::-webkit-resizer {
+    /* 7 */
+    background: springgreen; } }
 
 /*# sourceMappingURL=style.css.map */
