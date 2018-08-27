@@ -162,7 +162,6 @@ function format(d) {
 }
 
 
-
 function MasculinoouFeminino(sexo) {
     if (sexo === "F") {
         return sexo = "Feminino"

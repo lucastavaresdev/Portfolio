@@ -4,7 +4,6 @@
 ?>
 
 <div class="col s12 agendamento conteudo">
-
 	<div class="row">
 		<div class="col s12">
 			<h6>Localização</h6>
@@ -21,28 +20,7 @@
 								<th>Localização</th>
 							</tr>
 						</thead>
-							<tbody id="listadePacienteslocalizacao">
-
-							<tr>
-							<td>Julio Gael Osvaldo Silva</td>
-							<td>Ecocardiograma</td>
-							</tr>
-
-							<tr>
-							<td>Heitor Rafael Lima</td>
-							<td>Ecocardiograma</td>
-							</tr>
-
-							<tr>
-							<td>Márcia Emilly Corte Real</td>
-							<td>Endoscopia</td>
-							</tr>
-
-							<tr>
-							<td>Natália Fernanda Lopes</td>
-							<td>Ultrassonografia</td>
-							</tr>
-							</tbody>
+							<tbody id="listadePacienteslocalizacao"></tbody>
 					</table>
 				</div>
 			</div>
@@ -58,13 +36,8 @@
 	</div>
 </section>
 
-
-
-<?php
-   include './templates/frameworks.html';
-   ?>
+<?php include './templates/frameworks.html'; ?>
    <!-- <script src="./js/localizacao.js"></script> -->
-
 
 <script>
     $(document).ready(function () {

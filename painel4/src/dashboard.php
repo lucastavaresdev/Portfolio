@@ -62,8 +62,6 @@
         </div>
     </div>
 
-
-
     <div class="col s12 agendamento conteudo">
         <div class="row">
             <div class="col s12">
@@ -104,7 +102,6 @@
         </div>
         <div class="row"><?php include './templates/status.html'; ?></div>
     </div>
-
 
 <!-- The Modal -->
 <div id="elempai">

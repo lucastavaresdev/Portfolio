@@ -16,7 +16,7 @@
         <div class="col s12 l3 c_centralizando">
             <h1 class="c_titulo left c_agendamento">Consolidado</h1>
         </div>
-        <div class="col s6 l4 center  ">
+        <div class="col s12 l4 center  ">
             <h1 class="c_titulo" id="con_data_atual">--/--/--</h1>
         </div>
         <div class="col s6 l5 ">
