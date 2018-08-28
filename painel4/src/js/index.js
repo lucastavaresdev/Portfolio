@@ -179,7 +179,7 @@ function data_table(d) {
                 "zeroRecords": "Não encontrado pacientes",
                 "info": "Total de Pagina _PAGE_ de _PAGES_",
                 "infoEmpty": " ",
-                "infoFiltered": "(filtered from _MAX_ total records)",
+                "infoFiltered": "",
                 "search": "Filtrar:",
                 "paginate": {
                     "first": " ",
