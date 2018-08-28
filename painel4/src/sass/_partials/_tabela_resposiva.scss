@@ -111,10 +111,10 @@
     }
     .datepicker-date-display {
         background-color: $cor-primaria;
-        padding-left: 355px;
+        padding-left: 245px;
         .date-text,
         .year-text {
-            margin-left: -410px;
+            margin-left: -220px;
         }
     }
     .ocutarmobile {
@@ -173,34 +173,6 @@
         }
         .dash_btn_superior_sem_hover {
             width: 80% !important;
-        }
-    }
-    .input-calendario {
-        input {
-            border: none;
-            border-bottom: none !important;
-        }
-        .figuras {
-            display: inline-block;
-            padding-left: 24px;
-            line-height: 16px;
-            background-position: 2px center;
-            background-repeat: no-repeat;
-            background-image: url(../img/icon-calendario.jpg);
-        }
-        ::-webkit-input-placeholder {
-            color: transparent;
-        }
-        :-moz-placeholder {
-            /* Firefox 18- */
-            color: transparent;
-        }
-        ::-moz-placeholder {
-            /* Firefox 19+ */
-            color: transparent;
-        }
-        :-ms-input-placeholder {
-            color: transparent;
         }
     }
 }
