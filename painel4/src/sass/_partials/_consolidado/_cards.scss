@@ -3,7 +3,7 @@
     border-radius: 2px;
     padding-left: 0 !important;
     position: relative;
-    height: 220px;
+    height: 330px;
     width: 100%;
     margin-bottom: 40px;
     .imagem-img225 {
@@ -79,8 +79,14 @@
 
 @media(max-width: 920px) {
     .cards {
+        height: 260px;
         .c_conteudo_card {
             left: 34% !important;
+        }
+        .c_conteudo_card {
+            p {
+                font-size: 13px;
+            }
         }
     }
 }

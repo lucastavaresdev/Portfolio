@@ -117,6 +117,9 @@ $card_com_informacoes_do_setores = "SELECT a.codigo_servico_atual as id,s.servic
                                                                     inner join servicos as s on a.codigo_servico_atual = s.id
                                                                     where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by(codigo_servico_atual);";
 
+$informacoes_com_quantidade_nos_card = "SELECT codigo_servico_atual ,cod_cor_status , count(cod_cor_status) as qtd FROM agendamento as a 
+                                                                        INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+                                                                        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by codigo_servico_atual, cod_cor_status";
 /*
  *--------------------Quandade de status da unidade-----------------------------
  */
@@ -129,14 +132,14 @@ if (isset($_GET['status'])) {
 
 
  $qtd_de_status_todas_os_setores_por_procedimento = "select count(cod_cor_status) as status_por_procedimentos from (
-                                                                SELECT
-                                                                a.nome_paciente as paciente,
-                                                                a.servico_atual,
-                                                                s.servico as setor,
-                                                                a.cod_cor_status
-                                                                FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and  cod_cor_status = $status
-                                                            ) as contagemDePacientes";
+                                                                                                SELECT
+                                                                                                a.nome_paciente as paciente,
+                                                                                                a.servico_atual,
+                                                                                                s.servico as setor,
+                                                                                                a.cod_cor_status
+                                                                                                FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
+                                                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and  cod_cor_status = $status
+                                                                                            ) as contagemDePacientes";
 
 
 

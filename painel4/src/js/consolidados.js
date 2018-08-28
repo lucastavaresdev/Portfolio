@@ -57,10 +57,6 @@ function Em_atendimento_em_outro_serviço(data) {
 }
 
 
-
-
-
-
 function pergarId(id_da_alteracao) {
     var id = document.getElementById(id_da_alteracao);
     return id;
@@ -70,6 +66,7 @@ function pergarId(id_da_alteracao) {
 //cards por setor
 
 function card_com_informacoes_do_setores(data) {
+    console.log(data);
     var local_do_card = document.getElementById('con_card_setores');
     var html = " ";
 
@@ -87,10 +84,22 @@ function card_com_informacoes_do_setores(data) {
             + "<p>Procedimentos:"
             + "<b class='right'>" + data[i].exames + "</b>"
             + "</p>"
-            + "<p>Colaboradores:"
+            + "<p>Não iniciou:"
             + "<b class='right'> - </b>"
             + "</p>"
-            + "<p>Equipamentos:"
+            + "<p>Outro serviço:"
+            + "<b class='right'> - </b>"
+            + "</p>"
+            + "<p>Aguardando:"
+            + "<b class='right'> - </b>"
+            + "</p>"
+            + "<p>Em atendimento:"
+            + "<b class='right'> - </b>"
+            + "</p>"
+            + "<p>Atendido:"
+            + "<b class='right'> - </b>"
+            + "</p>"
+            + "<p>Fastpass:"
             + "<b class='right'> - </b>"
             + "</p>"
             + "<b class='c_status'>Status: <span id=status" + data[i].id + ">Indisponivel</b>"
