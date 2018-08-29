@@ -37,20 +37,30 @@ function lista_de_pacientes(data) {
             var tr = document.createElement('tr');
             var cols =
                 '<td  class="ocutarmobile"></td>' +
+                '<td>' + data[i].id_agendamento + '</td>' +
+                '<td>' + data[i].paciente + '</td>' +
                 '<td>' + data[i].hora + '</td>' +
                 '<td>' + data[i].atividade + '</td>' +
                 '<td>' + data[i].IH + '</td>' +
-                '<td>' + data[i].paciente + '</td>' +
-                '<td>' + data[i].servico_atual + '</td>' +
-                '<td>' + data[i].proximo_servico + '</td>' +
-                `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
-                '<td class="ocutar">' + data[i].sexo + '</td>' +
-                '<td class="ocutar">' + data[i].data_nascimento + '</td>' +
-                '<td class="ocutar">' + data[i].descricao_exame + '</td>' +
-                '<td class="ocutar">' + data[i].nome_medico + '</td>' +
-                '<td class="ocutar">' + data[i].crm + '</td>' +
-                '<td class="ocutar">' + data[i].anotacao + '</td>' +
-                `<td><a  id="${data[i].IH + data[i].atividade}" ><i class="material-icons botao_modal">info_outline</i></a></td>`;
+                '<td>' + data[i].codigo_exame + '</td>' +
+                '<td>' + data[i].data_servico_atual + '</td>' +
+                '<td>' + data[i].codigo_servico + '</td>' +
+                '<td>' + data[i].servico + '</td>' +
+                '<td>' + data[i].cod_cor_status + '</td>' +
+                '<td>' + data[i].descricao_exame + '</td>' +
+                `<td><a  id="${data[i].IH + data[i].atividade}" ><i class="material-icons botao_modal">info_outline</i></a></td>` +
+                '<td>' + data[i].sexo + '</td>' +
+                '<td>' + data[i].data_nascimento + '</td>' +
+                '<td>' + data[i].nome_medico + '</td>' +
+                '<td>' + data[i].crm + '</td>' +
+                '<td>' + data[i].checkin_unidade + '</td>' +
+                '<td>' + data[i].checkout_unidade + '</td>' +
+                '<td>' + data[i].tempo_vinculado + '</td>' +
+                '<td>' + data[i].checkin_exame + '</td>' +
+                '<td>' + data[i].checkout_exame + '</td>' +
+                '<td>' + data[i].tempo_exame + '</td>' +
+                '<td>' + data[i].tempo_espera + '</td>' +
+                '<td>' + data[i].localizacao + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -60,6 +70,22 @@ function lista_de_pacientes(data) {
     }
 }
 
+
+// '<td  class="ocutarmobile"></td>' +
+// '<td>' + data[i].hora + '</td>' +
+// '<td>' + data[i].atividade + '</td>' +
+// '<td>' + data[i].IH + '</td>' +
+// '<td>' + data[i].paciente + '</td>' +
+// '<td>' + data[i].servico_atual + '</td>' +
+// '<td>' + data[i].proximo_servico + '</td>' +
+// `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
+// '<td class="ocutar">' + data[i].sexo + '</td>' +
+// '<td class="ocutar">' + data[i].data_nascimento + '</td>' +
+// '<td class="ocutar">' + data[i].descricao_exame + '</td>' +
+// '<td class="ocutar">' + data[i].nome_medico + '</td>' +
+// '<td class="ocutar">' + data[i].crm + '</td>' +
+// '<td class="ocutar">' + data[i].anotacao + '</td>' +
+// `<td><a  id="${data[i].IH + data[i].atividade}" ><i class="material-icons botao_modal">info_outline</i></a></td>`;
 
 
 function modal(data) {
@@ -195,19 +221,31 @@ function data_table(d) {
                     "data": null,
                     "defaultContent": ''
                 },
+                { 'data': "id_agendamento" },
+                { 'data': "paciente" },
                 { 'data': "hora" },
                 { 'data': "atividade" },
                 { 'data': "IH" },
-                { 'data': "paciente" },
-                { 'data': "servico_atual" },
-                { 'data': "proximo_servico" },
+                { 'data': "codigo_exame" },
+                { 'data': "data_servico_atual" },
+                { 'data': "codigo_servico" },
+                { 'data': "servico" },
                 { 'data': "cod_cor_status" },
+                { 'data': "descricao_exame" },
+                { 'data': "anotacao" },
                 { 'data': "sexo" },
                 { 'data': "data_nascimento" },
-                { 'data': "descricao_exame" },
                 { 'data': "nome_medico" },
-                { 'data': "anotacao" },
                 { 'data': "crm" },
+                { 'data': "checkin_unidade" },
+                { 'data': "checkout_unidade" },
+                { 'data': "tempo_vinculado" },
+                { 'data': "checkin_exame" },
+                { 'data': "checkout_exame" },
+                { 'data': "tempo_exame" },
+                { 'data': "tempo_espera" },
+                { 'data': "localizacao" }
+
 
             ],
             "order": [[1, 'asc']],

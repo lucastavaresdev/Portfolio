@@ -79,20 +79,30 @@
                         <thead>
                             <tr>
                                 <th  class="ocutarmobile"></th>
-                                <th>Hora</th>
-                                <th>Atividade</th>
-                                <th>IH</th>
-                                <th>Paciente</th>
-                                <th>Serviço Atual</th>
-                                <th>Prox. Serviço</th>
-                                <th>Status</th>
-                                <th class="ocutar">Sexo</th>
-                                <th class="ocutar">Data de Nascimento</th>
-                                <th class="ocutar">Descricao Exame</th>
-                                <th class="ocutar">Nome Medico</th>
-                                <th class="ocutar">CRM</th>
-                                <th class="ocutar">Anotação</th>
-                                <th>Obs.</th>
+                                <th> id_agendamento </th>
+                                <th> paciente </th>
+                                <th> hora </th>
+                                <th> atividade </th>
+                                <th> IH </th>
+                                <th> codigo_exame </th>
+                                <th> data_servico_atual </th>
+                                <th> codigo_servico </th>
+                                <th> servico </th>
+                                <th> cod_cor_status </th>
+                                <th> descricao_exame </th>
+                                <th> anotacao </th>
+                                <th> sexo </th>
+                                <th> data_nascimento </th>
+                                <th> nome_medico </th>
+                                <th> crm </th>
+                                <th> checkin_unidade </th>
+                                <th> checkout_unidade </th>
+                                <th> tempo_vinculado </th>
+                                <th> checkin_exame </th>
+                                <th> checkout_exame </th>
+                                <th> tempo_exame </th>
+                                <th> tempo_espera </th>
+                                <th> Localizacao </th>
                             </tr>
                         </thead>
                         <tbody id="listadePacientes"></tbody>

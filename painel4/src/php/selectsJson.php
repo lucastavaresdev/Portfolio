@@ -14,9 +14,10 @@ if (isset($_GET['setor'])) {
 if (isset($_GET['data'])) {
     $data = $_GET['data'];//PARAMETRO
 } else {
-    $datadoServidor = date("Y/m/d");
+    $datadoServidor = date("Y-m-d");
     $data  = $datadoServidor;//PARAMETRO
 }
+
 
 /*
  * ----------------------Setores----------------------
@@ -37,22 +38,80 @@ if (isset($_GET['data'])) {
  *-----------------Lista de Pacientes----------------
  */
     $lista_do_setor = "SELECT 
-                                  distinct(a.nome_paciente) as paciente,
-                                  time(a.data_agendamento) as hora, 
-                                  a.codigo_agenda as atividade,
-                                  a.ih_paciente as IH,
-                                  a.servico_atual,
-                                  s.servico as setor,
-                                  a.proximo_servico,
-                                  a.cod_cor_status,
-                                  a.descricao_exame,
-                                  a.anotacao,
-                                  sexo_paciente as sexo,
-                                  data_nascimento,
-                                  nome_medico,
-                                  crm_medico as crm
-                                  FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-                                  where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and a.codigo_servico_atual = $setor order by hora";
+                                    `a`.`id_agendamento` AS `id_agendamento`,
+                                    `a`.`nome_paciente` AS `paciente`,
+                                    LEFT(`a`.`hora_servico_selecionado`, 5) AS `hora`,
+                                    `a`.`codigo_agenda` AS `atividade`,
+                                    `a`.`ih_paciente` AS `IH`,
+                                    `a`.`codigo_exame` AS `codigo_exame`,
+                                    STR_TO_DATE(`a`.`data_servico_atual`, '%d/%m/%Y') as data_servico_atual,
+                                    `es`.`codigo_servico` AS `codigo_servico`,
+                                    `s`.`servico` AS `servico`,
+                                    `a`.`cod_cor_status` AS `cod_cor_status`,
+                                    `a`.`descricao_exame` AS `descricao_exame`,
+                                    `a`.`anotacao` AS `anotacao`,
+                                    `a`.`sexo_paciente` AS `sexo`,
+                                    `a`.`data_nascimento` AS `data_nascimento`,
+                                    `a`.`nome_medico` AS `nome_medico`,
+                                    `a`.`crm_medico` AS `crm`,
+                                    `ch`.`checkin` AS `checkin_unidade`,
+                                    `ch`.`checkout` AS `checkout_unidade`,
+                                    IF(ISNULL(`ch`.`checkout`),
+                                        TIMEDIFF(NOW(), `ch`.`checkin`),
+                                        NULL) AS `tempo_vinculado`,
+                                    `cl_min_c`.`checkin` AS `checkin_exame`,
+                                    `cl_max_c`.`checkout` AS `checkout_exame`,
+                                    TIMEDIFF(`cl_max_c`.`checkout`,
+                                            `cl_min_c`.`checkin`) AS `tempo_exame`,
+                                    IF(ISNULL(`ch`.`checkout`),
+                                        TIMEDIFF(NOW(), `cl_last`.`checkout`),
+                                        NULL) AS `tempo_espera`,
+                                    se.nome as localizacao
+                                FROM
+                                    ((((((((`hcor`.`agendamento` `a`
+                                    LEFT JOIN `hcor`.`exame_servico` `es` ON ((`es`.`codigo_exame` = `a`.`codigo_exame`)))
+                                    LEFT JOIN `hcor`.`servicos` `s` ON ((`s`.`id` = `es`.`codigo_servico`)))
+                                    LEFT JOIN `hcor`.`checkin` `ch` ON ((`ch`.`atendimento` = `a`.`id_agendamento`)))
+                                    LEFT JOIN (SELECT 
+                                        MIN(`hcor`.`checklist`.`id`) AS `id`,
+                                            `hcor`.`checklist`.`agendamento` AS `agendamento`,
+                                            `hcor`.`checklist`.`etapa` AS `etapa`
+                                            FROM
+                                                `hcor`.`checklist`
+                                            WHERE
+                                                (CAST(`hcor`.`checklist`.`hora_agendamento` AS DATE) = '$data')
+                                            GROUP BY `hcor`.`checklist`.`agendamento` , `hcor`.`checklist`.`etapa`) `cl_min` ON (((`cl_min`.`agendamento` = `a`.`id_agendamento`)
+                                                AND (`cl_min`.`etapa` = `a`.`codigo_exame`))))
+                                    LEFT JOIN `hcor`.`checklist` `cl_min_c` ON ((`cl_min_c`.`id` = `cl_min`.`id`)))
+                                    LEFT JOIN (SELECT 
+                                        MAX(`hcor`.`checklist`.`id`) AS `id`,
+                                            `hcor`.`checklist`.`agendamento` AS `agendamento`,
+                                            `hcor`.`checklist`.`etapa` AS `etapa`
+                                        FROM
+                                            `hcor`.`checklist`
+                                        WHERE
+                                            (CAST(`hcor`.`checklist`.`hora_agendamento` AS DATE) = '$data')
+                                        GROUP BY `hcor`.`checklist`.`agendamento` , `hcor`.`checklist`.`etapa`) `cl_max` ON (((`cl_max`.`agendamento` = `a`.`id_agendamento`)
+                                            AND (`cl_max`.`etapa` = `a`.`codigo_exame`))))
+                                    LEFT JOIN `hcor`.`checklist` `cl_max_c` ON ((`cl_max_c`.`id` = `cl_max`.`id`)))
+                                    LEFT JOIN (SELECT 
+                                        MAX(`hcor`.`checklist`.`checkout`) AS `checkout`,
+                                            `hcor`.`checklist`.`agendamento` AS `agendamento`,
+                                            `hcor`.`checklist`.`etapa` AS `etapa`
+                                        FROM
+                                            `hcor`.`checklist`
+                                        WHERE
+                                            (CAST(`hcor`.`checklist`.`hora_agendamento` AS DATE) = '$data')
+                                        GROUP BY `hcor`.`checklist`.`agendamento`) `cl_last` ON ((`cl_last`.`agendamento` = `a`.`id_agendamento`)))
+                                    LEFT JOIN (SELECT max(checkout) as checkout, id_vinculado from tracking_pacientes where fechado is null group by id_vinculado) tp1 
+                                    on tp1.id_vinculado = a.id_agendamento
+                                    LEFT JOIN tracking_pacientes tp 
+                                    on tp.checkout = tp1.checkout
+                                    LEFT JOIN setores se
+                                    on se.id = tp.id_sala
+                                WHERE STR_TO_DATE(`a`.`data_servico_atual`, '%d/%m/%Y') = '$data' and
+                                es.codigo_servico = $setor
+                                ORDER BY LEFT(`a`.`hora_servico_selecionado`, 5)";
 
 /*
  *---------------------Procedimentos---------------------------
