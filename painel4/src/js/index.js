@@ -146,6 +146,7 @@ function abrirModal() {
 }
 
 function format(d) {
+    console.log(d);
     const resultadoSexo = MasculinoouFeminino(d.sexo);
     data_de_nascimento = d.data_nascimento;
     const divindodataeHora = quebraURL(data_de_nascimento, "T");
@@ -162,15 +163,19 @@ function format(d) {
         + '<p> Médico:<span class="negrito-informacoes"> ' + d.nome_medico + ' </span>CRM:<span class="negrito-informacoes"> ' + d.crm + ' </span></p>'
         + '</div> '
         + '</div> '
-        + '<div class="col s4 ">'
+        + '<div class="col s3 ">'
         + '<p> IH:<span class="negrito-informacoes"> ' + d.IH + '</span></p>'
         + '<p> Sexo:<span class="negrito-informacoes"> ' + resultadoSexo + '</span></p>'
         + '<p> Data de Nascimento:<span class="negrito-informacoes"> ' + datadeNascimento + '</span></p>'
         + '</div> '
-        + '<div class="col s4 ">'
-        + '<p> Tempo de Sala:<span class="negrito-informacoes"><span id="' + d.IH + '">' + 0 + '</span></span></p>'
-        + '<p> Tempo em Espera:<span class="negrito-informacoes"> ' + 0 + '</span></p>'
-        + '<p> Tempo Total:<span class="negrito-informacoes"> ' + 0 + '</span></p>'
+        + '<div class="col s3">'
+        + '<p> Tempo de Sala:<span class="negrito-informacoes"> ' + d.tempo_exame + '</span></span></p>'
+        + '<p> Tempo em Espera:<span class="negrito-informacoes"> ' + d.tempo_espera + '</span></p>'
+        + '<p> Tempo Total:<span class="negrito-informacoes"> ' + d.tempo_vinculado + '</span></p>'
+        + '</div>'
+        + '<div class="col s2">'
+        + '<p> Vinculado:<span class="negrito-informacoes"> ' + d.checkin_unidade + '</span></span></p>'
+        + '<p> Desvinculado:<span class="negrito-informacoes"> ' + d.checkout_exame + '</span></p>'
         + '</div> '
         + '</div> '
 
@@ -212,12 +217,12 @@ function data_table(d) {
                     "defaultContent": ''
                 },
                 { 'data': "id_agendamento" },
-                { 'data': "Hora" },
-                { 'data': "Atividade" },
+                { 'data': "hora" },
+                { 'data': "atividade" },
                 { 'data': "IH" },
-                { 'data': "Paciente" },
+                { 'data': "paciente" },
                 { 'data': "servico" },
-                { 'data': "Localizacao" },
+                { 'data': "localizacao" },
                 { 'data': "cod_cor_status" },
                 { 'data': "anotacao" },
                 { 'data': "codigo_exame" },
@@ -234,7 +239,7 @@ function data_table(d) {
                 { 'data': "checkin_exame" },
                 { 'data': "checkout_exame" },
                 { 'data': "tempo_exame" },
-                { 'data': "tempo_esper" },
+                { 'data': "tempo_espera" },
 
 
 
