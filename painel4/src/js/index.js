@@ -37,30 +37,30 @@ function lista_de_pacientes(data) {
             var tr = document.createElement('tr');
             var cols =
                 '<td  class="ocutarmobile"></td>' +
-                '<td>' + data[i].id_agendamento + '</td>' +
-                '<td>' + data[i].paciente + '</td>' +
-                '<td>' + data[i].hora + '</td>' +
-                '<td>' + data[i].atividade + '</td>' +
-                '<td>' + data[i].IH + '</td>' +
-                '<td>' + data[i].codigo_exame + '</td>' +
-                '<td>' + data[i].data_servico_atual + '</td>' +
-                '<td>' + data[i].codigo_servico + '</td>' +
-                '<td>' + data[i].servico + '</td>' +
-                '<td>' + data[i].cod_cor_status + '</td>' +
-                '<td>' + data[i].descricao_exame + '</td>' +
-                `<td><a  id="${data[i].IH + data[i].atividade}" ><i class="material-icons botao_modal">info_outline</i></a></td>` +
-                '<td>' + data[i].sexo + '</td>' +
-                '<td>' + data[i].data_nascimento + '</td>' +
-                '<td>' + data[i].nome_medico + '</td>' +
-                '<td>' + data[i].crm + '</td>' +
-                '<td>' + data[i].checkin_unidade + '</td>' +
-                '<td>' + data[i].checkout_unidade + '</td>' +
-                '<td>' + data[i].tempo_vinculado + '</td>' +
-                '<td>' + data[i].checkin_exame + '</td>' +
-                '<td>' + data[i].checkout_exame + '</td>' +
-                '<td>' + data[i].tempo_exame + '</td>' +
-                '<td>' + data[i].tempo_espera + '</td>' +
-                '<td>' + data[i].localizacao + '</td>';
+                '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
+                '<td  class="center">' + se_null(data[i].hora) + '</td>' +
+                '<td  class="center">' + se_null(data[i].atividade) + '</td>' +
+                '<td  class="center">' + se_null(data[i].IH) + '</td>' +
+                '<td  class="center">' + se_null(data[i].paciente) + '</td>' +
+                '<td  class="center">' + se_null(data[i].servico) + '</td>' +
+                '<td  class="center">' + se_null(data[i].localizacao) + '</td>' +
+                `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
+                `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
+                '<td  class="ocultar">' + se_null(data[i].codigo_exame) + '</td>' +
+                '<td  class="ocultar">' + se_null(data[i].data_servico_atual) + '</td>' +
+                '<td  class="ocultar">' + se_null(data[i].codigo_servico) + '</td>' +
+                '<td  class="ocultar">' + se_null(data[i].descricao_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].sexo) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].data_nascimento) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].nome_medico) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].crm) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].checkin_unidade) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].checkout_unidade) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].tempo_vinculado) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].checkin_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].checkout_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].tempo_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].tempo_espera) + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -70,23 +70,10 @@ function lista_de_pacientes(data) {
     }
 }
 
-
-// '<td  class="ocutarmobile"></td>' +
-// '<td>' + data[i].hora + '</td>' +
-// '<td>' + data[i].atividade + '</td>' +
-// '<td>' + data[i].IH + '</td>' +
-// '<td>' + data[i].paciente + '</td>' +
-// '<td>' + data[i].servico_atual + '</td>' +
-// '<td>' + data[i].proximo_servico + '</td>' +
-// `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
-// '<td class="ocutar">' + data[i].sexo + '</td>' +
-// '<td class="ocutar">' + data[i].data_nascimento + '</td>' +
-// '<td class="ocutar">' + data[i].descricao_exame + '</td>' +
-// '<td class="ocutar">' + data[i].nome_medico + '</td>' +
-// '<td class="ocutar">' + data[i].crm + '</td>' +
-// '<td class="ocutar">' + data[i].anotacao + '</td>' +
-// `<td><a  id="${data[i].IH + data[i].atividade}" ><i class="material-icons botao_modal">info_outline</i></a></td>`;
-
+function se_null(campo_do_banco) {
+    campo_do_banco === null ? campo_do_banco = ' ' : campo_do_banco;
+    return campo_do_banco
+}
 
 function modal(data) {
     modal = "";
@@ -95,12 +82,16 @@ function modal(data) {
         var IDdoModal = data[i].IH + data[i].atividade + "modal";
         var ID = data[i].IH + data[i].atividade;
         let obs;
+
         if (data[i].anotacao === null) {
             obs = "Não há observação"
         } else {
             obs = data[i].anotacao;
+            ID = ID + "botao"
             document.getElementById(ID).style.color = "#FF6347 "
         }
+
+
 
         modal += `<div id="${IDdoModal}"  class="modal modal-index">
         <div class="modal-index-content">
@@ -112,20 +103,19 @@ function modal(data) {
         </div>`
 
         document.getElementById("elempai").innerHTML = modal;
+
     }
 
     abrirModal()
-
 }
 
 
 function abrirModal() {
-
     var tabela = document.getElementById('listadePacientes');
-    var linhas = tabela.getElementsByTagName('a')
-
+    var linhas = tabela.getElementsByTagName('td')
     for (let i = 0; i < linhas.length; i++) {
-        linhas[i].addEventListener('click', function () {
+        elem = linhas[i];
+        elem.addEventListener('click', function () {
             id = this.id
 
             var btn = document.getElementById(id);
@@ -222,17 +212,18 @@ function data_table(d) {
                     "defaultContent": ''
                 },
                 { 'data': "id_agendamento" },
-                { 'data': "paciente" },
-                { 'data': "hora" },
-                { 'data': "atividade" },
+                { 'data': "Hora" },
+                { 'data': "Atividade" },
                 { 'data': "IH" },
+                { 'data': "Paciente" },
+                { 'data': "servico" },
+                { 'data': "Localizacao" },
+                { 'data': "cod_cor_status" },
+                { 'data': "anotacao" },
                 { 'data': "codigo_exame" },
                 { 'data': "data_servico_atual" },
                 { 'data': "codigo_servico" },
-                { 'data': "servico" },
-                { 'data': "cod_cor_status" },
                 { 'data': "descricao_exame" },
-                { 'data': "anotacao" },
                 { 'data': "sexo" },
                 { 'data': "data_nascimento" },
                 { 'data': "nome_medico" },
@@ -243,8 +234,8 @@ function data_table(d) {
                 { 'data': "checkin_exame" },
                 { 'data': "checkout_exame" },
                 { 'data': "tempo_exame" },
-                { 'data': "tempo_espera" },
-                { 'data': "localizacao" }
+                { 'data': "tempo_esper" },
+
 
 
             ],

@@ -106,7 +106,7 @@ if (isset($_GET['data'])) {
                                     LEFT JOIN (SELECT max(checkout) as checkout, id_vinculado from tracking_pacientes where fechado is null group by id_vinculado) tp1 
                                     on tp1.id_vinculado = a.id_agendamento
                                     LEFT JOIN tracking_pacientes tp 
-                                    on tp.checkout = tp1.checkout
+                                    on tp.checkout = tp1.checkout and tp.id_vinculado = tp1.id_vinculado
                                     LEFT JOIN setores se
                                     on se.id = tp.id_sala
                                 WHERE STR_TO_DATE(`a`.`data_servico_atual`, '%d/%m/%Y') = '$data' and

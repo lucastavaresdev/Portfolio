@@ -79,30 +79,32 @@
                         <thead>
                             <tr>
                                 <th  class="ocutarmobile"></th>
-                                <th> id_agendamento </th>
-                                <th> paciente </th>
-                                <th> hora </th>
-                                <th> atividade </th>
-                                <th> IH </th>
-                                <th> codigo_exame </th>
-                                <th> data_servico_atual </th>
-                                <th> codigo_servico </th>
-                                <th> servico </th>
-                                <th> cod_cor_status </th>
-                                <th> descricao_exame </th>
-                                <th> anotacao </th>
-                                <th> sexo </th>
-                                <th> data_nascimento </th>
-                                <th> nome_medico </th>
-                                <th> crm </th>
-                                <th> checkin_unidade </th>
-                                <th> checkout_unidade </th>
-                                <th> tempo_vinculado </th>
-                                <th> checkin_exame </th>
-                                <th> checkout_exame </th>
-                                <th> tempo_exame </th>
-                                <th> tempo_espera </th>
-                                <th> Localizacao </th>
+                                <th class='ocultar'> id_agendamento </th>
+                                <th  class='center'> Hora </th>
+                                <th  class='center'> Atividade </th>
+                                <th  class='center'> IH </th>
+                                <th  class='center'> Paciente </th>
+                                <th  class='center'> Setor </th>
+                                <th  class='center'> Localizacao </th>
+                                <th  class='center'> Status </th>
+                                
+                                <th class='ocultar'> codigo_exame </th>
+                                <th  class="ocultar"> data_servico_atual </th>
+                                <th  class="ocultar"> codigo_servico </th>
+                                <th  class="ocultar"> descricao_exame </th>
+                                <th class="ocultar"> sexo </th>
+                                <th class="ocultar"> data_nascimento </th>
+                                <th class="ocultar"> nome_medico </th>
+                                <th class="ocultar"> crm </th>
+                                <th class="ocultar"> checkin_unidade </th>
+                                <th class="ocultar"> checkout_unidade </th>
+                                <th class="ocultar"> tempo_vinculado </th>
+                                <th class="ocultar"> checkin_exame </th>
+                                <th class="ocultar"> checkout_exame </th>
+                                <th class="ocultar"> tempo_exame </th>
+                                <th class="ocultar"> tempo_espera </th>
+
+                                <th> Obs </th>
                             </tr>
                         </thead>
                         <tbody id="listadePacientes"></tbody>
@@ -113,9 +115,16 @@
         <div class="row"><?php include './templates/status.html'; ?></div>
     </div>
 
+
 <!-- The Modal -->
 <div id="elempai">
-
+<div id="cardio8611050modal" class="modal modal-index">
+        <div class="modal-index-content">
+        <span class="fecharModal"></span>
+        <p>RENATO GOMES DE MELO</p>
+        <p>Obs: Não há observação </p>
+        </div>
+        </div>
 </div>
 
 </body>
