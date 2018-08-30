@@ -493,6 +493,12 @@ table.dataTable tbody td.no-padding {
   height: 25px;
   color: transparent; }
 
+.status-7 {
+  background: #4b0082 !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
 .input-field label {
   color: #007DCC; }
 

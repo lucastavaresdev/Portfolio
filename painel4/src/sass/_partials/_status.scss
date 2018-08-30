@@ -37,3 +37,8 @@
     background: $fastpass !important;
     @include tamanho_status;
 }
+
+.status-7 {
+    background: $finalizado !important;
+    @include tamanho_status;
+}

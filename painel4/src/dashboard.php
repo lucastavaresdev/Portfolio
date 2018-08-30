@@ -87,7 +87,6 @@
                                 <th  class='center'> Setor </th>
                                 <th  class='center'> Localizacao </th>
                                 <th  class='center'> Status </th>
-                                
                                 <th class='ocultar'> codigo_exame </th>
                                 <th  class="ocultar"> data_servico_atual </th>
                                 <th  class="ocultar"> codigo_servico </th>

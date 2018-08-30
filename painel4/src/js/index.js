@@ -35,6 +35,8 @@ function lista_de_pacientes(data) {
     if (tbody) {
         for (i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
+
+            var nstatus = status(data[i].checkin_unidade, data[i].checkout_unidade, data[i].checkin_exame, data[i].checkout_exame)
             var cols =
                 '<td  class="ocutarmobile"></td>' +
                 '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
@@ -44,7 +46,7 @@ function lista_de_pacientes(data) {
                 '<td  class="center">' + se_null(data[i].paciente) + '</td>' +
                 '<td  class="center">' + se_null(data[i].servico) + '</td>' +
                 '<td  class="center">' + se_null(data[i].localizacao) + '</td>' +
-                `<td><div  class=" status-${data[i].cod_cor_status} center-status">${data[i].cod_cor_status}</div></td>` +
+                '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
                 `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
                 '<td  class="ocultar">' + se_null(data[i].codigo_exame) + '</td>' +
                 '<td  class="ocultar">' + se_null(data[i].data_servico_atual) + '</td>' +
@@ -69,6 +71,35 @@ function lista_de_pacientes(data) {
         modal(data)
     }
 }
+
+
+
+function status(vinculado, desvinculado, inicio_do_exame, final_do_exame) {
+    nstatus = '';
+    if (!vinculado || vinculado === null) {
+        console.log('Não iniciou o atendimento')
+        nstatus = 5
+        return nstatus
+    } else if (desvinculado) {
+        console.log('Finalizado')
+        nstatus = 7
+        return nstatus
+    } else if (vinculado) {
+        console.log('Aguardando')
+        nstatus = 2
+        return nstatus
+    } else if (inicio_do_exame && !final_do_exame) {
+        console.log('Em antedimentos')
+        nstatus = 3
+        return nstatus
+    } else if (inicio_do_exame && final_do_exame) {
+        console.log('Atendido')
+        nstatus = 4
+        return nstatus
+    }
+}
+
+
 
 function se_null(campo_do_banco) {
     campo_do_banco === null || campo_do_banco === undefined ? campo_do_banco = ' ' : campo_do_banco;
@@ -171,16 +202,20 @@ function format(d) {
         + '<div class="col s3">'
         + '<p> Tempo de Sala:<span class="negrito-informacoes"> ' + d.tempo_exame + '</span></span></p>'
         + '<p> Tempo em Espera:<span class="negrito-informacoes"> ' + d.tempo_espera + '</span></p>'
-        + '<p> Tempo Total:<span class="negrito-informacoes"> ' + d.tempo_vinculado + '</span></p>'
+        + '<p> Tempo do Exame:<span class="negrito-informacoes"> ' + d.tempo_exame + '</span></p>'
         + '</div>'
         + '<div class="col s2">'
         + '<p> Vinculado:<span class="negrito-informacoes"> ' + d.checkin_unidade + '</span></span></p>'
         + '<p> Desvinculado:<span class="negrito-informacoes"> ' + d.checkout_unidade + '</span></p>'
+        + '<p> Tempo Total:<span class="negrito-informacoes"> ' + d.tempo_vinculado + '</span></p>'
         + '</div> '
         + '</div> '
 
 
 }
+
+
+
 
 
 function MasculinoouFeminino(sexo) {
