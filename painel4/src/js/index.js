@@ -71,7 +71,7 @@ function lista_de_pacientes(data) {
 }
 
 function se_null(campo_do_banco) {
-    campo_do_banco === null ? campo_do_banco = ' ' : campo_do_banco;
+    campo_do_banco === null || campo_do_banco === undefined ? campo_do_banco = ' ' : campo_do_banco;
     return campo_do_banco
 }
 
@@ -175,7 +175,7 @@ function format(d) {
         + '</div>'
         + '<div class="col s2">'
         + '<p> Vinculado:<span class="negrito-informacoes"> ' + d.checkin_unidade + '</span></span></p>'
-        + '<p> Desvinculado:<span class="negrito-informacoes"> ' + d.checkout_exame + '</span></p>'
+        + '<p> Desvinculado:<span class="negrito-informacoes"> ' + d.checkout_unidade + '</span></p>'
         + '</div> '
         + '</div> '
 
