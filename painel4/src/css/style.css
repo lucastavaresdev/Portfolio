@@ -36,6 +36,9 @@ body {
 .negrito-informacoes {
   font-weight: 500; }
 
+.sem_negrito-informacoes {
+  font-weight: 400; }
+
 nav {
   box-shadow: none;
   background: #007DCC;

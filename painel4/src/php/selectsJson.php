@@ -51,7 +51,6 @@ if (isset($_GET['data'])) {
                                         a.codigo_exame,
                                         es.codigo_servico,
                                         s.servico,
-                                        a.cod_cor_status,
                                         a.descricao_exame,
                                         a.anotacao,
                                         sexo_paciente as sexo,
@@ -64,15 +63,18 @@ if (isset($_GET['data'])) {
                                         cl_min_c.checkin as checkin_exame,
                                         cl_max_c.checkout as checkout_exame,
                                         timediff(cl_max_c.checkout, cl_min_c.checkin) as tempo_exame,
+                                        if(cl_max_c.checkout, null, timediff(now(), cl_min_c.checkin)) as tempo_decorrido_do_exame,
+                                        cl_max_c.status,
+                                        st.descricao as desc_status,
                                         if( ch.checkout is null, timediff(now(), cl_last.checkout), null) as tempo_espera,
-                                        se.nome as setor
+                                        se.nome as localizacao
                                         FROM agendamento as a 
                                         left join exame_servico es 
                                         on es.codigo_exame = a.codigo_exame
                                         left join servicos s 
                                         on s.id = es.codigo_servico	
                                         left join checkin ch 
-                                        on ch.atendimento = a.id_agendamento
+                                        on ch.agendamento = a.id_agendamento
                                         left join (select min(id) as id, agendamento, etapa from checklist where (date(hora_agendamento) = '$data') group by agendamento, etapa) cl_min
                                         on cl_min.agendamento = a.id_agendamento and cl_min.etapa = a.codigo_exame
                                         left join checklist cl_min_c
@@ -89,6 +91,8 @@ if (isset($_GET['data'])) {
                                         on tp.checkout = tp1.checkout and tp.id_vinculado = tp1.id_vinculado
                                         LEFT JOIN setores se
                                         on se.id = tp.id_sala
+                                        LEFT JOIN status st 
+                                        on st.id = cl_max_c.status
                                         where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and
                                         es.codigo_servico = $setor
                                         order by hora";

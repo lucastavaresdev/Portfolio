@@ -78,18 +78,18 @@
                     <table id="tabela_pacientes"  class="responsive-table tabela-cor " style="width:100%" >
                         <thead>
                             <tr>
-                                <th  class="ocutarmobile"></th>
+                                 <!-- <th  class="ocutarmobile"></th>
                                 <th class='ocultar'> id_agendamento </th>
                                 <th  class='center'> Hora </th>
                                 <th  class='center'> Atividade </th>
                                 <th  class='center'> IH </th>
                                 <th  class='center'> Paciente </th>
-                                <th  class='center'> Setor </th>
+                                 <th  class='center'> Setor </th>
                                 <th  class='center'> Localizacao </th>
                                 <th  class='center'> Status </th>
-                                <th class='ocultar'> codigo_exame </th>
-                                <th  class="ocultar"> data_servico_atual </th>
+                                <th class="ocultar"> codigo_exame </th>
                                 <th  class="ocultar"> codigo_servico </th>
+                                <th  class="ocultar"> data_servico_atual </th>
                                 <th  class="ocultar"> descricao_exame </th>
                                 <th class="ocultar"> sexo </th>
                                 <th class="ocultar"> data_nascimento </th>
@@ -101,9 +101,40 @@
                                 <th class="ocultar"> checkin_exame </th>
                                 <th class="ocultar"> checkout_exame </th>
                                 <th class="ocultar"> tempo_exame </th>
-                                <th class="ocultar"> tempo_espera </th>
+                                <th class="ocultar"> tempo decorrido do exame</th>
+                                <th class="ocultar">desc_status</th>
+                                <th class="ocultar">tempo_espera</th>
+                                <th> Obs </th> -->
+                                <th  class="ocutarmobile"></th>
+                                <th class="ocultar">id_agendamento</th>
+                                <th>hora</th>
+                                <th>atividade</th>
+                                <th>IH</th>
+                                <th>paciente</th>
+                                <th class="ocultar">codigo_exame</th>
+                                <th class="ocultar">codigo_servico</th>
+                                <th>servico</th>
+                                <th class="ocultar">descricao_exame</th>
+                                <th class="ocultar">anotacao</th>
+                                <th class="ocultar">sexo</th>
+                                <th class="ocultar">data_nascimento</th>
+                                <th class="ocultar">nome_medico</th>
+                                <th class="ocultar">crm</th>
+                                <th class="ocultar">checkin_unidade</th>
+                                <th class="ocultar">checkout_unidade</th>
+                                <th class="ocultar">tempo_vinculado</th>
+                                <th class="ocultar">checkin_exame</th>
+                                <th class="ocultar">checkout_exame</th>
+                                <th class="ocultar">tempo_exame</th>
+                                <th class="ocultar">tempo_decorrido_do_exame</th>
+                                <th>status</th>
+                                <th class="ocultar">desc_status</th>
+                                <th class="ocultar">tempo_espera</th>
+                                <th>Localização</th>
+                                <th>Obs</th>
 
-                                <th> Obs </th>
+                              
+
                             </tr>
                         </thead>
                         <tbody id="listadePacientes"></tbody>

@@ -37,32 +37,63 @@ function lista_de_pacientes(data) {
             var tr = document.createElement('tr');
 
             var nstatus = status(data[i].checkin_unidade, data[i].checkout_unidade, data[i].checkin_exame, data[i].checkout_exame)
-            var cols =
-                '<td  class="ocutarmobile"></td>' +
-                '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
-                '<td  class="center">' + se_null(data[i].hora) + '</td>' +
-                '<td  class="center">' + se_null(data[i].atividade) + '</td>' +
-                '<td  class="center">' + se_null(data[i].IH) + '</td>' +
-                '<td  class="center">' + se_null(data[i].paciente) + '</td>' +
-                '<td  class="center">' + se_null(data[i].servico) + '</td>' +
-                '<td  class="center">' + se_null(data[i].localizacao) + '</td>' +
-                '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
-                `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
-                '<td  class="ocultar">' + se_null(data[i].codigo_exame) + '</td>' +
-                '<td  class="ocultar">' + se_null(data[i].data_servico_atual) + '</td>' +
-                '<td  class="ocultar">' + se_null(data[i].codigo_servico) + '</td>' +
-                '<td  class="ocultar">' + se_null(data[i].descricao_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].sexo) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].data_nascimento) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].nome_medico) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].crm) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].checkin_unidade) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].checkout_unidade) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].tempo_vinculado) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].checkin_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].checkout_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].tempo_exame) + '</td>' +
-                '<td class="ocultar">' + se_null(data[i].tempo_espera) + '</td>';
+            var cols = '<td  class="ocutarmobile"></td>' +
+                '<td class="ocultar">' + data[i].id_agendamento + '</td>' +
+                '<td>' + data[i].hora + '</td>' +
+                '<td>' + data[i].atividade + '</td>' +
+                '<td>' + data[i].IH + '</td>' +
+                '<td>' + data[i].paciente + '</td>' +
+                '<td class="ocultar">' + data[i].codigo_exame + '</td>' +
+                '<td class="ocultar">' + data[i].codigo_servico + '</td>' +
+                '<td>' + data[i].servico + '</td>' +
+                '<td class="ocultar">' + data[i].descricao_exame + '</td>' +
+                '<td class="ocultar">' + data[i].sexo + '</td>' +
+                '<td class="ocultar">' + data[i].data_nascimento + '</td>' +
+                '<td class="ocultar">' + data[i].nome_medico + '</td>' +
+                '<td class="ocultar">' + data[i].crm + '</td>' +
+                '<td class="ocultar">' + data[i].checkin_unidade + '</td>' +
+                '<td class="ocultar">' + data[i].checkout_unidade + '</td>' +
+                '<td class="ocultar">' + data[i].tempo_vinculado + '</td>' +
+                '<td class="ocultar">' + data[i].checkin_exame + '</td>' +
+                '<td class="ocultar">' + data[i].checkout_exame + '</td>' +
+                '<td class="ocultar">' + data[i].tempo_exame + '</td>' +
+                '<td class="ocultar">' + data[i].tempo_decorrido_do_exame + '</td>' +
+                '<td>' + data[i].status + '</td>' +
+                '<td class="ocultar">' + data[i].desc_status + '</td>' +
+                '<td class="ocultar">' + data[i].tempo_espera + '</td>' +
+                '<td>' + data[i].setor + '</td>' +
+                `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>`;
+
+
+
+
+            // '<td  class="ocutarmobile"></td>' +
+            //     '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
+            //     '<td  class="center">' + se_null(data[i].hora) + '</td>' +
+            //     '<td  class="center">' + se_null(data[i].atividade) + '</td>' +
+            //     '<td  class="center">' + se_null(data[i].IH) + '</td>' +
+            //     '<td  class="center">' + se_null(data[i].paciente) + '</td>' +
+            //     '<td  class="center">' + se_null(data[i].servico) + '</td>' +
+            //     '<td  class="center">' + c_localizacao(data[i].localizacao, data[i].checkin_unidade) + '</td>' +
+            //     '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
+            //     `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
+            //     '<td  class="ocultar">' + se_null(data[i].codigo_exame) + '</td>' +
+            //     '<td  class="ocultar">' + se_null(data[i].codigo_servico) + '</td>' +
+            //     '<td  class="ocultar">' + se_null(data[i].data_servico_atual) + '</td>' +
+            //     '<td  class="ocultar">' + se_null(data[i].descricao_exame) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].sexo) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].data_nascimento) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].nome_medico) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].crm) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].checkin_unidade) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].checkout_unidade) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].tempo_vinculado) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].checkin_exame) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].tempo_exame) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].checkout_exame) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].tempo_decorrido_do_exame) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].desc_status) + '</td>' +
+            //     '<td class="ocultar">' + se_null(data[i].tempo_espera) + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
@@ -71,7 +102,6 @@ function lista_de_pacientes(data) {
         modal(data)
     }
 }
-
 
 
 function status(vinculado, desvinculado, inicio_do_exame, final_do_exame) {
@@ -84,7 +114,7 @@ function status(vinculado, desvinculado, inicio_do_exame, final_do_exame) {
         console.log('Finalizado')
         nstatus = 7
         return nstatus
-    } else if (vinculado) {
+    } else if (vinculado && !inicio_do_exame) {
         console.log('Aguardando')
         nstatus = 2
         return nstatus
@@ -106,6 +136,20 @@ function se_null(campo_do_banco) {
     return campo_do_banco
 }
 
+function c_localizacao(campo_do_banco, vinculado) {
+    if (campo_do_banco === null || campo_do_banco === undefined) {
+        campo_do_banco = 'Paciente não esta na unidade'
+    } else if (campo_do_banco === null || campo_do_banco === undefined && !vinculado === null) {
+        campo_do_banco = 'Paciente vinculado  não esta na unidade'
+    } else {
+        campo_do_banco = campo_do_banco
+    }
+
+    return campo_do_banco
+}
+
+
+
 function modal(data) {
     modal = "";
 
@@ -124,13 +168,13 @@ function modal(data) {
 
 
 
-        modal += `<div id="${IDdoModal}"  class="modal modal-index">
-        <div class="modal-index-content">
-        <span class="fecharModal"></span>
-        <p>${data[i].paciente}</p>
-        <p>Obs: ${obs} </p>
-        </div>
-        </div>
+        modal += `<div id="${IDdoModal}" class="modal modal-index">
+                <div class="modal-index-content">
+                    <span class="fecharModal"></span>
+                    <p>${data[i].paciente}</p>
+                    <p>Obs: ${obs} </p>
+                </div>
+            </div>
         </div>`
 
         document.getElementById("elempai").innerHTML = modal;
@@ -182,8 +226,29 @@ function format(d) {
     data_de_nascimento = d.data_nascimento;
     const divindodataeHora = quebraURL(data_de_nascimento, "T");
     const divididoadata = quebraURL(divindodataeHora[0], "-");
+    const datadeNascimento = `${divididoadata[2]} /${divididoadata[1]}/${divididoadata[0]} `;
 
-    const datadeNascimento = `${divididoadata[2]}/${divididoadata[1]}/${divididoadata[0]}`;
+
+    vinculado = arredondarHora(d.checkin_unidade)
+    desvinculado = arredondarHora(d.checkout_unidade)
+    inicio_do_exame = arredondarHora(d.checkin_exame)
+    tempo_espera = d.tempo_vinculado.substring(0, 5)
+    tempo_total = d.tempo_vinculado.substring(0, 5)
+
+    d.tempo_decorrido_do_exame === undefined ? tempo_decorrido_do_exame = "" : tempo_decorrido_do_exame = d.tempo_decorrido_do_exame.substring(0, 5);
+
+    if (d.checkout_exame) {
+        checkout_exame = arredondarHora(d.checkout_exame);
+        tempo_decorrido_do_exame = diferenca_de_hora(inicio_do_exame, checkout_exame) + "<span class='sem_negrito-informacoes'> (Finalizado)</span> ";
+    } else {
+        checkout_exame = "";
+    }
+
+    if (desvinculado) {
+        tempo_total = diferenca_de_hora(vinculado, desvinculado);
+    }
+
+
 
     return '<div class="row add_info">'
         + '<div class=" col s4">'
@@ -200,23 +265,43 @@ function format(d) {
         + '<p> Data de Nascimento:<span class="negrito-informacoes"> ' + datadeNascimento + '</span></p>'
         + '</div> '
         + '<div class="col s3">'
-        + '<p> Tempo de Sala:<span class="negrito-informacoes"> ' + d.tempo_exame + '</span></span></p>'
-        + '<p> Tempo em Espera:<span class="negrito-informacoes"> ' + d.tempo_espera + '</span></p>'
-        + '<p> Tempo do Exame:<span class="negrito-informacoes"> ' + d.tempo_exame + '</span></p>'
+        + '<p> Exame: (Inicio: <span class="negrito-informacoes">' + inicio_do_exame + '</span> / Fim: <span class="negrito-informacoes">' + checkout_exame + '</span>)</p>'
+        + '<p> Tempo de Sala:<span class="negrito-informacoes"> ' + tempo_decorrido_do_exame + '</span></p>'
+        + '<p> Tempo em Espera:<span class="negrito-informacoes"> ' + tempo_espera + '</span></p>'
         + '</div>'
         + '<div class="col s2">'
-        + '<p> Vinculado:<span class="negrito-informacoes"> ' + d.checkin_unidade + '</span></span></p>'
-        + '<p> Desvinculado:<span class="negrito-informacoes"> ' + d.checkout_unidade + '</span></p>'
-        + '<p> Tempo Total:<span class="negrito-informacoes"> ' + d.tempo_vinculado + '</span></p>'
+        + '<p> Vinculado as:<span class="negrito-informacoes"> ' + vinculado + '</span></p>'
+        + '<p> Desvinculado as:<span class="negrito-informacoes"> ' + desvinculado + '</span></p>'
+        + '<p> Tempo Total de Vinculo:<span class="negrito-informacoes"> ' + tempo_total + '</span></p>'
         + '</div> '
         + '</div> '
+}
 
+function arredondarHora(campo) {
+    //debugger
+    campo = campo.substring(11, 16);
+    return campo;
+}
 
+function diferenca_de_hora(hora_inicio, hora_fim) {
+    novaHora = somaHora(hora_inicio, hora_fim, true);
+    return novaHora
 }
 
 
-
-
+function somaHora(hrA, hrB, zerarHora) {
+    if (hrA.length != 5 || hrB.length != 5) return "00:00";
+    temp = 0;
+    nova_h = 0;
+    novo_m = 0;
+    hora1 = hrA.substr(0, 2) * 1;
+    hora2 = hrB.substr(0, 2) * 1;
+    minu1 = hrA.substr(3, 2) * 1;
+    minu2 = hrB.substr(3, 2) * 1;
+    novo_m = minu2 - minu1;
+    nova_h = hora2 - hora1;
+    return Math.abs(nova_h) + 'h:' + Math.abs(novo_m) + 'm';
+}
 
 function MasculinoouFeminino(sexo) {
     if (sexo === "F") {
@@ -252,18 +337,15 @@ function data_table(d) {
                     "defaultContent": ''
                 },
                 { 'data': "id_agendamento" },
+                { 'data': "paciente" },
                 { 'data': "hora" },
                 { 'data': "atividade" },
                 { 'data': "IH" },
-                { 'data': "paciente" },
-                { 'data': "servico" },
-                { 'data': "localizacao" },
-                { 'data': "cod_cor_status" },
-                { 'data': "anotacao" },
                 { 'data': "codigo_exame" },
-                { 'data': "data_servico_atual" },
                 { 'data': "codigo_servico" },
+                { 'data': "servico" },
                 { 'data': "descricao_exame" },
+                { 'data': "anotacao" },
                 { 'data': "sexo" },
                 { 'data': "data_nascimento" },
                 { 'data': "nome_medico" },
@@ -274,9 +356,11 @@ function data_table(d) {
                 { 'data': "checkin_exame" },
                 { 'data': "checkout_exame" },
                 { 'data': "tempo_exame" },
+                { 'data': "tempo_decorrido_do_exame" },
+                { 'data': "status" },
+                { 'data': "desc_status" },
                 { 'data': "tempo_espera" },
-
-
+                { 'data': "setor" },
 
             ],
             "order": [[1, 'asc']],
@@ -357,7 +441,7 @@ function horarioComMaiorPacientes(data) {
     if (fluxodetempo) {
         for (i = 0; i < data.length; i++) {
             var j;
-            j = `<li>${data[i].intervalo_de_horas} <span> (${data[i].qtd_por_hora} pacientes)</span></li>`;
+            j = `< li > ${data[i].intervalo_de_horas} <span> (${data[i].qtd_por_hora} pacientes)</span></li > `;
             html += j;
         }
 
@@ -406,7 +490,7 @@ function calendario() {
 
         let dataescolhida = Calender.value; //pega a data
         dataescolhida = dataescolhida.split('-');
-        datamysql = `${dataescolhida[2]}-${dataescolhida[1]}-${dataescolhida[0]}`;
+        datamysql = `${dataescolhida[2]} -${dataescolhida[1]} -${dataescolhida[0]} `;
 
         //pega a url base do site
 
