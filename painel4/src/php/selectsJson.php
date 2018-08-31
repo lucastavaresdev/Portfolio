@@ -29,18 +29,15 @@ if (isset($_GET['data'])) {
  * --------Quantidade de pacientes por lista de agendados---------
  */
 
-    $qtd_de_agendamentos_do_dia_por_agenda = "SELECT count(distinct(nome_paciente)) as qtd_paciente
-                                                                                 FROM agendamento 
-                                                                                 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  '$data' 
-                                                                                 and codigo_servico_atual = $setor";
+    $qtd_de_agendamentos_do_dia_por_agenda = "SELECT count(distinct(a.nome_paciente)) as qtd_paciente
+                                                                                 FROM agendamento as a
+                                                                                 INNER JOIN exame_servico as exs on a.codigo_exame = exs.codigo_exame
+                                                                                 where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  ' $data'  and codigo_servico = $setor";
+
 
 /*
  *-----------------Lista de Pacientes----------------
  */
-
-
-
-
  
     $lista_do_setor = "SELECT 
                                         a.id_agendamento,
@@ -101,10 +98,11 @@ if (isset($_GET['data'])) {
  *---------------------Procedimentos---------------------------
  */
 
-$qtd_procedimentos = "SELECT 
-count(a.nome_paciente) as qtd_procedimentos
-FROM agendamento as a INNER JOIN servicos as s on a.codigo_servico_atual = s.id
-where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  '$data'  and s.id  = " .$setor .  " order by  servico";
+$qtd_procedimentos = "SELECT count(a.nome_paciente) as qtd_procedimentos
+                                        FROM agendamento as a
+                                        INNER JOIN exame_servico as exs on a.codigo_exame = exs.codigo_exame 
+                                        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  '$data' and codigo_servico = $setor";
+
 
 
 
