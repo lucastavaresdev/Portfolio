@@ -24,7 +24,6 @@ function lista_de_setores(data) {
 }
 
 function alteraTitulodoSetor(data) {
-
     var titulo = document.getElementById('titulo_do_setor');
     var titulo_aba = document.getElementById('aba_nome_setor');
 

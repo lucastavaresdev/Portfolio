@@ -36,96 +36,38 @@ function lista_de_pacientes(data) {
         for (i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
 
-            var nstatus = status(data[i].checkin_unidade, data[i].checkout_unidade, data[i].checkin_exame, data[i].checkout_exame)
             var cols = '<td  class="ocutarmobile"></td>' +
-                '<td class="ocultar">' + data[i].id_agendamento + '</td>' +
-                '<td>' + data[i].hora + '</td>' +
-                '<td>' + data[i].atividade + '</td>' +
-                '<td>' + data[i].IH + '</td>' +
-                '<td>' + data[i].paciente + '</td>' +
-                '<td class="ocultar">' + data[i].codigo_exame + '</td>' +
-                '<td class="ocultar">' + data[i].codigo_servico + '</td>' +
-                '<td>' + data[i].servico + '</td>' +
-                '<td class="ocultar">' + data[i].descricao_exame + '</td>' +
-                '<td class="ocultar">' + data[i].sexo + '</td>' +
-                '<td class="ocultar">' + data[i].data_nascimento + '</td>' +
-                '<td class="ocultar">' + data[i].nome_medico + '</td>' +
-                '<td class="ocultar">' + data[i].crm + '</td>' +
-                '<td class="ocultar">' + data[i].checkin_unidade + '</td>' +
-                '<td class="ocultar">' + data[i].checkout_unidade + '</td>' +
-                '<td class="ocultar">' + data[i].tempo_vinculado + '</td>' +
-                '<td class="ocultar">' + data[i].checkin_exame + '</td>' +
-                '<td class="ocultar">' + data[i].checkout_exame + '</td>' +
-                '<td class="ocultar">' + data[i].tempo_exame + '</td>' +
-                '<td class="ocultar">' + data[i].tempo_decorrido_do_exame + '</td>' +
-                '<td>' + data[i].status + '</td>' +
-                '<td class="ocultar">' + data[i].desc_status + '</td>' +
-                '<td class="ocultar">' + data[i].tempo_espera + '</td>' +
-                '<td>' + data[i].setor + '</td>' +
-                `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>`;
-
-
-
-
-            // '<td  class="ocutarmobile"></td>' +
-            //     '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
-            //     '<td  class="center">' + se_null(data[i].hora) + '</td>' +
-            //     '<td  class="center">' + se_null(data[i].atividade) + '</td>' +
-            //     '<td  class="center">' + se_null(data[i].IH) + '</td>' +
-            //     '<td  class="center">' + se_null(data[i].paciente) + '</td>' +
-            //     '<td  class="center">' + se_null(data[i].servico) + '</td>' +
-            //     '<td  class="center">' + c_localizacao(data[i].localizacao, data[i].checkin_unidade) + '</td>' +
-            //     '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
-            //     `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
-            //     '<td  class="ocultar">' + se_null(data[i].codigo_exame) + '</td>' +
-            //     '<td  class="ocultar">' + se_null(data[i].codigo_servico) + '</td>' +
-            //     '<td  class="ocultar">' + se_null(data[i].data_servico_atual) + '</td>' +
-            //     '<td  class="ocultar">' + se_null(data[i].descricao_exame) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].sexo) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].data_nascimento) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].nome_medico) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].crm) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].checkin_unidade) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].checkout_unidade) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].tempo_vinculado) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].checkin_exame) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].tempo_exame) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].checkout_exame) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].tempo_decorrido_do_exame) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].desc_status) + '</td>' +
-            //     '<td class="ocultar">' + se_null(data[i].tempo_espera) + '</td>';
+                '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
+                '<td>' + se_null(data[i].hora) + '</td>' +
+                '<td>' + se_null(data[i].atividade) + '</td>' +
+                '<td>' + se_null(data[i].IH) + '</td>' +
+                '<td>' + se_null(data[i].paciente) + '</td>' +
+                '<td>' + se_null(data[i].servico) + '</td>' +
+                '<td>' + c_localizacao(data[i].setor) + '</td>' +
+                `<td><div  class=" status-${data[i].status} center-status">${data[i].status}</div></td>` +
+                `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
+                '<td class="ocultar">' + se_null(data[i].codigo_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].codigo_servico) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].descricao_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].sexo) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].data_nascimento) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].nome_medico) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].crm) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].checkin_unidade) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].checkout_unidade) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].tempo_vinculado) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].checkin_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].checkout_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].tempo_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].tempo_decorrido_do_exame) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].desc_status) + '</td>' +
+                '<td class="ocultar">' + se_null(data[i].tempo_espera) + '</td>';
 
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
         }
         data_table(data)
         modal(data)
-    }
-}
-
-
-function status(vinculado, desvinculado, inicio_do_exame, final_do_exame) {
-    nstatus = '';
-    if (!vinculado || vinculado === null) {
-        console.log('Não iniciou o atendimento')
-        nstatus = 5
-        return nstatus
-    } else if (desvinculado) {
-        console.log('Finalizado')
-        nstatus = 7
-        return nstatus
-    } else if (vinculado && !inicio_do_exame) {
-        console.log('Aguardando')
-        nstatus = 2
-        return nstatus
-    } else if (inicio_do_exame && !final_do_exame) {
-        console.log('Em antedimentos')
-        nstatus = 3
-        return nstatus
-    } else if (inicio_do_exame && final_do_exame) {
-        console.log('Atendido')
-        nstatus = 4
-        return nstatus
     }
 }
 
@@ -152,7 +94,6 @@ function c_localizacao(campo_do_banco, vinculado) {
 
 function modal(data) {
     modal = "";
-
     for (i = 0; i < data.length; i++) {
         var IDdoModal = data[i].IH + data[i].atividade + "modal";
         var ID = data[i].IH + data[i].atividade;
@@ -165,9 +106,6 @@ function modal(data) {
             ID = ID + "botao"
             document.getElementById(ID).style.color = "#FF6347 "
         }
-
-
-
         modal += `<div id="${IDdoModal}" class="modal modal-index">
                 <div class="modal-index-content">
                     <span class="fecharModal"></span>
@@ -176,11 +114,8 @@ function modal(data) {
                 </div>
             </div>
         </div>`
-
         document.getElementById("elempai").innerHTML = modal;
-
     }
-
     abrirModal()
 }
 
@@ -188,29 +123,20 @@ function modal(data) {
 function abrirModal() {
     var tabela = document.getElementById('listadePacientes');
     var linhas = tabela.getElementsByTagName('td')
+
     for (let i = 0; i < linhas.length; i++) {
         elem = linhas[i];
         elem.addEventListener('click', function () {
             id = this.id
-
             var btn = document.getElementById(id);
-
             var modal = document.getElementById(id + 'modal');
-
-
-
             var span = document.getElementsByClassName("fecharModal")[0];
-
             btn.onclick = function () {
                 modal.style.display = "block";
             }
-
-            // When the user clicks on <span> (x), close the modal
             span.onclick = function () {
                 modal.style.display = "none";
             }
-
-            // When the user clicks anywhere outside of the modal, close it
             window.onclick = function (event) {
                 if (event.target == modal) {
                     modal.style.display = "none";
@@ -227,23 +153,18 @@ function format(d) {
     const divindodataeHora = quebraURL(data_de_nascimento, "T");
     const divididoadata = quebraURL(divindodataeHora[0], "-");
     const datadeNascimento = `${divididoadata[2]} /${divididoadata[1]}/${divididoadata[0]} `;
-
-
     vinculado = arredondarHora(d.checkin_unidade)
     desvinculado = arredondarHora(d.checkout_unidade)
     inicio_do_exame = arredondarHora(d.checkin_exame)
     tempo_espera = d.tempo_vinculado.substring(0, 5)
     tempo_total = d.tempo_vinculado.substring(0, 5)
-
     d.tempo_decorrido_do_exame === undefined ? tempo_decorrido_do_exame = "" : tempo_decorrido_do_exame = d.tempo_decorrido_do_exame.substring(0, 5);
-
     if (d.checkout_exame) {
         checkout_exame = arredondarHora(d.checkout_exame);
         tempo_decorrido_do_exame = diferenca_de_hora(inicio_do_exame, checkout_exame) + "<span class='sem_negrito-informacoes'> (Finalizado)</span> ";
     } else {
         checkout_exame = "";
     }
-
     if (desvinculado) {
         tempo_total = diferenca_de_hora(vinculado, desvinculado);
     }
@@ -337,15 +258,17 @@ function data_table(d) {
                     "defaultContent": ''
                 },
                 { 'data': "id_agendamento" },
-                { 'data': "paciente" },
                 { 'data': "hora" },
                 { 'data': "atividade" },
                 { 'data': "IH" },
+                { 'data': "paciente" },
+                { 'data': "servico" },
+                { 'data': "setor" },//localizacao
+                { 'data': "status" },
+                { 'data': "anotacao" },
                 { 'data': "codigo_exame" },
                 { 'data': "codigo_servico" },
-                { 'data': "servico" },
                 { 'data': "descricao_exame" },
-                { 'data': "anotacao" },
                 { 'data': "sexo" },
                 { 'data': "data_nascimento" },
                 { 'data': "nome_medico" },
@@ -357,11 +280,8 @@ function data_table(d) {
                 { 'data': "checkout_exame" },
                 { 'data': "tempo_exame" },
                 { 'data': "tempo_decorrido_do_exame" },
-                { 'data': "status" },
                 { 'data': "desc_status" },
                 { 'data': "tempo_espera" },
-                { 'data': "setor" },
-
             ],
             "order": [[1, 'asc']],
             "columnDefs": [
@@ -377,7 +297,6 @@ function data_table(d) {
         $('#tabela_pacientes tbody').on('click', 'td.details-control', function () {
             var tr = $(this).closest('tr');
             var row = table.row(tr);
-
             if (row.child.isShown()) {
                 $('div.add_info', row.child()).slideUp(function () {
                     row.child.hide();
@@ -385,7 +304,6 @@ function data_table(d) {
                 });
             }
             else {
-                // Open this row
 
                 row.child(format(row.data())).show();
                 tr.addClass('shown');
@@ -464,6 +382,9 @@ function atribuiHtml(classouid, resultado) {
 }
 
 
+/*
+ * ----------------------Calendario----------------------
+ */
 
 
 
@@ -490,9 +411,8 @@ function calendario() {
 
         let dataescolhida = Calender.value; //pega a data
         dataescolhida = dataescolhida.split('-');
-        datamysql = `${dataescolhida[2]} -${dataescolhida[1]} -${dataescolhida[0]} `;
+        datamysql = `${dataescolhida[2]}-${dataescolhida[1]}-${dataescolhida[0]} `;
 
-        //pega a url base do site
 
         let url = window.location.href
         url_dividida = quebraURL(url, "?")
@@ -501,7 +421,6 @@ function calendario() {
         parametros = quebraURL(url_dividida[1], "&")
 
         setor = parametros[0];
-
         window.location = resultado + '?' + setor + '&data=' + datamysql;
 
     })

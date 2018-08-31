@@ -461,43 +461,38 @@ table.dataTable tbody td.no-padding {
   margin-left: 15% !important; }
 
 .status-1 {
-  width: 25px;
-  height: 25px;
-  color: transparent;
-  background: #0000FF !important; }
-
-.status-2 {
   background: #FFFF00 !important;
   width: 25px;
   height: 25px;
   color: transparent; }
 
-.status-3 {
+.status-2 {
   background: #00FF00 !important;
   width: 25px;
   height: 25px;
   color: transparent; }
 
+.status-3 {
+  background: red !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
 .status-4 {
-  background: #FF00FF !important;
+  background: #4b0082 !important;
   width: 25px;
   height: 25px;
   color: transparent; }
 
 .status-5 {
+  background: #FF00FF !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
+.status-6,
+.status-null {
   background: #c6c6c6 !important;
-  width: 25px;
-  height: 25px;
-  color: transparent; }
-
-.status-6 {
-  background: #FF0000 !important;
-  width: 25px;
-  height: 25px;
-  color: transparent; }
-
-.status-7 {
-  background: #4b0082 !important;
   width: 25px;
   height: 25px;
   color: transparent; }
