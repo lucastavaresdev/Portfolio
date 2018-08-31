@@ -66,8 +66,9 @@ function lista_de_pacientes(data) {
             var linha = tr.innerHTML = cols;
             tbody.innerHTML += linha;
         }
-        data_table(data)
-        modal(data)
+        data_table(data);
+        modal(data);
+        pacientes_finalizados(data);
     }
 }
 
@@ -437,4 +438,23 @@ function menuclicado() {
             console.log(i)
         })
     }
+}
+
+/*
+ *---------------------Finalizados---------------------------
+ */
+
+
+
+function pacientes_finalizados(data) {
+    elem_numero = document.getElementById('d_pacientes_finalizados');
+
+    var resultado = 0;
+    data.forEach((obj) => {
+        if (obj.checkout_unidade !== null) {
+            resultado++
+        }
+    });
+
+    elem_numero.innerHTML = resultado
 }

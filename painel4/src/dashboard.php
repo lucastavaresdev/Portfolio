@@ -29,7 +29,7 @@
                 <div class="col s6 l2">
                     <div class="dash_btn_superior_sem_hover fade-in">
                         <p>Atendimentos</p>
-                        <h4>-/<span id="atendimentos_total">0</span></h4>
+                        <h4><span id='d_pacientes_finalizados'>0</span>/<span id="atendimentos_total">0</span></h4>
                     </div>
                 </div>
                 <?php echo "</a>"    ?>
