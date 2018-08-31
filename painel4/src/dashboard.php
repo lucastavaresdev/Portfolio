@@ -36,7 +36,7 @@
                 <?php echo "<a  href='./maior_fluxo.php?setor=$setor'>"?> 
                     <div class="col s6 l2 tamanho_da_linha_titulo_fluxo">
                         <div class="dash_btn_superior m-fluxo fade-in">
-                            <p>Maior Fluxo</p>
+                            <p>Fluxo de Tempo</p>
                             <ul id="fluxo"></ul>
                         </div>
                     </div>

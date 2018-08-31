@@ -351,6 +351,9 @@ function qtd_procedimentos(data) {
     elem.innerHTML = qtd_procedimentos;
 }
 
+/*
+ * ----------------------Fluxo de tempo----------------------
+ */
 
 
 function horarioComMaiorPacientes(data) {
@@ -360,7 +363,7 @@ function horarioComMaiorPacientes(data) {
     if (fluxodetempo) {
         for (i = 0; i < data.length; i++) {
             var j;
-            j = `< li > ${data[i].intervalo_de_horas} <span> (${data[i].qtd_por_hora} pacientes)</span></li > `;
+            j = `<li> ${data[i].intervalo_de_horas} <span> (${data[i].qtd_por_hora} pacientes)</span></li > `;
             html += j;
         }
 
