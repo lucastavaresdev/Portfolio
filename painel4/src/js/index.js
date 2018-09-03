@@ -465,24 +465,17 @@ function pacientes_finalizados_e_atuais(data) {
 
     var resultado = 0;
     var resultado_qtdAtuais = 0;
-    var resultado_tempoMedio = 0;
     data.forEach((obj) => {
 
         if (obj.checkout_unidade !== null) {
             resultado++
         } else if (obj.checkin_unidade !== null && obj.status !== "3") {
             resultado_qtdAtuais++
-        } else if (obj.tempo_exame !== null) {
-            resultado_tempoMedio = obj.tempo_exame
         }
     });
 
     elem_numero.innerHTML = resultado
     elem_qtdAtuais.innerHTML = resultado_qtdAtuais
-    elem_tempoMedio.innerHTML = resultado_tempoMedio
 }
 
-arr = ['01:00:00', '00:30:00', '00:30:00'];
-
-tempo_medio(arr);
 
