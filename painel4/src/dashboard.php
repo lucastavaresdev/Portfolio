@@ -45,15 +45,15 @@
                     <?php echo "<a>"    ?>
                         <div class="col s6 l2">
                             <div class=" dash_btn_superior_sem_hover fade-in">
-                            <p><span class='qtd_pacientes_atuais'>Qtd de pacientes atuais<span></p>
-                            <h4> - </h4>
+                            <p>Qtd de pacientes atuais</p>
+                            <h4><span id='qtd_pacientes_atuais'>0<span></h4>
                             </div>
                         </div>
                     <?php echo "</a>"?>
                     <?php echo "<a>"    ?>
                         <div class="col s6 l2">
                             <div class="dash_btn_superior_sem_hover fade-in">
-                            <p><span class='tempo_medio_de_sala'>Tempo Medio de Sala<span></p>
+                            <p><span id='tempo_medio_de_sala'>Tempo Medio de Sala<span></p>
                             <h4> - </h4>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                     <li class="tab col s12 l3">
                         <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                     </li>
-                    <li class="tab col s12 l2 right input-calendario ">
+                    <li class="tab col s12 l2 right input-calendario">
                             <input type="text"  id="busque_data" class="datepicker right figuras " placeholder="Busque por uma datas">
                     </li>
                 </ul>

@@ -68,7 +68,7 @@ function lista_de_pacientes(data) {
         }
         data_table(data);
         modal(data);
-        pacientes_finalizados(data);
+        pacientes_finalizados_e_atuais(data);
     }
 }
 
@@ -386,6 +386,14 @@ function atribuiHtml(classouid, resultado) {
 }
 
 
+
+
+
+
+
+
+
+
 /*
  * ----------------------Calendario----------------------
  */
@@ -444,20 +452,29 @@ function menuclicado() {
 }
 
 /*
- *---------------------Finalizados---------------------------
+ *--------------------- Finalizados e Quantidade de Pacientes Atuais ---------------------------
  */
 
 
 
-function pacientes_finalizados(data) {
+function pacientes_finalizados_e_atuais(data) {
     elem_numero = document.getElementById('d_pacientes_finalizados');
+    elem_qtdAtuais = document.getElementById('qtd_pacientes_atuais');
+    console.log(elem_qtdAtuais)
 
     var resultado = 0;
+    var resultado_qtdAtuais = 0;
+
     data.forEach((obj) => {
+        debugger
         if (obj.checkout_unidade !== null) {
             resultado++
+        } else if (obj.checkin_unidade !== null && obj.status !== "3") {
+
+            resultado_qtdAtuais++
         }
     });
 
     elem_numero.innerHTML = resultado
+    elem_qtdAtuais.innerHTML = resultado_qtdAtuais
 }
