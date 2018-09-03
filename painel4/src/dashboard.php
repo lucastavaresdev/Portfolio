@@ -53,8 +53,8 @@
                     <?php echo "<a>"    ?>
                         <div class="col s6 l2">
                             <div class="dash_btn_superior_sem_hover fade-in">
-                            <p><span id='tempo_medio_de_sala'>Tempo Medio de Sala<span></p>
-                            <h4> - </h4>
+                            <p>Tempo Medio de Sala</p>
+                            <h4>0 </h4>
                             </div>
                         </div>
                     <?php echo "</a>"?>

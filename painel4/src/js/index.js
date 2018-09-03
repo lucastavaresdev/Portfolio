@@ -460,21 +460,29 @@ function menuclicado() {
 function pacientes_finalizados_e_atuais(data) {
     elem_numero = document.getElementById('d_pacientes_finalizados');
     elem_qtdAtuais = document.getElementById('qtd_pacientes_atuais');
-    console.log(elem_qtdAtuais)
+    elem_tempoMedio = document.getElementById('tempo_medio_de_sala');
+
 
     var resultado = 0;
     var resultado_qtdAtuais = 0;
-
+    var resultado_tempoMedio = 0;
     data.forEach((obj) => {
-        debugger
+
         if (obj.checkout_unidade !== null) {
             resultado++
         } else if (obj.checkin_unidade !== null && obj.status !== "3") {
-
             resultado_qtdAtuais++
+        } else if (obj.tempo_exame !== null) {
+            resultado_tempoMedio = obj.tempo_exame
         }
     });
 
     elem_numero.innerHTML = resultado
     elem_qtdAtuais.innerHTML = resultado_qtdAtuais
+    elem_tempoMedio.innerHTML = resultado_tempoMedio
 }
+
+arr = ['01:00:00', '00:30:00', '00:30:00'];
+
+tempo_medio(arr);
+
