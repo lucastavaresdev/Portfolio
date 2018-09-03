@@ -45,7 +45,7 @@
                     <?php echo "<a>"    ?>
                         <div class="col s6 l2">
                             <div class=" dash_btn_superior_sem_hover fade-in">
-                            <p>Tempo de Sala</p>
+                            <p><span class='qtd_pacientes_atuais'>Qtd de pacientes atuais<span></p>
                             <h4> - </h4>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                     <?php echo "<a>"    ?>
                         <div class="col s6 l2">
                             <div class="dash_btn_superior_sem_hover fade-in">
-                            <p>Qtd de pacientes atuais</p>
+                            <p><span class='tempo_medio_de_sala'>Tempo Medio de Sala<span></p>
                             <h4> - </h4>
                             </div>
                         </div>
