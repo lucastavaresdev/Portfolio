@@ -67,10 +67,14 @@ $cor:"#00ff00") {
     color: $cor-aviso;
 }
 
-.ocutar {
+.ocultar {
     display: none !important;
 }
 
 .negrito-informacoes {
     font-weight: 500;
+}
+
+.sem_negrito-informacoes {
+    font-weight: 400;
 }

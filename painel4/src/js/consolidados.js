@@ -1,5 +1,7 @@
 
 
+
+
 chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setores', total_de_pacientes_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=card_com_informacoes_do_setores', card_com_informacoes_do_setores);
@@ -10,6 +12,11 @@ chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_pr
 chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=4', atendido);
 chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=5', naoiniciado);
 chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=6', fastpass);
+
+chamadaAjax()
+
+
+
 
 
 //total_de_pacientes_de_todos_os_setores
@@ -57,10 +64,6 @@ function Em_atendimento_em_outro_serviço(data) {
 }
 
 
-
-
-
-
 function pergarId(id_da_alteracao) {
     var id = document.getElementById(id_da_alteracao);
     return id;
@@ -70,14 +73,14 @@ function pergarId(id_da_alteracao) {
 //cards por setor
 
 function card_com_informacoes_do_setores(data) {
+    console.log(data);
     var local_do_card = document.getElementById('con_card_setores');
     var html = " ";
-
 
     for (i = 0; i < data.length; i++) {
 
         html += " <div class='col s12 l4' >"
-            + "<div class='cards z-depth-3'>"
+            + `<div class='cards z-depth-3'><a href="./dashboard.php?setor=${data[i].id}">`
             + `<div class='col s4  l3 imagem-img${data[i].id}'></div>`
             + "<div class='col s8 l9 c_conteudo_card'>"
             + "<h1 class='c_titulo c_card-title'>" + data[i].setor + "</h1>"
@@ -87,15 +90,27 @@ function card_com_informacoes_do_setores(data) {
             + "<p>Procedimentos:"
             + "<b class='right'>" + data[i].exames + "</b>"
             + "</p>"
-            + "<p>Colaboradores:"
+            + "<p>Não iniciou:"
             + "<b class='right'> - </b>"
             + "</p>"
-            + "<p>Equipamentos:"
+            + "<p>Aguardando:"
+            + "<b class='right'> - </b>"
+            + "</p>"
+            + "<p>Em atendimento:"
+            + "<b class='right'> - </b>"
+            + "</p>"
+            + "<p>Atendido:"
+            + "<b class='right'> - </b>"
+            + "</p>"
+            + "<p>Cancelados:"
+            + "<b class='right'> - </b>"
+            + "</p>"
+            + "<p>Finalizados:"
             + "<b class='right'> - </b>"
             + "</p>"
             + "<b class='c_status'>Status: <span id=status" + data[i].id + ">Indisponivel</b>"
             + "</div>"
-            + "</div>"
+            + "</div></a>"
             + "</div>";
 
     }

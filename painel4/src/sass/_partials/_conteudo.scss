@@ -1,5 +1,5 @@
 .conteudo {
-    padding:1% 4% !important;
+    padding: 1% 4% !important;
 }
 
 .espacamento {
@@ -18,21 +18,20 @@
         padding: 1% 4% 1% 11% !important;
     }
     .espacamento {
-        margin-top: 12%;
+        margin-top: 17%;
     }
 }
 
-
-@media (min-width: 900px) and (max-width: 1700px){
+@media (min-width: 900px) and (max-width: 1700px) {
     .conteudo {
         padding-top: 40px !important;
     }
 }
 
-
 /* Ipad Pro */
+
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation:portrait) {
     .espacamento {
         margin-top: 3.5%;
     }
-  }
+}

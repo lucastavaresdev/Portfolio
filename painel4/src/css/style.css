@@ -30,11 +30,14 @@ body {
 .cor-aviso {
   color: #E82C0C; }
 
-.ocutar {
+.ocultar {
   display: none !important; }
 
 .negrito-informacoes {
   font-weight: 500; }
+
+.sem_negrito-informacoes {
+  font-weight: 400; }
 
 nav {
   box-shadow: none;
@@ -80,27 +83,28 @@ nav {
 @media (max-width: 920px) {
   #titulo_do_setor {
     font-family: Montserrat, sans-serif;
-    font-size: 17px !important;
+    font-size: 13px !important;
     font-weight: 300;
     color: #ffffff;
-    line-height: 53px !important; }
+    line-height: 53px !important;
+    margin-left: -50px; }
 
   .logo {
     font-family: Montserrat, sans-serif;
-    font-size: 17px !important;
+    font-size: 13px !important;
     font-weight: 300;
     color: #ffffff;
     margin-left: 4%;
     line-height: 53px; }
     .logo b {
       font-family: Montserrat, sans-serif;
-      font-size: 17px !important;
+      font-size: 13px !important;
       font-weight: 300;
       color: #ffffff; }
 
   .drop_topo {
     font-family: Montserrat, sans-serif;
-    font-size: 17px !important;
+    font-size: 13px !important;
     font-weight: 300;
     color: #ffffff;
     line-height: 53px; } }
@@ -358,7 +362,7 @@ nav {
     padding: 1% 4% 1% 11% !important; }
 
   .espacamento {
-    margin-top: 12%; } }
+    margin-top: 17%; } }
 @media (min-width: 900px) and (max-width: 1700px) {
   .conteudo {
     padding-top: 40px !important; } }
@@ -457,37 +461,38 @@ table.dataTable tbody td.no-padding {
   margin-left: 15% !important; }
 
 .status-1 {
-  width: 25px;
-  height: 25px;
-  color: transparent;
-  background: #0000FF !important; }
-
-.status-2 {
   background: #FFFF00 !important;
   width: 25px;
   height: 25px;
   color: transparent; }
 
-.status-3 {
+.status-2 {
   background: #00FF00 !important;
   width: 25px;
   height: 25px;
   color: transparent; }
 
+.status-3 {
+  background: red !important;
+  width: 25px;
+  height: 25px;
+  color: transparent; }
+
 .status-4 {
-  background: #FF00FF !important;
+  background: #4b0082 !important;
   width: 25px;
   height: 25px;
   color: transparent; }
 
 .status-5 {
-  background: #c6c6c6 !important;
+  background: #FF00FF !important;
   width: 25px;
   height: 25px;
   color: transparent; }
 
-.status-6 {
-  background: #FF0000 !important;
+.status-6,
+.status-null {
+  background: #c6c6c6 !important;
   width: 25px;
   height: 25px;
   color: transparent; }
@@ -662,7 +667,7 @@ table.dataTable tbody td.no-padding {
   border-radius: 2px;
   padding-left: 0 !important;
   position: relative;
-  height: 220px;
+  height: 330px;
   width: 100%;
   margin-bottom: 40px; }
   .cards .imagem-img225 {
@@ -761,10 +766,16 @@ table.dataTable tbody td.no-padding {
       text-align: left !important; }
     .cards .c_conteudo_card .c_status {
       line-height: 3; }
+  .cards a {
+    color: #4a4a4a !important; }
 
 @media (max-width: 920px) {
-  .cards .c_conteudo_card {
-    left: 34% !important; } }
+  .cards {
+    height: 260px; }
+    .cards .c_conteudo_card {
+      left: 34% !important; }
+    .cards .c_conteudo_card p {
+      font-size: 13px; } }
 .agendamento .espacamento {
   margin-top: 2.5%; }
 .agendamento .bordas {
@@ -813,6 +824,9 @@ table.dataTable tbody td.no-padding {
 .agendamento table.dataTable.no-footer {
   border-bottom: none; }
 
+@media (max-width: 620px) {
+  .agendamento .tabela_bg {
+    padding: 0px !important; } }
 html,
 body {
   position: relative;
@@ -855,6 +869,10 @@ body {
   .agendamento ::-webkit-resizer {
     /* 7 */
     background: springgreen; }
+  .agendamento .paging_simple_numbers {
+    font-size: 11px; }
+  .agendamento .dataTables_wrapper .dataTables_filter input {
+    margin-left: 0em; }
 
 .pacientes .topo {
   margin-top: 60px; }
@@ -889,5 +907,140 @@ body {
 
 #listadePacienteslocalizacao tr td {
   background: #ffffff; }
+
+@media (max-width: 620px) {
+  .datepicker-container {
+    width: 300px !important; }
+
+  .datepicker-date-display {
+    background-color: #007DCC;
+    padding-left: 355px; }
+    .datepicker-date-display .date-text,
+    .datepicker-date-display .year-text {
+      margin-left: -410px; }
+
+  .ocutarmobile {
+    display: none !important; }
+
+  table.responsive-table thead th {
+    display: none; }
+
+  .agendamento ::-webkit-scrollbar {
+    width: 4px;
+    background: #f6f6f6; }
+  .agendamento ::-webkit-scrollbar-button {
+    display: none; }
+  .agendamento ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    /*3*/ }
+  .agendamento ::-webkit-scrollbar-track-piece {
+    border-radius: 20px;
+    background: none;
+    /* 4 */ }
+  .agendamento ::-webkit-scrollbar-thumb {
+    width: 4px;
+    background: #ececec;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px; }
+  .agendamento ::-webkit-scrollbar-corner {
+    /* 6 */
+    background: fuchsia; }
+  .agendamento ::-webkit-resizer {
+    /* 7 */
+    background: springgreen; }
+
+  .titulo_mobile_estrutura {
+    width: 50% !important; }
+
+  .setor_mobile_estrutura {
+    width: 1px !important;
+    margin-left: 13% !important; }
+
+  .dash_btn_superior .p-msg {
+    font-size: 10px; }
+
+  .dados_consolidados .dash_btn_superior {
+    width: 80% !important; }
+  .dados_consolidados .dash_btn_superior_sem_hover {
+    width: 80% !important; }
+
+  .input-calendario input {
+    border: none;
+    border-bottom: none !important; }
+  .input-calendario .figuras {
+    display: inline-block;
+    padding-left: 24px;
+    line-height: 16px;
+    background-position: 2px center;
+    background-repeat: no-repeat;
+    background-image: url(../img/icon-calendario.jpg); }
+  .input-calendario ::-webkit-input-placeholder {
+    color: transparent; }
+  .input-calendario :-moz-placeholder {
+    /* Firefox 18- */
+    color: transparent; }
+  .input-calendario ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: transparent; }
+  .input-calendario :-ms-input-placeholder {
+    color: transparent; } }
+@media (min-width: 621px) and (max-width: 920px) {
+  .datepicker-container {
+    width: 300px !important; }
+
+  .datepicker-date-display {
+    background-color: #007DCC;
+    padding-left: 245px; }
+    .datepicker-date-display .date-text,
+    .datepicker-date-display .year-text {
+      margin-left: -220px; }
+
+  .ocutarmobile {
+    display: none !important; }
+
+  .agendamento ::-webkit-scrollbar {
+    width: 4px;
+    background: #f6f6f6; }
+  .agendamento ::-webkit-scrollbar-button {
+    display: none; }
+  .agendamento ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    /*3*/ }
+  .agendamento ::-webkit-scrollbar-track-piece {
+    border-radius: 20px;
+    background: none;
+    /* 4 */ }
+  .agendamento ::-webkit-scrollbar-thumb {
+    width: 4px;
+    background: #ececec;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px; }
+  .agendamento ::-webkit-scrollbar-corner {
+    /* 6 */
+    background: fuchsia; }
+  .agendamento ::-webkit-resizer {
+    /* 7 */
+    background: springgreen; }
+
+  .titulo_mobile_estrutura {
+    width: 50% !important; }
+
+  .setor_mobile_estrutura {
+    width: 1px !important;
+    margin-left: 13% !important; }
+
+  .dash_btn_superior .p-msg {
+    font-size: 10px; }
+
+  .dados_consolidados .dash_btn_superior {
+    width: 80% !important; }
+  .dados_consolidados .dash_btn_superior_sem_hover {
+    width: 80% !important; } }
 
 /*# sourceMappingURL=style.css.map */
