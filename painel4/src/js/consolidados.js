@@ -1,5 +1,7 @@
 
 
+
+
 chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setores', total_de_pacientes_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=card_com_informacoes_do_setores', card_com_informacoes_do_setores);
@@ -10,6 +12,11 @@ chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_pr
 chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=4', atendido);
 chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=5', naoiniciado);
 chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=6', fastpass);
+
+chamadaAjax()
+
+
+
 
 
 //total_de_pacientes_de_todos_os_setores
@@ -70,7 +77,6 @@ function card_com_informacoes_do_setores(data) {
     var local_do_card = document.getElementById('con_card_setores');
     var html = " ";
 
-
     for (i = 0; i < data.length; i++) {
 
         html += " <div class='col s12 l4' >"
@@ -87,9 +93,6 @@ function card_com_informacoes_do_setores(data) {
             + "<p>Não iniciou:"
             + "<b class='right'> - </b>"
             + "</p>"
-            + "<p>Outro serviço:"
-            + "<b class='right'> - </b>"
-            + "</p>"
             + "<p>Aguardando:"
             + "<b class='right'> - </b>"
             + "</p>"
@@ -99,7 +102,10 @@ function card_com_informacoes_do_setores(data) {
             + "<p>Atendido:"
             + "<b class='right'> - </b>"
             + "</p>"
-            + "<p>Fastpass:"
+            + "<p>Cancelados:"
+            + "<b class='right'> - </b>"
+            + "</p>"
+            + "<p>Finalizados:"
             + "<b class='right'> - </b>"
             + "</p>"
             + "<b class='c_status'>Status: <span id=status" + data[i].id + ">Indisponivel</b>"

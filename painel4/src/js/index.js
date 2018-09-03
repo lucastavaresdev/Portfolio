@@ -15,6 +15,8 @@
 
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, dados);
 
+    chamadaAjax(`php/selectsJson.php?parametro=media_de_tempo_de_agendamento&${parametrosDaUrl}`, media_de_tempo);
+
     calendario();
 })();
 
@@ -23,6 +25,16 @@ var cord;
 
 function dados(data) {
     return data;
+}
+
+
+function media_de_tempo(data) {
+    var elem = document.getElementById('tempo_medio_de_sala');
+    debugger
+    if (data[0].tempo_medio !== null || data[0].tempo_medio !== undefined) {
+        let hora = data[0].tempo_medio.substr(0, 5);
+        elem.innerHTML = hora;
+    }
 }
 
 
@@ -385,21 +397,9 @@ function atribuiHtml(classouid, resultado) {
     classouid.innerHTML = resultado;
 }
 
-
-
-
-
-
-
-
-
-
 /*
  * ----------------------Calendario----------------------
  */
-
-
-
 
 function calendario() {
     const Calender = document.querySelector('.datepicker');

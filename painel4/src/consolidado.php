@@ -3,12 +3,7 @@
     include('./templates/menu.php');
 ?>
 
-
-
- <link rel="stylesheet" href="./css/consolidado.css">
-
-
-
+<link rel="stylesheet" href="./css/consolidado.css">
 
 
 <div class="col s12 conteudo espacamento">
@@ -69,7 +64,7 @@
             <div class="row c_linha_card_superior">
                 <div class="col s12 m12">
                     <div class="card-panel center">
-                        <span class="c_total_card">Atrasos:
+                        <span class="c_total_card">Checkout:
                             <b class="right"> - </b>
                         </span>
                     </div>
@@ -116,17 +111,6 @@
         </div>
         <div class="col s12 l2">
             <div class="row">
-                <div class="col s12 m12">
-                    <div class="card-panel center con_padding">
-                        <span class="c_total_card c_total_card_inferior">Outro Servico:
-                            <b class="right" id="con_outroservico"> - </b>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 l2">
-            <div class="row">
                 <div class="col s12 m12 ">
                     <div class="card-panel center con_padding">
                         <span class="c_total_card c_total_card_inferior">Em atendimento:
@@ -136,11 +120,23 @@
                 </div>
             </div>
         </div>
+
         <div class="col s12 l2">
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card-panel center con_padding">
-                        <span class="c_total_card c_total_card_inferior">Fastpass:
+                        <span class="c_total_card c_total_card_inferior">Finalizado:
+                            <b class="right" id="con_outroservico"> - </b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 l2">
+            <div class="row">
+                <div class="col s12 m12">
+                    <div class="card-panel center con_padding">
+                        <span class="c_total_card c_total_card_inferior">Cancelado:
                             <b class="right" id="con_fastpass"> - </b>
                         </span>
                     </div>
