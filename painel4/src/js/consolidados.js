@@ -5,31 +5,32 @@
 chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setores', total_de_pacientes_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=card_com_informacoes_do_setores', card_com_informacoes_do_setores);
-
-
 chamadaAjax('php/selectsJson.php?parametro=chekin_e_checkout', checkin_checkout);
 
+function pergarId(id_da_alteracao) {
+    var id = document.getElementById(id_da_alteracao);
+    return id;
+}
 
 
-
-
-
+/*
+ *---------------------Cards superior 1 row---------------------------
+ */
 
 //total_de_pacientes_de_todos_os_setores
 function total_de_pacientes_de_todos_os_setores(data, id_da_alteracao) {
-    var id = pergarId("com_checkin");
-    var id = pergarId("com_checkin");
+    var id = pergarId("con_agendados");
     id.innerHTML = data[0].totaldePacientes;
 }
 
 //total_de_procedimento_de_todos_os_setores
-function total_de_procedimentos_de_todos_os_setores(data, id_da_alteracao) {
+function total_de_procedimentos_de_todos_os_setores(data) {
     var id = pergarId("con_procedimento");
     id.innerHTML = data[0].total_procedimento;
 }
 
 
-//Não Iniciado
+//Checkin Checkout
 function checkin_checkout(data) {
     var id_checkin = pergarId("com_checkin");
     var id_checkout = pergarId("com_checkout");
@@ -38,15 +39,17 @@ function checkin_checkout(data) {
 }
 
 
+/*
+ *---------------------Cards superior 2 row---------------------------
+ */
 
-function pergarId(id_da_alteracao) {
-    var id = document.getElementById(id_da_alteracao);
-    return id;
-}
+
+
+
+
 
 
 //cards por setor
-
 function card_com_informacoes_do_setores(data) {
     console.log(data);
     var local_do_card = document.getElementById('con_card_setores');
