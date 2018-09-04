@@ -63,13 +63,10 @@ function status_consolidado(data) {
 
 //cards por setor
 function card_com_informacoes_do_setores(data) {
-    console.log("consolidado");
-    console.log(data);
     var local_do_card = document.getElementById('con_card_setores');
     var html = " ";
-
+    debugger
     for (i = 0; i < data.length; i++) {
-
         html += " <div class='col s12 l4' >"
             + `<div class='cards z-depth-3'><a href="./dashboard.php?setor=${data[i].id}">`
             + `<div class='col s4  l3 imagem-img${data[i].id}'></div>`
@@ -85,7 +82,7 @@ function card_com_informacoes_do_setores(data) {
             + "<b class='right'> - </b>"
             + "</p>"
             + "<p>Aguardando:"
-            + "<b class='right'> - </b>"
+            + "<b class='right con_card_aguardando'> - </b>"
             + "</p>"
             + "<p>Em atendimento:"
             + "<b class='right'> - </b>"
@@ -103,8 +100,9 @@ function card_com_informacoes_do_setores(data) {
             + "</div>"
             + "</div></a>"
             + "</div>";
-
     }
+
+
     local_do_card.innerHTML = html;
     for (let i = 0; i < data.length; i++) {
         var dado = parseInt(data[i].agendamento_do_dia);

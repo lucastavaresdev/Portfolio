@@ -263,7 +263,7 @@ $status_consolidado_por_setor = "SELECT
                                             inner join (select max(id) as id, agendamento, etapa from checklist group by agendamento, etapa) cl2
                                             on cl2.id = cl.id
                                             where date(cl.checkin) = curdate() and
-                                        cl.servico = 226;";
+                                        cl.servico = $setor";
 /*
  *--------------------Status por setor-----------------------------
  */
