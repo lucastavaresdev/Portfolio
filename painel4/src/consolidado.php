@@ -71,12 +71,9 @@
                 </div>
             </div>
         </div>
-
     </div>
-
     <div class="row">
-
-        <div class="col s12 l2">
+        <div class="col s12 l3">
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card-panel center con_padding">
@@ -100,17 +97,6 @@
         </div>
         <div class="col s12 l2">
             <div class="row">
-                <div class="col s12 m12">
-                    <div class="card-panel center con_padding">
-                        <span class="c_total_card c_total_card_inferior">Atendido:
-                            <b class="right"  id=con_atendido> - </b>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 l2">
-            <div class="row">
                 <div class="col s12 m12 ">
                     <div class="card-panel center con_padding">
                         <span class="c_total_card c_total_card_inferior">Em atendimento:
@@ -125,24 +111,26 @@
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card-panel center con_padding">
-                        <span class="c_total_card c_total_card_inferior">Finalizado:
-                            <b class="right" id="con_outroservico"> - </b>
+                        <span class="c_total_card c_total_card_inferior">Cancelado:
+                            <b class="right" id="con_cancelado"> - </b>
                         </span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 l2">
+
+        <div class="col s12 l3">
             <div class="row">
                 <div class="col s12 m12">
                     <div class="card-panel center con_padding">
-                        <span class="c_total_card c_total_card_inferior">Cancelado:
-                            <b class="right" id="con_fastpass"> - </b>
+                        <span class="c_total_card c_total_card_inferior">Finalizado:
+                            <b class="right" id="con_finalizado"> - </b>
                         </span>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="row" id="con_card_setores"></div>

@@ -6,6 +6,7 @@ chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setore
 chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=card_com_informacoes_do_setores', card_com_informacoes_do_setores);
 chamadaAjax('php/selectsJson.php?parametro=chekin_e_checkout', checkin_checkout);
+chamadaAjax('php/selectsJson.php?parametro=status_consolidado', status_consolidado);
 
 function pergarId(id_da_alteracao) {
     var id = document.getElementById(id_da_alteracao);
@@ -43,14 +44,26 @@ function checkin_checkout(data) {
  *---------------------Cards superior 2 row---------------------------
  */
 
+function status_consolidado(data) {
+    var id_con_aguardando = pergarId("con_aguardando");
+    var id_emAtendimento = pergarId("con_emAtendimento");
+    var id_con_cancelado = pergarId("con_cancelado");
+    var id_con_finalizado = pergarId("con_finalizado");
+    id_con_aguardando.innerHTML = data[0].aguardando;
+    id_emAtendimento.innerHTML = data[0].andamento;
+    id_con_cancelado.innerHTML = data[0].cancelado;
+    id_con_finalizado.innerHTML = data[0].finalizado;
+}
 
 
-
-
+/*
+ *---------Cards Inferiores com informações dos setores----------------
+ */
 
 
 //cards por setor
 function card_com_informacoes_do_setores(data) {
+    console.log("consolidado");
     console.log(data);
     var local_do_card = document.getElementById('con_card_setores');
     var html = " ";
