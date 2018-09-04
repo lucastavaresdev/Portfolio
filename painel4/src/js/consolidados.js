@@ -6,14 +6,10 @@ chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setore
 chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=card_com_informacoes_do_setores', card_com_informacoes_do_setores);
 
-chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=1', Em_atendimento_em_outro_serviço);
-chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=2', aguardando);
-chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=3', emAtendimento);
-chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=4', atendido);
-chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=5', naoiniciado);
-chamadaAjax('php/selectsJson.php?parametro=qtd_de_status_todas_os_setores_por_procedimento&status=6', fastpass);
 
-chamadaAjax()
+chamadaAjax('php/selectsJson.php?parametro=chekin_e_checkout', checkin_checkout);
+
+
 
 
 
@@ -21,7 +17,8 @@ chamadaAjax()
 
 //total_de_pacientes_de_todos_os_setores
 function total_de_pacientes_de_todos_os_setores(data, id_da_alteracao) {
-    var id = pergarId("con_agendados");
+    var id = pergarId("com_checkin");
+    var id = pergarId("com_checkin");
     id.innerHTML = data[0].totaldePacientes;
 }
 
@@ -33,35 +30,13 @@ function total_de_procedimentos_de_todos_os_setores(data, id_da_alteracao) {
 
 
 //Não Iniciado
-function naoiniciado(data) {
-    var id = pergarId("con_naoIniciado");
-    id.innerHTML = data[0].status_por_procedimentos;
+function checkin_checkout(data) {
+    var id_checkin = pergarId("com_checkin");
+    var id_checkout = pergarId("com_checkout");
+    id_checkin.innerHTML = data[0].checkin;
+    id_checkout.innerHTML = data[0].checkout;
 }
 
-//Não Iniciado
-function aguardando(data) {
-    var id = pergarId("con_aguardando");
-    id.innerHTML = data[0].status_por_procedimentos;
-}
-
-function atendido(data) {
-    var id = pergarId("con_atendido");
-    id.innerHTML = data[0].status_por_procedimentos;
-}
-
-function fastpass(data) {
-    var id = pergarId("con_fastpass");
-    id.innerHTML = data[0].status_por_procedimentos;
-}
-function emAtendimento(data) {
-    var id = pergarId("con_emAtendimento");
-    id.innerHTML = data[0].status_por_procedimentos;
-}
-
-function Em_atendimento_em_outro_serviço(data) {
-    var id = pergarId("con_outroservico");
-    id.innerHTML = data[0].status_por_procedimentos;
-}
 
 
 function pergarId(id_da_alteracao) {

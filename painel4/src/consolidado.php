@@ -53,7 +53,7 @@
                 <div class="col s12 m12">
                     <div class="card-panel center">
                         <span class="c_total_card">Checkin:
-                            <b class="right"> - </b>
+                            <b class="right" id="com_checkin"> - </b>
                         </span>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="col s12 m12">
                     <div class="card-panel center">
                         <span class="c_total_card">Checkout:
-                            <b class="right"> - </b>
+                            <b class="right" id="com_checkout"> - </b>
                         </span>
                     </div>
                 </div>
