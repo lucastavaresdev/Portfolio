@@ -9,12 +9,9 @@
 
     chamadaAjax(`php/selectsJson.php?parametro=qtd_de_agendamentos_do_dia_por_agenda&${parametrosDaUrl}`, qtd_de_agendamentos_do_dia_por_agenda);
     chamadaAjax(`php/selectsJson.php?parametro=qtd_procedimentos&${parametrosDaUrl}`, qtd_procedimentos);
-
     chamadaAjax(`php/selectsJson.php?parametro=horario_de_maior_fluxo&${parametrosDaUrl}`, horarioComMaiorPacientes);
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
-
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, dados);
-
     chamadaAjax(`php/selectsJson.php?parametro=media_de_tempo_de_agendamento&${parametrosDaUrl}`, media_de_tempo);
 
     calendario();
@@ -30,7 +27,6 @@ function dados(data) {
 
 function media_de_tempo(data) {
     var elem = document.getElementById('tempo_medio_de_sala');
-    debugger
     if (data[0].tempo_medio !== null || data[0].tempo_medio !== undefined) {
         let hora = data[0].tempo_medio.substr(0, 5);
         elem.innerHTML = hora;
@@ -48,6 +44,8 @@ function lista_de_pacientes(data) {
         for (i = 0; i < data.length; i++) {
             var tr = document.createElement('tr');
 
+            var nstatus = status(data[i].checkin_unidade, data[i].checkout_unidade, data[i].checkin_exame, data[i].checkout_exame, data[i].status)
+
             var cols = '<td  class="ocutarmobile"></td>' +
                 '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
                 '<td>' + se_null(data[i].hora) + '</td>' +
@@ -56,7 +54,7 @@ function lista_de_pacientes(data) {
                 '<td>' + se_null(data[i].paciente) + '</td>' +
                 '<td>' + se_null(data[i].servico) + '</td>' +
                 '<td>' + c_localizacao(data[i].setor) + '</td>' +
-                `<td><div  class=" status-${data[i].status} center-status">${data[i].status}</div></td>` +
+                '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
                 `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
                 '<td class="ocultar">' + se_null(data[i].codigo_exame) + '</td>' +
                 '<td class="ocultar">' + se_null(data[i].codigo_servico) + '</td>' +
@@ -84,7 +82,34 @@ function lista_de_pacientes(data) {
     }
 }
 
+function status(vinculado, desvinculado, inicio_do_exame, final_do_exame, status_cancelado_vindo_do_banco) {
+    nstatus = '';
 
+    if (status_cancelado_vindo_do_banco === 3 && status_cancelado_vindo_do_banco !== null) {
+        console.log('cancelado')
+        nstatus = 3;
+    } else if (!vinculado || vinculado === null) {
+        console.log('Não iniciou o atendimento')
+        nstatus = 6
+        return nstatus
+    } else if (desvinculado) {
+        console.log('Finalizado')
+        nstatus = 4
+        return nstatus
+    } else if (vinculado && !inicio_do_exame) {
+        console.log('Aguardando')
+        nstatus = 1
+        return nstatus
+    } else if (inicio_do_exame && !final_do_exame) {
+        console.log('Em antedimentos')
+        nstatus = 2
+        return nstatus
+    } else if (inicio_do_exame && final_do_exame) {
+        console.log('Atendido')
+        nstatus = 5
+        return nstatus
+    }
+}
 
 function se_null(campo_do_banco) {
     campo_do_banco === null || campo_do_banco === undefined ? campo_do_banco = ' ' : campo_do_banco;
@@ -212,7 +237,6 @@ function format(d) {
 }
 
 function arredondarHora(campo) {
-    //debugger
     campo = campo.substring(11, 16);
     return campo;
 }
