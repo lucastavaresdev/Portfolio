@@ -124,7 +124,6 @@ function c_localizacao(campo_do_banco, vinculado) {
     } else {
         campo_do_banco = campo_do_banco
     }
-
     return campo_do_banco
 }
 

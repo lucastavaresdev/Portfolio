@@ -234,6 +234,50 @@ $card_com_informacoes_do_setores = "SELECT a.codigo_servico_atual as id,s.servic
 $informacoes_com_quantidade_nos_card = "SELECT codigo_servico_atual ,cod_cor_status , count(cod_cor_status) as qtd FROM agendamento as a 
                                                                         INNER JOIN servicos as s on a.codigo_servico_atual = s.id
                                                                         where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by codigo_servico_atual, cod_cor_status";
+
+/*
+ *--------------------Checkin e Checkout-----------------------------
+ */
+
+$chekin_e_checkout = "SELECT 
+                                    count(checkin) as checkin,
+                                    count(checkout) as checkout
+                                    from checkin
+                                    where date(checkin) = curdate()";
+/*
+ *--------------------Status Consolidado-----------------------------
+ */
+
+$status_consolidado = "SELECT 
+                                            count(if(cl.status = 1, 1, null)) as aguardando,
+                                            count(if(cl.status = 2, 1, null)) as andamento,
+                                            count(if(cl.status = 3, 1, null)) as cancelado,
+                                            count(if(cl.status = 4, 1, null)) as finalizado
+                                            from checklist cl
+                                            inner join (select max(id) as id, agendamento, etapa from checklist group by agendamento, etapa) cl2
+                                            on cl2.id = cl.id
+                                            where date(cl.checkin) = curdate()";
+
+ /*
+ *--------------------Status por setor-----------------------------
+ */
+
+
+$status_consolidado = "SELECT 
+                                            count(if(cl.status = 1, 1, null)) as aguardando,
+                                            count(if(cl.status = 2, 1, null)) as andamento,
+                                            count(if(cl.status = 3, 1, null)) as cancelado,
+                                            count(if(cl.status = 4, 1, null)) as concluido
+                                            from checklist cl
+                                            inner join (select max(id) as id, agendamento, etapa from checklist group by agendamento, etapa) cl2
+                                            on cl2.id = cl.id
+                                            where date(cl.checkin) = curdate() and
+                                        cl.servico = 226;";
+/*
+ *--------------------Status Consolidado-----------------------------
+ */
+
+
 /*
  *--------------------Quandade de status da unidade-----------------------------
  */
