@@ -84,11 +84,11 @@ function lista_de_pacientes(data) {
 
 function status(vinculado, desvinculado, inicio_do_exame, final_do_exame, status_cancelado_vindo_do_banco) {
     nstatus = '';
-
+    debugger
     if (status_cancelado_vindo_do_banco === 3 && status_cancelado_vindo_do_banco !== null) {
         console.log('cancelado')
         nstatus = 3;
-    } else if (!vinculado || vinculado === null) {
+    } else if (!vinculado && inicio_do_exame === null || vinculado === null && inicio_do_exame === null) {
         console.log('Não iniciou o atendimento')
         nstatus = 6
         return nstatus

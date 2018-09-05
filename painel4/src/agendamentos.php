@@ -14,7 +14,7 @@
 			<table id="tabela_pacientes"  class="responsive-table tabela-cor " style="width:100%" >
 				<thead>
 					<tr>
-						<th  class="ocutarmobile"></th>
+						<th  class="ocutarmobile ocultar"></th>
 						<th class="ocultar">id_agendamento</th>
 						<th>hora</th>
 						<th>atividade</th>

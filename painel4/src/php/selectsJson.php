@@ -306,7 +306,7 @@ if (isset($_GET['status'])) {
  *--------------------Quandade de status da unidade-----------------------------
  */
 
- $qtd_por_horario_de_procedimento = "SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00')  intervalo_de_horas, COUNT(*) as Qtd
+$qtd_por_horario_de_procedimento = "SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00')  intervalo_de_horas, COUNT(*) as Qtd
                                                               FROM agendamento
                                                               where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and codigo_servico_atual = $setor
                                                               GROUP BY HOUR(hora_servico_selecionado)";
@@ -315,6 +315,16 @@ $qtd_por_horario_de_pacientes = "SELECT  CONCAT(HOUR(hora_servico_selecionado), 
                                                         FROM agendamento
                                                         where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and codigo_servico_atual = $setor
                                                         GROUP BY HOUR(hora_servico_selecionado)";
+
+/*
+ *--------------------Quandade unidade-----------------------------
+ */
+
+
+
+
+
+
 
 /*
  * ----------------------Comparação para gerar o json----------------------

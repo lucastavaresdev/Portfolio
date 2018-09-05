@@ -27,7 +27,7 @@ function lista_de_pacientes(data) {
 
             var nstatus = status(data[i].checkin_unidade, data[i].checkout_unidade, data[i].checkin_exame, data[i].checkout_exame, data[i].status)
 
-            var cols = '<td  class="ocutarmobile"></td>' +
+            var cols = '<td  class="ocutarmobile ocultar"></td>' +
                 '<td class="ocultar">' + se_null(data[i].id_agendamento) + '</td>' +
                 '<td>' + se_null(data[i].hora) + '</td>' +
                 '<td>' + se_null(data[i].atividade) + '</td>' +
@@ -63,11 +63,11 @@ function lista_de_pacientes(data) {
 
 function status(vinculado, desvinculado, inicio_do_exame, final_do_exame, status_cancelado_vindo_do_banco) {
     nstatus = '';
-
+    debugger
     if (status_cancelado_vindo_do_banco === 3 && status_cancelado_vindo_do_banco !== null) {
         console.log('cancelado')
         nstatus = 3;
-    } else if (!vinculado || vinculado === null) {
+    } else if (!vinculado && inicio_do_exame === null || vinculado === null && inicio_do_exame === null) {
         console.log('Não iniciou o atendimento')
         nstatus = 6
         return nstatus
@@ -249,7 +249,7 @@ function qtd_de_agendamentos_do_dia_por_agenda(data) {
 
 function cards_notificação(data) {
     // console.log('--------------------------');
-    // console.log(data);
+    console.log(data);
     var html = ""
     var elem = document.getElementById('agendamemento_card_notificacao');
     for (let i = 0; i < data.length; i++) {
