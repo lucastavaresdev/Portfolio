@@ -250,6 +250,7 @@ function qtd_de_agendamentos_do_dia_por_agenda(data) {
 
 
 function cards_notificação(data) {
+    console.log('--------------------------');
     console.log(data);
     var html = ""
     var elem = document.getElementById('agendamemento_card_notificacao');

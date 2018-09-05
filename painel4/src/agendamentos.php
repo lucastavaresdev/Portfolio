@@ -5,9 +5,9 @@
 
 <div class="col s12 agendamento conteudo espacamento">
 	<div class="row">
-				<div class="col s12">
-					<h6>Agendamentos</h6>
-				</div>
+		<div class="col s12">
+			<h6 class='titulo_agendamento'>Agendamentos</h6>
+		</div>
 	</div>
 	<div class="row">
 		<div class="col s12 l9">
@@ -45,7 +45,7 @@
 				</thead>
 				<tbody id="listadePacientes"></tbody>
 			</table>
-			<div class="row"><?php include './templates/status.html';?></div>
+			<div class="row status_agendamento"><?php include './templates/status.html';?></div>
 		</div>
 		<div class="col  s12 l3 info ">
 			<div class="cor2 bordas">

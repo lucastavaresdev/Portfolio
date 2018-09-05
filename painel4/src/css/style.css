@@ -874,6 +874,13 @@ body {
   .agendamento .dataTables_wrapper .dataTables_filter input {
     margin-left: 0em; }
 
+.titulo_agendamento {
+  font-size: 21px;
+  padding-top: 10px; }
+
+.status_agendamento {
+  margin-top: 4%; }
+
 .pacientes .topo {
   margin-top: 60px; }
 .pacientes .titulo {
