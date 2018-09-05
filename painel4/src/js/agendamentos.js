@@ -129,7 +129,13 @@ function somaHora(hrA, hrB, zerarHora) {
     minu2 = hrB.substr(3, 2) * 1;
     novo_m = minu2 - minu1;
     nova_h = hora2 - hora1;
-    return Math.abs(nova_h) + 'h:' + Math.abs(novo_m) + 'm';
+    nhora = Math.abs(nova_h) + ':' + Math.abs(novo_m)
+    if (Math.abs(nova_h) < 2 && hora1 >= hora2) {
+        return 2
+    } else {
+        return nhora
+    }
+
 }
 
 function MasculinoouFeminino(sexo) {
@@ -243,7 +249,7 @@ function qtd_de_agendamentos_do_dia_por_agenda(data) {
 
 
 /*
- * ----------------------Calendario----------------------
+ * ----------------------Cards----------------------
  */
 
 
@@ -254,14 +260,23 @@ function cards_notificação(data) {
     var html = ""
     var elem = document.getElementById('agendamemento_card_notificacao');
     for (let i = 0; i < data.length; i++) {
-        if (data[i].checkin_unidade === null && data[i].checkin_exame === null) {
+        var now = new Date
+
+        hora = horaouminutoscolocandozero(now.getHours())
+        minutos = horaouminutoscolocandozero(now.getMinutes())
+        var horaAtual = `${hora}:${minutos}`;
+        var horadoexame = data[i].hora
+
+        Hora = somaHora(horaAtual, horadoexame)
+        if (data[i].checkin_unidade === null && data[i].checkin_exame !== null && Hora === 2) {
+
             html += '<div class="card"> '
                 + '<div class="card-content">'
                 + '<div class="row">'
                 + '<div class="col s10">'
                 + '<div class="com_agendamento">'
                 + '<span class="card-title titulo ">' + data[i].paciente + '</span>'
-                + '<p class="cor-aviso">Paciente realizou exame sem vinculo</p>'
+                + '<p class="cor-aviso">Paciente sem vinculo</p>'
                 + '</div>'
                 + '</div>'
                 + '<div class="col s2">'
@@ -274,3 +289,12 @@ function cards_notificação(data) {
     }
     elem.innerHTML = html;
 }
+
+function horaouminutoscolocandozero(horaouminutos) {
+    if (horaouminutos < 10) {
+        return `0${horaouminutos}`
+    } else {
+        return `${horaouminutos}`
+    }
+}
+
