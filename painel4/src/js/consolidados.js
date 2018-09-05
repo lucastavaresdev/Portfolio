@@ -4,7 +4,7 @@
 
 chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setores', total_de_pacientes_de_todos_os_setores);
 chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
-chamadaAjax('php/selectsJson.php?parametro=card_com_informacoes_do_setores', card_com_informacoes_do_setores);
+chamadaAjax('php/query_temp.php?parametro=query', card_com_informacoes_do_setores);
 chamadaAjax('php/selectsJson.php?parametro=chekin_e_checkout', checkin_checkout);
 chamadaAjax('php/selectsJson.php?parametro=status_consolidado', status_consolidado);
 
@@ -65,41 +65,35 @@ function status_consolidado(data) {
 function card_com_informacoes_do_setores(data) {
     var local_do_card = document.getElementById('con_card_setores');
     var html = " ";
-    debugger
     for (i = 0; i < data.length; i++) {
         html += " <div class='col s12 l4' >"
-            + `<div class='cards z-depth-3'><a href="./dashboard.php?setor=${data[i].id}">`
-            + `<div class='col s4  l3 imagem-img${data[i].id}'></div>`
+            + `<div class='cards z-depth-3'><a href="./dashboard.php?setor=${data[i].id_setor}">`
+            + `<div class='col s4  l3 imagem-img${data[i].id_setor}'></div>`
             + "<div class='col s8 l9 c_conteudo_card'>"
             + "<h1 class='c_titulo c_card-title'>" + data[i].setor + "</h1>"
             + "<p>Paciente:"
-            + "<b class='right' id=pacientes" + data[i].id + ">" + data[i].agendamento_do_dia + "</b>"
+            + "<b class='right' id=pacientes" + data[i].id_setor + ">" + '2' + "</b>"
             + "</p>"
             + "<p>Procedimentos:"
-            + "<b class='right'>" + data[i].exames + "</b>"
-            + "</p>"
-            + "<p>Não iniciou:"
-            + "<b class='right'> - </b>"
+            + "<b class='right'  id=procedimentos" + data[i].id_setor + ">" + '' + "</b>"
             + "</p>"
             + "<p>Aguardando:"
-            + "<b class='right con_card_aguardando'> - </b>"
+            + "<b class='right con_card_aguardando'>" + se_null(data[i].somatorio_aguardando) + "</b>"
             + "</p>"
             + "<p>Em atendimento:"
-            + "<b class='right'> - </b>"
-            + "</p>"
-            + "<p>Atendido:"
-            + "<b class='right'> - </b>"
+            + "<b class='right'>" + se_null(data[i].somatorio_aguardando) + "</b>"
             + "</p>"
             + "<p>Cancelados:"
-            + "<b class='right'> - </b>"
+            + "<b class='right'>" + se_null(data[i].somatorio_cancelamento) + "</b>"
             + "</p>"
             + "<p>Finalizados:"
-            + "<b class='right'> - </b>"
+            + "<b class='right'>" + se_null(data[i].somatorio_finalizado) + "</b>"
             + "</p>"
-            + "<b class='c_status'>Status: <span id=status" + data[i].id + ">Indisponivel</b>"
             + "</div>"
             + "</div></a>"
             + "</div>";
+
+        chamadaAjax('php/selectsJson.php?parametro=card_com_informacoes_do_setores', populaCardcomQtdPacienteQtdProcedimentos);
     }
 
 
@@ -110,10 +104,25 @@ function card_com_informacoes_do_setores(data) {
             status(data[i].id)
         }
     }
+
+
+    function populaCardcomQtdPacienteQtdProcedimentos(data) {
+        for (i = 0; i < data.length; i++) {
+
+            Qtdpaciente = document.getElementById('pacientes' + data[i].id);
+            Qtdprocedimento = document.getElementById('procedimentos' + data[i].id);
+
+            Qtdpaciente.innerHTML = data[i].agendamento_do_dia
+            Qtdprocedimento.innerHTML = data[i].exames
+        }
+    }
 }
 
 
-
+function se_null(campo_do_banco) {
+    campo_do_banco === null || campo_do_banco === undefined ? campo_do_banco = 0 : campo_do_banco;
+    return campo_do_banco
+}
 
 function status(numero_do_setor) {
     var elem = document.getElementById(`status${numero_do_setor}`);
