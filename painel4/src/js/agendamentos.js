@@ -58,8 +58,6 @@ function lista_de_pacientes(data) {
             tbody.innerHTML += linha;
         }
         data_table(data);
-        modal(data);
-        pacientes_finalizados_e_atuais(data);
     }
 }
 
@@ -250,17 +248,19 @@ function qtd_de_agendamentos_do_dia_por_agenda(data) {
 
 
 function cards_notificação(data) {
-    console.log('--------------------------');
-    console.log(data);
+    // console.log('--------------------------');
+    // console.log(data);
     var html = ""
     var elem = document.getElementById('agendamemento_card_notificacao');
-    for (let i = 0; i < 2; i++) {
-        html += '<div class="card"> '
-            + '<div class="card-content">'
-            + '<span class="card-title titulo ">' + data[i].paciente + '</span>'
-            + '<p class="cor-aviso">Paciente sem vinculo</p>'
-            + '</div>'
-            + '</div>';
+    for (let i = 0; i < data.length; i++) {
+        if (data[i].checkin_unidade !== null && data[i].checkin_unidade === null) {
+            html += '<div class="card"> '
+                + '<div class="card-content">'
+                + '<span class="card-title titulo ">' + data[i].paciente + '</span>'
+                + '<p class="cor-aviso">Paciente sem vinculo</p>'
+                + '</div>'
+                + '</div>';
+        }
     }
     elem.innerHTML = html;
 }
