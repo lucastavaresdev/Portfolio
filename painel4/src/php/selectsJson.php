@@ -321,9 +321,7 @@ $qtd_por_horario_de_pacientes = "SELECT  CONCAT(HOUR(hora_servico_selecionado), 
  */
 
 
-
-
-
+ 
 
 
 /*
@@ -342,25 +340,25 @@ function comparação($parametro, $conexao, $select)
 /*
  * ------------------------------------------------------------------------------
  */
+
+
  
 //retorna e exibe o json
-  function geraJson($select, $conexao)
-  {
-      $sql = $select;
-      $stmt = $conexao->prepare($sql);
-      $stmt->execute();
-      $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-      $novo = array();
-      foreach ($result as $key => $value) {
-          foreach ($value as $k => $v) {
-              $novo[$key][$k] = $v;
-          }
-      }
-      $json = json_encode($novo);
-      echo $json;
-  }
-?>
-
-
-
-
+function geraJson($select, $conexao)
+{
+    $sql = $select;
+    $stmt = $conexao->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $novo = array();
+    foreach ($result as $key => $value) {
+        foreach ($value as $k => $v) {
+            $novo[$key][$k] = $v;
+        }
+    }
+    $json = json_encode($novo);
+    echo $json;
+}
+/*
+ * ------------------------------------------------------------------------------
+ */
