@@ -63,7 +63,7 @@ function lista_de_pacientes(data) {
 
 function status(vinculado, desvinculado, inicio_do_exame, final_do_exame, status_cancelado_vindo_do_banco) {
     nstatus = '';
-    debugger
+
     if (status_cancelado_vindo_do_banco === 3 && status_cancelado_vindo_do_banco !== null) {
         console.log('cancelado')
         nstatus = 3;
@@ -249,11 +249,12 @@ function qtd_de_agendamentos_do_dia_por_agenda(data) {
 
 function cards_notificação(data) {
     // console.log('--------------------------');
+    debugger
     console.log(data);
     var html = ""
     var elem = document.getElementById('agendamemento_card_notificacao');
     for (let i = 0; i < data.length; i++) {
-        if (data[i].checkin_unidade !== null && data[i].checkin_unidade === null) {
+        if (data[i].checkin_unidade === null && data[i].checkin_exame !== null) {
             html += '<div class="card"> '
                 + '<div class="card-content">'
                 + '<span class="card-title titulo ">' + data[i].paciente + '</span>'
