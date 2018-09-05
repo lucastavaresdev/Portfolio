@@ -249,16 +249,25 @@ function qtd_de_agendamentos_do_dia_por_agenda(data) {
 
 function cards_notificação(data) {
     // console.log('--------------------------');
-    debugger
+    //debugger
     console.log(data);
     var html = ""
     var elem = document.getElementById('agendamemento_card_notificacao');
     for (let i = 0; i < data.length; i++) {
-        if (data[i].checkin_unidade === null && data[i].checkin_exame !== null) {
+        if (data[i].checkin_unidade === null && data[i].checkin_exame === null) {
             html += '<div class="card"> '
                 + '<div class="card-content">'
+                + '<div class="row">'
+                + '<div class="col s10">'
+                + '<div class="com_agendamento">'
                 + '<span class="card-title titulo ">' + data[i].paciente + '</span>'
-                + '<p class="cor-aviso">Paciente sem vinculo</p>'
+                + '<p class="cor-aviso">Paciente realizou exame sem vinculo</p>'
+                + '</div>'
+                + '</div>'
+                + '<div class="col s2">'
+                + '<h6 class="hora_agendamento">' + data[i].hora + '</h6>'
+                + '</div>'
+                + '</div>'
                 + '</div>'
                 + '</div>';
         }

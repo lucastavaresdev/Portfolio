@@ -842,7 +842,7 @@ body {
     transition: background .3s ease-out .1s;
     height: 700px; }
     .agendamento #agendamemento_card_notificacao .titulo {
-      font-size: 17px; }
+      font-size: 15px; }
     .agendamento #agendamemento_card_notificacao .card .card-content {
       padding: 12px; }
   .agendamento ::-webkit-scrollbar {
@@ -880,6 +880,12 @@ body {
 
 .status_agendamento {
   margin-top: 4%; }
+
+.hora_agendamento {
+  padding-top: 50%; }
+
+.com_agendamento {
+  padding-top: 10px; }
 
 .pacientes .topo {
   margin-top: 60px; }
