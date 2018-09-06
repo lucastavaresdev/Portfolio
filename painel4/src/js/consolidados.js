@@ -1,10 +1,16 @@
+chamadas()
+
 setInterval(function () {
+    chamadas()
+}, 300000);
+
+function chamadas() {
     chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setores', total_de_pacientes_de_todos_os_setores);
     chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
     chamadaAjax('php/query_temp.php?parametro=query', card_com_informacoes_do_setores);
     chamadaAjax('php/selectsJson.php?parametro=chekin_e_checkout', checkin_checkout);
     chamadaAjax('php/selectsJson.php?parametro=status_consolidado', status_consolidado);
-}, 20000);
+}
 
 
 function pergarId(id_da_alteracao) {
