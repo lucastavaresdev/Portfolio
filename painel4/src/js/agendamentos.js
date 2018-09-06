@@ -266,8 +266,10 @@ function cards_notificação(data) {
 
         hora = horaouminutoscolocandozero(now.getHours())
         minutos = horaouminutoscolocandozero(now.getMinutes())
+
         var horaAtual = `${hora}:${minutos}`;
         var horadoexame = data[i].hora
+
 
         Hora = somaHora(horaAtual, horadoexame)
         if (data[i].checkin_unidade === null && data[i].checkin_exame !== null && Hora === 2) {
@@ -288,15 +290,16 @@ function cards_notificação(data) {
                 + '</div>'
                 + '</div>';
         }
+        elem.innerHTML = html;
     }
-    elem.innerHTML = html;
-}
 
-function horaouminutoscolocandozero(horaouminutos) {
-    if (horaouminutos < 10) {
-        return `0${horaouminutos}`
-    } else {
-        return `${horaouminutos}`
+    function horaouminutoscolocandozero(horaouminutos) {
+
+        if (horaouminutos < 10) {
+            return `0${horaouminutos}`
+        } else {
+            return `${horaouminutos}`
+        }
     }
 }
 
