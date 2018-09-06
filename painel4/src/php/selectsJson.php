@@ -306,15 +306,20 @@ if (isset($_GET['status'])) {
  *--------------------Quandade de status da unidade-----------------------------
  */
 
-$qtd_por_horario_de_procedimento = "SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00')  intervalo_de_horas, COUNT(*) as Qtd
-                                                              FROM agendamento
-                                                              where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and codigo_servico_atual = $setor
-                                                              GROUP BY HOUR(hora_servico_selecionado)";
 
-$qtd_por_horario_de_pacientes = "SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00')  intervalo_de_horas, COUNT(distinct(nome_paciente)) as Qtd
-                                                        FROM agendamento
-                                                        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and codigo_servico_atual = $setor
-                                                        GROUP BY HOUR(hora_servico_selecionado)";
+$qtd_por_horario_de_procedimento = " SELECT  CONCAT(HOUR(a.hora_servico_selecionado), ':00-', HOUR(a.hora_servico_selecionado)+ 1 , ':00') as intervalo_de_horas, 
+                                                                COUNT(*) as Qtd
+                                                                FROM agendamento as a
+                                                                INNER JOIN exame_servico as exs on a.codigo_exame = exs.codigo_exame
+                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data'  and exs.codigo_servico = $setor
+                                                                GROUP BY HOUR(intervalo_de_horas)";
+
+$qtd_por_horario_de_pacientes = "SELECT  CONCAT(HOUR(a.hora_servico_selecionado), ':00-', HOUR(a.hora_servico_selecionado)+ 1 , ':00') as intervalo_de_horas, 
+                                                        COUNT(distinct(nome_paciente)) as Qtd
+                                                        FROM agendamento as a
+                                                        INNER JOIN exame_servico as exs on a.codigo_exame = exs.codigo_exame
+                                                        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data'  and exs.codigo_servico = $setor
+                                                        GROUP BY HOUR(intervalo_de_horas)";
 
 /*
  *--------------------Quandade unidade-----------------------------
