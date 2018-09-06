@@ -226,10 +226,55 @@ $cards_com_dados_setores = "SELECT
                                                 
 
 
-$card_com_informacoes_do_setores = "SELECT a.codigo_servico_atual as id,s.servico as setor ,count(distinct(a.nome_paciente)) as agendamento_do_dia, count(a.nome_paciente) as exames
-                                                                    FROM agendamento as a
-                                                                    inner join servicos as s on a.codigo_servico_atual = s.id
-                                                                    where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by(codigo_servico_atual);";
+/*
+ *--------------------Checkin e Checkout-----------------------------
+ */
+
+$chekin_e_checkout = "SELECT 
+                                    count(checkin) as checkin,
+                                    count(checkout) as checkout
+                                    from checkin
+                                    where date(checkin) = curdate()";
+/*
+ *--------------------Status Consolidado-----------------------------
+ */
+
+$status_consolidado = "SELECT 
+                                            count(if(cl.status = 1, 1, null)) as aguardando,
+                                            count(if(cl.status = 2, 1, null)) as andamento,
+                                            count(if(cl.status = 3, 1, null)) as cancelado,
+                                            count(if(cl.status = 4, 1, null)) as finalizado
+                                            from checklist cl
+                                            inner join (select max(id) as id, agendamento, etapa from checklist group by agendamento, etapa) cl2
+                                            on cl2.id = cl.id
+                                            where date(cl.checkin) = curdate()";
+
+ /*
+ *--------------------Status por setor-----------------------------
+ */
+
+
+$status_consolidado_por_setor = "SELECT 
+                                            count(if(cl.status = 1, 1, null)) as aguardando,
+                                            count(if(cl.status = 2, 1, null)) as andamento,
+                                            count(if(cl.status = 3, 1, null)) as cancelado,
+                                            count(if(cl.status = 4, 1, null)) as finalizado
+                                            from checklist cl
+                                            inner join (select max(id) as id, agendamento, etapa from checklist group by agendamento, etapa) cl2
+                                            on cl2.id = cl.id
+                                            where date(cl.checkin) = curdate() and
+                                        cl.servico = $setor";
+/*
+ *--------------------Status por setor-----------------------------
+ */
+
+
+$card_com_informacoes_do_setores = "SELECT exs.codigo_servico as id, s.servico as setor ,count(distinct(a.nome_paciente)) as agendamento_do_dia, count(a.nome_paciente) as exames FROM agendamento as a
+                                                                INNER JOIN exame_servico as exs on a.codigo_exame = exs.codigo_exame
+                                                                inner join servicos as s on exs.codigo_servico = s.id
+                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() group by(exs.codigo_servico);;";
+
+
 
 $informacoes_com_quantidade_nos_card = "SELECT codigo_servico_atual ,cod_cor_status , count(cod_cor_status) as qtd FROM agendamento as a 
                                                                         INNER JOIN servicos as s on a.codigo_servico_atual = s.id
@@ -261,15 +306,28 @@ if (isset($_GET['status'])) {
  *--------------------Quandade de status da unidade-----------------------------
  */
 
- $qtd_por_horario_de_procedimento = "SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00')  intervalo_de_horas, COUNT(*) as Qtd
-                                                              FROM agendamento
-                                                              where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and codigo_servico_atual = $setor
-                                                              GROUP BY HOUR(hora_servico_selecionado)";
 
-$qtd_por_horario_de_pacientes = "SELECT  CONCAT(HOUR(hora_servico_selecionado), ':00-', HOUR(hora_servico_selecionado)+1, ':00')  intervalo_de_horas, COUNT(distinct(nome_paciente)) as Qtd
-                                                        FROM agendamento
-                                                        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') =  CURDATE() and codigo_servico_atual = $setor
-                                                        GROUP BY HOUR(hora_servico_selecionado)";
+$qtd_por_horario_de_procedimento = " SELECT  CONCAT(HOUR(a.hora_servico_selecionado), ':00-', HOUR(a.hora_servico_selecionado)+ 1 , ':00') as intervalo_de_horas, 
+                                                                COUNT(*) as Qtd
+                                                                FROM agendamento as a
+                                                                INNER JOIN exame_servico as exs on a.codigo_exame = exs.codigo_exame
+                                                                where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data'  and exs.codigo_servico = $setor
+                                                                GROUP BY HOUR(intervalo_de_horas)";
+
+$qtd_por_horario_de_pacientes = "SELECT  CONCAT(HOUR(a.hora_servico_selecionado), ':00-', HOUR(a.hora_servico_selecionado)+ 1 , ':00') as intervalo_de_horas, 
+                                                        COUNT(distinct(nome_paciente)) as Qtd
+                                                        FROM agendamento as a
+                                                        INNER JOIN exame_servico as exs on a.codigo_exame = exs.codigo_exame
+                                                        where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data'  and exs.codigo_servico = $setor
+                                                        GROUP BY HOUR(intervalo_de_horas)";
+
+/*
+ *--------------------Quandade unidade-----------------------------
+ */
+
+
+ 
+
 
 /*
  * ----------------------Comparação para gerar o json----------------------
@@ -287,25 +345,25 @@ function comparação($parametro, $conexao, $select)
 /*
  * ------------------------------------------------------------------------------
  */
+
+
  
 //retorna e exibe o json
-  function geraJson($select, $conexao)
-  {
-      $sql = $select;
-      $stmt = $conexao->prepare($sql);
-      $stmt->execute();
-      $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-      $novo = array();
-      foreach ($result as $key => $value) {
-          foreach ($value as $k => $v) {
-              $novo[$key][$k] = $v;
-          }
-      }
-      $json = json_encode($novo);
-      echo $json;
-  }
-?>
-
-
-
-
+function geraJson($select, $conexao)
+{
+    $sql = $select;
+    $stmt = $conexao->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $novo = array();
+    foreach ($result as $key => $value) {
+        foreach ($value as $k => $v) {
+            $novo[$key][$k] = $v;
+        }
+    }
+    $json = json_encode($novo);
+    echo $json;
+}
+/*
+ * ------------------------------------------------------------------------------
+ */

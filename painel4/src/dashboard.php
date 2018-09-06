@@ -1,4 +1,5 @@
 <?php
+    header("Refresh:300");
     include "./templates/header.php";
     $setor = $_GET['setor'];
 ?>

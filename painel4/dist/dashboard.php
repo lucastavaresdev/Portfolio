@@ -1,4 +1,5 @@
 <?php
+    header("Refresh:300");
     include "./templates/header.php";
     $setor = $_GET['setor'];
 ?>
@@ -8,7 +9,7 @@
         <div class="  col s12 dados_consolidados">
             <div class="col s12 conteudo bg-consolidado espacamento">
             <?php echo "<a  href='./agendamentos.php?setor=$setor'>"?> 
-                        <div class="col s4 l2 ">
+                        <div class="col s6 l2 ">
                             <div class="dash_btn_superior fade-in">
                                 <p>Agendamentos</p>
                                 <h4  id="agendimentos_do_dia">
@@ -18,7 +19,7 @@
                         </div>
                         <?php echo "</a>"?> 
                 <?php echo "<a>"?>
-                    <div class="col s4 l2">
+                    <div class="col s6 l2">
                         <div class="dash_btn_superior_sem_hover fade-in">
                             <p>Procedimentos</p>
                             <h4 id='qtd_procedimentos'>0</h4>
@@ -26,43 +27,41 @@
                     </div>
                     <?php echo "</a>"?>
                     <?php echo "<a>"    ?>
-                <div class="col s4 l2">
+                <div class="col s6 l2">
                     <div class="dash_btn_superior_sem_hover fade-in">
                         <p>Atendimentos</p>
-                        <h4>-/<span id="atendimentos_total">0</span></h4>
+                        <h4><span id='d_pacientes_finalizados'>0</span>/<span id="atendimentos_total">0</span></h4>
                     </div>
                 </div>
                 <?php echo "</a>"    ?>
                 <?php echo "<a  href='./maior_fluxo.php?setor=$setor'>"?> 
-                    <div class="col s4 l2 tamanho_da_linha_titulo_fluxo">
+                    <div class="col s6 l2 tamanho_da_linha_titulo_fluxo">
                         <div class="dash_btn_superior m-fluxo fade-in">
-                            <p>Maior Fluxo</p>
+                            <p>Fluxo de Tempo</p>
                             <ul id="fluxo"></ul>
                         </div>
                     </div>
                     <?php echo "</a>"?>
                     
                     <?php echo "<a>"    ?>
-                        <div class="col s4 l2">
+                        <div class="col s6 l2">
                             <div class=" dash_btn_superior_sem_hover fade-in">
-                            <p>Tempo de Sala</p>
-                            <h4> - </h4>
+                            <p>Qtd de pacientes atuais</p>
+                            <h4><span id='qtd_pacientes_atuais'>0<span></h4>
                             </div>
                         </div>
                     <?php echo "</a>"?>
                     <?php echo "<a>"    ?>
-                        <div class="col s4 l2">
+                        <div class="col s6 l2">
                             <div class="dash_btn_superior_sem_hover fade-in">
-                            <p>Qtd de pacientes atuais</p>
-                            <h4> - </h4>
+                            <p>Tempo Medio de Sala</p>
+                            <h4><span id="tempo_medio_de_sala">0</span></h4>
                             </div>
                         </div>
                     <?php echo "</a>"?>
             </div>
         </div>
     </div>
-
-
 
     <div class="col s12 agendamento conteudo">
         <div class="row">
@@ -72,29 +71,41 @@
                     <li class="tab col s12 l3">
                         <a id="aba_nome_setor" class="active" href="#test1"> - </a>
                     </li>
-                    <li class="tab col s12 l2 right ">
-                            <input type="text"  id="busque_data" class="datepicker right" placeholder="Busque por uma data">
+                    <li class="tab col s12 l2 right input-calendario">
+                            <input type="text"  id="busque_data" class="datepicker right figuras " placeholder="Busque por uma datas">
                     </li>
                 </ul>
                 <div id="test1" class="col s12 tabela_bg">
-                    <table id="tabela_pacientes"  class="responsive-table tabela-cor" style="width:100%" >
+                    <table id="tabela_pacientes"  class="responsive-table tabela-cor " style="width:100%" >
                         <thead>
                             <tr>
-                                <th></th>
-                                <th>Hora</th>
-                                <th>Atividade</th>
+                                <th  class="ocutarmobile"></th>
+                                <th class="ocultar">id_agendamento</th>
+                                <th>hora</th>
+                                <th>atividade</th>
                                 <th>IH</th>
-                                <th>Paciente</th>
-                                <th>Serviço Atual</th>
-                                <th>Prox. Serviço</th>
-                                <th>Status</th>
-                                <th class="ocutar">Sexo</th>
-                                <th class="ocutar">Data de Nascimento</th>
-                                <th class="ocutar">Descricao Exame</th>
-                                <th class="ocutar">Nome Medico</th>
-                                <th class="ocutar">CRM</th>
-                                <th class="ocutar">Anotação</th>
-                                <th>Obs.</th>
+                                <th>paciente</th>
+                                <th>servico</th>
+                                <th>Localização</th>
+                                <th>status</th>
+                                <th>Obs</th>
+                                <th class="ocultar">codigo_exame</th>
+                                <th class="ocultar">codigo_servico</th>
+                                <th class="ocultar">descricao_exame</th>
+                                <th class="ocultar">anotacao</th>
+                                <th class="ocultar">sexo</th>
+                                <th class="ocultar">data_nascimento</th>
+                                <th class="ocultar">nome_medico</th>
+                                <th class="ocultar">crm</th>
+                                <th class="ocultar">checkin_unidade</th>
+                                <th class="ocultar">checkout_unidade</th>
+                                <th class="ocultar">tempo_vinculado</th>
+                                <th class="ocultar">checkin_exame</th>
+                                <th class="ocultar">checkout_exame</th>
+                                <th class="ocultar">tempo_exame</th>
+                                <th class="ocultar">tempo_decorrido_do_exame</th>
+                                <th class="ocultar">desc_status</th>
+                                <th class="ocultar">tempo_espera</th>
                             </tr>
                         </thead>
                         <tbody id="listadePacientes"></tbody>

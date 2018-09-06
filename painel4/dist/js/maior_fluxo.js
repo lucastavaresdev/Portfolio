@@ -1,12 +1,21 @@
-(function () {
-    var url_atual = window.location.href;
+var url_atual = window.location.href;
 
-    var parametrosDaUrl = url_atual.split("?")[1];
+var parametrosDaUrl = url_atual.split("?")[1];
 
-    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_procedimento&${parametrosDaUrl}`, intervaloprocedimento);
-    chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_pacientes&${parametrosDaUrl}`, intervalopaciente);
+chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_procedimento&${parametrosDaUrl}`, intervaloprocedimento);
+chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_pacientes&${parametrosDaUrl}`, intervalopaciente);
 
-})();
+
+setInterval(function () {
+    (function () {
+        var url_atual = window.location.href;
+
+        var parametrosDaUrl = url_atual.split("?")[1];
+
+        chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_procedimento&${parametrosDaUrl}`, intervaloprocedimento);
+        chamadaAjax(`php/selectsJson.php?parametro=qtd_por_horario_de_pacientes&${parametrosDaUrl}`, intervalopaciente);
+    })();
+}, 300000);
 
 
 function intervaloprocedimento(data) {

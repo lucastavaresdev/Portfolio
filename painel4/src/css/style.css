@@ -667,7 +667,7 @@ table.dataTable tbody td.no-padding {
   border-radius: 2px;
   padding-left: 0 !important;
   position: relative;
-  height: 330px;
+  height: 280px;
   width: 100%;
   margin-bottom: 40px; }
   .cards .imagem-img225 {
@@ -842,7 +842,7 @@ body {
     transition: background .3s ease-out .1s;
     height: 700px; }
     .agendamento #agendamemento_card_notificacao .titulo {
-      font-size: 17px; }
+      font-size: 15px; }
     .agendamento #agendamemento_card_notificacao .card .card-content {
       padding: 12px; }
   .agendamento ::-webkit-scrollbar {
@@ -873,6 +873,19 @@ body {
     font-size: 11px; }
   .agendamento .dataTables_wrapper .dataTables_filter input {
     margin-left: 0em; }
+
+.titulo_agendamento {
+  font-size: 21px;
+  padding-top: 10px; }
+
+.status_agendamento {
+  margin-top: 4%; }
+
+.hora_agendamento {
+  padding-top: 50%; }
+
+.com_agendamento {
+  padding-top: 10px; }
 
 .pacientes .topo {
   margin-top: 60px; }
