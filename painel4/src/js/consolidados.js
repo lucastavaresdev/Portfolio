@@ -135,19 +135,15 @@ function se_null(campo_do_banco) {
     return campo_do_banco
 }
 
-function status(numero_do_setor) {
-    var elem = document.getElementById(`status${numero_do_setor}`);
-    elem.innerHTML = "Operando";
-}
-
-
 
 dataatual()
 
 function dataatual() {
     now = new Date();
+    dia = now.getDate()
+    dia = dia < 10 ? '0' + dia : dia;
     mes = now.getMonth() + 1;
     mes = mes < 10 ? '0' + mes : mes;
-    data = now.getDate() + "/" + mes + "/" + now.getFullYear();
+    data = dia + "/" + mes + "/" + now.getFullYear();
     document.getElementById('con_data_atual').innerHTML = data;
 }
