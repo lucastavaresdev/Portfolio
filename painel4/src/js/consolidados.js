@@ -1,12 +1,11 @@
+setInterval(function () {
+    chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setores', total_de_pacientes_de_todos_os_setores);
+    chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
+    chamadaAjax('php/query_temp.php?parametro=query', card_com_informacoes_do_setores);
+    chamadaAjax('php/selectsJson.php?parametro=chekin_e_checkout', checkin_checkout);
+    chamadaAjax('php/selectsJson.php?parametro=status_consolidado', status_consolidado);
+}, 20000);
 
-
-
-
-chamadaAjax('php/selectsJson.php?parametro=total_de_pacientes_de_todos_os_setores', total_de_pacientes_de_todos_os_setores);
-chamadaAjax('php/selectsJson.php?parametro=total_de_procedimentos_de_todos_os_setores', total_de_procedimentos_de_todos_os_setores);
-chamadaAjax('php/query_temp.php?parametro=query', card_com_informacoes_do_setores);
-chamadaAjax('php/selectsJson.php?parametro=chekin_e_checkout', checkin_checkout);
-chamadaAjax('php/selectsJson.php?parametro=status_consolidado', status_consolidado);
 
 function pergarId(id_da_alteracao) {
     var id = document.getElementById(id_da_alteracao);
@@ -59,7 +58,7 @@ function status_consolidado(data) {
 
 
 
-function naoIniciado(aguardando, andamento, cancelado, finalizado) {
+async function naoIniciado(aguardando, andamento, cancelado, finalizado) {
     var id_con_naoIniciado = pergarId("con_naoIniciado");
     var id_con_agendados = pergarId("con_agendados").textContent;
     todos_os_pacientes_agendados = parseInt(id_con_agendados)
@@ -117,7 +116,6 @@ function card_com_informacoes_do_setores(data) {
         }
     }
 
-
     function populaCardcomQtdPacienteQtdProcedimentos(data) {
         for (i = 0; i < data.length; i++) {
 
@@ -129,12 +127,10 @@ function card_com_informacoes_do_setores(data) {
     }
 }
 
-
 function se_null(campo_do_banco) {
     campo_do_banco === null || campo_do_banco === undefined ? campo_do_banco = 0 : campo_do_banco;
     return campo_do_banco
 }
-
 
 dataatual()
 

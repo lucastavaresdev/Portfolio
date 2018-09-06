@@ -3,7 +3,9 @@
     var url_atual = window.location.href;
     var parametrosDaUrl = url_atual.split("?")[1];
     chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, lista_de_pacientes);
-    chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, cards_notificação);
+    setInterval(function () {
+        chamadaAjax(`php/selectsJson.php?parametro=lista_do_setor&${parametrosDaUrl}`, cards_notificação);
+    }, 200);
 })();
 
 function media_de_tempo(data) {
