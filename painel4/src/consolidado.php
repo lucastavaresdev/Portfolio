@@ -78,7 +78,7 @@
                 <div class="col s12 m12">
                     <div class="card-panel center con_padding">
                         <span class="c_total_card c_total_card_inferior">Não Iniciado:
-                            <b class="right" id="con_naoIniciado"> - </b>
+                            <b class="right" id="con_naoIniciado"> 0 </b>
                         </span>
                     </div>
                 </div>

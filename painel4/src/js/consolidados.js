@@ -49,12 +49,24 @@ function status_consolidado(data) {
     var id_emAtendimento = pergarId("con_emAtendimento");
     var id_con_cancelado = pergarId("con_cancelado");
     var id_con_finalizado = pergarId("con_finalizado");
+
     id_con_aguardando.innerHTML = data[0].aguardando;
     id_emAtendimento.innerHTML = data[0].andamento;
     id_con_cancelado.innerHTML = data[0].cancelado;
     id_con_finalizado.innerHTML = data[0].finalizado;
+    naoIniciado(data[0].aguardando, data[0].andamento, data[0].cancelado, data[0].finalizado)
 }
 
+
+
+function naoIniciado(aguardando, andamento, cancelado, finalizado) {
+    var id_con_naoIniciado = pergarId("con_naoIniciado");
+    var id_con_agendados = pergarId("con_agendados").textContent;
+    todos_os_pacientes_agendados = parseInt(id_con_agendados)
+    resultado_soma_de_todos_os_Status = parseInt(aguardando) + parseInt(andamento) + parseInt(cancelado) + parseInt(finalizado)
+    resultado_soma_de_todos_os_Status = todos_os_pacientes_agendados - resultado_soma_de_todos_os_Status
+    id_con_naoIniciado.innerHTML = resultado_soma_de_todos_os_Status
+}
 
 /*
  *---------Cards Inferiores com informações dos setores----------------
