@@ -62,10 +62,10 @@
                     <a href="consolidado.php">
                         <i class="material-icons">grid_on</i>Consolidado</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="localizacao.php">
                         <i class="material-icons">blur_on</i>Localizacao</a>
-                </li>
+                </li> -->
                 <!-- <li>
                     <a href="painel_pacientes.php">
                         <i class="material-icons">clear_all</i>Paciente</a>
