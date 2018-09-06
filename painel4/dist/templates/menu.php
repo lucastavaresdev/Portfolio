@@ -18,10 +18,10 @@
                     ?>
                 </div>
             </div>
-            <div class="col s4 center">
+            <div class="col s4 center titulo_mobile_estrutura">
                 <div id="titulo_do_setor" class="titulo_consolidado"></div>
             </div>
-            <div class="col s1 offset-s3 setor_espacamento">
+            <div class="col s1 offset-s3 setor_espacamento setor_mobile_estrutura">
                 <ul id="setores">
                     <div>
                         <a class="drop_topo mobile" href="#!" data-target="setores_lista">Setores
@@ -62,14 +62,14 @@
                     <a href="consolidado.php">
                         <i class="material-icons">grid_on</i>Consolidado</a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="localizacao.php">
                         <i class="material-icons">blur_on</i>Localizacao</a>
-                </li>
-                <li>
+                </li> -->
+                <!-- <li>
                     <a href="painel_pacientes.php">
                         <i class="material-icons">clear_all</i>Paciente</a>
-                </li>
+                </li> -->
                 <li>
                     <div class="divider"></div>
                 </li>

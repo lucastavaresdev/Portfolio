@@ -48,20 +48,11 @@
 
 	</div>
 
-
-
-
 <?php
    include './templates/frameworks.html';
    ?>
    <script src="./js/maior_fluxo.js"></script>
 
-
-<script>
-    $(document).ready(function () {
-        $('.tabs').tabs();
-    });
-</script>
 
 
 <script>

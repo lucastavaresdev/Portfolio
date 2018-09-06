@@ -30,11 +30,14 @@ body {
 .cor-aviso {
   color: #E82C0C; }
 
-.ocutar {
+.ocultar {
   display: none !important; }
 
 .negrito-informacoes {
   font-weight: 500; }
+
+.sem_negrito-informacoes {
+  font-weight: 400; }
 
 body {
   background-image: url("../img/bg_login.jpg");
