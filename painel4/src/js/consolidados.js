@@ -72,10 +72,10 @@ function card_com_informacoes_do_setores(data) {
             + "<div class='col s8 l9 c_conteudo_card'>"
             + "<h1 class='c_titulo c_card-title'>" + data[i].setor + "</h1>"
             + "<p>Paciente:"
-            + "<b class='right' id=pacientes" + data[i].id_setor + ">" + '2' + "</b>"
+            + "<b class='right' id=pacientes" + se_null(data[i].id_setor) + ">" + '0' + "</b>"
             + "</p>"
             + "<p>Procedimentos:"
-            + "<b class='right'  id=procedimentos" + data[i].id_setor + ">" + '' + "</b>"
+            + "<b class='right'  id=procedimentos" + se_null(data[i].id_setor) + ">" + '0' + "</b>"
             + "</p>"
             + "<p>Aguardando:"
             + "<b class='right con_card_aguardando'>" + se_null(data[i].somatorio_aguardando) + "</b>"
@@ -111,7 +111,6 @@ function card_com_informacoes_do_setores(data) {
 
             Qtdpaciente = document.getElementById('pacientes' + data[i].id);
             Qtdprocedimento = document.getElementById('procedimentos' + data[i].id);
-
             Qtdpaciente.innerHTML = data[i].agendamento_do_dia
             Qtdprocedimento.innerHTML = data[i].exames
         }
