@@ -118,7 +118,7 @@ if (isset($_GET['data'])) {
                                     LEFT JOIN status st 
                                     on st.id = cl_max_c.status
                                     where STR_TO_DATE(data_servico_atual, '%d/%m/%Y') = '$data' and
-                                    es.codigo_servico = $setor
+                                    es.codigo_servico = $setor and a.nome_paciente = 'RONNIE BAGGIO'
                                     order by hora";
 
 /*
