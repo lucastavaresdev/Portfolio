@@ -122,7 +122,7 @@ function c_localizacao(campo_do_banco, vinculado) {
     } else if (campo_do_banco === null || campo_do_banco === undefined && !vinculado === null) {
         campo_do_banco = 'Paciente vinculado  não esta na unidade'
     } else {
-        campo_do_banco = campo_do_banco
+        campo_do_banco = '<b>' + campo_do_banco + '</b >'
     }
     return campo_do_banco
 }
