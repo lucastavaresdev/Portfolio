@@ -27,7 +27,8 @@ function dados(data) {
 
 function media_de_tempo(data) {
     var elem = document.getElementById('tempo_medio_de_sala');
-    if (data[0].tempo_medio !== null || data[0].tempo_medio !== undefined) {
+    if (data[0].tempo_medio !== null && data[0].tempo_medio !== undefined) {
+        debugger
         let hora = data[0].tempo_medio.substr(0, 5);
         elem.innerHTML = hora;
     }
@@ -37,7 +38,6 @@ function media_de_tempo(data) {
 /*
  *---------------------Lista de Paciente---------------------------
  */
-
 function lista_de_pacientes(data) {
     var tbody = document.getElementById("listadePacientes");
     if (tbody) {
@@ -53,7 +53,7 @@ function lista_de_pacientes(data) {
                 '<td>' + se_null(data[i].IH) + '</td>' +
                 '<td>' + se_null(data[i].paciente) + '</td>' +
                 '<td>' + se_null(data[i].servico) + '</td>' +
-                '<td>' + c_localizacao(data[i].setor) + '</td>' +
+                '<td>' + c_localizacao(data[i].localizacao) + '</td>' +
                 '<td><div class="status-' + nstatus + ' center-status">' + nstatus + '</div></td>' +
                 `<td id="${data[i].IH + data[i].atividade}" class='center' ><a><i id="${data[i].IH + data[i].atividade}botao" class="material-icons botao_modal">info_outline</i></a></td>` +
                 '<td class="ocultar">' + se_null(data[i].codigo_exame) + '</td>' +
@@ -84,10 +84,11 @@ function lista_de_pacientes(data) {
 
 function status(vinculado, desvinculado, inicio_do_exame, final_do_exame, status_cancelado_vindo_do_banco) {
     nstatus = '';
-
+    status_cancelado_vindo_do_banco = parseInt(status_cancelado_vindo_do_banco);
     if (status_cancelado_vindo_do_banco === 3 && status_cancelado_vindo_do_banco !== null) {
         console.log('cancelado')
         nstatus = 3;
+        return nstatus
     } else if (!vinculado && inicio_do_exame === null || vinculado === null && inicio_do_exame === null) {
         console.log('Não iniciou o atendimento')
         nstatus = 6
@@ -120,9 +121,9 @@ function c_localizacao(campo_do_banco, vinculado) {
     if (campo_do_banco === null || campo_do_banco === undefined) {
         campo_do_banco = 'Paciente não esta na unidade'
     } else if (campo_do_banco === null || campo_do_banco === undefined && !vinculado === null) {
-        campo_do_banco = 'Paciente vinculado  não esta na unidade'
+        campo_do_banco = 'Paciente vinculado não esta na unidade'
     } else {
-        campo_do_banco = campo_do_banco
+        campo_do_banco = '<span class="negrito-informacoes">' + campo_do_banco + '</span>'
     }
     return campo_do_banco
 }
