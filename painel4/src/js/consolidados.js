@@ -18,7 +18,6 @@ function pergarId(id_da_alteracao) {
     return id;
 }
 
-
 /*
  *---------------------Cards superior 1 row---------------------------
  */
@@ -67,10 +66,14 @@ function status_consolidado(data) {
 async function naoIniciado(aguardando, andamento, cancelado, finalizado) {
     var id_con_naoIniciado = pergarId("con_naoIniciado");
     var id_con_agendados = pergarId("con_agendados").textContent;
-    todos_os_pacientes_agendados = parseInt(id_con_agendados)
-    resultado_soma_de_todos_os_Status = parseInt(aguardando) + parseInt(andamento) + parseInt(cancelado) + parseInt(finalizado)
-    resultado_soma_de_todos_os_Status = todos_os_pacientes_agendados - resultado_soma_de_todos_os_Status
-    id_con_naoIniciado.innerHTML = resultado_soma_de_todos_os_Status
+    if (id_con_agendados !== undefined) {
+        todos_os_pacientes_agendados = parseInt(id_con_agendados)
+        resultado_soma_de_todos_os_Status = parseInt(aguardando) + parseInt(andamento) + parseInt(cancelado) + parseInt(finalizado)
+        resultado_soma_de_todos_os_Status = todos_os_pacientes_agendados - resultado_soma_de_todos_os_Status
+        id_con_naoIniciado.innerHTML = resultado_soma_de_todos_os_Status
+    } else {
+        window.location.reload(true);
+    }
 }
 
 /*
